@@ -1,0 +1,38 @@
+name: trade-hourly
+
+on:
+  schedule:
+    - cron: "3 * * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: redline-bot
+  cancel-in-progress: false
+
+jobs:
+  trade:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install -q requests
+      - name: Run trading step
+        env:
+          BINANCE_API_KEY: ${{ secrets.BINANCE_API_KEY }}
+          BINANCE_API_SECRET: ${{ secrets.BINANCE_API_SECRET }}
+        run: python bot/trade.py
+      - name: Save logs
+        if: always()
+        run: |
+          git config user.name "redline-bot"
+          git config user.email "redline-bot@users.noreply.github.com"
+          git add data
+          git diff --cached --quiet || git commit -m "trade run $(date -u +%FT%TZ)"
+          git pull --rebase -q || true
+          git push -q || true
