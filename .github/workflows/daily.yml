@@ -1,0 +1,38 @@
+name: learn-and-report-daily
+
+on:
+  schedule:
+    - cron: "40 18 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: redline-bot
+  cancel-in-progress: false
+
+jobs:
+  daily:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install -q requests
+      - name: Learn (walk-forward tuning)
+        run: python bot/learn.py
+      - name: Report
+        if: always()
+        run: python bot/report.py
+      - name: Save
+        if: always()
+        run: |
+          git config user.name "redline-bot"
+          git config user.email "redline-bot@users.noreply.github.com"
+          git add data reports bot/config.json
+          git diff --cached --quiet || git commit -m "daily learn+report $(date -u +%F)"
+          git pull --rebase -q || true
+          git push -q || true
