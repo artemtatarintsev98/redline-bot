@@ -30,6 +30,10 @@ def main():
     key, secret = os.getenv("BINANCE_API_KEY"), os.getenv("BINANCE_API_SECRET")
     mode = "testnet" if (cfg["mode"] == "testnet" and key and secret) else "paper"
     client = C.Testnet(key, secret) if mode == "testnet" else None
+    if client:
+        acct = client.account()  # fails loudly if keys or access are wrong
+        usdt = next((b["free"] for b in acct.get("balances", []) if b["asset"] == "USDT"), "?")
+        print(f"[TESTNET] connected, USDT balance {usdt}")
 
     candles = C.closed_candles(C.fetch_klines(sym, cfg["interval"], 500))
     ind = S.indicators(candles, p)
@@ -101,7 +105,7 @@ def main():
                     "params_version": cfg["params_version"]}
                 log("ENTRY", f"buy {qty} @ {entry_px:.2f}, SL {pos['sl']:.2f}, TP {pos['tp']:.2f}")
         else:
-            log("WAIT", f"no signal, price {price:.2f}, RSI {ind['rsi'][i]:.1f}")
+            log("WAIT", f"[{mode}] no signal, price {price:.2f}, RSI {ind['rsi'][i]:.1f}")
 
     st["last_candle"] = last["open_time"]
     C.append_csv(C.EQUITY, C.EQUITY_FIELDS, {
