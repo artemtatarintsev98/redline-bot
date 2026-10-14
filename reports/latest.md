@@ -1,12 +1,11 @@
 # Звіт за 2026-10-14
 
-- Режим: **?** (віртуальні гроші)
-- Баланс бота: **1000 USDT** (старт 1000), за день +0 USDT
-- Угод сьогодні: 0 (+0 / -0), P&L +0 USDT
-- Всього угод: 0, win rate: None
-- Відкрита позиція: ні
-- Зупинено запобіжником: ні
-- Версія параметрів: v1 {'ema_fast': 20, 'ema_slow': 50, 'rsi_len': 14, 'rsi_entry': 45, 'atr_len': 14, 'sl_atr': 2.0, 'tp_atr': 3.0}
-- Помилок сьогодні: 0
+**Баланс:** 1000 USDT (старт 1000) · за день +0 · всього +0
+**Угоди сьогодні:** 0 (виграшних 0), P&L +0 USDT
+**Всього угод:** 0 · win rate None
+**Сканувань за день:** 0 · помилок даних 0
 
-**Навчання:** REJECTED — better on train but not on unseen data (likely overfit)
+## Що бот торгує (перевірено 48 комбінацій)
+- Активні (довів прибутковість на нових даних): AVAX/breakout, DOGE/breakout, DOT/trend_pullback, ADA/breakout, ADA/trend_pullback, BTC/trend_pullback, DOT/breakout, DOGE/trend_pullback, AVAX/trend_pullback, BNB/breakout
+- Пробні (мінімальний ризик): LINK/trend_pullback, LTC/trend_pullback, SILVER/breakout
+
