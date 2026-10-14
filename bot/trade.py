@@ -1,15 +1,18 @@
-"""Hourly run: read the market, manage the open position, maybe open a new one.
+"""Scanner run (every ~5 minutes on GitHub Actions). Paper trading on real prices.
 
-Runs on GitHub Actions. Orders go to the Binance Spot Testnet (virtual money).
-If no API keys are set, it runs in 'paper' mode and simulates fills at market price.
+1. Pull fresh 15m candles for every asset the learner approved (+ any open position).
+2. Manage open positions: stop / target / time limit, also against the live price.
+3. Score new signals across all assets, rank them, open the best ones within risk limits.
 """
-import math
-import os
 import sys
+import time
 from datetime import datetime, timezone
 
 import common as C
 import strategy as S
+
+FETCH = {"binance": 400, "yahoo": 1200}
+FRESH_MS = 60 * 60_000  # ignore markets whose last closed bar is older than 1h (closed market)
 
 
 def log(action, detail=""):
@@ -17,101 +20,143 @@ def log(action, detail=""):
     C.append_csv(C.RUNLOG, C.RUN_FIELDS, {"time": C.now_iso(), "action": action, "detail": detail})
 
 
+def close_pos(cfg, st, pos, px, reason, fees):
+    fee = fees[pos["asset"]]
+    pnl = pos["side"] * (px - pos["entry"]) * pos["qty"] - fee * (px + pos["entry"]) * pos["qty"]
+    st["realized"] += pnl
+    C.append_csv(C.TRADES, C.TRADE_FIELDS, {
+        "open_time": pos["time"], "close_time": C.now_iso(), "asset": pos["asset"],
+        "strategy": pos["strategy"], "tier": pos["tier"], "side": "long" if pos["side"] == 1 else "short",
+        "entry": round(pos["entry"], 6), "exit": round(px, 6), "qty": round(pos["qty"], 8),
+        "pnl_usdt": round(pnl, 2), "pnl_pct": round(pos["side"] * (px / pos["entry"] - 1) * 100, 2),
+        "reason": reason, "bars": pos.get("bars", 0)})
+    log("EXIT", f"{pos['asset']} {pos['strategy']} {reason} @ {px:.6g} pnl {pnl:+.2f}")
+
+
 def main():
     cfg = C.load_json(C.CONFIG, None)
-    p, sym = cfg["params"], cfg["symbol"]
+    models = C.load_json(C.MODELS, {"combos": []})
     st = C.load_json(C.STATE, {})
-    st.setdefault("realized", 0.0)
-    st.setdefault("position", None)
-    st.setdefault("peak_equity", cfg["capital_usdt"])
-    st.setdefault("halted", False)
-    st.setdefault("last_candle", 0)
+    for k, v in {"realized": 0.0, "positions": [], "peak_equity": cfg["capital_usdt"],
+                 "halted": False, "last_bar": {}}.items():
+        st.setdefault(k, v)
+    assets = {a["id"]: a for a in cfg["assets"]}
+    fees = {k: cfg["fees"][a["cls"]] for k, a in assets.items()}
+    combos = [c for c in models["combos"] if c["asset"] in assets]
+    need = {c["asset"] for c in combos} | {p["asset"] for p in st["positions"]}
 
-    key, secret = os.getenv("BINANCE_API_KEY"), os.getenv("BINANCE_API_SECRET")
-    mode = "testnet" if (cfg["mode"] == "testnet" and key and secret) else "paper"
-    client = C.Testnet(key, secret) if mode == "testnet" else None
-    if client:
-        acct = client.account()  # fails loudly if keys or access are wrong
-        usdt = next((b["free"] for b in acct.get("balances", []) if b["asset"] == "USDT"), "?")
-        print(f"[TESTNET] connected, USDT balance {usdt}")
+    series, live_px, ok = {}, {}, []
+    now_ms = int(time.time() * 1000)
+    for aid in sorted(need):
+        try:
+            closed, forming = C.split_closed(C.candles(assets[aid], cfg["interval"], FETCH[assets[aid]["src"]]))
+        except Exception as e:
+            log("DATA", f"{aid} failed: {str(e)[:120]}")
+            continue
+        if not closed:
+            continue
+        series[aid] = S.Series(closed)
+        live_px[aid] = forming["close"] if forming else closed[-1]["close"]
+        ok.append(aid)
 
-    candles = C.closed_candles(C.fetch_klines(sym, cfg["interval"], 500))
-    ind = S.indicators(candles, p)
-    i = len(candles) - 1
-    last = candles[i]
-    price = last["close"]
-    new_candles = [c for c in candles if c["open_time"] > st["last_candle"]]
-
-    # ---- manage the open position ----
-    pos = st["position"]
-    if pos:
-        reason = None
-        for c in new_candles:
-            if c["low"] <= pos["sl"]:
-                reason = "stop"
+    # ---- manage open positions ----
+    keep = []
+    for pos in st["positions"]:
+        s = series.get(pos["asset"])
+        if not s:
+            keep.append(pos)
+            continue
+        px = reason = None
+        for bar in s.cs:
+            if bar["open_time"] <= pos["last_checked"]:
+                continue
+            pos["bars"] = pos.get("bars", 0) + 1
+            pos["last_checked"] = bar["open_time"]
+            px, reason = S.check_exit(pos, bar)
+            if px:
                 break
-            if c["high"] >= pos["tp"]:
-                reason = "target"
+            if pos["bars"] >= pos["max_bars"]:
+                px, reason = bar["close"], "time"
                 break
-        if not reason and S.trend_broken(candles, ind, i):
-            reason = "trend"
-        if reason:
-            if client:
-                exit_px, _ = C.fill_price(client.market_sell(sym, pos["qty"]))
-            else:
-                exit_px = price
-            gross = (exit_px - pos["entry"]) * pos["qty"]
-            fees = (exit_px + pos["entry"]) * pos["qty"] * cfg["fee_rate"]
-            pnl = gross - fees
-            st["realized"] += pnl
-            C.append_csv(C.TRADES, C.TRADE_FIELDS, {
-                "open_time": pos["time"], "close_time": C.now_iso(), "symbol": sym,
-                "entry": round(pos["entry"], 2), "exit": round(exit_px, 2), "qty": pos["qty"],
-                "pnl_usdt": round(pnl, 2), "pnl_pct": round(pnl / (pos["entry"] * pos["qty"]) * 100, 2),
-                "reason": reason, "params_version": pos["params_version"], "mode": mode})
-            log("EXIT", f"{reason} @ {exit_px:.2f} pnl {pnl:+.2f} USDT")
-            st["position"] = pos = None
+        if not px:  # real-time check against the live price
+            lp, side = live_px[pos["asset"]], pos["side"]
+            if (side == 1 and lp <= pos["sl"]) or (side == -1 and lp >= pos["sl"]):
+                px, reason = lp, "stop"
+            elif (side == 1 and lp >= pos["tp"]) or (side == -1 and lp <= pos["tp"]):
+                px, reason = lp, "target"
+        if px:
+            close_pos(cfg, st, pos, px, reason, fees)
+        else:
+            keep.append(pos)
+    st["positions"] = keep
 
-    # ---- equity, daily loss limit, kill switch ----
-    unreal = (price - pos["entry"]) * pos["qty"] if pos else 0.0
-    equity = cfg["capital_usdt"] + st["realized"] + unreal
+    # ---- equity and safety limits ----
+    def unreal():
+        return sum(p["side"] * (live_px.get(p["asset"], p["entry"]) - p["entry"]) * p["qty"]
+                   for p in st["positions"])
+
+    equity = cfg["capital_usdt"] + st["realized"] + unreal()
     st["peak_equity"] = max(st["peak_equity"], equity)
     today = datetime.now(timezone.utc).strftime("%Y-%m-%d")
     if st.get("day") != today:
         st["day"], st["day_start_equity"] = today, equity
-    day_loss = 1 - equity / st["day_start_equity"]
     if 1 - equity / st["peak_equity"] >= cfg["kill_switch_drawdown_pct"] and not st["halted"]:
         st["halted"] = True
-        log("HALT", f"drawdown limit hit, equity {equity:.2f}. Trading stopped until reviewed.")
+        log("HALT", f"drawdown limit hit, equity {equity:.2f}")
+    day_blocked = 1 - equity / st["day_start_equity"] >= cfg["daily_loss_limit_pct"]
 
-    # ---- maybe open a new position (only once per new candle) ----
-    if not pos and new_candles and not st["halted"]:
-        if day_loss >= cfg["daily_loss_limit_pct"]:
-            log("SKIP", "daily loss limit reached")
-        elif S.entry_signal(candles, ind, i, p):
-            sl_dist = p["sl_atr"] * ind["atr"][i]
-            risk_usdt = equity * cfg["risk_per_trade"]
-            quote = min(risk_usdt / sl_dist * price, equity * cfg["max_position_pct"])
-            if quote >= 10:  # exchange minimum notional
-                if client:
-                    entry_px, qty = C.fill_price(client.market_buy_quote(sym, quote))
-                    step = client.lot_step(sym)
-                    qty = math.floor(qty / step) * step
-                else:
-                    entry_px, qty = price, round(quote / price, 6)
-                st["position"] = pos = {
-                    "time": C.now_iso(), "entry": entry_px, "qty": qty,
-                    "sl": entry_px - sl_dist, "tp": entry_px + p["tp_atr"] * ind["atr"][i],
-                    "params_version": cfg["params_version"]}
-                log("ENTRY", f"buy {qty} @ {entry_px:.2f}, SL {pos['sl']:.2f}, TP {pos['tp']:.2f}")
-        else:
-            log("WAIT", f"[{mode}] no signal, price {price:.2f}, RSI {ind['rsi'][i]:.1f}")
+    # ---- find and rank new signals ----
+    cands = []
+    for c in combos:
+        s = series.get(c["asset"])
+        if not s:
+            continue
+        i = len(s) - 1
+        bar = s.cs[i]
+        if bar["open_time"] <= st["last_bar"].get(c["asset"], 0) or now_ms - bar["close_time"] > FRESH_MS:
+            continue
+        d, strength = S.signal(s, i, c["strategy"], c["params"])
+        if d:
+            rank = (1 if c["tier"] == "active" else 0, max(c["valid"]["score"], 0) * strength + strength / 100)
+            cands.append((rank, c, d, strength))
+    for aid, s in series.items():
+        st["last_bar"][aid] = s.cs[-1]["open_time"]
 
-    st["last_candle"] = last["open_time"]
-    C.append_csv(C.EQUITY, C.EQUITY_FIELDS, {
-        "time": C.now_iso(), "price": round(price, 2), "equity": round(equity, 2),
-        "realized": round(st["realized"], 2), "unrealized": round(unreal, 2), "in_position": int(bool(pos))})
-    st["mode"] = mode
+    cands.sort(key=lambda x: x[0], reverse=True)
+    opened = []
+    held = {p["asset"] for p in st["positions"]}
+    for _, c, d, strength in cands:
+        if st["halted"] or day_blocked or len(st["positions"]) >= cfg["max_positions"]:
+            break
+        if c["asset"] in held:
+            continue
+        s = series[c["asset"]]
+        i = len(s) - 1
+        entry = live_px[c["asset"]]
+        sl, tp = S.exit_levels(s, i, d, c["params"])
+        shift = entry - s.c[i]  # re-anchor levels on the live price
+        sl, tp = sl + shift, tp + shift
+        risk = cfg["risk_active"] if c["tier"] == "active" else cfg["risk_explore"]
+        dist = abs(entry - sl)
+        if dist <= 0:
+            continue
+        qty = min(equity * risk / dist, equity * cfg["max_notional_pct"] / entry)
+        pos = {"asset": c["asset"], "strategy": c["strategy"], "tier": c["tier"], "side": d,
+               "entry": entry, "qty": qty, "sl": sl, "tp": tp, "time": C.now_iso(),
+               "last_checked": s.cs[i]["open_time"], "max_bars": c["params"]["max_bars"], "bars": 0}
+        st["positions"].append(pos)
+        held.add(c["asset"])
+        opened.append(c["asset"])
+        log("ENTRY", f"{c['asset']} {'LONG' if d == 1 else 'SHORT'} {c['strategy']} [{c['tier']}] "
+                     f"@ {entry:.6g} SL {sl:.6g} TP {tp:.6g} strength {strength:.2f}")
+
+    equity = cfg["capital_usdt"] + st["realized"] + unreal()
+    log("SCAN", f"{len(ok)}/{len(need)} assets, {len(cands)} signals, opened {len(opened)}, "
+                f"open {len(st['positions'])}, equity {equity:.2f}"
+                + (" HALTED" if st["halted"] else "") + (" DAY-LIMIT" if day_blocked else ""))
+    C.append_csv(C.PORTFOLIO, C.PORTFOLIO_FIELDS, {
+        "time": C.now_iso(), "equity": round(equity, 2), "realized": round(st["realized"], 2),
+        "unrealized": round(unreal(), 2), "open_positions": len(st["positions"]), "assets_ok": len(ok)})
     C.save_json(C.STATE, st)
 
 
