@@ -1,0 +1,70 @@
+{
+  "date": "2026-10-14",
+  "mode": "?",
+  "capital_start": 1000,
+  "equity": 1000,
+  "day_change_usdt": 0,
+  "total_pnl_usdt": 0,
+  "trades_today": 0,
+  "wins_today": 0,
+  "losses_today": 0,
+  "pnl_today_usdt": 0,
+  "trades_total": 0,
+  "win_rate_total": null,
+  "open_position": null,
+  "halted": false,
+  "params_version": 1,
+  "params": {
+    "ema_fast": 20,
+    "ema_slow": 50,
+    "rsi_len": 14,
+    "rsi_entry": 45,
+    "atr_len": 14,
+    "sl_atr": 2.0,
+    "tp_atr": 3.0
+  },
+  "learning_today": {
+    "time": "2026-10-14T13:19:21Z",
+    "decision": "REJECTED",
+    "old_version": "1",
+    "new_version": "1",
+    "old_params": "{\"ema_fast\": 20, \"ema_slow\": 50, \"rsi_len\": 14, \"rsi_entry\": 45, \"atr_len\": 14, \"sl_atr\": 2.0, \"tp_atr\": 3.0}",
+    "new_params": "{\"ema_fast\": 20, \"ema_slow\": 40, \"rsi_len\": 14, \"rsi_entry\": 45, \"atr_len\": 14, \"sl_atr\": 2.0, \"tp_atr\": 3.0}",
+    "old_valid_score": "-0.0243",
+    "new_valid_score": "-0.0286",
+    "valid_trades": "2",
+    "note": "better on train but not on unseen data (likely overfit)"
+  },
+  "backtest": {
+    "time": "2026-10-14T13:19:21Z",
+    "params": {
+      "ema_fast": 20,
+      "ema_slow": 50,
+      "rsi_len": 14,
+      "rsi_entry": 45,
+      "atr_len": 14,
+      "sl_atr": 2.0,
+      "tp_atr": 3.0
+    },
+    "train": {
+      "trades": 24,
+      "win_rate": 0.25,
+      "total_ret": -0.0698,
+      "max_dd": 0.0794,
+      "profit_factor": 0.41,
+      "score": -0.1095
+    },
+    "valid": {
+      "trades": 4,
+      "win_rate": 0.25,
+      "total_ret": -0.0132,
+      "max_dd": 0.0223,
+      "profit_factor": 0.42,
+      "score": -0.0243
+    },
+    "candles": 2880
+  },
+  "errors_today": 0,
+  "runs_today": 0,
+  "today_trades": []
+}
