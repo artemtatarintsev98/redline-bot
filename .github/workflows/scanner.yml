@@ -1,0 +1,32 @@
+name: scanner-live
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "17 */2 * * *"
+
+permissions:
+  contents: write
+  actions: write
+
+concurrency:
+  group: redline-scanner
+  cancel-in-progress: false
+
+jobs:
+  scan:
+    runs-on: ubuntu-latest
+    timeout-minutes: 355
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install -q requests
+      - name: Run scanner loop (~5h40m, scans every minute)
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          git config user.name "redline-bot"
+          git config user.email "redline-bot@users.noreply.github.com"
+          python bot/loop.py
