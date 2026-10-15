@@ -1,13 +1,17 @@
 # Звіт за 2026-10-15
 
-**Баланс:** 984.64 USDT (старт 1000) · за день -15.36 · всього -15.36
+**Баланс:** 983.83 USDT (старт 1000) · за день -16.17 · всього -16.17
 **Угоди сьогодні:** 7 (виграшних 2), P&L -15.36 USDT
 **Всього угод:** 7 · win rate 0.286
-**Сканувань за день:** 538 · помилок даних 0
+**Сканувань за день:** 599 · помилок даних 0
 
 ## Що бот торгує (перевірено 48 комбінацій)
 - Активні (довів прибутковість на нових даних): AVAX/breakout, DOGE/breakout, DOT/trend_pullback, ADA/breakout, ADA/trend_pullback, BTC/trend_pullback, DOT/breakout, DOGE/trend_pullback, AVAX/trend_pullback, BNB/breakout
 - Пробні (мінімальний ризик): LINK/trend_pullback, LTC/trend_pullback, SILVER/breakout
+
+## Відкриті позиції
+- LTC SHORT (trend_pullback) вхід 58.54, стоп 59.133, ціль 57.6505
+- SILVER LONG (breakout) вхід 56.94, стоп 56.6353, ціль 57.5495
 
 ## Угоди за день
 - DOGE short breakout: 0.08113 → 0.07889 = +12.82 USDT (target)
