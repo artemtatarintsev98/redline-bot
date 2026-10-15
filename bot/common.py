@@ -22,7 +22,7 @@ UA = {"User-Agent": "Mozilla/5.0 (redline-bot research)"}
 BAR_MS = {"15m": 15 * 60_000, "1h": 3_600_000}
 
 TRADE_FIELDS = ["open_time", "close_time", "asset", "strategy", "tier", "side", "entry", "exit",
-                "qty", "pnl_usdt", "pnl_pct", "reason", "bars"]
+                "qty", "pnl_usdt", "pnl_pct", "reason", "bars", "risk_usdt", "r"]
 PORTFOLIO_FIELDS = ["time", "equity", "realized", "unrealized", "open_positions", "assets_ok"]
 RUN_FIELDS = ["time", "action", "detail"]
 LEARN_FIELDS = ["time", "asset", "strategy", "params", "tier", "train_trades", "train_ret",
@@ -48,6 +48,16 @@ def save_json(path, obj):
 def append_csv(path, fields, row):
     path = Path(path)
     path.parent.mkdir(parents=True, exist_ok=True)
+    if path.exists():  # migrate files written with an older column set
+        with path.open() as f:
+            header = f.readline().strip().split(",")
+        if header != fields:
+            old = read_csv(path)
+            with path.open("w", newline="") as f:
+                w = csv.DictWriter(f, fieldnames=fields)
+                w.writeheader()
+                for r in old:
+                    w.writerow({k: r.get(k, "") for k in fields})
     new = not path.exists()
     with path.open("a", newline="") as f:
         w = csv.DictWriter(f, fieldnames=fields)

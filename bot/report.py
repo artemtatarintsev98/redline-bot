@@ -3,6 +3,7 @@ from collections import defaultdict
 from datetime import datetime, timezone
 
 import common as C
+import trust as T
 
 
 def main():
@@ -65,6 +66,15 @@ def main():
         L += ["## Результат по активах (вся історія)", "| Актив | Стратегія | Угод | Win | P&L |", "|---|---|---|---|---|"]
         for (a, strat), ts in sorted(by_asset.items(), key=lambda x: -pnl(x[1])):
             L.append(f"| {a} | {strat} | {len(ts)} | {wins(ts)} | {pnl(ts):+} |")
+    tbl = T.table()
+    if tbl:
+        L += ["", "## Рейтинг довіри (винагорода бота)",
+              "Більше довіри → більший ризик на угоду (до x2). Мінус → менше грошей або лава запасних.", "",
+              "| Актив/стратегія | Угод | Сума R | Просадка R | Довіра | Множник ризику |",
+              "|---|---|---|---|---|---|"]
+        for (a, strat), v in sorted(tbl.items(), key=lambda x: -x[1]["trust"]):
+            m = "на лаві" if v["benched"] else f"x{v['mult']}"
+            L.append(f"| {a}/{strat} | {v['trades']} | {v['total_r']:+} | {v['max_dd_r']} | {v['trust']:+} | {m} |")
     md = "\n".join(L) + "\n"
     (C.ROOT / "reports").mkdir(exist_ok=True)
     (C.ROOT / "reports" / "latest.md").write_text(md)

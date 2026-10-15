@@ -10,11 +10,13 @@ from datetime import datetime, timezone
 
 import common as C
 import strategy as S
+import trust as T
 
 FETCH = {"binance": 400, "yahoo": 1200}
 FRESH_MS = 60 * 60_000  # ignore markets whose last closed bar is older than 1h (closed market)
 MAX_SAME_SIDE = {"crypto": 2}  # crypto coins move together: cap positions per direction
 COOLDOWN_MIN = 120  # after a stop, leave that asset alone for 2 hours
+MAX_RISK = 0.02  # hard cap per trade, even for the most trusted combo
 
 
 def log(action, detail=""):
@@ -33,7 +35,8 @@ def close_pos(cfg, st, pos, px, reason, fees):
         "strategy": pos["strategy"], "tier": pos["tier"], "side": "long" if pos["side"] == 1 else "short",
         "entry": round(pos["entry"], 6), "exit": round(px, 6), "qty": round(pos["qty"], 8),
         "pnl_usdt": round(pnl, 2), "pnl_pct": round(pos["side"] * (px / pos["entry"] - 1) * 100, 2),
-        "reason": reason, "bars": pos.get("bars", 0)})
+        "reason": reason, "bars": pos.get("bars", 0), "risk_usdt": round(pos.get("risk_usdt", 0), 2),
+        "r": round(pnl / pos["risk_usdt"], 2) if pos.get("risk_usdt") else ""})
     log("EXIT", f"{pos['asset']} {pos['strategy']} {reason} @ {px:.6g} pnl {pnl:+.2f}")
 
 
@@ -109,7 +112,8 @@ def main():
         log("HALT", f"drawdown limit hit, equity {equity:.2f}")
     day_blocked = 1 - equity / st["day_start_equity"] >= cfg["daily_loss_limit_pct"]
 
-    # ---- find and rank new signals ----
+    # ---- find and rank new signals (trust = reward from past live trades) ----
+    trust = T.table()
     cands = []
     for c in combos:
         s = series.get(c["asset"])
@@ -120,8 +124,13 @@ def main():
         if bar["open_time"] <= st["last_bar"].get(c["asset"], 0) or now_ms - bar["close_time"] > FRESH_MS:
             continue
         d, strength = S.signal(s, i, c["strategy"], c["params"])
+        tr = T.get(trust, c["asset"], c["strategy"])
+        if d and tr["benched"]:
+            log("SKIP", f"{c['asset']}/{c['strategy']} benched: trust {tr['trust']} after {tr['trades']} trades")
+            continue
         if d:
-            rank = (1 if c["tier"] == "active" else 0, max(c["valid"]["score"], 0) * strength + strength / 100)
+            rank = (tr["mult"], 1 if c["tier"] == "active" else 0,
+                    max(c["valid"]["score"], 0) * strength + strength / 100)
             cands.append((rank, c, d, strength))
     for aid, s in series.items():
         st["last_bar"][aid] = s.cs[-1]["open_time"]
@@ -150,19 +159,24 @@ def main():
         sl, tp = S.exit_levels(s, i, d, c["params"])
         shift = entry - s.c[i]  # re-anchor levels on the live price
         sl, tp = sl + shift, tp + shift
-        risk = cfg["risk_active"] if c["tier"] == "active" else cfg["risk_explore"]
+        tr = T.get(trust, c["asset"], c["strategy"])
+        base = cfg["risk_active"] if c["tier"] == "active" else cfg["risk_explore"]
+        risk = min(base * tr["mult"], MAX_RISK)
         dist = abs(entry - sl)
         if dist <= 0:
             continue
         qty = min(equity * risk / dist, equity * cfg["max_notional_pct"] / entry)
+        risk_usdt = qty * dist
         pos = {"asset": c["asset"], "strategy": c["strategy"], "tier": c["tier"], "side": d,
+               "risk_usdt": risk_usdt, "trust_mult": tr["mult"],
                "entry": entry, "qty": qty, "sl": sl, "tp": tp, "time": C.now_iso(),
                "last_checked": s.cs[i]["open_time"], "max_bars": c["params"]["max_bars"], "bars": 0}
         st["positions"].append(pos)
         held.add(c["asset"])
         opened.append(c["asset"])
         log("ENTRY", f"{c['asset']} {'LONG' if d == 1 else 'SHORT'} {c['strategy']} [{c['tier']}] "
-                     f"@ {entry:.6g} SL {sl:.6g} TP {tp:.6g} strength {strength:.2f}")
+                     f"@ {entry:.6g} SL {sl:.6g} TP {tp:.6g} strength {strength:.2f} "
+                     f"risk {risk_usdt:.2f} USDT (trust x{tr['mult']})")
 
     equity = cfg["capital_usdt"] + st["realized"] + unreal()
     log("SCAN", f"{len(ok)}/{len(need)} assets, {len(cands)} signals, opened {len(opened)}, "
