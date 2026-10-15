@@ -113,6 +113,7 @@ GRIDS = {
     "mean_revert": {"lo": [25, 30], "sl": [1.5, 2.0], "tp": [1.0, 1.5], "max_bars": [24]},
 }
 WARMUP = 210
+MAX_STRENGTH = 3.0  # skip entries where price already ran too far (chasing)
 
 
 def grid(name):
@@ -125,7 +126,10 @@ def grid(name):
 def signal(s, i, name, p):
     if i < WARMUP or i >= len(s):
         return 0, 0
-    return STRATEGIES[name](s, i, p)
+    d, strength = STRATEGIES[name](s, i, p)
+    if d and strength > MAX_STRENGTH:
+        return 0, 0
+    return d, strength
 
 
 def exit_levels(s, i, side, p):

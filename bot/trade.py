@@ -13,6 +13,8 @@ import strategy as S
 
 FETCH = {"binance": 400, "yahoo": 1200}
 FRESH_MS = 60 * 60_000  # ignore markets whose last closed bar is older than 1h (closed market)
+MAX_SAME_SIDE = {"crypto": 2}  # crypto coins move together: cap positions per direction
+COOLDOWN_MIN = 120  # after a stop, leave that asset alone for 2 hours
 
 
 def log(action, detail=""):
@@ -24,6 +26,8 @@ def close_pos(cfg, st, pos, px, reason, fees):
     fee = fees[pos["asset"]]
     pnl = pos["side"] * (px - pos["entry"]) * pos["qty"] - fee * (px + pos["entry"]) * pos["qty"]
     st["realized"] += pnl
+    if reason == "stop":
+        st.setdefault("cooldown", {})[pos["asset"]] = int(time.time()) + COOLDOWN_MIN * 60
     C.append_csv(C.TRADES, C.TRADE_FIELDS, {
         "open_time": pos["time"], "close_time": C.now_iso(), "asset": pos["asset"],
         "strategy": pos["strategy"], "tier": pos["tier"], "side": "long" if pos["side"] == 1 else "short",
@@ -125,10 +129,20 @@ def main():
     cands.sort(key=lambda x: x[0], reverse=True)
     opened = []
     held = {p["asset"] for p in st["positions"]}
+    cool = {a: t for a, t in st.get("cooldown", {}).items() if t > time.time()}
+    st["cooldown"] = cool
     for _, c, d, strength in cands:
         if st["halted"] or day_blocked or len(st["positions"]) >= cfg["max_positions"]:
             break
         if c["asset"] in held:
+            continue
+        if c["asset"] in cool:
+            log("SKIP", f"{c['asset']} cooling down after a stop")
+            continue
+        cls = assets[c["asset"]]["cls"]
+        same = sum(1 for p in st["positions"] if p["side"] == d and assets[p["asset"]]["cls"] == cls)
+        if cls in MAX_SAME_SIDE and same >= MAX_SAME_SIDE[cls]:
+            log("SKIP", f"{c['asset']} {'LONG' if d == 1 else 'SHORT'}: already {same} {cls} positions this way")
             continue
         s = series[c["asset"]]
         i = len(s) - 1
