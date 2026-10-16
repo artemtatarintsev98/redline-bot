@@ -1,13 +1,13 @@
 # Звіт за 2026-10-16
 
-**Баланс:** 968.91 USDT (старт 1000) · за день +0.74 · всього -31.09
+**Баланс:** 968.33 USDT (старт 1000) · за день +0.16 · всього -31.67
 **Угоди сьогодні:** 7 (виграшних 3), P&L +0.71 USDT
 **Всього угод:** 17 · win rate 0.294
-**Сканувань за день:** 799 · помилок даних 0
+**Сканувань за день:** 824 · помилок даних 0
 
-## Що бот торгує (перевірено 49 комбінацій)
-- Активні (довів прибутковість на нових даних): DOGE/breakout, DOT/breakout, AVAX/breakout, ADA/breakout, DOT/trend_pullback, DOGE/trend_pullback, LINK/trend_pullback, AVAX/trend_pullback
-- Пробні (мінімальний ризик): ADA/trend_pullback, LTC/trend_pullback, SILVER/breakout
+## Що бот торгує (перевірено 48 комбінацій)
+- Активні (довів прибутковість на нових даних): DOGE/breakout, DOT/trend_pullback, AVAX/breakout, ADA/trend_pullback, ADA/breakout, ETH/trend_pullback, GOLD/trend_pullback, BTC/trend_pullback, DOGE/trend_pullback, DOT/breakout, LINK/breakout, LTC/breakout
+- Пробні (мінімальний ризик): AVAX/trend_pullback, LINK/trend_pullback, LTC/trend_pullback
 
 ## Відкриті позиції
 - SILVER LONG (breakout) вхід 57.7, стоп 57.3932, ціль 58.3135
