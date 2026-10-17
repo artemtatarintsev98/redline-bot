@@ -1,27 +1,28 @@
 # Звіт за 2026-10-17
 
-**Баланс:** 954.89 USDT (старт 1000) · за день -1.65 · всього -45.11
-**Угоди сьогодні:** 2 (виграшних 1), P&L -0.01 USDT
-**Всього угод:** 23 · win rate 0.304
-**Сканувань за день:** 501 · помилок даних 0
+**Баланс:** 952.8 USDT (старт 1000) · за день -3.74 · всього -47.2
+**Угоди сьогодні:** 3 (виграшних 1), P&L -3.3 USDT
+**Всього угод:** 24 · win rate 0.292
+**Сканувань за день:** 561 · помилок даних 0
 
 ## Що бот торгує (перевірено 48 комбінацій)
 - Активні (довів прибутковість на нових даних): DOGE/breakout, DOT/trend_pullback, AVAX/breakout, ADA/trend_pullback, ADA/breakout, ETH/trend_pullback, GOLD/trend_pullback, BTC/trend_pullback, DOGE/trend_pullback, DOT/breakout, LINK/breakout, LTC/breakout
 - Пробні (мінімальний ризик): AVAX/trend_pullback, LINK/trend_pullback, LTC/trend_pullback
 
 ## Відкриті позиції
-- AVAX SHORT (trend_pullback) вхід 9.994, стоп 10.0766, ціль 9.87011
+- BTC SHORT (trend_pullback) вхід 81680, стоп 81812, ціль 81482
 
 ## Угоди за день
 - ADA short breakout: 0.2258 → 0.2241 = +2.68 USDT (time)
 - DOT long breakout: 1.193 → 1.173392 = -2.69 USDT (stop)
+- AVAX short trend_pullback: 9.994 → 10.082 = -3.29 USDT (stop)
 
 ## Результат по активах (вся історія)
 | Актив | Стратегія | Угод | Win | P&L |
 |---|---|---|---|---|
 | ADA | breakout | 3 | 2 | +10.97 |
-| AVAX | trend_pullback | 1 | 1 | +4.74 |
 | ADA | trend_pullback | 1 | 1 | +3.14 |
+| AVAX | trend_pullback | 2 | 1 | +1.45 |
 | LTC | breakout | 2 | 1 | -0.92 |
 | DOGE | breakout | 3 | 1 | -2.66 |
 | LTC | trend_pullback | 1 | 0 | -2.95 |
@@ -37,9 +38,9 @@
 | Актив/стратегія | Угод | Сума R | Просадка R | Довіра | Множник ризику |
 |---|---|---|---|---|---|
 | ADA/trend_pullback | 1 | +1.3 | 0.0 | +0.118 | x1.05 |
-| AVAX/trend_pullback | 1 | +1.25 | 0.0 | +0.113 | x1.05 |
 | ADA/breakout | 3 | +1.39 | 0.91 | +0.072 | x1.15 |
 | AVAX/breakout | 3 | +0.21 | 1.27 | -0.033 | x0.9 |
+| AVAX/trend_pullback | 2 | -0.06 | 1.31 | -0.06 | x0.82 |
 | BNB/breakout | 1 | -0.49 | 0.49 | -0.067 | x0.8 |
 | LTC/breakout | 2 | -0.18 | 1.26 | -0.068 | x0.8 |
 | DOT/trend_pullback | 1 | -1.07 | 1.07 | -0.146 | x0.56 |
