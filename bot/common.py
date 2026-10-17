@@ -122,7 +122,8 @@ def candles(asset, interval, n):
             if len(batch) < 1000:
                 break
         return out[-n:]
-    days = max(2, min(59, n * BAR_MS[interval] // 86_400_000 + 2))
+    cap = 59 if interval == "15m" else 729  # yahoo keeps 60 days of 15m bars, 730 of 1h
+    days = max(2, min(cap, n * BAR_MS[interval] // 86_400_000 + 2))
     return _yahoo(asset["sym"], interval, f"{days}d")[-n:]
 
 
