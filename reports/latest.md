@@ -1,9 +1,9 @@
 # Звіт за 2026-10-17
 
-**Баланс:** 955.86 USDT (старт 1000) · за день -0.68 · всього -44.14
+**Баланс:** 956.17 USDT (старт 1000) · за день -0.37 · всього -43.83
 **Угоди сьогодні:** 2 (виграшних 1), P&L -0.01 USDT
 **Всього угод:** 23 · win rate 0.304
-**Сканувань за день:** 379 · помилок даних 0
+**Сканувань за день:** 380 · помилок даних 0
 
 ## Що бот торгує (перевірено 48 комбінацій)
 - Активні (довів прибутковість на нових даних): DOGE/breakout, DOT/trend_pullback, AVAX/breakout, ADA/trend_pullback, ADA/breakout, ETH/trend_pullback, GOLD/trend_pullback, BTC/trend_pullback, DOGE/trend_pullback, DOT/breakout, LINK/breakout, LTC/breakout
