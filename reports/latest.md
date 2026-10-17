@@ -1,9 +1,9 @@
-# Звіт за 2026-10-16
+# Звіт за 2026-10-17
 
-**Баланс:** 955.9 USDT (старт 1000) · за день -12.27 · всього -44.1
-**Угоди сьогодні:** 11 (виграшних 4), P&L -11.83 USDT
+**Баланс:** 956.33 USDT (старт 1000) · за день -0.21 · всього -43.67
+**Угоди сьогодні:** 0 (виграшних 0), P&L +0 USDT
 **Всього угод:** 21 · win rate 0.286
-**Сканувань за день:** 1382 · помилок даних 0
+**Сканувань за день:** 4 · помилок даних 0
 
 ## Що бот торгує (перевірено 48 комбінацій)
 - Активні (довів прибутковість на нових даних): DOGE/breakout, DOT/trend_pullback, AVAX/breakout, ADA/trend_pullback, ADA/breakout, ETH/trend_pullback, GOLD/trend_pullback, BTC/trend_pullback, DOGE/trend_pullback, DOT/breakout, LINK/breakout, LTC/breakout
@@ -11,19 +11,6 @@
 
 ## Відкриті позиції
 - ADA SHORT (breakout) вхід 0.2258, стоп 0.228028, ціль 0.219857
-
-## Угоди за день
-- DOT long breakout: 1.169 → 1.151 = -2.74 USDT (stop)
-- AVAX long trend_pullback: 10.005 → 10.123 = +4.74 USDT (target)
-- ADA long trend_pullback: 0.2289 → 0.2321 = +3.14 USDT (target)
-- AVAX long breakout: 10.217 → 10.412 = +8.32 USDT (target)
-- AVAX long breakout: 10.38 → 10.302918 = -4.63 USDT (stop)
-- DOGE long breakout: 0.08238 → 0.08164 = -5.34 USDT (stop)
-- DOT long breakout: 1.19 → 1.167 = -2.78 USDT (stop)
-- SILVER long breakout: 57.700001 → 57.393229 = -1.24 USDT (stop)
-- LTC short breakout: 60.19 → 59.59 = +3.86 USDT (target)
-- LTC short breakout: 59.49 → 59.953121 = -4.78 USDT (stop)
-- DOT long trend_pullback: 1.178 → 1.145327 = -10.38 USDT (stop)
 
 ## Результат по активах (вся історія)
 | Актив | Стратегія | Угод | Win | P&L |
