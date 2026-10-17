@@ -23,10 +23,10 @@ def trade_r(t):
     return float(t["pnl_usdt"]) / risk if risk else 0.0
 
 
-def table():
+def table(path=None):
     """{(asset, strategy): {...}} built from all closed trades."""
     by = defaultdict(list)
-    for t in C.read_csv(C.TRADES):
+    for t in C.read_csv(path or C.TRADES):
         by[(t["asset"], t["strategy"])].append(trade_r(t))
     out = {}
     for key, rs in by.items():

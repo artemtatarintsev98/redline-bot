@@ -52,6 +52,25 @@ def main():
               f"**Угод ротації:** {len(rtr)}", ""]
     else:
         R += ["Ще не запускалась.", ""]
+    for prefix, title in (("multi", "Щоденна торгівля 4h (з фільтром денного тренду)"),
+                          ("shadow", "Тіньовий режим 15m / 1h (тільки записує, гроші не чіпає)")):
+        mt = C.read_csv(C.ROOT / "data" / f"{prefix}_trades.csv")
+        me = C.read_csv(C.ROOT / "data" / f"{prefix}_equity.csv")
+        R += [f"## {title}", ""]
+        if not me:
+            R += ["Ще без угод.", ""]
+            continue
+        rs = [float(t["r"] or 0) for t in mt]
+        mt_today = [t for t in mt if t["close_time"].startswith(today)]
+        R += [f"**Баланс:** {float(me[-1]['equity']):.2f} USDT зі старту 1000 · відкрито {me[-1]['open_positions']}",
+              f"**Угод:** {len(mt)} (сьогодні {len(mt_today)}), виграшних {sum(r > 0 for r in rs)}, "
+              f"середній R {sum(rs) / len(rs) if rs else 0:+.2f}", ""]
+        by = defaultdict(list)
+        for t in mt:
+            by[t["strategy"]].append(float(t["r"] or 0))
+        for k, v in sorted(by.items()):
+            R.append(f"- {k}: {len(v)} угод, сума R {sum(v):+.2f}")
+        R.append("")
     L = [f"# Звіт за {today}", ""] + R + ["## Стара внутрішньоденна стратегія (вимкнена для нових входів)", "",
          f"**Баланс:** {s['equity']} USDT (старт {s['capital']}) · за день {s['day_change']:+} · всього {s['total_pnl']:+}",
          f"**Угоди сьогодні:** {s['trades_today']} (виграшних {s['wins_today']}), P&L {s['pnl_today']:+} USDT",

@@ -14,6 +14,7 @@ import common as C
 import learn
 import report
 import rotation
+import multi
 import trade
 
 RUN_SECONDS = 5 * 3600 + 40 * 60
@@ -84,6 +85,7 @@ def main():
             last_report = time.time()
         safe("scan", trade.main)
         safe("rotation", rotation.main)
+        safe("multi", multi.main)
         if time.time() - last_report >= REPORT_EVERY:
             safe("report", report.main)
             last_report = time.time()

@@ -12,7 +12,7 @@ import common as C
 
 COINS = ["BTC", "ETH", "SOL", "BNB", "XRP", "DOGE", "ADA", "AVAX", "LINK", "LTC", "DOT", "TRX"]
 LOOKBACKS = (14, 30, 60)
-TOP_N, REBALANCE_DAYS, REGIME_SMA = 3, 7, 100
+TOP_N, REBALANCE_DAYS, REGIME_SMA = 3, 1, 100  # daily rebalance won Lab v3 (+43%/yr vs +33% weekly)
 FEE, CAPITAL = 0.001, 1000.0
 STATE = C.ROOT / "data" / "rotation_state.json"
 TRADES = C.ROOT / "data" / "rotation_trades.csv"
@@ -69,7 +69,7 @@ def main(force=False):
             targets = []
             reason = "regime off (BTC below SMA100) -> cash"
         elif due:
-            reason = f"weekly rebalance -> {', '.join(targets)}"
+            reason = f"daily rebalance -> {', '.join(targets)}"
         else:
             targets = held
             reason = None
