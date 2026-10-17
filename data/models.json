@@ -1,5 +1,6 @@
 {
-  "updated": "2026-10-16T13:45:51Z",
+  "updated": "2026-10-17T12:00:46Z",
+  "interval": "15m",
   "combos": [
     {
       "asset": "DOGE",
@@ -11,20 +12,20 @@
         "max_bars": 48
       },
       "train": {
-        "trades": 39,
-        "win_rate": 0.436,
-        "ret": 0.0424,
+        "trades": 37,
+        "win_rate": 0.405,
+        "ret": 0.0159,
         "max_dd": 0.1364,
-        "pf": 1.18,
-        "score": -0.0258
+        "pf": 1.08,
+        "score": -0.0523
       },
       "valid": {
         "trades": 16,
-        "win_rate": 0.5,
-        "ret": 0.0727,
+        "win_rate": 0.562,
+        "ret": 0.0908,
         "max_dd": 0.0192,
-        "pf": 2.09,
-        "score": 0.0631
+        "pf": 2.59,
+        "score": 0.0812
       },
       "benched": false,
       "tier": "active"
@@ -42,77 +43,19 @@
       },
       "train": {
         "trades": 26,
-        "win_rate": 0.577,
-        "ret": 0.1257,
+        "win_rate": 0.538,
+        "ret": 0.0857,
         "max_dd": 0.0728,
-        "pf": 1.65,
-        "score": 0.0893
+        "pf": 1.43,
+        "score": 0.0493
       },
       "valid": {
         "trades": 8,
         "win_rate": 0.625,
-        "ret": 0.0457,
-        "max_dd": 0.0186,
-        "pf": 2.11,
-        "score": 0.0364
-      },
-      "benched": false,
-      "tier": "active"
-    },
-    {
-      "asset": "AVAX",
-      "strategy": "breakout",
-      "params": {
-        "n": 48,
-        "sl": 1.5,
-        "tp": 3.0,
-        "max_bars": 48
-      },
-      "train": {
-        "trades": 47,
-        "win_rate": 0.362,
-        "ret": -0.0092,
-        "max_dd": 0.211,
-        "pf": 1.0,
-        "score": -0.1146
-      },
-      "valid": {
-        "trades": 24,
-        "win_rate": 0.5,
-        "ret": 0.0367,
-        "max_dd": 0.0477,
-        "pf": 1.27,
-        "score": 0.0129
-      },
-      "benched": false,
-      "tier": "active"
-    },
-    {
-      "asset": "ADA",
-      "strategy": "trend_pullback",
-      "params": {
-        "fast": 20,
-        "slow": 100,
-        "rsi": 40,
-        "sl": 2.0,
-        "tp": 3.0,
-        "max_bars": 48
-      },
-      "train": {
-        "trades": 16,
-        "win_rate": 0.688,
-        "ret": 0.1303,
-        "max_dd": 0.0336,
-        "pf": 2.49,
-        "score": 0.1134
-      },
-      "valid": {
-        "trades": 8,
-        "win_rate": 0.625,
-        "ret": 0.0277,
-        "max_dd": 0.0301,
-        "pf": 1.91,
-        "score": 0.0126
+        "ret": 0.0275,
+        "max_dd": 0.0297,
+        "pf": 1.49,
+        "score": 0.0127
       },
       "benched": false,
       "tier": "active"
@@ -127,20 +70,20 @@
         "max_bars": 48
       },
       "train": {
-        "trades": 43,
-        "win_rate": 0.372,
-        "ret": 0.006,
+        "trades": 40,
+        "win_rate": 0.35,
+        "ret": -0.0227,
         "max_dd": 0.1121,
-        "pf": 1.04,
-        "score": -0.0501
+        "pf": 0.95,
+        "score": -0.0788
       },
       "valid": {
-        "trades": 19,
-        "win_rate": 0.474,
-        "ret": 0.0308,
+        "trades": 20,
+        "win_rate": 0.5,
+        "ret": 0.0356,
         "max_dd": 0.0497,
-        "pf": 1.28,
-        "score": 0.006
+        "pf": 1.32,
+        "score": 0.0108
       },
       "benched": false,
       "tier": "active"
@@ -176,31 +119,57 @@
       "tier": "active"
     },
     {
-      "asset": "GOLD",
-      "strategy": "trend_pullback",
+      "asset": "EURUSD",
+      "strategy": "mean_revert",
       "params": {
-        "fast": 10,
-        "slow": 100,
-        "rsi": 40,
+        "lo": 30,
         "sl": 2.0,
+        "tp": 1.0,
+        "max_bars": 24
+      },
+      "train": {
+        "trades": 8,
+        "win_rate": 0.125,
+        "ret": -0.0033,
+        "max_dd": 0.0033,
+        "pf": 0.04,
+        "score": -0.0049
+      },
+      "valid": {
+        "trades": 3,
+        "win_rate": 0.333,
+        "ret": 0.0001,
+        "max_dd": 0.0001,
+        "pf": 1.65,
+        "score": 0.0
+      },
+      "benched": false,
+      "tier": "active"
+    },
+    {
+      "asset": "LINK",
+      "strategy": "breakout",
+      "params": {
+        "n": 48,
+        "sl": 1.5,
         "tp": 3.0,
         "max_bars": 48
       },
       "train": {
-        "trades": 14,
-        "win_rate": 0.571,
-        "ret": 0.0117,
-        "max_dd": 0.0092,
-        "pf": 1.44,
-        "score": 0.0071
+        "trades": 44,
+        "win_rate": 0.341,
+        "ret": -0.0787,
+        "max_dd": 0.12,
+        "pf": 0.75,
+        "score": -0.1387
       },
       "valid": {
-        "trades": 7,
-        "win_rate": 0.571,
-        "ret": 0.0035,
-        "max_dd": 0.0102,
-        "pf": 1.35,
-        "score": -0.0015
+        "trades": 27,
+        "win_rate": 0.481,
+        "ret": 0.0175,
+        "max_dd": 0.0393,
+        "pf": 1.15,
+        "score": -0.0022
       },
       "benched": false,
       "tier": "active"
@@ -217,12 +186,12 @@
         "max_bars": 48
       },
       "train": {
-        "trades": 11,
-        "win_rate": 0.455,
-        "ret": -0.0016,
-        "max_dd": 0.0149,
-        "pf": 0.95,
-        "score": -0.009
+        "trades": 10,
+        "win_rate": 0.5,
+        "ret": -0.0002,
+        "max_dd": 0.0137,
+        "pf": 1.0,
+        "score": -0.0071
       },
       "valid": {
         "trades": 5,
@@ -236,10 +205,38 @@
       "tier": "active"
     },
     {
-      "asset": "DOGE",
+      "asset": "NASDAQ",
+      "strategy": "breakout",
+      "params": {
+        "n": 20,
+        "sl": 1.5,
+        "tp": 2.0,
+        "max_bars": 48
+      },
+      "train": {
+        "trades": 23,
+        "win_rate": 0.478,
+        "ret": -0.0073,
+        "max_dd": 0.0139,
+        "pf": 0.83,
+        "score": -0.0142
+      },
+      "valid": {
+        "trades": 15,
+        "win_rate": 0.533,
+        "ret": 0.0033,
+        "max_dd": 0.0125,
+        "pf": 1.15,
+        "score": -0.003
+      },
+      "benched": false,
+      "tier": "active"
+    },
+    {
+      "asset": "ADA",
       "strategy": "trend_pullback",
       "params": {
-        "fast": 10,
+        "fast": 20,
         "slow": 100,
         "rsi": 40,
         "sl": 2.0,
@@ -247,137 +244,79 @@
         "max_bars": 48
       },
       "train": {
-        "trades": 14,
-        "win_rate": 0.643,
-        "ret": 0.052,
-        "max_dd": 0.0171,
-        "pf": 2.02,
-        "score": 0.0434
+        "trades": 15,
+        "win_rate": 0.667,
+        "ret": 0.1165,
+        "max_dd": 0.0336,
+        "pf": 2.34,
+        "score": 0.0997
       },
       "valid": {
-        "trades": 6,
-        "win_rate": 0.667,
-        "ret": 0.0045,
-        "max_dd": 0.0188,
-        "pf": 1.17,
-        "score": -0.0049
+        "trades": 7,
+        "win_rate": 0.571,
+        "ret": 0.0091,
+        "max_dd": 0.0301,
+        "pf": 1.31,
+        "score": -0.006
       },
       "benched": false,
       "tier": "active"
     },
     {
-      "asset": "DOT",
+      "asset": "BNB",
       "strategy": "breakout",
       "params": {
         "n": 48,
-        "sl": 2.0,
+        "sl": 1.5,
         "tp": 4.0,
         "max_bars": 48
       },
       "train": {
-        "trades": 33,
-        "win_rate": 0.455,
-        "ret": 0.0668,
-        "max_dd": 0.1053,
-        "pf": 1.25,
-        "score": 0.0142
+        "trades": 39,
+        "win_rate": 0.359,
+        "ret": -0.044,
+        "max_dd": 0.0741,
+        "pf": 0.71,
+        "score": -0.0811
       },
       "valid": {
-        "trades": 15,
-        "win_rate": 0.467,
-        "ret": 0.0188,
-        "max_dd": 0.0495,
-        "pf": 1.14,
-        "score": -0.0059
-      },
-      "benched": false,
-      "tier": "active"
-    },
-    {
-      "asset": "LINK",
-      "strategy": "breakout",
-      "params": {
-        "n": 48,
-        "sl": 1.5,
-        "tp": 3.0,
-        "max_bars": 48
-      },
-      "train": {
-        "trades": 47,
-        "win_rate": 0.362,
-        "ret": -0.0714,
-        "max_dd": 0.1125,
-        "pf": 0.78,
-        "score": -0.1277
-      },
-      "valid": {
-        "trades": 27,
-        "win_rate": 0.481,
-        "ret": 0.0125,
-        "max_dd": 0.0393,
-        "pf": 1.1,
-        "score": -0.0072
-      },
-      "benched": false,
-      "tier": "active"
-    },
-    {
-      "asset": "LTC",
-      "strategy": "breakout",
-      "params": {
-        "n": 48,
-        "sl": 1.5,
-        "tp": 2.0,
-        "max_bars": 48
-      },
-      "train": {
-        "trades": 58,
-        "win_rate": 0.448,
-        "ret": -0.0667,
-        "max_dd": 0.1147,
-        "pf": 0.81,
-        "score": -0.1241
-      },
-      "valid": {
-        "trades": 28,
-        "win_rate": 0.571,
-        "ret": 0.0112,
-        "max_dd": 0.045,
-        "pf": 1.12,
-        "score": -0.0112
+        "trades": 18,
+        "win_rate": 0.444,
+        "ret": 0.0069,
+        "max_dd": 0.0275,
+        "pf": 1.15,
+        "score": -0.0068
       },
       "benched": false,
       "tier": "active"
     },
     {
       "asset": "AVAX",
-      "strategy": "trend_pullback",
+      "strategy": "breakout",
       "params": {
-        "fast": 20,
-        "slow": 50,
-        "rsi": 45,
-        "sl": 2.0,
+        "n": 48,
+        "sl": 1.5,
         "tp": 3.0,
         "max_bars": 48
       },
       "train": {
-        "trades": 20,
-        "win_rate": 0.5,
-        "ret": 0.0844,
-        "max_dd": 0.0621,
-        "pf": 1.63,
-        "score": 0.0534
+        "trades": 44,
+        "win_rate": 0.341,
+        "ret": -0.0264,
+        "max_dd": 0.211,
+        "pf": 0.96,
+        "score": -0.1318
       },
       "valid": {
-        "trades": 11,
-        "win_rate": 0.455,
-        "ret": 0.0016,
-        "max_dd": 0.0519,
-        "pf": 1.04,
-        "score": -0.0244
+        "trades": 26,
+        "win_rate": 0.462,
+        "ret": 0.0157,
+        "max_dd": 0.0477,
+        "pf": 1.11,
+        "score": -0.0082
       },
       "benched": false,
-      "tier": "explore"
+      "tier": "active"
     },
     {
       "asset": "LINK",
@@ -429,12 +368,42 @@
         "score": 0.0561
       },
       "valid": {
-        "trades": 10,
-        "win_rate": 0.3,
-        "ret": -0.0313,
+        "trades": 9,
+        "win_rate": 0.222,
+        "ret": -0.0384,
         "max_dd": 0.0513,
-        "pf": 0.48,
-        "score": -0.057
+        "pf": 0.35,
+        "score": -0.0641
+      },
+      "benched": false,
+      "tier": "explore"
+    },
+    {
+      "asset": "AVAX",
+      "strategy": "trend_pullback",
+      "params": {
+        "fast": 20,
+        "slow": 100,
+        "rsi": 40,
+        "sl": 2.0,
+        "tp": 2.0,
+        "max_bars": 48
+      },
+      "train": {
+        "trades": 16,
+        "win_rate": 0.625,
+        "ret": 0.083,
+        "max_dd": 0.0495,
+        "pf": 1.92,
+        "score": 0.0582
+      },
+      "valid": {
+        "trades": 11,
+        "win_rate": 0.364,
+        "ret": -0.052,
+        "max_dd": 0.0663,
+        "pf": 0.38,
+        "score": -0.0851
       },
       "benched": false,
       "tier": "explore"
@@ -463,10 +432,10 @@
       "valid": {
         "trades": 20,
         "win_rate": 0.4,
-        "ret": -0.0103,
-        "max_dd": 0.0252,
-        "pf": 0.82,
-        "score": -0.0229
+        "ret": -0.029,
+        "max_dd": 0.0302,
+        "pf": 0.59,
+        "score": -0.044
       }
     },
     {
@@ -487,64 +456,64 @@
       "strategy": "breakout",
       "tier": null,
       "valid": {
-        "trades": 19,
-        "win_rate": 0.421,
-        "ret": 0.0033,
+        "trades": 18,
+        "win_rate": 0.389,
+        "ret": -0.0,
         "max_dd": 0.0408,
-        "pf": 1.05,
-        "score": -0.0171
+        "pf": 1.01,
+        "score": -0.0205
       }
     },
     {
       "asset": "SOL",
+      "strategy": "trend_pullback",
+      "tier": null,
+      "valid": {
+        "trades": 9,
+        "win_rate": 0.333,
+        "ret": -0.0257,
+        "max_dd": 0.0257,
+        "pf": 0.42,
+        "score": -0.0385
+      }
+    },
+    {
+      "asset": "SOL",
+      "strategy": "breakout",
+      "tier": null,
+      "valid": {
+        "trades": 21,
+        "win_rate": 0.286,
+        "ret": -0.0668,
+        "max_dd": 0.1006,
+        "pf": 0.57,
+        "score": -0.1172
+      }
+    },
+    {
+      "asset": "BNB",
       "strategy": "trend_pullback",
       "tier": null,
       "valid": {
         "trades": 8,
         "win_rate": 0.375,
-        "ret": -0.0146,
-        "max_dd": 0.0241,
-        "pf": 0.56,
-        "score": -0.0267
-      }
-    },
-    {
-      "asset": "SOL",
-      "strategy": "breakout",
-      "tier": null,
-      "valid": {
-        "trades": 23,
-        "win_rate": 0.304,
-        "ret": -0.0687,
-        "max_dd": 0.0799,
-        "pf": 0.5,
-        "score": -0.1086
-      }
-    },
-    {
-      "asset": "BNB",
-      "strategy": "trend_pullback",
-      "tier": null,
-      "valid": {
-        "trades": 10,
-        "win_rate": 0.4,
-        "ret": -0.0202,
-        "max_dd": 0.0312,
-        "pf": 0.46,
-        "score": -0.0358
+        "ret": -0.018,
+        "max_dd": 0.0238,
+        "pf": 0.4,
+        "score": -0.0299
       }
     },
     {
       "asset": "BNB",
       "strategy": "breakout",
-      "tier": null,
+      "tier": "active",
       "valid": {
         "trades": 18,
         "win_rate": 0.444,
-        "ret": 0.0035,
+        "ret": 0.0069,
         "max_dd": 0.0275,
-        "pf": 1.07,
-        "score": -0.0103
+        "pf": 1.15,
+        "score": -0.0068
       }
     },
     {
@@ -552,12 +521,12 @@
       "strategy": "trend_pullback",
       "tier": null,
       "valid": {
-        "trades": 4,
-        "win_rate": 0.25,
-        "ret": -0.0222,
+        "trades": 5,
+        "win_rate": 0.4,
+        "ret": -0.0203,
         "max_dd": 0.0264,
-        "pf": 0.16,
-        "score": -0.0354
+        "pf": 0.24,
+        "score": -0.0335
       }
     },
     {
@@ -565,25 +534,25 @@
       "strategy": "breakout",
       "tier": null,
       "valid": {
-        "trades": 27,
-        "win_rate": 0.37,
-        "ret": -0.0556,
-        "max_dd": 0.0948,
-        "pf": 0.68,
-        "score": -0.103
+        "trades": 29,
+        "win_rate": 0.345,
+        "ret": -0.074,
+        "max_dd": 0.0966,
+        "pf": 0.61,
+        "score": -0.1223
       }
     },
     {
       "asset": "DOGE",
       "strategy": "trend_pullback",
-      "tier": "active",
+      "tier": null,
       "valid": {
         "trades": 6,
-        "win_rate": 0.667,
-        "ret": 0.0045,
-        "max_dd": 0.0188,
-        "pf": 1.17,
-        "score": -0.0049
+        "win_rate": 0.5,
+        "ret": -0.0142,
+        "max_dd": 0.0298,
+        "pf": 0.64,
+        "score": -0.0291
       }
     },
     {
@@ -592,11 +561,11 @@
       "tier": "active",
       "valid": {
         "trades": 16,
-        "win_rate": 0.5,
-        "ret": 0.0727,
+        "win_rate": 0.562,
+        "ret": 0.0908,
         "max_dd": 0.0192,
-        "pf": 2.09,
-        "score": 0.0631
+        "pf": 2.59,
+        "score": 0.0812
       }
     },
     {
@@ -604,12 +573,12 @@
       "strategy": "trend_pullback",
       "tier": "active",
       "valid": {
-        "trades": 8,
-        "win_rate": 0.625,
-        "ret": 0.0277,
+        "trades": 7,
+        "win_rate": 0.571,
+        "ret": 0.0091,
         "max_dd": 0.0301,
-        "pf": 1.91,
-        "score": 0.0126
+        "pf": 1.31,
+        "score": -0.006
       }
     },
     {
@@ -617,12 +586,12 @@
       "strategy": "breakout",
       "tier": "active",
       "valid": {
-        "trades": 19,
-        "win_rate": 0.474,
-        "ret": 0.0308,
+        "trades": 20,
+        "win_rate": 0.5,
+        "ret": 0.0356,
         "max_dd": 0.0497,
-        "pf": 1.28,
-        "score": 0.006
+        "pf": 1.32,
+        "score": 0.0108
       }
     },
     {
@@ -631,11 +600,11 @@
       "tier": "explore",
       "valid": {
         "trades": 11,
-        "win_rate": 0.455,
-        "ret": 0.0016,
-        "max_dd": 0.0519,
-        "pf": 1.04,
-        "score": -0.0244
+        "win_rate": 0.364,
+        "ret": -0.052,
+        "max_dd": 0.0663,
+        "pf": 0.38,
+        "score": -0.0851
       }
     },
     {
@@ -643,12 +612,12 @@
       "strategy": "breakout",
       "tier": "active",
       "valid": {
-        "trades": 24,
-        "win_rate": 0.5,
-        "ret": 0.0367,
+        "trades": 26,
+        "win_rate": 0.462,
+        "ret": 0.0157,
         "max_dd": 0.0477,
-        "pf": 1.27,
-        "score": 0.0129
+        "pf": 1.11,
+        "score": -0.0082
       }
     },
     {
@@ -671,10 +640,10 @@
       "valid": {
         "trades": 27,
         "win_rate": 0.481,
-        "ret": 0.0125,
+        "ret": 0.0175,
         "max_dd": 0.0393,
-        "pf": 1.1,
-        "score": -0.0072
+        "pf": 1.15,
+        "score": -0.0022
       }
     },
     {
@@ -695,25 +664,25 @@
       "strategy": "trend_pullback",
       "tier": "explore",
       "valid": {
-        "trades": 10,
-        "win_rate": 0.3,
-        "ret": -0.0313,
+        "trades": 9,
+        "win_rate": 0.222,
+        "ret": -0.0384,
         "max_dd": 0.0513,
-        "pf": 0.48,
-        "score": -0.057
+        "pf": 0.35,
+        "score": -0.0641
       }
     },
     {
       "asset": "LTC",
       "strategy": "breakout",
-      "tier": "active",
+      "tier": null,
       "valid": {
-        "trades": 28,
-        "win_rate": 0.571,
-        "ret": 0.0112,
+        "trades": 29,
+        "win_rate": 0.552,
+        "ret": 0.0017,
         "max_dd": 0.045,
-        "pf": 1.12,
-        "score": -0.0112
+        "pf": 1.02,
+        "score": -0.0208
       }
     },
     {
@@ -723,23 +692,23 @@
       "valid": {
         "trades": 8,
         "win_rate": 0.625,
-        "ret": 0.0457,
-        "max_dd": 0.0186,
-        "pf": 2.11,
-        "score": 0.0364
+        "ret": 0.0275,
+        "max_dd": 0.0297,
+        "pf": 1.49,
+        "score": 0.0127
       }
     },
     {
       "asset": "DOT",
       "strategy": "breakout",
-      "tier": "active",
+      "tier": "benched",
       "valid": {
-        "trades": 15,
-        "win_rate": 0.467,
-        "ret": 0.0188,
-        "max_dd": 0.0495,
-        "pf": 1.14,
-        "score": -0.0059
+        "trades": 18,
+        "win_rate": 0.389,
+        "ret": -0.0341,
+        "max_dd": 0.0988,
+        "pf": 0.86,
+        "score": -0.0835
       }
     },
     {
@@ -747,12 +716,12 @@
       "strategy": "trend_pullback",
       "tier": null,
       "valid": {
-        "trades": 9,
-        "win_rate": 0.0,
-        "ret": -0.0152,
-        "max_dd": 0.0152,
-        "pf": 0.0,
-        "score": -0.0227
+        "trades": 11,
+        "win_rate": 0.091,
+        "ret": -0.0215,
+        "max_dd": 0.0218,
+        "pf": 0.01,
+        "score": -0.0324
       }
     },
     {
@@ -760,12 +729,12 @@
       "strategy": "breakout",
       "tier": null,
       "valid": {
-        "trades": 21,
-        "win_rate": 0.381,
-        "ret": -0.0286,
-        "max_dd": 0.0333,
+        "trades": 20,
+        "win_rate": 0.4,
+        "ret": -0.0281,
+        "max_dd": 0.0328,
         "pf": 0.34,
-        "score": -0.0452
+        "score": -0.0444
       }
     },
     {
@@ -773,25 +742,25 @@
       "strategy": "mean_revert",
       "tier": null,
       "valid": {
-        "trades": 3,
+        "trades": 2,
         "win_rate": 0.0,
-        "ret": -0.0052,
-        "max_dd": 0.0052,
+        "ret": -0.0016,
+        "max_dd": 0.0016,
         "pf": 0.0,
-        "score": -0.0078
+        "score": -0.0024
       }
     },
     {
       "asset": "GOLD",
       "strategy": "trend_pullback",
-      "tier": "active",
+      "tier": null,
       "valid": {
-        "trades": 7,
-        "win_rate": 0.571,
-        "ret": 0.0035,
-        "max_dd": 0.0102,
-        "pf": 1.35,
-        "score": -0.0015
+        "trades": 8,
+        "win_rate": 0.5,
+        "ret": -0.001,
+        "max_dd": 0.0114,
+        "pf": 0.94,
+        "score": -0.0067
       }
     },
     {
@@ -799,12 +768,12 @@
       "strategy": "breakout",
       "tier": null,
       "valid": {
-        "trades": 20,
-        "win_rate": 0.4,
-        "ret": -0.0087,
-        "max_dd": 0.0206,
-        "pf": 0.8,
-        "score": -0.0191
+        "trades": 21,
+        "win_rate": 0.381,
+        "ret": -0.0135,
+        "max_dd": 0.0254,
+        "pf": 0.72,
+        "score": -0.0262
       }
     },
     {
@@ -825,12 +794,12 @@
       "strategy": "trend_pullback",
       "tier": null,
       "valid": {
-        "trades": 3,
-        "win_rate": 0.333,
-        "ret": -0.0071,
-        "max_dd": 0.0126,
-        "pf": 0.44,
-        "score": -0.0134
+        "trades": 4,
+        "win_rate": 0.25,
+        "ret": -0.0141,
+        "max_dd": 0.0196,
+        "pf": 0.28,
+        "score": -0.0239
       }
     },
     {
@@ -838,12 +807,12 @@
       "strategy": "breakout",
       "tier": null,
       "valid": {
-        "trades": 24,
-        "win_rate": 0.458,
-        "ret": -0.0057,
-        "max_dd": 0.051,
-        "pf": 0.95,
-        "score": -0.0312
+        "trades": 22,
+        "win_rate": 0.5,
+        "ret": 0.0066,
+        "max_dd": 0.0394,
+        "pf": 1.09,
+        "score": -0.0131
       }
     },
     {
@@ -864,12 +833,12 @@
       "strategy": "trend_pullback",
       "tier": null,
       "valid": {
-        "trades": 14,
-        "win_rate": 0.357,
-        "ret": -0.0317,
+        "trades": 13,
+        "win_rate": 0.385,
+        "ret": -0.026,
         "max_dd": 0.04,
-        "pf": 0.52,
-        "score": -0.0517
+        "pf": 0.57,
+        "score": -0.046
       }
     },
     {
@@ -877,12 +846,12 @@
       "strategy": "breakout",
       "tier": null,
       "valid": {
-        "trades": 39,
-        "win_rate": 0.333,
-        "ret": -0.0402,
+        "trades": 40,
+        "win_rate": 0.35,
+        "ret": -0.028,
         "max_dd": 0.0707,
-        "pf": 0.76,
-        "score": -0.0755
+        "pf": 0.84,
+        "score": -0.0633
       }
     },
     {
@@ -916,25 +885,25 @@
       "strategy": "breakout",
       "tier": null,
       "valid": {
-        "trades": 32,
-        "win_rate": 0.438,
-        "ret": -0.0062,
+        "trades": 34,
+        "win_rate": 0.412,
+        "ret": -0.0092,
         "max_dd": 0.0123,
-        "pf": 0.75,
-        "score": -0.0124
+        "pf": 0.67,
+        "score": -0.0154
       }
     },
     {
       "asset": "EURUSD",
       "strategy": "mean_revert",
-      "tier": null,
+      "tier": "active",
       "valid": {
-        "trades": 2,
-        "win_rate": 0.0,
-        "ret": -0.0001,
+        "trades": 3,
+        "win_rate": 0.333,
+        "ret": 0.0001,
         "max_dd": 0.0001,
-        "pf": 0.0,
-        "score": -0.0002
+        "pf": 1.65,
+        "score": 0.0
       }
     },
     {
@@ -955,12 +924,12 @@
       "strategy": "breakout",
       "tier": null,
       "valid": {
-        "trades": 38,
-        "win_rate": 0.342,
-        "ret": -0.01,
-        "max_dd": 0.0127,
-        "pf": 0.62,
-        "score": -0.0164
+        "trades": 37,
+        "win_rate": 0.324,
+        "ret": -0.0108,
+        "max_dd": 0.0118,
+        "pf": 0.59,
+        "score": -0.0168
       }
     },
     {
@@ -994,12 +963,12 @@
       "strategy": "breakout",
       "tier": null,
       "valid": {
-        "trades": 33,
-        "win_rate": 0.485,
-        "ret": -0.0166,
+        "trades": 32,
+        "win_rate": 0.438,
+        "ret": -0.0203,
         "max_dd": 0.0242,
-        "pf": 0.42,
-        "score": -0.0287
+        "pf": 0.33,
+        "score": -0.0324
       }
     },
     {
@@ -1020,12 +989,12 @@
       "strategy": "trend_pullback",
       "tier": null,
       "valid": {
-        "trades": 4,
-        "win_rate": 0.0,
-        "ret": -0.009,
+        "trades": 5,
+        "win_rate": 0.2,
+        "ret": -0.0054,
         "max_dd": 0.009,
-        "pf": 0.0,
-        "score": -0.0135
+        "pf": 0.4,
+        "score": -0.0099
       }
     },
     {
@@ -1033,12 +1002,12 @@
       "strategy": "breakout",
       "tier": null,
       "valid": {
-        "trades": 11,
-        "win_rate": 0.455,
-        "ret": -0.0055,
+        "trades": 12,
+        "win_rate": 0.5,
+        "ret": -0.0026,
         "max_dd": 0.0114,
-        "pf": 0.65,
-        "score": -0.0112
+        "pf": 0.84,
+        "score": -0.0083
       }
     },
     {
@@ -1057,14 +1026,14 @@
     {
       "asset": "NASDAQ",
       "strategy": "breakout",
-      "tier": null,
+      "tier": "active",
       "valid": {
         "trades": 15,
-        "win_rate": 0.467,
-        "ret": -0.0063,
-        "max_dd": 0.0128,
-        "pf": 0.76,
-        "score": -0.0127
+        "win_rate": 0.533,
+        "ret": 0.0033,
+        "max_dd": 0.0125,
+        "pf": 1.15,
+        "score": -0.003
       }
     }
   ]

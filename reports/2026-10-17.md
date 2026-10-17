@@ -1,13 +1,19 @@
 # Звіт за 2026-10-17
 
+## Основна стратегія: моментум-ротація (з 17.10)
+
+Ще не запускалась.
+
+## Стара внутрішньоденна стратегія (вимкнена для нових входів)
+
 **Баланс:** 955.31 USDT (старт 1000) · за день -1.23 · всього -44.69
 **Угоди сьогодні:** 3 (виграшних 1), P&L -3.3 USDT
 **Всього угод:** 24 · win rate 0.292
 **Сканувань за день:** 719 · помилок даних 0
 
 ## Що бот торгує (перевірено 48 комбінацій)
-- Активні (довів прибутковість на нових даних): DOGE/breakout, DOT/trend_pullback, AVAX/breakout, ADA/trend_pullback, ADA/breakout, ETH/trend_pullback, GOLD/trend_pullback, BTC/trend_pullback, DOGE/trend_pullback, DOT/breakout, LINK/breakout, LTC/breakout
-- Пробні (мінімальний ризик): AVAX/trend_pullback, LINK/trend_pullback, LTC/trend_pullback
+- Активні (довів прибутковість на нових даних): DOGE/breakout, DOT/trend_pullback, ADA/breakout, ETH/trend_pullback, EURUSD/mean_revert, LINK/breakout, BTC/trend_pullback, NASDAQ/breakout, ADA/trend_pullback, BNB/breakout, AVAX/breakout
+- Пробні (мінімальний ризик): LINK/trend_pullback, LTC/trend_pullback, AVAX/trend_pullback
 
 ## Відкриті позиції
 - BTC SHORT (trend_pullback) вхід 81680, стоп 81812, ціль 81482
@@ -48,4 +54,4 @@
 | DOGE/breakout | 3 | -0.95 | 2.24 | -0.159 | x0.52 |
 | LTC/trend_pullback | 1 | -1.18 | 1.18 | -0.161 | x0.52 |
 | SILVER/breakout | 2 | -2.43 | 2.43 | -0.304 | x0.25 |
-| DOT/breakout | 5 | -5.61 | 5.61 | -0.561 | x0.25 |
+| DOT/breakout | 5 | -5.61 | 5.61 | -0.561 | на лаві |
