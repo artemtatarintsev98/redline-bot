@@ -1,20 +1,20 @@
 # Звіт за 2026-10-17
 
-**Баланс:** 957.51 USDT (старт 1000) · за день +0.97 · всього -42.49
-**Угоди сьогодні:** 1 (виграшних 1), P&L +2.68 USDT
-**Всього угод:** 22 · win rate 0.318
-**Сканувань за день:** 342 · помилок даних 0
+**Баланс:** 955.86 USDT (старт 1000) · за день -0.68 · всього -44.14
+**Угоди сьогодні:** 2 (виграшних 1), P&L -0.01 USDT
+**Всього угод:** 23 · win rate 0.304
+**Сканувань за день:** 379 · помилок даних 0
 
 ## Що бот торгує (перевірено 48 комбінацій)
 - Активні (довів прибутковість на нових даних): DOGE/breakout, DOT/trend_pullback, AVAX/breakout, ADA/trend_pullback, ADA/breakout, ETH/trend_pullback, GOLD/trend_pullback, BTC/trend_pullback, DOGE/trend_pullback, DOT/breakout, LINK/breakout, LTC/breakout
 - Пробні (мінімальний ризик): AVAX/trend_pullback, LINK/trend_pullback, LTC/trend_pullback
 
 ## Відкриті позиції
-- DOT LONG (breakout) вхід 1.193, стоп 1.17339, ціль 1.23222
 - AVAX SHORT (trend_pullback) вхід 9.994, стоп 10.0766, ціль 9.87011
 
 ## Угоди за день
 - ADA short breakout: 0.2258 → 0.2241 = +2.68 USDT (time)
+- DOT long breakout: 1.193 → 1.173392 = -2.69 USDT (stop)
 
 ## Результат по активах (вся історія)
 | Актив | Стратегія | Угод | Win | P&L |
@@ -29,7 +29,7 @@
 | BNB | breakout | 1 | 0 | -4.9 |
 | AVAX | breakout | 3 | 1 | -5.74 |
 | DOT | trend_pullback | 1 | 0 | -10.38 |
-| DOT | breakout | 4 | 0 | -27.73 |
+| DOT | breakout | 5 | 0 | -30.42 |
 
 ## Рейтинг довіри (винагорода бота)
 Більше довіри → більший ризик на угоду (до x2). Мінус → менше грошей або лава запасних.
@@ -46,4 +46,4 @@
 | DOGE/breakout | 3 | -0.95 | 2.24 | -0.159 | x0.52 |
 | LTC/trend_pullback | 1 | -1.18 | 1.18 | -0.161 | x0.52 |
 | SILVER/breakout | 2 | -2.43 | 2.43 | -0.304 | x0.25 |
-| DOT/breakout | 4 | -4.49 | 4.49 | -0.481 | x0.25 |
+| DOT/breakout | 5 | -5.61 | 5.61 | -0.561 | x0.25 |
