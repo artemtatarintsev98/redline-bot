@@ -13,6 +13,7 @@ import traceback
 import common as C
 import learn
 import report
+import rotation
 import trade
 
 RUN_SECONDS = 5 * 3600 + 40 * 60
@@ -74,13 +75,15 @@ def main():
     while time.time() - start < RUN_SECONDS:
         t0 = time.time()
         sh("git pull -q --rebase --autostash -X theirs")  # pick up config/model changes
-        if models_age_hours() >= LEARN_EVERY_HOURS:
+        cfg_iv = C.load_json(C.CONFIG, {}).get("interval")
+        if models_age_hours() >= LEARN_EVERY_HOURS or C.load_json(C.MODELS, {}).get("interval") != cfg_iv:
             trade.log("LOOP", "running daily learning")
             safe("learn", learn.main)
             safe("report", report.main)
             save(f"learn {C.now_iso()}")
             last_report = time.time()
         safe("scan", trade.main)
+        safe("rotation", rotation.main)
         if time.time() - last_report >= REPORT_EVERY:
             safe("report", report.main)
             last_report = time.time()

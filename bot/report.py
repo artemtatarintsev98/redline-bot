@@ -41,7 +41,18 @@ def main():
     C.save_json(C.ROOT / "data" / "summary.json", summary)
 
     s = summary
-    L = [f"# Звіт за {today}", "",
+    rot = C.load_json(C.ROOT / "data" / "rotation_state.json", {})
+    rtr = C.read_csv(C.ROOT / "data" / "rotation_trades.csv")
+    req = C.read_csv(C.ROOT / "data" / "rotation_equity.csv")
+    R = ["## Основна стратегія: моментум-ротація (з 17.10)", ""]
+    if req:
+        e = float(req[-1]["equity"])
+        R += [f"**Баланс:** {e:.2f} USDT зі старту 1000 ({e / 10 - 100:+.2f}%)",
+              f"**Зараз тримає:** {req[-1]['holdings'] or 'кеш'} · режим ринку: {'BTC вище SMA100, торгуємо' if rot.get('regime') else 'BTC нижче SMA100, у кеші'}",
+              f"**Угод ротації:** {len(rtr)}", ""]
+    else:
+        R += ["Ще не запускалась.", ""]
+    L = [f"# Звіт за {today}", ""] + R + ["## Стара внутрішньоденна стратегія (вимкнена для нових входів)", "",
          f"**Баланс:** {s['equity']} USDT (старт {s['capital']}) · за день {s['day_change']:+} · всього {s['total_pnl']:+}",
          f"**Угоди сьогодні:** {s['trades_today']} (виграшних {s['wins_today']}), P&L {s['pnl_today']:+} USDT",
          f"**Всього угод:** {s['trades_total']} · win rate {s['win_rate']}",

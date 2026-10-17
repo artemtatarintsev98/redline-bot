@@ -19,7 +19,8 @@ LEARNLOG = ROOT / "data" / "learning_v2.csv"
 BINANCE_URLS = ["https://data-api.binance.vision", "https://api.binance.com"]
 YAHOO_URL = "https://query1.finance.yahoo.com/v8/finance/chart/"
 UA = {"User-Agent": "Mozilla/5.0 (redline-bot research)"}
-BAR_MS = {"15m": 15 * 60_000, "1h": 3_600_000}
+BAR_MS = {"15m": 15 * 60_000, "1h": 3_600_000, "4h": 4 * 3_600_000}
+YAHOO_INTERVALS = {"15m", "1h"}
 
 TRADE_FIELDS = ["open_time", "close_time", "asset", "strategy", "tier", "side", "entry", "exit",
                 "qty", "pnl_usdt", "pnl_pct", "reason", "bars", "risk_usdt", "r"]

@@ -13,7 +13,6 @@ import strategy as S
 import trust as T
 
 FETCH = {"binance": 400, "yahoo": 1200}
-FRESH_MS = 60 * 60_000  # ignore markets whose last closed bar is older than 1h (closed market)
 MAX_SAME_SIDE = {"crypto": 2}  # crypto coins move together: cap positions per direction
 COOLDOWN_MIN = 120  # after a stop, leave that asset alone for 2 hours
 MAX_RISK = 0.02  # hard cap per trade, even for the most trusted combo
@@ -50,6 +49,7 @@ def main():
     assets = {a["id"]: a for a in cfg["assets"]}
     fees = {k: cfg["fees"][a["cls"]] for k, a in assets.items()}
     combos = [c for c in models["combos"] if c["asset"] in assets]
+    fresh_ms = 2 * C.BAR_MS[cfg["interval"]] + 600_000  # skip closed markets (stale last bar)
     need = {c["asset"] for c in combos} | {p["asset"] for p in st["positions"]}
 
     series, live_px, ok = {}, {}, []
@@ -121,7 +121,7 @@ def main():
             continue
         i = len(s) - 1
         bar = s.cs[i]
-        if bar["open_time"] <= st["last_bar"].get(c["asset"], 0) or now_ms - bar["close_time"] > FRESH_MS:
+        if bar["open_time"] <= st["last_bar"].get(c["asset"], 0) or now_ms - bar["close_time"] > fresh_ms:
             continue
         d, strength = S.signal(s, i, c["strategy"], c["params"])
         tr = T.get(trust, c["asset"], c["strategy"])
@@ -140,6 +140,8 @@ def main():
     held = {p["asset"] for p in st["positions"]}
     cool = {a: t for a, t in st.get("cooldown", {}).items() if t > time.time()}
     st["cooldown"] = cool
+    if not cfg.get("intraday_enabled", True):
+        cands = []  # intraday entries switched off: only manage what is already open
     for _, c, d, strength in cands:
         if st["halted"] or day_blocked or len(st["positions"]) >= cfg["max_positions"]:
             break

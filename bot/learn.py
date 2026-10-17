@@ -36,6 +36,8 @@ def main():
     benched = live_bench()
     results, failed = [], []
     for a in cfg["assets"]:
+        if a["src"] == "yahoo" and cfg["interval"] not in C.YAHOO_INTERVALS:
+            continue
         try:
             closed, _ = C.split_closed(C.candles(a, cfg["interval"], BARS[a["src"]]))
         except Exception as e:
@@ -70,7 +72,7 @@ def main():
 
     combos = [r for r in results if r["tier"] in ("active", "explore")]
     combos.sort(key=lambda r: (r["tier"] != "active", -r["valid"]["score"]))
-    C.save_json(C.MODELS, {"updated": C.now_iso(), "combos": combos, "failed": failed,
+    C.save_json(C.MODELS, {"updated": C.now_iso(), "interval": cfg["interval"], "combos": combos, "failed": failed,
                            "tested": len(results),
                            "all": [{k: r[k] for k in ("asset", "strategy", "tier", "valid")} for r in results]})
     now = C.now_iso()

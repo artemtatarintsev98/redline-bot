@@ -14,7 +14,7 @@ import common as C
 PRIOR_TRADES = 10       # new combos count as 10 neutral trades: trust must be earned
 DD_PENALTY = 0.5        # each R of drawdown costs half an R of trust
 MIN_MULT, MAX_MULT = 0.25, 2.0
-BENCH_AFTER, BENCH_BELOW = 8, -0.15
+BENCH_AFTER, BENCH_BELOW = 5, -0.10  # bench a combo fast once it keeps losing
 TIER_RISK_GUESS = {"active": 10.0, "explore": 2.5}  # for older trades without risk_usdt
 
 
