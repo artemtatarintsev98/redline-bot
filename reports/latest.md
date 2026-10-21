@@ -2,20 +2,20 @@
 
 ## Основна стратегія: моментум-ротація (з 17.10)
 
-**Баланс:** 997.96 USDT зі старту 1000 (-0.20%)
+**Баланс:** 999.36 USDT зі старту 1000 (-0.06%)
 **Зараз тримає:** BTC+DOT+LTC · режим ринку: BTC вище SMA100, торгуємо
 **Угод ротації:** 7
 
 ## Щоденна торгівля 4h (з фільтром денного тренду)
 
-**Баланс:** 994.26 USDT зі старту 1000 · відкрито 0
+**Баланс:** 994.57 USDT зі старту 1000 · відкрито 1
 **Угод:** 1 (сьогодні 0), виграшних 0, середній R -1.23
 
 - 4h:breakout: 1 угод, сума R -1.23
 
 ## Тіньовий режим 15m / 1h (тільки записує, гроші не чіпає)
 
-**Баланс:** 961.61 USDT зі старту 1000 · відкрито 1
+**Баланс:** 962.35 USDT зі старту 1000 · відкрито 1
 **Угод:** 18 (сьогодні 2), виграшних 6, середній R -0.51
 
 - 15m:breakout: 15 угод, сума R -5.23
@@ -26,11 +26,11 @@
 **Баланс:** 955.91 USDT (старт 1000) · за день +0.0 · всього -44.09
 **Угоди сьогодні:** 0 (виграшних 0), P&L +0 USDT
 **Всього угод:** 26 · win rate 0.346
-**Сканувань за день:** 711 · помилок даних 0
+**Сканувань за день:** 724 · помилок даних 0
 
-## Що бот торгує (перевірено 46 комбінацій)
-- Активні (довів прибутковість на нових даних): DOT/trend_pullback, ADA/breakout, AVAX/trend_pullback, ADA/trend_pullback, DOGE/breakout, ETH/trend_pullback, LINK/breakout, ETH/breakout, NASDAQ/breakout, BNB/breakout, SILVER/breakout
-- Пробні (мінімальний ризик): DOGE/trend_pullback, LINK/trend_pullback, LTC/trend_pullback
+## Що бот торгує (перевірено 47 комбінацій)
+- Активні (довів прибутковість на нових даних): LTC/breakout, ADA/breakout, ADA/trend_pullback, DOGE/breakout, AVAX/trend_pullback, BNB/trend_pullback, ETH/trend_pullback, BNB/breakout, NASDAQ/breakout, ETH/breakout, SP500/breakout, DOT/trend_pullback
+- Пробні (мінімальний ризик): DOGE/trend_pullback, LTC/trend_pullback, SILVER/trend_pullback
 
 ## Результат по активах (вся історія)
 | Актив | Стратегія | Угод | Win | P&L |
