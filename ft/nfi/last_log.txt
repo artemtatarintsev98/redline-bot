@@ -1,9 +1,4 @@
-3.14/site-packages/ccxt/pro/binance.py", line 1508, in watch_ohlcv
-    result = await self.watch_ohlcv_for_symbols([[symbol, timeframe]], since, limit, params)
-             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/home/ftuser/.local/lib/python3.14/site-packages/ccxt/pro/binance.py", line 1600, in watch_ohlcv_for_symbols
-    res = await self.watch_multiple(url, messageHashes, self.extend(request, params), messageHashes, subscribe)
-          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^^^^^^^^
 ccxt.base.errors.NetworkError: 451, message='Invalid response status', url='wss://stream.binance.com:9443/ws/0'
 2026-10-22 17:30:01,566 - freqtrade.exchange.exchange_ws - ERROR - Exception in continuously_async_watch_ohlcv for NEAR/USDT, 5m
 Traceback (most recent call last):
@@ -1513,3 +1508,9 @@ ccxt.base.errors.NetworkError: 451, message='Invalid response status', url='wss:
 2026-10-22 17:35:32,511 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.9, strategy_version: v18.0.146', state='RUNNING'
 2026-10-22 17:36:32,514 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.9, strategy_version: v18.0.146', state='RUNNING'
 2026-10-22 17:37:32,517 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.9, strategy_version: v18.0.146', state='RUNNING'
+2026-10-22 17:37:39,329 - freqtrade.commands.trade_commands - INFO - worker found ... calling exit
+2026-10-22 17:37:39,330 - freqtrade.rpc.rpc_manager - INFO - Sending rpc message: {'type': status, 'status': 'process died'}
+2026-10-22 17:37:39,331 - freqtrade.freqtradebot - INFO - Cleaning up modules ...
+2026-10-22 17:37:39,333 - freqtrade.rpc.rpc_manager - INFO - Cleaning up rpc modules ...
+2026-10-22 17:37:39,333 - freqtrade.exchange.exchange_ws - INFO - Cleaning up exchange WS connections.
+2026-10-22 17:37:39,842 - freqtrade - INFO - SIGINT received, aborting ...
