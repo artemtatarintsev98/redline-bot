@@ -1,273 +1,4 @@
-10-22 14:04:37,821 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.9', state='RUNNING'
-2026-10-22 14:05:37,824 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.9', state='RUNNING'
-2026-10-22 14:06:37,827 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.9', state='RUNNING'
-2026-10-22 14:07:37,830 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.9', state='RUNNING'
-2026-10-22 14:08:37,833 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.9', state='RUNNING'
-2026-10-22 14:09:37,836 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.9', state='RUNNING'
-2026-10-22 14:10:37,839 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.9', state='RUNNING'
-2026-10-22 14:11:37,842 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.9', state='RUNNING'
-2026-10-22 14:12:37,844 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.9', state='RUNNING'
-2026-10-22 14:13:37,847 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.9', state='RUNNING'
-2026-10-22 14:14:37,850 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.9', state='RUNNING'
-2026-10-22 14:15:01,013 - freqtrade.exchange.exchange - INFO - Couldn't reuse watch for ADA/USDT, 15m, falling back to REST api. False, 1792678500000, 0, 2026-10-22T14:15:00, 1970-01-01T00:00:00 
-2026-10-22 14:15:01,015 - freqtrade.exchange.exchange - INFO - Couldn't reuse watch for APT/USDT, 15m, falling back to REST api. False, 1792678500000, 0, 2026-10-22T14:15:00, 1970-01-01T00:00:00 
-2026-10-22 14:15:01,016 - freqtrade.exchange.exchange - INFO - Couldn't reuse watch for DOGE/USDT, 15m, falling back to REST api. False, 1792678500000, 0, 2026-10-22T14:15:00, 1970-01-01T00:00:00 
-2026-10-22 14:15:01,017 - freqtrade.exchange.exchange - INFO - Couldn't reuse watch for NEAR/USDT, 15m, falling back to REST api. False, 1792678500000, 0, 2026-10-22T14:15:00, 1970-01-01T00:00:00 
-2026-10-22 14:15:01,017 - freqtrade.exchange.exchange - INFO - Couldn't reuse watch for TRX/USDT, 15m, falling back to REST api. False, 1792678500000, 0, 2026-10-22T14:15:00, 1970-01-01T00:00:00 
-2026-10-22 14:15:01,018 - freqtrade.exchange.exchange - INFO - Couldn't reuse watch for SOL/USDT, 15m, falling back to REST api. False, 1792678500000, 0, 2026-10-22T14:15:00, 1970-01-01T00:00:00 
-2026-10-22 14:15:01,019 - freqtrade.exchange.exchange - INFO - Couldn't reuse watch for LTC/USDT, 15m, falling back to REST api. False, 1792678500000, 0, 2026-10-22T14:15:00, 1970-01-01T00:00:00 
-2026-10-22 14:15:01,019 - freqtrade.exchange.exchange - INFO - Couldn't reuse watch for DOT/USDT, 15m, falling back to REST api. False, 1792678500000, 0, 2026-10-22T14:15:00, 1970-01-01T00:00:00 
-2026-10-22 14:15:01,020 - freqtrade.exchange.exchange - INFO - Couldn't reuse watch for BTC/USDT, 15m, falling back to REST api. False, 1792678500000, 0, 2026-10-22T14:15:00, 1970-01-01T00:00:00 
-2026-10-22 14:15:01,021 - freqtrade.exchange.exchange - INFO - Couldn't reuse watch for SUI/USDT, 15m, falling back to REST api. False, 1792678500000, 0, 2026-10-22T14:15:00, 1970-01-01T00:00:00 
-2026-10-22 14:15:01,022 - freqtrade.exchange.exchange - INFO - Couldn't reuse watch for AVAX/USDT, 15m, falling back to REST api. False, 1792678500000, 0, 2026-10-22T14:15:00, 1970-01-01T00:00:00 
-2026-10-22 14:15:01,023 - freqtrade.exchange.exchange - INFO - Couldn't reuse watch for ETH/USDT, 15m, falling back to REST api. False, 1792678500000, 0, 2026-10-22T14:15:00, 1970-01-01T00:00:00 
-2026-10-22 14:15:01,024 - freqtrade.exchange.exchange - INFO - Couldn't reuse watch for BNB/USDT, 15m, falling back to REST api. False, 1792678500000, 0, 2026-10-22T14:15:00, 1970-01-01T00:00:00 
-2026-10-22 14:15:01,025 - freqtrade.exchange.exchange - INFO - Couldn't reuse watch for XRP/USDT, 15m, falling back to REST api. False, 1792678500000, 0, 2026-10-22T14:15:00, 1970-01-01T00:00:00 
-2026-10-22 14:15:01,025 - freqtrade.exchange.exchange - INFO - Couldn't reuse watch for LINK/USDT, 15m, falling back to REST api. False, 1792678500000, 0, 2026-10-22T14:15:00, 1970-01-01T00:00:00 
-2026-10-22 14:15:01,448 - freqtrade.exchange.exchange_ws - ERROR - Exception in continuously_async_watch_ohlcv for ADA/USDT, 15m
-Traceback (most recent call last):
-  File "/freqtrade/freqtrade/exchange/exchange_ws.py", line 248, in _continuously_async_watch_ohlcv
-    data = await self._ccxt_object.watch_ohlcv(pair, timeframe)
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/home/ftuser/.local/lib/python3.14/site-packages/ccxt/pro/binance.py", line 1508, in watch_ohlcv
-    result = await self.watch_ohlcv_for_symbols([[symbol, timeframe]], since, limit, params)
-             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/home/ftuser/.local/lib/python3.14/site-packages/ccxt/pro/binance.py", line 1600, in watch_ohlcv_for_symbols
-    res = await self.watch_multiple(url, messageHashes, self.extend(request, params), messageHashes, subscribe)
-          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-ccxt.base.errors.NetworkError: 451, message='Invalid response status', url='wss://stream.binance.com:9443/ws/0'
-2026-10-22 14:15:01,450 - freqtrade.exchange.exchange_ws - ERROR - Exception in continuously_async_watch_ohlcv for APT/USDT, 15m
-Traceback (most recent call last):
-  File "/freqtrade/freqtrade/exchange/exchange_ws.py", line 248, in _continuously_async_watch_ohlcv
-    data = await self._ccxt_object.watch_ohlcv(pair, timeframe)
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/home/ftuser/.local/lib/python3.14/site-packages/ccxt/pro/binance.py", line 1508, in watch_ohlcv
-    result = await self.watch_ohlcv_for_symbols([[symbol, timeframe]], since, limit, params)
-             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/home/ftuser/.local/lib/python3.14/site-packages/ccxt/pro/binance.py", line 1600, in watch_ohlcv_for_symbols
-    res = await self.watch_multiple(url, messageHashes, self.extend(request, params), messageHashes, subscribe)
-          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-ccxt.base.errors.NetworkError: 451, message='Invalid response status', url='wss://stream.binance.com:9443/ws/0'
-2026-10-22 14:15:01,452 - freqtrade.exchange.exchange_ws - ERROR - Exception in continuously_async_watch_ohlcv for DOGE/USDT, 15m
-Traceback (most recent call last):
-  File "/freqtrade/freqtrade/exchange/exchange_ws.py", line 248, in _continuously_async_watch_ohlcv
-    data = await self._ccxt_object.watch_ohlcv(pair, timeframe)
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/home/ftuser/.local/lib/python3.14/site-packages/ccxt/pro/binance.py", line 1508, in watch_ohlcv
-    result = await self.watch_ohlcv_for_symbols([[symbol, timeframe]], since, limit, params)
-             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/home/ftuser/.local/lib/python3.14/site-packages/ccxt/pro/binance.py", line 1600, in watch_ohlcv_for_symbols
-    res = await self.watch_multiple(url, messageHashes, self.extend(request, params), messageHashes, subscribe)
-          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-ccxt.base.errors.NetworkError: 451, message='Invalid response status', url='wss://stream.binance.com:9443/ws/0'
-2026-10-22 14:15:01,453 - freqtrade.exchange.exchange_ws - ERROR - Exception in continuously_async_watch_ohlcv for TRX/USDT, 15m
-Traceback (most recent call last):
-  File "/freqtrade/freqtrade/exchange/exchange_ws.py", line 248, in _continuously_async_watch_ohlcv
-    data = await self._ccxt_object.watch_ohlcv(pair, timeframe)
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/home/ftuser/.local/lib/python3.14/site-packages/ccxt/pro/binance.py", line 1508, in watch_ohlcv
-    result = await self.watch_ohlcv_for_symbols([[symbol, timeframe]], since, limit, params)
-             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/home/ftuser/.local/lib/python3.14/site-packages/ccxt/pro/binance.py", line 1600, in watch_ohlcv_for_symbols
-    res = await self.watch_multiple(url, messageHashes, self.extend(request, params), messageHashes, subscribe)
-          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-ccxt.base.errors.NetworkError: 451, message='Invalid response status', url='wss://stream.binance.com:9443/ws/0'
-2026-10-22 14:15:01,455 - freqtrade.exchange.exchange_ws - ERROR - Exception in continuously_async_watch_ohlcv for NEAR/USDT, 15m
-Traceback (most recent call last):
-  File "/freqtrade/freqtrade/exchange/exchange_ws.py", line 248, in _continuously_async_watch_ohlcv
-    data = await self._ccxt_object.watch_ohlcv(pair, timeframe)
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/home/ftuser/.local/lib/python3.14/site-packages/ccxt/pro/binance.py", line 1508, in watch_ohlcv
-    result = await self.watch_ohlcv_for_symbols([[symbol, timeframe]], since, limit, params)
-             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/home/ftuser/.local/lib/python3.14/site-packages/ccxt/pro/binance.py", line 1600, in watch_ohlcv_for_symbols
-    res = await self.watch_multiple(url, messageHashes, self.extend(request, params), messageHashes, subscribe)
-          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-ccxt.base.errors.NetworkError: 451, message='Invalid response status', url='wss://stream.binance.com:9443/ws/0'
-2026-10-22 14:15:01,457 - freqtrade.exchange.exchange_ws - ERROR - Exception in continuously_async_watch_ohlcv for SOL/USDT, 15m
-Traceback (most recent call last):
-  File "/freqtrade/freqtrade/exchange/exchange_ws.py", line 248, in _continuously_async_watch_ohlcv
-    data = await self._ccxt_object.watch_ohlcv(pair, timeframe)
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/home/ftuser/.local/lib/python3.14/site-packages/ccxt/pro/binance.py", line 1508, in watch_ohlcv
-    result = await self.watch_ohlcv_for_symbols([[symbol, timeframe]], since, limit, params)
-             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/home/ftuser/.local/lib/python3.14/site-packages/ccxt/pro/binance.py", line 1600, in watch_ohlcv_for_symbols
-    res = await self.watch_multiple(url, messageHashes, self.extend(request, params), messageHashes, subscribe)
-          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-ccxt.base.errors.NetworkError: 451, message='Invalid response status', url='wss://stream.binance.com:9443/ws/0'
-2026-10-22 14:15:01,458 - freqtrade.exchange.exchange_ws - ERROR - Exception in continuously_async_watch_ohlcv for LTC/USDT, 15m
-Traceback (most recent call last):
-  File "/freqtrade/freqtrade/exchange/exchange_ws.py", line 248, in _continuously_async_watch_ohlcv
-    data = await self._ccxt_object.watch_ohlcv(pair, timeframe)
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/home/ftuser/.local/lib/python3.14/site-packages/ccxt/pro/binance.py", line 1508, in watch_ohlcv
-    result = await self.watch_ohlcv_for_symbols([[symbol, timeframe]], since, limit, params)
-             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/home/ftuser/.local/lib/python3.14/site-packages/ccxt/pro/binance.py", line 1600, in watch_ohlcv_for_symbols
-    res = await self.watch_multiple(url, messageHashes, self.extend(request, params), messageHashes, subscribe)
-          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-ccxt.base.errors.NetworkError: 451, message='Invalid response status', url='wss://stream.binance.com:9443/ws/0'
-2026-10-22 14:15:01,460 - freqtrade.exchange.exchange_ws - ERROR - Exception in continuously_async_watch_ohlcv for DOT/USDT, 15m
-Traceback (most recent call last):
-  File "/freqtrade/freqtrade/exchange/exchange_ws.py", line 248, in _continuously_async_watch_ohlcv
-    data = await self._ccxt_object.watch_ohlcv(pair, timeframe)
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/home/ftuser/.local/lib/python3.14/site-packages/ccxt/pro/binance.py", line 1508, in watch_ohlcv
-    result = await self.watch_ohlcv_for_symbols([[symbol, timeframe]], since, limit, params)
-             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/home/ftuser/.local/lib/python3.14/site-packages/ccxt/pro/binance.py", line 1600, in watch_ohlcv_for_symbols
-    res = await self.watch_multiple(url, messageHashes, self.extend(request, params), messageHashes, subscribe)
-          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-ccxt.base.errors.NetworkError: 451, message='Invalid response status', url='wss://stream.binance.com:9443/ws/0'
-2026-10-22 14:15:01,461 - freqtrade.exchange.exchange_ws - ERROR - Exception in continuously_async_watch_ohlcv for BTC/USDT, 15m
-Traceback (most recent call last):
-  File "/freqtrade/freqtrade/exchange/exchange_ws.py", line 248, in _continuously_async_watch_ohlcv
-    data = await self._ccxt_object.watch_ohlcv(pair, timeframe)
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/home/ftuser/.local/lib/python3.14/site-packages/ccxt/pro/binance.py", line 1508, in watch_ohlcv
-    result = await self.watch_ohlcv_for_symbols([[symbol, timeframe]], since, limit, params)
-             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/home/ftuser/.local/lib/python3.14/site-packages/ccxt/pro/binance.py", line 1600, in watch_ohlcv_for_symbols
-    res = await self.watch_multiple(url, messageHashes, self.extend(request, params), messageHashes, subscribe)
-          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-ccxt.base.errors.NetworkError: 451, message='Invalid response status', url='wss://stream.binance.com:9443/ws/0'
-2026-10-22 14:15:01,462 - freqtrade.exchange.exchange_ws - ERROR - Exception in continuously_async_watch_ohlcv for SUI/USDT, 15m
-Traceback (most recent call last):
-  File "/freqtrade/freqtrade/exchange/exchange_ws.py", line 248, in _continuously_async_watch_ohlcv
-    data = await self._ccxt_object.watch_ohlcv(pair, timeframe)
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/home/ftuser/.local/lib/python3.14/site-packages/ccxt/pro/binance.py", line 1508, in watch_ohlcv
-    result = await self.watch_ohlcv_for_symbols([[symbol, timeframe]], since, limit, params)
-             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/home/ftuser/.local/lib/python3.14/site-packages/ccxt/pro/binance.py", line 1600, in watch_ohlcv_for_symbols
-    res = await self.watch_multiple(url, messageHashes, self.extend(request, params), messageHashes, subscribe)
-          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-ccxt.base.errors.NetworkError: 451, message='Invalid response status', url='wss://stream.binance.com:9443/ws/0'
-2026-10-22 14:15:01,464 - freqtrade.exchange.exchange_ws - ERROR - Exception in continuously_async_watch_ohlcv for AVAX/USDT, 15m
-Traceback (most recent call last):
-  File "/freqtrade/freqtrade/exchange/exchange_ws.py", line 248, in _continuously_async_watch_ohlcv
-    data = await self._ccxt_object.watch_ohlcv(pair, timeframe)
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/home/ftuser/.local/lib/python3.14/site-packages/ccxt/pro/binance.py", line 1508, in watch_ohlcv
-    result = await self.watch_ohlcv_for_symbols([[symbol, timeframe]], since, limit, params)
-             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/home/ftuser/.local/lib/python3.14/site-packages/ccxt/pro/binance.py", line 1600, in watch_ohlcv_for_symbols
-    res = await self.watch_multiple(url, messageHashes, self.extend(request, params), messageHashes, subscribe)
-          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-ccxt.base.errors.NetworkError: 451, message='Invalid response status', url='wss://stream.binance.com:9443/ws/0'
-2026-10-22 14:15:01,465 - freqtrade.exchange.exchange_ws - ERROR - Exception in continuously_async_watch_ohlcv for ETH/USDT, 15m
-Traceback (most recent call last):
-  File "/freqtrade/freqtrade/exchange/exchange_ws.py", line 248, in _continuously_async_watch_ohlcv
-    data = await self._ccxt_object.watch_ohlcv(pair, timeframe)
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/home/ftuser/.local/lib/python3.14/site-packages/ccxt/pro/binance.py", line 1508, in watch_ohlcv
-    result = await self.watch_ohlcv_for_symbols([[symbol, timeframe]], since, limit, params)
-             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/home/ftuser/.local/lib/python3.14/site-packages/ccxt/pro/binance.py", line 1600, in watch_ohlcv_for_symbols
-    res = await self.watch_multiple(url, messageHashes, self.extend(request, params), messageHashes, subscribe)
-          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-ccxt.base.errors.NetworkError: 451, message='Invalid response status', url='wss://stream.binance.com:9443/ws/0'
-2026-10-22 14:15:01,466 - freqtrade.exchange.exchange_ws - ERROR - Exception in continuously_async_watch_ohlcv for BNB/USDT, 15m
-Traceback (most recent call last):
-  File "/freqtrade/freqtrade/exchange/exchange_ws.py", line 248, in _continuously_async_watch_ohlcv
-    data = await self._ccxt_object.watch_ohlcv(pair, timeframe)
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/home/ftuser/.local/lib/python3.14/site-packages/ccxt/pro/binance.py", line 1508, in watch_ohlcv
-    result = await self.watch_ohlcv_for_symbols([[symbol, timeframe]], since, limit, params)
-             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/home/ftuser/.local/lib/python3.14/site-packages/ccxt/pro/binance.py", line 1600, in watch_ohlcv_for_symbols
-    res = await self.watch_multiple(url, messageHashes, self.extend(request, params), messageHashes, subscribe)
-          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-ccxt.base.errors.NetworkError: 451, message='Invalid response status', url='wss://stream.binance.com:9443/ws/0'
-2026-10-22 14:15:01,468 - freqtrade.exchange.exchange_ws - ERROR - Exception in continuously_async_watch_ohlcv for LINK/USDT, 15m
-Traceback (most recent call last):
-  File "/freqtrade/freqtrade/exchange/exchange_ws.py", line 248, in _continuously_async_watch_ohlcv
-    data = await self._ccxt_object.watch_ohlcv(pair, timeframe)
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/home/ftuser/.local/lib/python3.14/site-packages/ccxt/pro/binance.py", line 1508, in watch_ohlcv
-    result = await self.watch_ohlcv_for_symbols([[symbol, timeframe]], since, limit, params)
-             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/home/ftuser/.local/lib/python3.14/site-packages/ccxt/pro/binance.py", line 1600, in watch_ohlcv_for_symbols
-    res = await self.watch_multiple(url, messageHashes, self.extend(request, params), messageHashes, subscribe)
-          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-ccxt.base.errors.NetworkError: 451, message='Invalid response status', url='wss://stream.binance.com:9443/ws/0'
-2026-10-22 14:15:01,469 - freqtrade.exchange.exchange_ws - ERROR - Exception in continuously_async_watch_ohlcv for XRP/USDT, 15m
-Traceback (most recent call last):
-  File "/freqtrade/freqtrade/exchange/exchange_ws.py", line 248, in _continuously_async_watch_ohlcv
-    data = await self._ccxt_object.watch_ohlcv(pair, timeframe)
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/home/ftuser/.local/lib/python3.14/site-packages/ccxt/pro/binance.py", line 1508, in watch_ohlcv
-    result = await self.watch_ohlcv_for_symbols([[symbol, timeframe]], since, limit, params)
-             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/home/ftuser/.local/lib/python3.14/site-packages/ccxt/pro/binance.py", line 1600, in watch_ohlcv_for_symbols
-    res = await self.watch_multiple(url, messageHashes, self.extend(request, params), messageHashes, subscribe)
-          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-ccxt.base.errors.NetworkError: 451, message='Invalid response status', url='wss://stream.binance.com:9443/ws/0'
-2026-10-22 14:15:01,470 - freqtrade.exchange.exchange_ws - INFO - ADA/USDT, 15m, spot - Task finished - done
-2026-10-22 14:15:01,471 - freqtrade.exchange.exchange_ws - INFO - APT/USDT, 15m, spot - Task finished - done
-2026-10-22 14:15:01,471 - freqtrade.exchange.exchange_ws - INFO - DOGE/USDT, 15m, spot - Task finished - done
-2026-10-22 14:15:01,472 - freqtrade.exchange.exchange_ws - INFO - TRX/USDT, 15m, spot - Task finished - done
-2026-10-22 14:15:01,472 - freqtrade.exchange.exchange_ws - INFO - NEAR/USDT, 15m, spot - Task finished - done
-2026-10-22 14:15:01,473 - freqtrade.exchange.exchange_ws - INFO - SOL/USDT, 15m, spot - Task finished - done
-2026-10-22 14:15:01,473 - freqtrade.exchange.exchange_ws - INFO - LTC/USDT, 15m, spot - Task finished - done
-2026-10-22 14:15:01,474 - freqtrade.exchange.exchange_ws - INFO - DOT/USDT, 15m, spot - Task finished - done
-2026-10-22 14:15:01,474 - freqtrade.exchange.exchange_ws - INFO - BTC/USDT, 15m, spot - Task finished - done
-2026-10-22 14:15:01,475 - freqtrade.exchange.exchange_ws - INFO - SUI/USDT, 15m, spot - Task finished - done
-2026-10-22 14:15:01,475 - freqtrade.exchange.exchange_ws - INFO - AVAX/USDT, 15m, spot - Task finished - done
-2026-10-22 14:15:01,476 - freqtrade.exchange.exchange_ws - INFO - ETH/USDT, 15m, spot - Task finished - done
-2026-10-22 14:15:01,476 - freqtrade.exchange.exchange_ws - INFO - BNB/USDT, 15m, spot - Task finished - done
-2026-10-22 14:15:01,476 - freqtrade.exchange.exchange_ws - INFO - LINK/USDT, 15m, spot - Task finished - done
-2026-10-22 14:15:01,477 - freqtrade.exchange.exchange_ws - INFO - XRP/USDT, 15m, spot - Task finished - done
-2026-10-22 14:15:11,131 - freqtrade.exchange.exchange - INFO - Couldn't reuse watch for ADA/USDT, 15m, falling back to REST api. False, 1792678500000, 0, 2026-10-22T14:15:00, 1970-01-01T00:00:00 
-2026-10-22 14:15:11,133 - freqtrade.exchange.exchange - INFO - Couldn't reuse watch for LTC/USDT, 15m, falling back to REST api. False, 1792678500000, 0, 2026-10-22T14:15:00, 1970-01-01T00:00:00 
-2026-10-22 14:15:12,426 - freqtrade.freqai.freqai_interface - INFO - Total time spent inferencing pairlist 8.46 seconds
-2026-10-22 14:15:31,876 - freqtrade.exchange.exchange_ws - ERROR - Exception in continuously_async_watch_ohlcv for ADA/USDT, 15m
-Traceback (most recent call last):
-  File "/freqtrade/freqtrade/exchange/exchange_ws.py", line 248, in _continuously_async_watch_ohlcv
-    data = await self._ccxt_object.watch_ohlcv(pair, timeframe)
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/home/ftuser/.local/lib/python3.14/site-packages/ccxt/pro/binance.py", line 1508, in watch_ohlcv
-    result = await self.watch_ohlcv_for_symbols([[symbol, timeframe]], since, limit, params)
-             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/home/ftuser/.local/lib/python3.14/site-packages/ccxt/pro/binance.py", line 1600, in watch_ohlcv_for_symbols
-    res = await self.watch_multiple(url, messageHashes, self.extend(request, params), messageHashes, subscribe)
-          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-ccxt.base.errors.NetworkError: 451, message='Invalid response status', url='wss://stream.binance.com:9443/ws/0'
-2026-10-22 14:15:31,878 - freqtrade.exchange.exchange_ws - ERROR - Exception in continuously_async_watch_ohlcv for LTC/USDT, 15m
-Traceback (most recent call last):
-  File "/freqtrade/freqtrade/exchange/exchange_ws.py", line 248, in _continuously_async_watch_ohlcv
-    data = await self._ccxt_object.watch_ohlcv(pair, timeframe)
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/home/ftuser/.local/lib/python3.14/site-packages/ccxt/pro/binance.py", line 1508, in watch_ohlcv
-    result = await self.watch_ohlcv_for_symbols([[symbol, timeframe]], since, limit, params)
-             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/home/ftuser/.local/lib/python3.14/site-packages/ccxt/pro/binance.py", line 1600, in watch_ohlcv_for_symbols
-    res = await self.watch_multiple(url, messageHashes, self.extend(request, params), messageHashes, subscribe)
-          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-ccxt.base.errors.NetworkError: 451, message='Invalid response status', url='wss://stream.binance.com:9443/ws/0'
-2026-10-22 14:15:31,879 - freqtrade.exchange.exchange_ws - INFO - ADA/USDT, 15m, spot - Task finished - done
-2026-10-22 14:15:31,880 - freqtrade.exchange.exchange_ws - INFO - LTC/USDT, 15m, spot - Task finished - done
-2026-10-22 14:15:41,112 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.9', state='RUNNING'
-2026-10-22 14:16:41,115 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.9', state='RUNNING'
-2026-10-22 14:17:41,118 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.9', state='RUNNING'
-2026-10-22 14:18:41,121 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.9', state='RUNNING'
-2026-10-22 14:19:41,124 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.9', state='RUNNING'
-2026-10-22 14:20:41,127 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.9', state='RUNNING'
-2026-10-22 14:21:41,129 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.9', state='RUNNING'
-2026-10-22 14:22:41,132 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.9', state='RUNNING'
-2026-10-22 14:23:41,135 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.9', state='RUNNING'
-2026-10-22 14:24:41,138 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.9', state='RUNNING'
-2026-10-22 14:25:41,141 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.9', state='RUNNING'
-2026-10-22 14:26:41,144 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.9', state='RUNNING'
-2026-10-22 14:27:41,147 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.9', state='RUNNING'
-2026-10-22 14:28:41,150 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.9', state='RUNNING'
-2026-10-22 14:29:41,153 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.9', state='RUNNING'
-2026-10-22 14:30:01,018 - freqtrade.exchange.exchange - INFO - Couldn't reuse watch for ADA/USDT, 15m, falling back to REST api. False, 1792679400000, 0, 2026-10-22T14:30:00, 1970-01-01T00:00:00 
-2026-10-22 14:30:01,020 - freqtrade.exchange.exchange - INFO - Couldn't reuse watch for APT/USDT, 15m, falling back to REST api. False, 1792679400000, 0, 2026-10-22T14:30:00, 1970-01-01T00:00:00 
-2026-10-22 14:30:01,021 - freqtrade.exchange.exchange - INFO - Couldn't reuse watch for DOGE/USDT, 15m, falling back to REST api. False, 1792679400000, 0, 2026-10-22T14:30:00, 1970-01-01T00:00:00 
-2026-10-22 14:30:01,022 - freqtrade.exchange.exchange - INFO - Couldn't reuse watch for NEAR/USDT, 15m, falling back to REST api. False, 1792679400000, 0, 2026-10-22T14:30:00, 1970-01-01T00:00:00 
-2026-10-22 14:30:01,023 - freqtrade.exchange.exchange - INFO - Couldn't reuse watch for TRX/USDT, 15m, falling back to REST api. False, 1792679400000, 0, 2026-10-22T14:30:00, 1970-01-01T00:00:00 
+4:30:01,023 - freqtrade.exchange.exchange - INFO - Couldn't reuse watch for TRX/USDT, 15m, falling back to REST api. False, 1792679400000, 0, 2026-10-22T14:30:00, 1970-01-01T00:00:00 
 2026-10-22 14:30:01,023 - freqtrade.exchange.exchange - INFO - Couldn't reuse watch for SOL/USDT, 15m, falling back to REST api. False, 1792679400000, 0, 2026-10-22T14:30:00, 1970-01-01T00:00:00 
 2026-10-22 14:30:01,024 - freqtrade.exchange.exchange - INFO - Couldn't reuse watch for LTC/USDT, 15m, falling back to REST api. False, 1792679400000, 0, 2026-10-22T14:30:00, 1970-01-01T00:00:00 
 2026-10-22 14:30:01,025 - freqtrade.exchange.exchange - INFO - Couldn't reuse watch for DOT/USDT, 15m, falling back to REST api. False, 1792679400000, 0, 2026-10-22T14:30:00, 1970-01-01T00:00:00 
@@ -1449,3 +1180,276 @@ ccxt.base.errors.NetworkError: 451, message='Invalid response status', url='wss:
 2026-10-22 15:15:12,097 - freqtrade.freqai.freqai_interface - INFO - Total time spent inferencing pairlist 8.38 seconds
 2026-10-22 15:15:52,136 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.9', state='RUNNING'
 2026-10-22 15:16:52,139 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.9', state='RUNNING'
+2026-10-22 15:17:52,142 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.9', state='RUNNING'
+2026-10-22 15:18:52,145 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.9', state='RUNNING'
+2026-10-22 15:19:52,148 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.9', state='RUNNING'
+2026-10-22 15:20:52,151 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.9', state='RUNNING'
+2026-10-22 15:21:52,153 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.9', state='RUNNING'
+2026-10-22 15:22:52,156 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.9', state='RUNNING'
+2026-10-22 15:23:52,159 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.9', state='RUNNING'
+2026-10-22 15:24:52,162 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.9', state='RUNNING'
+2026-10-22 15:25:52,164 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.9', state='RUNNING'
+2026-10-22 15:26:52,167 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.9', state='RUNNING'
+2026-10-22 15:27:52,169 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.9', state='RUNNING'
+2026-10-22 15:28:52,172 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.9', state='RUNNING'
+2026-10-22 15:29:52,174 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.9', state='RUNNING'
+2026-10-22 15:30:01,019 - freqtrade.exchange.exchange - INFO - Couldn't reuse watch for ADA/USDT, 15m, falling back to REST api. False, 1792683000000, 0, 2026-10-22T15:30:00, 1970-01-01T00:00:00 
+2026-10-22 15:30:01,020 - freqtrade.exchange.exchange - INFO - Couldn't reuse watch for APT/USDT, 15m, falling back to REST api. False, 1792683000000, 0, 2026-10-22T15:30:00, 1970-01-01T00:00:00 
+2026-10-22 15:30:01,021 - freqtrade.exchange.exchange - INFO - Couldn't reuse watch for DOGE/USDT, 15m, falling back to REST api. False, 1792683000000, 0, 2026-10-22T15:30:00, 1970-01-01T00:00:00 
+2026-10-22 15:30:01,021 - freqtrade.exchange.exchange - INFO - Couldn't reuse watch for NEAR/USDT, 15m, falling back to REST api. False, 1792683000000, 0, 2026-10-22T15:30:00, 1970-01-01T00:00:00 
+2026-10-22 15:30:01,022 - freqtrade.exchange.exchange - INFO - Couldn't reuse watch for TRX/USDT, 15m, falling back to REST api. False, 1792683000000, 0, 2026-10-22T15:30:00, 1970-01-01T00:00:00 
+2026-10-22 15:30:01,024 - freqtrade.exchange.exchange - INFO - Couldn't reuse watch for SOL/USDT, 15m, falling back to REST api. False, 1792683000000, 0, 2026-10-22T15:30:00, 1970-01-01T00:00:00 
+2026-10-22 15:30:01,024 - freqtrade.exchange.exchange - INFO - Couldn't reuse watch for LTC/USDT, 15m, falling back to REST api. False, 1792683000000, 0, 2026-10-22T15:30:00, 1970-01-01T00:00:00 
+2026-10-22 15:30:01,025 - freqtrade.exchange.exchange - INFO - Couldn't reuse watch for DOT/USDT, 15m, falling back to REST api. False, 1792683000000, 0, 2026-10-22T15:30:00, 1970-01-01T00:00:00 
+2026-10-22 15:30:01,026 - freqtrade.exchange.exchange - INFO - Couldn't reuse watch for BTC/USDT, 15m, falling back to REST api. False, 1792683000000, 0, 2026-10-22T15:30:00, 1970-01-01T00:00:00 
+2026-10-22 15:30:01,027 - freqtrade.exchange.exchange - INFO - Couldn't reuse watch for SUI/USDT, 15m, falling back to REST api. False, 1792683000000, 0, 2026-10-22T15:30:00, 1970-01-01T00:00:00 
+2026-10-22 15:30:01,028 - freqtrade.exchange.exchange - INFO - Couldn't reuse watch for AVAX/USDT, 15m, falling back to REST api. False, 1792683000000, 0, 2026-10-22T15:30:00, 1970-01-01T00:00:00 
+2026-10-22 15:30:01,029 - freqtrade.exchange.exchange - INFO - Couldn't reuse watch for ETH/USDT, 15m, falling back to REST api. False, 1792683000000, 0, 2026-10-22T15:30:00, 1970-01-01T00:00:00 
+2026-10-22 15:30:01,030 - freqtrade.exchange.exchange - INFO - Couldn't reuse watch for BNB/USDT, 15m, falling back to REST api. False, 1792683000000, 0, 2026-10-22T15:30:00, 1970-01-01T00:00:00 
+2026-10-22 15:30:01,031 - freqtrade.exchange.exchange - INFO - Couldn't reuse watch for XRP/USDT, 15m, falling back to REST api. False, 1792683000000, 0, 2026-10-22T15:30:00, 1970-01-01T00:00:00 
+2026-10-22 15:30:01,032 - freqtrade.exchange.exchange - INFO - Couldn't reuse watch for LINK/USDT, 15m, falling back to REST api. False, 1792683000000, 0, 2026-10-22T15:30:00, 1970-01-01T00:00:00 
+2026-10-22 15:30:01,450 - freqtrade.exchange.exchange_ws - ERROR - Exception in continuously_async_watch_ohlcv for ADA/USDT, 15m
+Traceback (most recent call last):
+  File "/freqtrade/freqtrade/exchange/exchange_ws.py", line 248, in _continuously_async_watch_ohlcv
+    data = await self._ccxt_object.watch_ohlcv(pair, timeframe)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ftuser/.local/lib/python3.14/site-packages/ccxt/pro/binance.py", line 1508, in watch_ohlcv
+    result = await self.watch_ohlcv_for_symbols([[symbol, timeframe]], since, limit, params)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ftuser/.local/lib/python3.14/site-packages/ccxt/pro/binance.py", line 1600, in watch_ohlcv_for_symbols
+    res = await self.watch_multiple(url, messageHashes, self.extend(request, params), messageHashes, subscribe)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ccxt.base.errors.NetworkError: 451, message='Invalid response status', url='wss://stream.binance.com:9443/ws/0'
+2026-10-22 15:30:01,451 - freqtrade.exchange.exchange_ws - ERROR - Exception in continuously_async_watch_ohlcv for APT/USDT, 15m
+Traceback (most recent call last):
+  File "/freqtrade/freqtrade/exchange/exchange_ws.py", line 248, in _continuously_async_watch_ohlcv
+    data = await self._ccxt_object.watch_ohlcv(pair, timeframe)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ftuser/.local/lib/python3.14/site-packages/ccxt/pro/binance.py", line 1508, in watch_ohlcv
+    result = await self.watch_ohlcv_for_symbols([[symbol, timeframe]], since, limit, params)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ftuser/.local/lib/python3.14/site-packages/ccxt/pro/binance.py", line 1600, in watch_ohlcv_for_symbols
+    res = await self.watch_multiple(url, messageHashes, self.extend(request, params), messageHashes, subscribe)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ccxt.base.errors.NetworkError: 451, message='Invalid response status', url='wss://stream.binance.com:9443/ws/0'
+2026-10-22 15:30:01,453 - freqtrade.exchange.exchange_ws - ERROR - Exception in continuously_async_watch_ohlcv for DOGE/USDT, 15m
+Traceback (most recent call last):
+  File "/freqtrade/freqtrade/exchange/exchange_ws.py", line 248, in _continuously_async_watch_ohlcv
+    data = await self._ccxt_object.watch_ohlcv(pair, timeframe)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ftuser/.local/lib/python3.14/site-packages/ccxt/pro/binance.py", line 1508, in watch_ohlcv
+    result = await self.watch_ohlcv_for_symbols([[symbol, timeframe]], since, limit, params)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ftuser/.local/lib/python3.14/site-packages/ccxt/pro/binance.py", line 1600, in watch_ohlcv_for_symbols
+    res = await self.watch_multiple(url, messageHashes, self.extend(request, params), messageHashes, subscribe)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ccxt.base.errors.NetworkError: 451, message='Invalid response status', url='wss://stream.binance.com:9443/ws/0'
+2026-10-22 15:30:01,455 - freqtrade.exchange.exchange_ws - ERROR - Exception in continuously_async_watch_ohlcv for NEAR/USDT, 15m
+Traceback (most recent call last):
+  File "/freqtrade/freqtrade/exchange/exchange_ws.py", line 248, in _continuously_async_watch_ohlcv
+    data = await self._ccxt_object.watch_ohlcv(pair, timeframe)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ftuser/.local/lib/python3.14/site-packages/ccxt/pro/binance.py", line 1508, in watch_ohlcv
+    result = await self.watch_ohlcv_for_symbols([[symbol, timeframe]], since, limit, params)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ftuser/.local/lib/python3.14/site-packages/ccxt/pro/binance.py", line 1600, in watch_ohlcv_for_symbols
+    res = await self.watch_multiple(url, messageHashes, self.extend(request, params), messageHashes, subscribe)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ccxt.base.errors.NetworkError: 451, message='Invalid response status', url='wss://stream.binance.com:9443/ws/0'
+2026-10-22 15:30:01,456 - freqtrade.exchange.exchange_ws - ERROR - Exception in continuously_async_watch_ohlcv for TRX/USDT, 15m
+Traceback (most recent call last):
+  File "/freqtrade/freqtrade/exchange/exchange_ws.py", line 248, in _continuously_async_watch_ohlcv
+    data = await self._ccxt_object.watch_ohlcv(pair, timeframe)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ftuser/.local/lib/python3.14/site-packages/ccxt/pro/binance.py", line 1508, in watch_ohlcv
+    result = await self.watch_ohlcv_for_symbols([[symbol, timeframe]], since, limit, params)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ftuser/.local/lib/python3.14/site-packages/ccxt/pro/binance.py", line 1600, in watch_ohlcv_for_symbols
+    res = await self.watch_multiple(url, messageHashes, self.extend(request, params), messageHashes, subscribe)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ccxt.base.errors.NetworkError: 451, message='Invalid response status', url='wss://stream.binance.com:9443/ws/0'
+2026-10-22 15:30:01,458 - freqtrade.exchange.exchange_ws - ERROR - Exception in continuously_async_watch_ohlcv for SOL/USDT, 15m
+Traceback (most recent call last):
+  File "/freqtrade/freqtrade/exchange/exchange_ws.py", line 248, in _continuously_async_watch_ohlcv
+    data = await self._ccxt_object.watch_ohlcv(pair, timeframe)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ftuser/.local/lib/python3.14/site-packages/ccxt/pro/binance.py", line 1508, in watch_ohlcv
+    result = await self.watch_ohlcv_for_symbols([[symbol, timeframe]], since, limit, params)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ftuser/.local/lib/python3.14/site-packages/ccxt/pro/binance.py", line 1600, in watch_ohlcv_for_symbols
+    res = await self.watch_multiple(url, messageHashes, self.extend(request, params), messageHashes, subscribe)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ccxt.base.errors.NetworkError: 451, message='Invalid response status', url='wss://stream.binance.com:9443/ws/0'
+2026-10-22 15:30:01,459 - freqtrade.exchange.exchange_ws - ERROR - Exception in continuously_async_watch_ohlcv for LTC/USDT, 15m
+Traceback (most recent call last):
+  File "/freqtrade/freqtrade/exchange/exchange_ws.py", line 248, in _continuously_async_watch_ohlcv
+    data = await self._ccxt_object.watch_ohlcv(pair, timeframe)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ftuser/.local/lib/python3.14/site-packages/ccxt/pro/binance.py", line 1508, in watch_ohlcv
+    result = await self.watch_ohlcv_for_symbols([[symbol, timeframe]], since, limit, params)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ftuser/.local/lib/python3.14/site-packages/ccxt/pro/binance.py", line 1600, in watch_ohlcv_for_symbols
+    res = await self.watch_multiple(url, messageHashes, self.extend(request, params), messageHashes, subscribe)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ccxt.base.errors.NetworkError: 451, message='Invalid response status', url='wss://stream.binance.com:9443/ws/0'
+2026-10-22 15:30:01,461 - freqtrade.exchange.exchange_ws - ERROR - Exception in continuously_async_watch_ohlcv for DOT/USDT, 15m
+Traceback (most recent call last):
+  File "/freqtrade/freqtrade/exchange/exchange_ws.py", line 248, in _continuously_async_watch_ohlcv
+    data = await self._ccxt_object.watch_ohlcv(pair, timeframe)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ftuser/.local/lib/python3.14/site-packages/ccxt/pro/binance.py", line 1508, in watch_ohlcv
+    result = await self.watch_ohlcv_for_symbols([[symbol, timeframe]], since, limit, params)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ftuser/.local/lib/python3.14/site-packages/ccxt/pro/binance.py", line 1600, in watch_ohlcv_for_symbols
+    res = await self.watch_multiple(url, messageHashes, self.extend(request, params), messageHashes, subscribe)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ccxt.base.errors.NetworkError: 451, message='Invalid response status', url='wss://stream.binance.com:9443/ws/0'
+2026-10-22 15:30:01,462 - freqtrade.exchange.exchange_ws - ERROR - Exception in continuously_async_watch_ohlcv for BTC/USDT, 15m
+Traceback (most recent call last):
+  File "/freqtrade/freqtrade/exchange/exchange_ws.py", line 248, in _continuously_async_watch_ohlcv
+    data = await self._ccxt_object.watch_ohlcv(pair, timeframe)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ftuser/.local/lib/python3.14/site-packages/ccxt/pro/binance.py", line 1508, in watch_ohlcv
+    result = await self.watch_ohlcv_for_symbols([[symbol, timeframe]], since, limit, params)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ftuser/.local/lib/python3.14/site-packages/ccxt/pro/binance.py", line 1600, in watch_ohlcv_for_symbols
+    res = await self.watch_multiple(url, messageHashes, self.extend(request, params), messageHashes, subscribe)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ccxt.base.errors.NetworkError: 451, message='Invalid response status', url='wss://stream.binance.com:9443/ws/0'
+2026-10-22 15:30:01,463 - freqtrade.exchange.exchange_ws - ERROR - Exception in continuously_async_watch_ohlcv for SUI/USDT, 15m
+Traceback (most recent call last):
+  File "/freqtrade/freqtrade/exchange/exchange_ws.py", line 248, in _continuously_async_watch_ohlcv
+    data = await self._ccxt_object.watch_ohlcv(pair, timeframe)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ftuser/.local/lib/python3.14/site-packages/ccxt/pro/binance.py", line 1508, in watch_ohlcv
+    result = await self.watch_ohlcv_for_symbols([[symbol, timeframe]], since, limit, params)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ftuser/.local/lib/python3.14/site-packages/ccxt/pro/binance.py", line 1600, in watch_ohlcv_for_symbols
+    res = await self.watch_multiple(url, messageHashes, self.extend(request, params), messageHashes, subscribe)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ccxt.base.errors.NetworkError: 451, message='Invalid response status', url='wss://stream.binance.com:9443/ws/0'
+2026-10-22 15:30:01,465 - freqtrade.exchange.exchange_ws - ERROR - Exception in continuously_async_watch_ohlcv for AVAX/USDT, 15m
+Traceback (most recent call last):
+  File "/freqtrade/freqtrade/exchange/exchange_ws.py", line 248, in _continuously_async_watch_ohlcv
+    data = await self._ccxt_object.watch_ohlcv(pair, timeframe)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ftuser/.local/lib/python3.14/site-packages/ccxt/pro/binance.py", line 1508, in watch_ohlcv
+    result = await self.watch_ohlcv_for_symbols([[symbol, timeframe]], since, limit, params)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ftuser/.local/lib/python3.14/site-packages/ccxt/pro/binance.py", line 1600, in watch_ohlcv_for_symbols
+    res = await self.watch_multiple(url, messageHashes, self.extend(request, params), messageHashes, subscribe)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ccxt.base.errors.NetworkError: 451, message='Invalid response status', url='wss://stream.binance.com:9443/ws/0'
+2026-10-22 15:30:01,466 - freqtrade.exchange.exchange_ws - ERROR - Exception in continuously_async_watch_ohlcv for BNB/USDT, 15m
+Traceback (most recent call last):
+  File "/freqtrade/freqtrade/exchange/exchange_ws.py", line 248, in _continuously_async_watch_ohlcv
+    data = await self._ccxt_object.watch_ohlcv(pair, timeframe)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ftuser/.local/lib/python3.14/site-packages/ccxt/pro/binance.py", line 1508, in watch_ohlcv
+    result = await self.watch_ohlcv_for_symbols([[symbol, timeframe]], since, limit, params)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ftuser/.local/lib/python3.14/site-packages/ccxt/pro/binance.py", line 1600, in watch_ohlcv_for_symbols
+    res = await self.watch_multiple(url, messageHashes, self.extend(request, params), messageHashes, subscribe)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ccxt.base.errors.NetworkError: 451, message='Invalid response status', url='wss://stream.binance.com:9443/ws/0'
+2026-10-22 15:30:01,467 - freqtrade.exchange.exchange_ws - ERROR - Exception in continuously_async_watch_ohlcv for ETH/USDT, 15m
+Traceback (most recent call last):
+  File "/freqtrade/freqtrade/exchange/exchange_ws.py", line 248, in _continuously_async_watch_ohlcv
+    data = await self._ccxt_object.watch_ohlcv(pair, timeframe)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ftuser/.local/lib/python3.14/site-packages/ccxt/pro/binance.py", line 1508, in watch_ohlcv
+    result = await self.watch_ohlcv_for_symbols([[symbol, timeframe]], since, limit, params)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ftuser/.local/lib/python3.14/site-packages/ccxt/pro/binance.py", line 1600, in watch_ohlcv_for_symbols
+    res = await self.watch_multiple(url, messageHashes, self.extend(request, params), messageHashes, subscribe)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ccxt.base.errors.NetworkError: 451, message='Invalid response status', url='wss://stream.binance.com:9443/ws/0'
+2026-10-22 15:30:01,468 - freqtrade.exchange.exchange_ws - ERROR - Exception in continuously_async_watch_ohlcv for LINK/USDT, 15m
+Traceback (most recent call last):
+  File "/freqtrade/freqtrade/exchange/exchange_ws.py", line 248, in _continuously_async_watch_ohlcv
+    data = await self._ccxt_object.watch_ohlcv(pair, timeframe)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ftuser/.local/lib/python3.14/site-packages/ccxt/pro/binance.py", line 1508, in watch_ohlcv
+    result = await self.watch_ohlcv_for_symbols([[symbol, timeframe]], since, limit, params)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ftuser/.local/lib/python3.14/site-packages/ccxt/pro/binance.py", line 1600, in watch_ohlcv_for_symbols
+    res = await self.watch_multiple(url, messageHashes, self.extend(request, params), messageHashes, subscribe)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ccxt.base.errors.NetworkError: 451, message='Invalid response status', url='wss://stream.binance.com:9443/ws/0'
+2026-10-22 15:30:01,470 - freqtrade.exchange.exchange_ws - ERROR - Exception in continuously_async_watch_ohlcv for XRP/USDT, 15m
+Traceback (most recent call last):
+  File "/freqtrade/freqtrade/exchange/exchange_ws.py", line 248, in _continuously_async_watch_ohlcv
+    data = await self._ccxt_object.watch_ohlcv(pair, timeframe)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ftuser/.local/lib/python3.14/site-packages/ccxt/pro/binance.py", line 1508, in watch_ohlcv
+    result = await self.watch_ohlcv_for_symbols([[symbol, timeframe]], since, limit, params)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ftuser/.local/lib/python3.14/site-packages/ccxt/pro/binance.py", line 1600, in watch_ohlcv_for_symbols
+    res = await self.watch_multiple(url, messageHashes, self.extend(request, params), messageHashes, subscribe)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ccxt.base.errors.NetworkError: 451, message='Invalid response status', url='wss://stream.binance.com:9443/ws/0'
+2026-10-22 15:30:01,471 - freqtrade.exchange.exchange_ws - INFO - ADA/USDT, 15m, spot - Task finished - done
+2026-10-22 15:30:01,471 - freqtrade.exchange.exchange_ws - INFO - APT/USDT, 15m, spot - Task finished - done
+2026-10-22 15:30:01,472 - freqtrade.exchange.exchange_ws - INFO - DOGE/USDT, 15m, spot - Task finished - done
+2026-10-22 15:30:01,472 - freqtrade.exchange.exchange_ws - INFO - NEAR/USDT, 15m, spot - Task finished - done
+2026-10-22 15:30:01,473 - freqtrade.exchange.exchange_ws - INFO - TRX/USDT, 15m, spot - Task finished - done
+2026-10-22 15:30:01,473 - freqtrade.exchange.exchange_ws - INFO - SOL/USDT, 15m, spot - Task finished - done
+2026-10-22 15:30:01,474 - freqtrade.exchange.exchange_ws - INFO - LTC/USDT, 15m, spot - Task finished - done
+2026-10-22 15:30:01,474 - freqtrade.exchange.exchange_ws - INFO - DOT/USDT, 15m, spot - Task finished - done
+2026-10-22 15:30:01,474 - freqtrade.exchange.exchange_ws - INFO - BTC/USDT, 15m, spot - Task finished - done
+2026-10-22 15:30:01,475 - freqtrade.exchange.exchange_ws - INFO - SUI/USDT, 15m, spot - Task finished - done
+2026-10-22 15:30:01,475 - freqtrade.exchange.exchange_ws - INFO - AVAX/USDT, 15m, spot - Task finished - done
+2026-10-22 15:30:01,476 - freqtrade.exchange.exchange_ws - INFO - BNB/USDT, 15m, spot - Task finished - done
+2026-10-22 15:30:01,476 - freqtrade.exchange.exchange_ws - INFO - ETH/USDT, 15m, spot - Task finished - done
+2026-10-22 15:30:01,476 - freqtrade.exchange.exchange_ws - INFO - LINK/USDT, 15m, spot - Task finished - done
+2026-10-22 15:30:01,477 - freqtrade.exchange.exchange_ws - INFO - XRP/USDT, 15m, spot - Task finished - done
+2026-10-22 15:30:10,506 - freqtrade.exchange.exchange - INFO - Couldn't reuse watch for SOL/USDT, 15m, falling back to REST api. False, 1792683000000, 0, 2026-10-22T15:30:00, 1970-01-01T00:00:00 
+2026-10-22 15:30:10,508 - freqtrade.exchange.exchange - INFO - Couldn't reuse watch for ETH/USDT, 15m, falling back to REST api. False, 1792683000000, 0, 2026-10-22T15:30:00, 1970-01-01T00:00:00 
+2026-10-22 15:30:10,508 - freqtrade.exchange.exchange - INFO - Couldn't reuse watch for BNB/USDT, 15m, falling back to REST api. False, 1792683000000, 0, 2026-10-22T15:30:00, 1970-01-01T00:00:00 
+2026-10-22 15:30:12,299 - freqtrade.freqai.freqai_interface - INFO - Total time spent inferencing pairlist 8.46 seconds
+2026-10-22 15:30:31,852 - freqtrade.exchange.exchange_ws - ERROR - Exception in continuously_async_watch_ohlcv for SOL/USDT, 15m
+Traceback (most recent call last):
+  File "/freqtrade/freqtrade/exchange/exchange_ws.py", line 248, in _continuously_async_watch_ohlcv
+    data = await self._ccxt_object.watch_ohlcv(pair, timeframe)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ftuser/.local/lib/python3.14/site-packages/ccxt/pro/binance.py", line 1508, in watch_ohlcv
+    result = await self.watch_ohlcv_for_symbols([[symbol, timeframe]], since, limit, params)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ftuser/.local/lib/python3.14/site-packages/ccxt/pro/binance.py", line 1600, in watch_ohlcv_for_symbols
+    res = await self.watch_multiple(url, messageHashes, self.extend(request, params), messageHashes, subscribe)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ccxt.base.errors.NetworkError: 451, message='Invalid response status', url='wss://stream.binance.com:9443/ws/0'
+2026-10-22 15:30:31,854 - freqtrade.exchange.exchange_ws - ERROR - Exception in continuously_async_watch_ohlcv for ETH/USDT, 15m
+Traceback (most recent call last):
+  File "/freqtrade/freqtrade/exchange/exchange_ws.py", line 248, in _continuously_async_watch_ohlcv
+    data = await self._ccxt_object.watch_ohlcv(pair, timeframe)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ftuser/.local/lib/python3.14/site-packages/ccxt/pro/binance.py", line 1508, in watch_ohlcv
+    result = await self.watch_ohlcv_for_symbols([[symbol, timeframe]], since, limit, params)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ftuser/.local/lib/python3.14/site-packages/ccxt/pro/binance.py", line 1600, in watch_ohlcv_for_symbols
+    res = await self.watch_multiple(url, messageHashes, self.extend(request, params), messageHashes, subscribe)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ccxt.base.errors.NetworkError: 451, message='Invalid response status', url='wss://stream.binance.com:9443/ws/0'
+2026-10-22 15:30:31,855 - freqtrade.exchange.exchange_ws - ERROR - Exception in continuously_async_watch_ohlcv for BNB/USDT, 15m
+Traceback (most recent call last):
+  File "/freqtrade/freqtrade/exchange/exchange_ws.py", line 248, in _continuously_async_watch_ohlcv
+    data = await self._ccxt_object.watch_ohlcv(pair, timeframe)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ftuser/.local/lib/python3.14/site-packages/ccxt/pro/binance.py", line 1508, in watch_ohlcv
+    result = await self.watch_ohlcv_for_symbols([[symbol, timeframe]], since, limit, params)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ftuser/.local/lib/python3.14/site-packages/ccxt/pro/binance.py", line 1600, in watch_ohlcv_for_symbols
+    res = await self.watch_multiple(url, messageHashes, self.extend(request, params), messageHashes, subscribe)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ccxt.base.errors.NetworkError: 451, message='Invalid response status', url='wss://stream.binance.com:9443/ws/0'
+2026-10-22 15:30:31,856 - freqtrade.exchange.exchange_ws - INFO - SOL/USDT, 15m, spot - Task finished - done
+2026-10-22 15:30:31,857 - freqtrade.exchange.exchange_ws - INFO - ETH/USDT, 15m, spot - Task finished - done
+2026-10-22 15:30:31,857 - freqtrade.exchange.exchange_ws - INFO - BNB/USDT, 15m, spot - Task finished - done
+2026-10-22 15:30:55,486 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.9', state='RUNNING'
+2026-10-22 15:31:55,489 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.9', state='RUNNING'
+2026-10-22 15:32:55,492 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.9', state='RUNNING'
+2026-10-22 15:33:55,495 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.9', state='RUNNING'
+2026-10-22 15:34:55,498 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.9', state='RUNNING'
+2026-10-22 15:35:55,500 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.9', state='RUNNING'
+2026-10-22 15:36:55,503 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.9', state='RUNNING'
