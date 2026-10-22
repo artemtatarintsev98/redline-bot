@@ -15,43 +15,51 @@ jobs:
     timeout-minutes: 355
     env:
       GH_TOKEN: ${{ github.token }}
-      IMG: freqtradeorg/freqtrade:stable_freqai
     steps:
       - uses: actions/checkout@v4
-      - name: Probe exchanges
+      - name: Probe Binance mirror
         run: |
-          for u in https://api.binance.us/api/v3/ping https://api.binance.com/api/v3/ping https://api.hyperliquid.xyz/info; do
-            echo "$u -> $(curl -s -o /dev/null -w '%{http_code}' $u)"; done
+          for u in https://data-api.binance.vision/api/v3/ping https://data-api.binance.vision/api/v3/exchangeInfo?symbol=BTCUSDT https://api.binance.com/api/v3/ping; do
+            echo "$u -> $(curl -s -o /dev/null -w '%{http_code}' "$u")"; done
       - name: Prepare
         run: |
-          mkdir -p ft/user_data/strategies
-          docker pull -q $IMG
-          docker run --rm --entrypoint cat $IMG /freqtrade/freqtrade/templates/FreqaiExampleStrategy.py \
-            | sed 's/class FreqaiExampleStrategy/class RedlineFreqAI/; s/can_short = True/can_short = False/' \
-            > ft/user_data/strategies/RedlineFreqAI.py
-          sudo chmod -R 777 ft
-      - name: Run bot (dry-run) and save state
+          git clone -q --depth 1 https://github.com/iterativv/NostalgiaForInfinity.git /tmp/nfi
+          echo "NFI commit: $(git -C /tmp/nfi log -1 --format='%h %cd')"
+          mkdir -p ft/ai/user_data/strategies ft/nfi/user_data/strategies
+          cp ft/ai/RedlineAI.py ft/ai/user_data/strategies/
+          cp /tmp/nfi/NostalgiaForInfinityX8.py ft/nfi/user_data/strategies/
+          docker pull -q freqtradeorg/freqtrade:stable_freqai
+          docker pull -q freqtradeorg/freqtrade:stable
+          sudo chmod -R 777 ft /tmp/nfi
+      - name: Run both bots (dry-run) and save state
         run: |
-          docker run -d --name ft -v $PWD/ft/user_data:/freqtrade/user_data -v $PWD/ft/config.json:/freqtrade/config.json:ro \
-            $IMG trade --config /freqtrade/config.json --strategy RedlineFreqAI --freqaimodel LightGBMRegressor \
-            --db-url sqlite:////freqtrade/user_data/tradesv3.dryrun.sqlite --logfile /freqtrade/user_data/freqtrade.log
+          docker run -d --name ai -v $PWD/ft/ai/user_data:/freqtrade/user_data -v $PWD/ft/ai/config.json:/freqtrade/config.json:ro \
+            freqtradeorg/freqtrade:stable_freqai trade --config /freqtrade/config.json --strategy RedlineAI --freqaimodel LightGBMRegressor \
+            --db-url sqlite:////freqtrade/user_data/trades.sqlite --logfile /freqtrade/user_data/bot.log
+          docker run -d --name nfi -v $PWD/ft/nfi/user_data:/freqtrade/user_data -v $PWD/ft/nfi/config.json:/freqtrade/config.json:ro \
+            -v /tmp/nfi:/freqtrade/nfi:ro freqtradeorg/freqtrade:stable trade --config /freqtrade/config.json \
+            --db-url sqlite:////freqtrade/user_data/trades.sqlite --logfile /freqtrade/user_data/bot.log
           git config user.name redline-bot; git config user.email bot@users.noreply.github.com
           save() {
-            sudo chmod -R 777 ft/user_data || true
-            [ -f ft/user_data/tradesv3.dryrun.sqlite ] && python3 ft/report.py ft/user_data/tradesv3.dryrun.sqlite || true
-            tail -c 200000 ft/user_data/freqtrade.log > ft/last_log.txt 2>/dev/null || true
-            git add -f ft/user_data/tradesv3.dryrun.sqlite ft/report.md ft/trades.csv ft/last_log.txt 2>/dev/null || true
+            sudo chmod -R 777 ft || true
+            for b in ai nfi; do
+              d=ft/$b/user_data
+              [ -f $d/trades.sqlite ] && python3 ft/report.py $d/trades.sqlite "$b" ft/$b/out || true
+              tail -c 150000 $d/bot.log > ft/$b/last_log.txt 2>/dev/null || true
+              git add -f $d/trades.sqlite ft/$b/out_report.md ft/$b/out_trades.csv ft/$b/last_log.txt 2>/dev/null || true
+            done
             git commit -qm "freqtrade state $(date -u +%FT%H:%M)" || true
             git pull -q --rebase --autostash -X theirs || true
             git push -q || true
           }
-          end=$(( $(date +%s) + 335*60 ))
+          sleep 300; save
+          end=$(( $(date +%s) + 330*60 ))
           while [ $(date +%s) -lt $end ]; do
             sleep 1200
-            if ! docker ps -q -f name=ft | grep -q .; then echo "bot stopped"; docker logs --tail 80 ft; save; break; fi
+            for b in ai nfi; do docker ps -q -f name=^$b$ | grep -q . || { echo "$b stopped"; docker logs --tail 60 $b; }; done
             save
           done
-          docker stop -t 60 ft || true
+          docker stop -t 60 ai nfi || true
           save
       - name: Relaunch
         if: ${{ !cancelled() }}
