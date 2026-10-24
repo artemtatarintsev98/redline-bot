@@ -1,746 +1,348 @@
-2026-10-23 22:29:39,712 - freqtrade.loggers - INFO - Enabling colorized output.
-2026-10-23 22:29:39,713 - freqtrade.loggers - INFO - Logfile configured
-2026-10-23 22:29:39,713 - freqtrade.loggers - INFO - Verbosity set to 0
-2026-10-23 22:29:39,714 - freqtrade.configuration.configuration - INFO - Runmode set to dry_run.
-2026-10-23 22:29:39,714 - freqtrade.configuration.configuration - INFO - Parameter --db-url detected ...
-2026-10-23 22:29:39,714 - freqtrade.configuration.configuration - INFO - Dry run is enabled
-2026-10-23 22:29:39,715 - freqtrade.configuration.configuration - INFO - Using DB: "sqlite:////freqtrade/user_data/trades.sqlite"
-2026-10-23 22:29:39,715 - freqtrade.configuration.configuration - INFO - Using max_open_trades: 5 ...
-2026-10-23 22:29:39,728 - freqtrade.configuration.configuration - INFO - Using user-data directory: /freqtrade/user_data ...
-2026-10-23 22:29:39,729 - freqtrade.configuration.directory_operations - INFO - Created data directory: None
-2026-10-23 22:29:39,729 - freqtrade.configuration.configuration - INFO - Using data directory: /freqtrade/user_data/data/binance ...
-2026-10-23 22:29:39,730 - freqtrade.configuration.configuration - INFO - Using freqaimodel class name: LightGBMRegressor
-2026-10-23 22:29:39,731 - freqtrade.exchange.check_exchange - INFO - Checking exchange...
-2026-10-23 22:29:39,746 - freqtrade.exchange.check_exchange - INFO - Exchange "binance" is officially supported by the Freqtrade development team.
-2026-10-23 22:29:39,746 - freqtrade.configuration.configuration - INFO - Using pairlist from configuration.
-2026-10-23 22:29:39,747 - freqtrade.exchange.exchange - INFO - Instance is running with dry_run enabled
-2026-10-23 22:29:39,748 - freqtrade.exchange.exchange - INFO - Using CCXT 4.5.84
-2026-10-23 22:29:39,748 - freqtrade.exchange.exchange - INFO - Applying additional ccxt config: {'enableRateLimit': True, 'urls': {'api': {'public': 'https://data-api.binance.vision/api/v3'}}, 'options': {'fetchMarkets': {'types': ['spot']}}}
-2026-10-23 22:29:39,752 - freqtrade.exchange.exchange - INFO - Applying additional ccxt config: {'enableRateLimit': True, 'urls': {'api': {'public': 'https://data-api.binance.vision/api/v3'}}, 'options': {'fetchMarkets': {'types': ['spot']}}}
-2026-10-23 22:29:39,756 - freqtrade.exchange.exchange - INFO - Using Exchange "Binance"
-2026-10-23 22:29:41,748 - freqtrade.exchange.exchange - INFO - Time offset to Binance is -174ms.
-2026-10-23 22:29:41,748 - freqtrade.resolvers.exchange_resolver - INFO - Using resolved exchange class 'Binance' ...
-2026-10-23 22:29:41,764 - freqtrade.resolvers.iresolver - INFO - Using resolved strategy RedlineAI from '/freqtrade/user_data/strategies/RedlineAI.py'...
-2026-10-23 22:29:41,764 - freqtrade.strategy.hyper - INFO - Found no parameter file.
-2026-10-23 22:29:41,765 - freqtrade.resolvers.strategy_resolver - INFO - Override strategy 'timeframe' with value from the configuration: 15m.
-2026-10-23 22:29:41,765 - freqtrade.resolvers.strategy_resolver - INFO - Override strategy 'stake_currency' with value from the configuration: USDT.
-2026-10-23 22:29:41,766 - freqtrade.resolvers.strategy_resolver - INFO - Override strategy 'stake_amount' with value from the configuration: 190.
-2026-10-23 22:29:41,766 - freqtrade.resolvers.strategy_resolver - INFO - Override strategy 'unfilledtimeout' with value from the configuration: {'entry': 10, 'exit': 30}.
-2026-10-23 22:29:41,767 - freqtrade.resolvers.strategy_resolver - INFO - Override strategy 'max_open_trades' with value from the configuration: 5.
-2026-10-23 22:29:41,767 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using minimal_roi: {'0': 0.1, '240': -1}
-2026-10-23 22:29:41,767 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using timeframe: 15m
-2026-10-23 22:29:41,768 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using stoploss: -0.05
-2026-10-23 22:29:41,768 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using trailing_stop: False
-2026-10-23 22:29:41,768 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using trailing_stop_positive_offset: 0.0
-2026-10-23 22:29:41,769 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using trailing_only_offset_is_reached: False
-2026-10-23 22:29:41,769 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using use_custom_stoploss: False
-2026-10-23 22:29:41,769 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using process_only_new_candles: True
-2026-10-23 22:29:41,770 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using order_types: {'entry': 'limit', 'exit': 'limit', 'stoploss': 'limit', 'stoploss_on_exchange': False, 'stoploss_on_exchange_interval': 60}
-2026-10-23 22:29:41,770 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using order_time_in_force: {'entry': 'GTC', 'exit': 'GTC'}
-2026-10-23 22:29:41,770 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using stake_currency: USDT
-2026-10-23 22:29:41,771 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using stake_amount: 190
-2026-10-23 22:29:41,771 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using startup_candle_count: 60
-2026-10-23 22:29:41,771 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using unfilledtimeout: {'entry': 10, 'exit': 30}
-2026-10-23 22:29:41,772 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using use_exit_signal: True
-2026-10-23 22:29:41,772 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using exit_profit_only: False
-2026-10-23 22:29:41,772 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using ignore_roi_if_entry_signal: False
-2026-10-23 22:29:41,773 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using exit_profit_offset: 0.0
-2026-10-23 22:29:41,773 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using disable_dataframe_checks: False
-2026-10-23 22:29:41,774 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using ignore_buying_expired_candle_after: 0
-2026-10-23 22:29:41,774 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using position_adjustment_enable: False
-2026-10-23 22:29:41,774 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using max_entry_position_adjustment: -1
-2026-10-23 22:29:41,775 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using max_open_trades: 5
-2026-10-23 22:29:41,775 - freqtrade.configuration.config_validation - INFO - Validating configuration ...
-2026-10-23 22:29:41,813 - freqtrade.wallets - INFO - Wallets synced.
-2026-10-23 22:29:41,816 - freqtrade.resolvers.iresolver - INFO - Using resolved pairlist StaticPairList from '/freqtrade/freqtrade/plugins/pairlist/StaticPairList.py'...
-2026-10-23 22:29:41,817 - freqtrade.freqtradebot - INFO - Starting initial pairlist refresh
-2026-10-23 22:29:41,831 - freqtrade.plugins.pairlistmanager - INFO - Whitelist with 15 pairs: ['BTC/USDT', 'ETH/USDT', 'SOL/USDT', 'XRP/USDT', 'DOGE/USDT', 'ADA/USDT', 'AVAX/USDT', 'LINK/USDT', 'LTC/USDT', 'BNB/USDT', 'DOT/USDT', 'TRX/USDT', 'SUI/USDT', 'NEAR/USDT', 'APT/USDT']
-2026-10-23 22:29:41,832 - freqtrade.freqtradebot - INFO - Initial Pairlist refresh took 0.01s
-2026-10-23 22:29:42,132 - freqtrade.resolvers.iresolver - INFO - Using resolved freqaimodel LightGBMRegressor from '/freqtrade/freqtrade/freqai/prediction_models/LightGBMRegressor.py'...
-2026-10-23 22:29:42,133 - freqtrade.freqai.data_drawer - INFO - Could not find existing datadrawer, starting from scratch
-2026-10-23 22:29:42,133 - freqtrade.freqai.data_drawer - INFO - Could not find existing historic_predictions, starting from scratch
-2026-10-23 22:29:42,134 - freqtrade.freqai.freqai_interface - INFO - Set fresh train queue from whitelist. Queue: ['BTC/USDT', 'ETH/USDT', 'SOL/USDT', 'XRP/USDT', 'DOGE/USDT', 'ADA/USDT', 'AVAX/USDT', 'LINK/USDT', 'LTC/USDT', 'BNB/USDT', 'DOT/USDT', 'TRX/USDT', 'SUI/USDT', 'NEAR/USDT', 'APT/USDT']
-2026-10-23 22:29:42,134 - freqtrade.strategy.interface - INFO - Downloading all training data for all pairs in whitelist and corr_pairlist, this may take a while if the data is not already on disk.
-2026-10-23 22:29:42,143 - freqtrade.freqai.utils - INFO - FreqAI auto-downloader using 90 startup candles.
-2026-10-23 22:29:42,167 - freqtrade.data.history.history_utils - INFO - Download history data for "BTC/USDT", 15m, spot and store in /freqtrade/user_data/data/binance. From 2026-06-25T22:29:42 to 2026-10-23T22:29:42
-2026-10-23 22:29:43,396 - freqtrade.data.history.history_utils - INFO - Downloaded data for BTC/USDT, 15m, spot with length 11519.
-2026-10-23 22:29:43,410 - freqtrade.data.history.history_utils - INFO - Download history data for "BTC/USDT", 1h, spot and store in /freqtrade/user_data/data/binance. From 2026-06-25T22:29:42 to 2026-10-23T22:29:42
-2026-10-23 22:29:43,836 - freqtrade.data.history.history_utils - INFO - Downloaded data for BTC/USDT, 1h, spot with length 2879.
-2026-10-23 22:29:43,842 - freqtrade.data.history.history_utils - INFO - Downloading parallel candles for 4h for all pairs since 2026-06-25T22:29:42
-2026-10-23 22:29:44,447 - freqtrade.data.history.history_utils - INFO - Download history data for "BTC/USDT", 4h, spot and store in /freqtrade/user_data/data/binance. From 2026-06-25T22:29:42 to 2026-10-23T22:29:42
-2026-10-23 22:29:44,744 - freqtrade.data.history.history_utils - INFO - Downloaded data for BTC/USDT, 4h, spot with length 719.
-2026-10-23 22:29:44,748 - freqtrade.data.history.history_utils - INFO - Downloading parallel candles for 1d for all pairs since 2026-06-25T22:29:42
-2026-10-23 22:29:45,329 - freqtrade.data.history.history_utils - INFO - Download history data for "BTC/USDT", 1d, spot and store in /freqtrade/user_data/data/binance. From 2026-06-25T22:29:42 to 2026-10-23T22:29:42
-2026-10-23 22:29:45,617 - freqtrade.data.history.history_utils - INFO - Downloaded data for BTC/USDT, 1d, spot with length 119.
-2026-10-23 22:29:45,621 - freqtrade.data.history.history_utils - INFO - Download history data for "ETH/USDT", 15m, spot and store in /freqtrade/user_data/data/binance. From 2026-06-25T22:29:42 to 2026-10-23T22:29:42
-2026-10-23 22:29:46,143 - freqtrade.data.history.history_utils - INFO - Downloaded data for ETH/USDT, 15m, spot with length 11519.
-2026-10-23 22:29:46,159 - freqtrade.data.history.history_utils - INFO - Download history data for "ETH/USDT", 1h, spot and store in /freqtrade/user_data/data/binance. From 2026-06-25T22:29:42 to 2026-10-23T22:29:42
-2026-10-23 22:29:46,504 - freqtrade.data.history.history_utils - INFO - Downloaded data for ETH/USDT, 1h, spot with length 2879.
-2026-10-23 22:29:46,510 - freqtrade.data.history.history_utils - INFO - Download history data for "ETH/USDT", 4h, spot and store in /freqtrade/user_data/data/binance. From 2026-06-25T22:29:42 to 2026-10-23T22:29:42
-2026-10-23 22:29:46,807 - freqtrade.data.history.history_utils - INFO - Downloaded data for ETH/USDT, 4h, spot with length 719.
-2026-10-23 22:29:46,812 - freqtrade.data.history.history_utils - INFO - Download history data for "ETH/USDT", 1d, spot and store in /freqtrade/user_data/data/binance. From 2026-06-25T22:29:42 to 2026-10-23T22:29:42
-2026-10-23 22:29:47,098 - freqtrade.data.history.history_utils - INFO - Downloaded data for ETH/USDT, 1d, spot with length 119.
-2026-10-23 22:29:47,101 - freqtrade.data.history.history_utils - INFO - Download history data for "SOL/USDT", 15m, spot and store in /freqtrade/user_data/data/binance. From 2026-06-25T22:29:42 to 2026-10-23T22:29:42
-2026-10-23 22:29:47,622 - freqtrade.data.history.history_utils - INFO - Downloaded data for SOL/USDT, 15m, spot with length 11519.
-2026-10-23 22:29:47,638 - freqtrade.data.history.history_utils - INFO - Download history data for "SOL/USDT", 1h, spot and store in /freqtrade/user_data/data/binance. From 2026-06-25T22:29:42 to 2026-10-23T22:29:42
-2026-10-23 22:29:47,978 - freqtrade.data.history.history_utils - INFO - Downloaded data for SOL/USDT, 1h, spot with length 2879.
-2026-10-23 22:29:47,985 - freqtrade.data.history.history_utils - INFO - Download history data for "SOL/USDT", 4h, spot and store in /freqtrade/user_data/data/binance. From 2026-06-25T22:29:42 to 2026-10-23T22:29:42
-2026-10-23 22:29:48,286 - freqtrade.data.history.history_utils - INFO - Downloaded data for SOL/USDT, 4h, spot with length 719.
-2026-10-23 22:29:48,291 - freqtrade.data.history.history_utils - INFO - Download history data for "SOL/USDT", 1d, spot and store in /freqtrade/user_data/data/binance. From 2026-06-25T22:29:42 to 2026-10-23T22:29:42
-2026-10-23 22:29:48,578 - freqtrade.data.history.history_utils - INFO - Downloaded data for SOL/USDT, 1d, spot with length 119.
-2026-10-23 22:29:48,581 - freqtrade.data.history.history_utils - INFO - Download history data for "XRP/USDT", 15m, spot and store in /freqtrade/user_data/data/binance. From 2026-06-25T22:29:42 to 2026-10-23T22:29:42
-2026-10-23 22:29:49,106 - freqtrade.data.history.history_utils - INFO - Downloaded data for XRP/USDT, 15m, spot with length 11519.
-2026-10-23 22:29:49,115 - freqtrade.data.history.history_utils - INFO - Download history data for "XRP/USDT", 1h, spot and store in /freqtrade/user_data/data/binance. From 2026-06-25T22:29:42 to 2026-10-23T22:29:42
-2026-10-23 22:29:49,456 - freqtrade.data.history.history_utils - INFO - Downloaded data for XRP/USDT, 1h, spot with length 2879.
-2026-10-23 22:29:49,461 - freqtrade.data.history.history_utils - INFO - Download history data for "XRP/USDT", 4h, spot and store in /freqtrade/user_data/data/binance. From 2026-06-25T22:29:42 to 2026-10-23T22:29:42
-2026-10-23 22:29:49,757 - freqtrade.data.history.history_utils - INFO - Downloaded data for XRP/USDT, 4h, spot with length 719.
-2026-10-23 22:29:49,762 - freqtrade.data.history.history_utils - INFO - Download history data for "XRP/USDT", 1d, spot and store in /freqtrade/user_data/data/binance. From 2026-06-25T22:29:42 to 2026-10-23T22:29:42
-2026-10-23 22:29:50,048 - freqtrade.data.history.history_utils - INFO - Downloaded data for XRP/USDT, 1d, spot with length 119.
-2026-10-23 22:29:50,052 - freqtrade.data.history.history_utils - INFO - Download history data for "DOGE/USDT", 15m, spot and store in /freqtrade/user_data/data/binance. From 2026-06-25T22:29:42 to 2026-10-23T22:29:42
-2026-10-23 22:29:50,571 - freqtrade.data.history.history_utils - INFO - Downloaded data for DOGE/USDT, 15m, spot with length 11519.
-2026-10-23 22:29:50,581 - freqtrade.data.history.history_utils - INFO - Download history data for "DOGE/USDT", 1h, spot and store in /freqtrade/user_data/data/binance. From 2026-06-25T22:29:42 to 2026-10-23T22:29:42
-2026-10-23 22:29:50,921 - freqtrade.data.history.history_utils - INFO - Downloaded data for DOGE/USDT, 1h, spot with length 2879.
-2026-10-23 22:29:50,927 - freqtrade.data.history.history_utils - INFO - Download history data for "DOGE/USDT", 4h, spot and store in /freqtrade/user_data/data/binance. From 2026-06-25T22:29:42 to 2026-10-23T22:29:42
-2026-10-23 22:29:51,221 - freqtrade.data.history.history_utils - INFO - Downloaded data for DOGE/USDT, 4h, spot with length 719.
-2026-10-23 22:29:51,226 - freqtrade.data.history.history_utils - INFO - Download history data for "DOGE/USDT", 1d, spot and store in /freqtrade/user_data/data/binance. From 2026-06-25T22:29:42 to 2026-10-23T22:29:42
-2026-10-23 22:29:51,510 - freqtrade.data.history.history_utils - INFO - Downloaded data for DOGE/USDT, 1d, spot with length 119.
-2026-10-23 22:29:51,513 - freqtrade.data.history.history_utils - INFO - Download history data for "ADA/USDT", 15m, spot and store in /freqtrade/user_data/data/binance. From 2026-06-25T22:29:42 to 2026-10-23T22:29:42
-2026-10-23 22:29:52,034 - freqtrade.data.history.history_utils - INFO - Downloaded data for ADA/USDT, 15m, spot with length 11519.
-2026-10-23 22:29:52,045 - freqtrade.data.history.history_utils - INFO - Download history data for "ADA/USDT", 1h, spot and store in /freqtrade/user_data/data/binance. From 2026-06-25T22:29:42 to 2026-10-23T22:29:42
-2026-10-23 22:29:52,393 - freqtrade.data.history.history_utils - INFO - Downloaded data for ADA/USDT, 1h, spot with length 2879.
-2026-10-23 22:29:52,399 - freqtrade.data.history.history_utils - INFO - Download history data for "ADA/USDT", 4h, spot and store in /freqtrade/user_data/data/binance. From 2026-06-25T22:29:42 to 2026-10-23T22:29:42
-2026-10-23 22:29:52,695 - freqtrade.data.history.history_utils - INFO - Downloaded data for ADA/USDT, 4h, spot with length 719.
-2026-10-23 22:29:52,700 - freqtrade.data.history.history_utils - INFO - Download history data for "ADA/USDT", 1d, spot and store in /freqtrade/user_data/data/binance. From 2026-06-25T22:29:42 to 2026-10-23T22:29:42
-2026-10-23 22:29:52,988 - freqtrade.data.history.history_utils - INFO - Downloaded data for ADA/USDT, 1d, spot with length 119.
-2026-10-23 22:29:52,991 - freqtrade.data.history.history_utils - INFO - Download history data for "AVAX/USDT", 15m, spot and store in /freqtrade/user_data/data/binance. From 2026-06-25T22:29:42 to 2026-10-23T22:29:42
-2026-10-23 22:29:53,511 - freqtrade.data.history.history_utils - INFO - Downloaded data for AVAX/USDT, 15m, spot with length 11519.
-2026-10-23 22:29:53,522 - freqtrade.data.history.history_utils - INFO - Download history data for "AVAX/USDT", 1h, spot and store in /freqtrade/user_data/data/binance. From 2026-06-25T22:29:42 to 2026-10-23T22:29:42
-2026-10-23 22:29:53,863 - freqtrade.data.history.history_utils - INFO - Downloaded data for AVAX/USDT, 1h, spot with length 2879.
-2026-10-23 22:29:53,868 - freqtrade.data.history.history_utils - INFO - Download history data for "AVAX/USDT", 4h, spot and store in /freqtrade/user_data/data/binance. From 2026-06-25T22:29:42 to 2026-10-23T22:29:42
-2026-10-23 22:29:54,165 - freqtrade.data.history.history_utils - INFO - Downloaded data for AVAX/USDT, 4h, spot with length 719.
-2026-10-23 22:29:54,170 - freqtrade.data.history.history_utils - INFO - Download history data for "AVAX/USDT", 1d, spot and store in /freqtrade/user_data/data/binance. From 2026-06-25T22:29:42 to 2026-10-23T22:29:42
-2026-10-23 22:29:54,453 - freqtrade.data.history.history_utils - INFO - Downloaded data for AVAX/USDT, 1d, spot with length 119.
-2026-10-23 22:29:54,456 - freqtrade.data.history.history_utils - INFO - Download history data for "LINK/USDT", 15m, spot and store in /freqtrade/user_data/data/binance. From 2026-06-25T22:29:42 to 2026-10-23T22:29:42
-2026-10-23 22:29:54,974 - freqtrade.data.history.history_utils - INFO - Downloaded data for LINK/USDT, 15m, spot with length 11519.
-2026-10-23 22:29:54,989 - freqtrade.data.history.history_utils - INFO - Download history data for "LINK/USDT", 1h, spot and store in /freqtrade/user_data/data/binance. From 2026-06-25T22:29:42 to 2026-10-23T22:29:42
-2026-10-23 22:29:55,330 - freqtrade.data.history.history_utils - INFO - Downloaded data for LINK/USDT, 1h, spot with length 2879.
-2026-10-23 22:29:55,335 - freqtrade.data.history.history_utils - INFO - Download history data for "LINK/USDT", 4h, spot and store in /freqtrade/user_data/data/binance. From 2026-06-25T22:29:42 to 2026-10-23T22:29:42
-2026-10-23 22:29:55,635 - freqtrade.data.history.history_utils - INFO - Downloaded data for LINK/USDT, 4h, spot with length 719.
-2026-10-23 22:29:55,641 - freqtrade.data.history.history_utils - INFO - Download history data for "LINK/USDT", 1d, spot and store in /freqtrade/user_data/data/binance. From 2026-06-25T22:29:42 to 2026-10-23T22:29:42
-2026-10-23 22:29:55,926 - freqtrade.data.history.history_utils - INFO - Downloaded data for LINK/USDT, 1d, spot with length 119.
-2026-10-23 22:29:55,929 - freqtrade.data.history.history_utils - INFO - Download history data for "LTC/USDT", 15m, spot and store in /freqtrade/user_data/data/binance. From 2026-06-25T22:29:42 to 2026-10-23T22:29:42
-2026-10-23 22:29:56,451 - freqtrade.data.history.history_utils - INFO - Downloaded data for LTC/USDT, 15m, spot with length 11519.
-2026-10-23 22:29:56,471 - freqtrade.data.history.history_utils - INFO - Download history data for "LTC/USDT", 1h, spot and store in /freqtrade/user_data/data/binance. From 2026-06-25T22:29:42 to 2026-10-23T22:29:42
-2026-10-23 22:29:56,813 - freqtrade.data.history.history_utils - INFO - Downloaded data for LTC/USDT, 1h, spot with length 2879.
-2026-10-23 22:29:56,820 - freqtrade.data.history.history_utils - INFO - Download history data for "LTC/USDT", 4h, spot and store in /freqtrade/user_data/data/binance. From 2026-06-25T22:29:42 to 2026-10-23T22:29:42
-2026-10-23 22:29:57,114 - freqtrade.data.history.history_utils - INFO - Downloaded data for LTC/USDT, 4h, spot with length 719.
-2026-10-23 22:29:57,119 - freqtrade.data.history.history_utils - INFO - Download history data for "LTC/USDT", 1d, spot and store in /freqtrade/user_data/data/binance. From 2026-06-25T22:29:42 to 2026-10-23T22:29:42
-2026-10-23 22:29:57,409 - freqtrade.data.history.history_utils - INFO - Downloaded data for LTC/USDT, 1d, spot with length 119.
-2026-10-23 22:29:57,412 - freqtrade.data.history.history_utils - INFO - Download history data for "BNB/USDT", 15m, spot and store in /freqtrade/user_data/data/binance. From 2026-06-25T22:29:42 to 2026-10-23T22:29:42
-2026-10-23 22:29:57,931 - freqtrade.data.history.history_utils - INFO - Downloaded data for BNB/USDT, 15m, spot with length 11519.
-2026-10-23 22:29:57,949 - freqtrade.data.history.history_utils - INFO - Download history data for "BNB/USDT", 1h, spot and store in /freqtrade/user_data/data/binance. From 2026-06-25T22:29:42 to 2026-10-23T22:29:42
-2026-10-23 22:29:58,289 - freqtrade.data.history.history_utils - INFO - Downloaded data for BNB/USDT, 1h, spot with length 2879.
-2026-10-23 22:29:58,295 - freqtrade.data.history.history_utils - INFO - Download history data for "BNB/USDT", 4h, spot and store in /freqtrade/user_data/data/binance. From 2026-06-25T22:29:42 to 2026-10-23T22:29:42
-2026-10-23 22:29:58,594 - freqtrade.data.history.history_utils - INFO - Downloaded data for BNB/USDT, 4h, spot with length 719.
-2026-10-23 22:29:58,599 - freqtrade.data.history.history_utils - INFO - Download history data for "BNB/USDT", 1d, spot and store in /freqtrade/user_data/data/binance. From 2026-06-25T22:29:42 to 2026-10-23T22:29:42
-2026-10-23 22:29:58,884 - freqtrade.data.history.history_utils - INFO - Downloaded data for BNB/USDT, 1d, spot with length 119.
-2026-10-23 22:29:58,887 - freqtrade.data.history.history_utils - INFO - Download history data for "DOT/USDT", 15m, spot and store in /freqtrade/user_data/data/binance. From 2026-06-25T22:29:42 to 2026-10-23T22:29:42
-2026-10-23 22:29:59,406 - freqtrade.data.history.history_utils - INFO - Downloaded data for DOT/USDT, 15m, spot with length 11519.
-2026-10-23 22:29:59,418 - freqtrade.data.history.history_utils - INFO - Download history data for "DOT/USDT", 1h, spot and store in /freqtrade/user_data/data/binance. From 2026-06-25T22:29:42 to 2026-10-23T22:29:42
-2026-10-23 22:29:59,759 - freqtrade.data.history.history_utils - INFO - Downloaded data for DOT/USDT, 1h, spot with length 2879.
-2026-10-23 22:29:59,764 - freqtrade.data.history.history_utils - INFO - Download history data for "DOT/USDT", 4h, spot and store in /freqtrade/user_data/data/binance. From 2026-06-25T22:29:42 to 2026-10-23T22:29:42
-2026-10-23 22:30:00,061 - freqtrade.data.history.history_utils - INFO - Downloaded data for DOT/USDT, 4h, spot with length 719.
-2026-10-23 22:30:00,066 - freqtrade.data.history.history_utils - INFO - Download history data for "DOT/USDT", 1d, spot and store in /freqtrade/user_data/data/binance. From 2026-06-25T22:29:42 to 2026-10-23T22:29:42
-2026-10-23 22:30:00,352 - freqtrade.data.history.history_utils - INFO - Downloaded data for DOT/USDT, 1d, spot with length 119.
-2026-10-23 22:30:00,355 - freqtrade.data.history.history_utils - INFO - Download history data for "TRX/USDT", 15m, spot and store in /freqtrade/user_data/data/binance. From 2026-06-25T22:29:42 to 2026-10-23T22:29:42
-2026-10-23 22:30:01,756 - freqtrade.data.history.history_utils - INFO - Downloaded data for TRX/USDT, 15m, spot with length 11519.
-2026-10-23 22:30:01,766 - freqtrade.data.history.history_utils - INFO - Download history data for "TRX/USDT", 1h, spot and store in /freqtrade/user_data/data/binance. From 2026-06-25T22:29:42 to 2026-10-23T22:29:42
-2026-10-23 22:30:03,382 - freqtrade.data.history.history_utils - INFO - Downloaded data for TRX/USDT, 1h, spot with length 2879.
-2026-10-23 22:30:03,388 - freqtrade.data.history.history_utils - INFO - Download history data for "TRX/USDT", 4h, spot and store in /freqtrade/user_data/data/binance. From 2026-06-25T22:29:42 to 2026-10-23T22:29:42
-2026-10-23 22:30:04,408 - freqtrade.data.history.history_utils - INFO - Downloaded data for TRX/USDT, 4h, spot with length 719.
-2026-10-23 22:30:04,413 - freqtrade.data.history.history_utils - INFO - Download history data for "TRX/USDT", 1d, spot and store in /freqtrade/user_data/data/binance. From 2026-06-25T22:29:42 to 2026-10-23T22:29:42
-2026-10-23 22:30:04,797 - freqtrade.data.history.history_utils - INFO - Downloaded data for TRX/USDT, 1d, spot with length 119.
-2026-10-23 22:30:04,800 - freqtrade.data.history.history_utils - INFO - Download history data for "SUI/USDT", 15m, spot and store in /freqtrade/user_data/data/binance. From 2026-06-25T22:29:42 to 2026-10-23T22:29:42
-2026-10-23 22:30:05,350 - freqtrade.data.history.history_utils - INFO - Downloaded data for SUI/USDT, 15m, spot with length 11520.
-2026-10-23 22:30:05,360 - freqtrade.data.history.history_utils - INFO - Download history data for "SUI/USDT", 1h, spot and store in /freqtrade/user_data/data/binance. From 2026-06-25T22:29:42 to 2026-10-23T22:29:42
-2026-10-23 22:30:05,706 - freqtrade.data.history.history_utils - INFO - Downloaded data for SUI/USDT, 1h, spot with length 2879.
-2026-10-23 22:30:05,712 - freqtrade.data.history.history_utils - INFO - Download history data for "SUI/USDT", 4h, spot and store in /freqtrade/user_data/data/binance. From 2026-06-25T22:29:42 to 2026-10-23T22:29:42
-2026-10-23 22:30:06,012 - freqtrade.data.history.history_utils - INFO - Downloaded data for SUI/USDT, 4h, spot with length 719.
-2026-10-23 22:30:06,018 - freqtrade.data.history.history_utils - INFO - Download history data for "SUI/USDT", 1d, spot and store in /freqtrade/user_data/data/binance. From 2026-06-25T22:29:42 to 2026-10-23T22:29:42
-2026-10-23 22:30:06,314 - freqtrade.data.history.history_utils - INFO - Downloaded data for SUI/USDT, 1d, spot with length 119.
-2026-10-23 22:30:06,318 - freqtrade.data.history.history_utils - INFO - Download history data for "NEAR/USDT", 15m, spot and store in /freqtrade/user_data/data/binance. From 2026-06-25T22:29:42 to 2026-10-23T22:29:42
-2026-10-23 22:30:06,841 - freqtrade.data.history.history_utils - INFO - Downloaded data for NEAR/USDT, 15m, spot with length 11520.
-2026-10-23 22:30:06,855 - freqtrade.data.history.history_utils - INFO - Download history data for "NEAR/USDT", 1h, spot and store in /freqtrade/user_data/data/binance. From 2026-06-25T22:29:42 to 2026-10-23T22:29:42
-2026-10-23 22:30:07,201 - freqtrade.data.history.history_utils - INFO - Downloaded data for NEAR/USDT, 1h, spot with length 2879.
-2026-10-23 22:30:07,206 - freqtrade.data.history.history_utils - INFO - Download history data for "NEAR/USDT", 4h, spot and store in /freqtrade/user_data/data/binance. From 2026-06-25T22:29:42 to 2026-10-23T22:29:42
-2026-10-23 22:30:07,506 - freqtrade.data.history.history_utils - INFO - Downloaded data for NEAR/USDT, 4h, spot with length 719.
-2026-10-23 22:30:07,511 - freqtrade.data.history.history_utils - INFO - Download history data for "NEAR/USDT", 1d, spot and store in /freqtrade/user_data/data/binance. From 2026-06-25T22:29:42 to 2026-10-23T22:29:42
-2026-10-23 22:30:07,799 - freqtrade.data.history.history_utils - INFO - Downloaded data for NEAR/USDT, 1d, spot with length 119.
-2026-10-23 22:30:07,804 - freqtrade.data.history.history_utils - INFO - Download history data for "APT/USDT", 15m, spot and store in /freqtrade/user_data/data/binance. From 2026-06-25T22:29:42 to 2026-10-23T22:29:42
-2026-10-23 22:30:08,326 - freqtrade.data.history.history_utils - INFO - Downloaded data for APT/USDT, 15m, spot with length 11520.
-2026-10-23 22:30:08,336 - freqtrade.data.history.history_utils - INFO - Download history data for "APT/USDT", 1h, spot and store in /freqtrade/user_data/data/binance. From 2026-06-25T22:29:42 to 2026-10-23T22:29:42
-2026-10-23 22:30:08,677 - freqtrade.data.history.history_utils - INFO - Downloaded data for APT/USDT, 1h, spot with length 2879.
-2026-10-23 22:30:08,683 - freqtrade.data.history.history_utils - INFO - Download history data for "APT/USDT", 4h, spot and store in /freqtrade/user_data/data/binance. From 2026-06-25T22:29:42 to 2026-10-23T22:29:42
-2026-10-23 22:30:08,983 - freqtrade.data.history.history_utils - INFO - Downloaded data for APT/USDT, 4h, spot with length 719.
-2026-10-23 22:30:08,988 - freqtrade.data.history.history_utils - INFO - Download history data for "APT/USDT", 1d, spot and store in /freqtrade/user_data/data/binance. From 2026-06-25T22:29:42 to 2026-10-23T22:29:42
-2026-10-23 22:30:09,274 - freqtrade.data.history.history_utils - INFO - Downloaded data for APT/USDT, 1d, spot with length 119.
-2026-10-23 22:30:09,281 - freqtrade.plugins.protectionmanager - INFO - No protection Handlers defined.
-2026-10-23 22:30:09,281 - freqtrade.rpc.rpc_manager - INFO - Sending rpc message: {'type': status, 'status': 'running'}
-2026-10-23 22:30:09,282 - freqtrade.worker - INFO - Changing state to: RUNNING
-2026-10-23 22:30:09,289 - freqtrade.rpc.rpc_manager - INFO - Sending rpc message: {'type': warning, 'status': 'Dry run is enabled. All trades are simulated.'}
-2026-10-23 22:30:09,290 - freqtrade.rpc.rpc_manager - INFO - Sending rpc message: {'type': startup, 'status': "*Exchange:* `binance`\n*Stake per trade:* `190 USDT`\n*Minimum ROI:* `{'0': 0.1, '240': -1}`\n*Stoploss:* `-0.05`\n*Position adjustment:* `Off`\n*Timeframe:* `15m`\n*Strategy:* `RedlineAI`"}
-2026-10-23 22:30:09,290 - freqtrade.rpc.rpc_manager - INFO - Sending rpc message: {'type': startup, 'status': "Searching for USDT pairs to buy and sell based on [{'StaticPairList': 'StaticPairList'}]"}
-2026-10-23 22:30:13,590 - freqtrade.freqai.freqai_interface - WARNING - No model ready for BTC/USDT, returning null values to strategy.
-2026-10-23 22:30:15,000 - freqtrade.freqai.freqai_interface - WARNING - No model ready for ETH/USDT, returning null values to strategy.
-2026-10-23 22:30:15,357 - freqtrade.freqai.base_models.BaseRegressionModel - INFO - -------------------- Starting training BTC/USDT --------------------
-2026-10-23 22:30:15,373 - freqtrade.freqai.data_kitchen - INFO - BTC/USDT: dropped 20 training points due to NaNs in populated dataset 2879.
-2026-10-23 22:30:15,375 - freqtrade.freqai.base_models.BaseRegressionModel - INFO - -------------------- Training on data from 2026-09-23 to 2026-10-23 --------------------
-2026-10-23 22:30:15,579 - datasieve.pipeline - INFO - SVM detected 19 data points as outliers.
-2026-10-23 22:30:15,950 - datasieve.pipeline - INFO - SVM detected 329 data points as outliers.
-2026-10-23 22:30:16,219 - datasieve.pipeline - INFO - DI tossed 290 predictions for being too far from training data.
-2026-10-23 22:30:16,220 - freqtrade.freqai.base_models.BaseRegressionModel - INFO - Training model on 506 features
-2026-10-23 22:30:16,224 - freqtrade.freqai.base_models.BaseRegressionModel - INFO - Training model on 1896 data points
-2026-10-23 22:30:17,731 - freqtrade.freqai.freqai_interface - WARNING - No model ready for SOL/USDT, returning null values to strategy.
-2026-10-23 22:30:20,002 - freqtrade.freqai.freqai_interface - WARNING - No model ready for XRP/USDT, returning null values to strategy.
-2026-10-23 22:30:20,045 - freqtrade.freqai.base_models.BaseRegressionModel - INFO - -------------------- Done training BTC/USDT (4.69 secs) --------------------
-2026-10-23 22:30:22,005 - freqtrade.freqai.freqai_interface - WARNING - No model ready for DOGE/USDT, returning null values to strategy.
-2026-10-23 22:30:22,617 - freqtrade.freqai.base_models.BaseRegressionModel - INFO - -------------------- Starting training ETH/USDT --------------------
-2026-10-23 22:30:22,638 - freqtrade.freqai.data_kitchen - INFO - ETH/USDT: dropped 20 training points due to NaNs in populated dataset 2879.
-2026-10-23 22:30:22,640 - freqtrade.freqai.base_models.BaseRegressionModel - INFO - -------------------- Training on data from 2026-09-23 to 2026-10-23 --------------------
-2026-10-23 22:30:22,700 - datasieve.pipeline - INFO - SVM detected 19 data points as outliers.
-2026-10-23 22:30:23,161 - datasieve.pipeline - INFO - SVM detected 329 data points as outliers.
-2026-10-23 22:30:23,318 - datasieve.pipeline - INFO - DI tossed 290 predictions for being too far from training data.
-2026-10-23 22:30:23,336 - freqtrade.freqai.base_models.BaseRegressionModel - INFO - Training model on 506 features
-2026-10-23 22:30:23,372 - freqtrade.freqai.base_models.BaseRegressionModel - INFO - Training model on 1896 data points
-2026-10-23 22:30:24,548 - freqtrade.freqai.freqai_interface - WARNING - No model ready for ADA/USDT, returning null values to strategy.
-2026-10-23 22:30:26,945 - freqtrade.freqai.freqai_interface - WARNING - No model ready for AVAX/USDT, returning null values to strategy.
-2026-10-23 22:30:26,989 - freqtrade.freqai.base_models.BaseRegressionModel - INFO - -------------------- Done training ETH/USDT (4.37 secs) --------------------
-2026-10-23 22:30:28,979 - freqtrade.freqai.freqai_interface - WARNING - No model ready for LINK/USDT, returning null values to strategy.
-2026-10-23 22:30:30,487 - freqtrade.freqai.base_models.BaseRegressionModel - INFO - -------------------- Starting training SOL/USDT --------------------
-2026-10-23 22:30:30,504 - freqtrade.freqai.data_kitchen - INFO - SOL/USDT: dropped 20 training points due to NaNs in populated dataset 2879.
-2026-10-23 22:30:30,505 - freqtrade.freqai.base_models.BaseRegressionModel - INFO - -------------------- Training on data from 2026-09-23 to 2026-10-23 --------------------
-2026-10-23 22:30:30,581 - datasieve.pipeline - INFO - SVM detected 16 data points as outliers.
-2026-10-23 22:30:31,108 - datasieve.pipeline - INFO - SVM detected 316 data points as outliers.
-2026-10-23 22:30:31,196 - datasieve.pipeline - INFO - DI tossed 311 predictions for being too far from training data.
-2026-10-23 22:30:31,201 - freqtrade.freqai.base_models.BaseRegressionModel - INFO - Training model on 758 features
-2026-10-23 22:30:31,201 - freqtrade.freqai.base_models.BaseRegressionModel - INFO - Training model on 1899 data points
-2026-10-23 22:30:31,737 - freqtrade.freqai.freqai_interface - WARNING - No model ready for LTC/USDT, returning null values to strategy.
-2026-10-23 22:30:34,218 - freqtrade.freqai.freqai_interface - WARNING - No model ready for BNB/USDT, returning null values to strategy.
-2026-10-23 22:30:35,998 - freqtrade.freqai.base_models.BaseRegressionModel - INFO - -------------------- Done training SOL/USDT (5.51 secs) --------------------
-2026-10-23 22:30:36,380 - freqtrade.freqai.freqai_interface - WARNING - No model ready for DOT/USDT, returning null values to strategy.
-2026-10-23 22:30:38,732 - freqtrade.freqai.freqai_interface - WARNING - No model ready for TRX/USDT, returning null values to strategy.
-2026-10-23 22:30:39,446 - freqtrade.freqai.base_models.BaseRegressionModel - INFO - -------------------- Starting training XRP/USDT --------------------
-2026-10-23 22:30:39,469 - freqtrade.freqai.data_kitchen - INFO - XRP/USDT: dropped 20 training points due to NaNs in populated dataset 2879.
-2026-10-23 22:30:39,471 - freqtrade.freqai.base_models.BaseRegressionModel - INFO - -------------------- Training on data from 2026-09-23 to 2026-10-23 --------------------
-2026-10-23 22:30:39,782 - datasieve.pipeline - INFO - SVM detected 24 data points as outliers.
-2026-10-23 22:30:40,283 - datasieve.pipeline - INFO - SVM detected 206 data points as outliers.
-2026-10-23 22:30:40,400 - datasieve.pipeline - INFO - DI tossed 390 predictions for being too far from training data.
-2026-10-23 22:30:40,404 - freqtrade.freqai.base_models.BaseRegressionModel - INFO - Training model on 758 features
-2026-10-23 22:30:40,408 - freqtrade.freqai.base_models.BaseRegressionModel - INFO - Training model on 1891 data points
-2026-10-23 22:30:41,194 - freqtrade.freqai.freqai_interface - WARNING - No model ready for SUI/USDT, returning null values to strategy.
-2026-10-23 22:30:43,367 - freqtrade.freqai.freqai_interface - WARNING - No model ready for NEAR/USDT, returning null values to strategy.
-2026-10-23 22:30:45,348 - freqtrade.freqai.freqai_interface - WARNING - No model ready for APT/USDT, returning null values to strategy.
-2026-10-23 22:30:45,386 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.9', state='RUNNING'
-2026-10-23 22:30:45,640 - freqtrade.freqai.base_models.BaseRegressionModel - INFO - -------------------- Done training XRP/USDT (6.19 secs) --------------------
-2026-10-23 22:30:47,202 - freqtrade.freqai.base_models.BaseRegressionModel - INFO - -------------------- Starting training DOGE/USDT --------------------
-2026-10-23 22:30:47,212 - freqtrade.freqai.data_kitchen - INFO - DOGE/USDT: dropped 20 training points due to NaNs in populated dataset 2879.
-2026-10-23 22:30:47,212 - freqtrade.freqai.base_models.BaseRegressionModel - INFO - -------------------- Training on data from 2026-09-23 to 2026-10-23 --------------------
-2026-10-23 22:30:47,257 - datasieve.pipeline - INFO - SVM detected 37 data points as outliers.
-2026-10-23 22:30:47,455 - datasieve.pipeline - INFO - SVM detected 244 data points as outliers.
-2026-10-23 22:30:47,505 - datasieve.pipeline - INFO - DI tossed 375 predictions for being too far from training data.
-2026-10-23 22:30:47,507 - freqtrade.freqai.base_models.BaseRegressionModel - INFO - Training model on 758 features
-2026-10-23 22:30:47,508 - freqtrade.freqai.base_models.BaseRegressionModel - INFO - Training model on 1878 data points
-2026-10-23 22:30:49,989 - freqtrade.freqai.base_models.BaseRegressionModel - INFO - -------------------- Done training DOGE/USDT (2.79 secs) --------------------
-2026-10-23 22:30:51,569 - freqtrade.freqai.base_models.BaseRegressionModel - INFO - -------------------- Starting training ADA/USDT --------------------
-2026-10-23 22:30:51,579 - freqtrade.freqai.data_kitchen - INFO - ADA/USDT: dropped 20 training points due to NaNs in populated dataset 2879.
-2026-10-23 22:30:51,580 - freqtrade.freqai.base_models.BaseRegressionModel - INFO - -------------------- Training on data from 2026-09-23 to 2026-10-23 --------------------
-2026-10-23 22:30:51,630 - datasieve.pipeline - INFO - SVM detected 24 data points as outliers.
-2026-10-23 22:30:51,853 - datasieve.pipeline - INFO - SVM detected 102 data points as outliers.
-2026-10-23 22:30:51,921 - datasieve.pipeline - INFO - DI tossed 514 predictions for being too far from training data.
-2026-10-23 22:30:51,923 - freqtrade.freqai.base_models.BaseRegressionModel - INFO - Training model on 758 features
-2026-10-23 22:30:51,924 - freqtrade.freqai.base_models.BaseRegressionModel - INFO - Training model on 1891 data points
-2026-10-23 22:30:54,453 - freqtrade.freqai.base_models.BaseRegressionModel - INFO - -------------------- Done training ADA/USDT (2.88 secs) --------------------
-2026-10-23 22:30:56,029 - freqtrade.freqai.base_models.BaseRegressionModel - INFO - -------------------- Starting training AVAX/USDT --------------------
-2026-10-23 22:30:56,039 - freqtrade.freqai.data_kitchen - INFO - AVAX/USDT: dropped 20 training points due to NaNs in populated dataset 2879.
-2026-10-23 22:30:56,040 - freqtrade.freqai.base_models.BaseRegressionModel - INFO - -------------------- Training on data from 2026-09-23 to 2026-10-23 --------------------
-2026-10-23 22:30:56,085 - datasieve.pipeline - INFO - SVM detected 10 data points as outliers.
-2026-10-23 22:30:56,309 - datasieve.pipeline - INFO - SVM detected 119 data points as outliers.
-2026-10-23 22:30:56,373 - datasieve.pipeline - INFO - DI tossed 470 predictions for being too far from training data.
-2026-10-23 22:30:56,375 - freqtrade.freqai.base_models.BaseRegressionModel - INFO - Training model on 758 features
-2026-10-23 22:30:56,376 - freqtrade.freqai.base_models.BaseRegressionModel - INFO - Training model on 1905 data points
-2026-10-23 22:30:58,930 - freqtrade.freqai.base_models.BaseRegressionModel - INFO - -------------------- Done training AVAX/USDT (2.90 secs) --------------------
-2026-10-23 22:31:00,600 - freqtrade.freqai.base_models.BaseRegressionModel - INFO - -------------------- Starting training LINK/USDT --------------------
-2026-10-23 22:31:00,610 - freqtrade.freqai.data_kitchen - INFO - LINK/USDT: dropped 20 training points due to NaNs in populated dataset 2879.
-2026-10-23 22:31:00,611 - freqtrade.freqai.base_models.BaseRegressionModel - INFO - -------------------- Training on data from 2026-09-23 to 2026-10-23 --------------------
-2026-10-23 22:31:00,656 - datasieve.pipeline - INFO - SVM detected 51 data points as outliers.
-2026-10-23 22:31:00,856 - datasieve.pipeline - INFO - SVM detected 204 data points as outliers.
-2026-10-23 22:31:00,905 - datasieve.pipeline - INFO - DI tossed 320 predictions for being too far from training data.
-2026-10-23 22:31:00,907 - freqtrade.freqai.base_models.BaseRegressionModel - INFO - Training model on 758 features
-2026-10-23 22:31:00,907 - freqtrade.freqai.base_models.BaseRegressionModel - INFO - Training model on 1864 data points
-2026-10-23 22:31:03,326 - freqtrade.freqai.base_models.BaseRegressionModel - INFO - -------------------- Done training LINK/USDT (2.72 secs) --------------------
-2026-10-23 22:31:04,902 - freqtrade.freqai.base_models.BaseRegressionModel - INFO - -------------------- Starting training LTC/USDT --------------------
-2026-10-23 22:31:04,911 - freqtrade.freqai.data_kitchen - INFO - LTC/USDT: dropped 20 training points due to NaNs in populated dataset 2879.
-2026-10-23 22:31:04,912 - freqtrade.freqai.base_models.BaseRegressionModel - INFO - -------------------- Training on data from 2026-09-23 to 2026-10-23 --------------------
-2026-10-23 22:31:04,957 - datasieve.pipeline - INFO - SVM detected 73 data points as outliers.
-2026-10-23 22:31:05,158 - datasieve.pipeline - INFO - SVM detected 71 data points as outliers.
-2026-10-23 22:31:05,216 - datasieve.pipeline - INFO - DI tossed 491 predictions for being too far from training data.
-2026-10-23 22:31:05,217 - freqtrade.freqai.base_models.BaseRegressionModel - INFO - Training model on 758 features
-2026-10-23 22:31:05,218 - freqtrade.freqai.base_models.BaseRegressionModel - INFO - Training model on 1842 data points
-2026-10-23 22:31:07,751 - freqtrade.freqai.base_models.BaseRegressionModel - INFO - -------------------- Done training LTC/USDT (2.85 secs) --------------------
-2026-10-23 22:31:09,319 - freqtrade.freqai.base_models.BaseRegressionModel - INFO - -------------------- Starting training BNB/USDT --------------------
-2026-10-23 22:31:09,328 - freqtrade.freqai.data_kitchen - INFO - BNB/USDT: dropped 20 training points due to NaNs in populated dataset 2879.
-2026-10-23 22:31:09,329 - freqtrade.freqai.base_models.BaseRegressionModel - INFO - -------------------- Training on data from 2026-09-23 to 2026-10-23 --------------------
-2026-10-23 22:31:09,374 - datasieve.pipeline - INFO - SVM detected 18 data points as outliers.
-2026-10-23 22:31:09,579 - datasieve.pipeline - INFO - SVM detected 337 data points as outliers.
-2026-10-23 22:31:09,628 - datasieve.pipeline - INFO - DI tossed 272 predictions for being too far from training data.
-2026-10-23 22:31:09,630 - freqtrade.freqai.base_models.BaseRegressionModel - INFO - Training model on 758 features
-2026-10-23 22:31:09,630 - freqtrade.freqai.base_models.BaseRegressionModel - INFO - Training model on 1897 data points
-2026-10-23 22:31:12,217 - freqtrade.freqai.base_models.BaseRegressionModel - INFO - -------------------- Done training BNB/USDT (2.90 secs) --------------------
-2026-10-23 22:31:13,791 - freqtrade.freqai.base_models.BaseRegressionModel - INFO - -------------------- Starting training DOT/USDT --------------------
-2026-10-23 22:31:13,801 - freqtrade.freqai.data_kitchen - INFO - DOT/USDT: dropped 20 training points due to NaNs in populated dataset 2879.
-2026-10-23 22:31:13,802 - freqtrade.freqai.base_models.BaseRegressionModel - INFO - -------------------- Training on data from 2026-09-23 to 2026-10-23 --------------------
-2026-10-23 22:31:13,847 - datasieve.pipeline - INFO - SVM detected 10 data points as outliers.
-2026-10-23 22:31:14,060 - datasieve.pipeline - INFO - SVM detected 220 data points as outliers.
-2026-10-23 22:31:14,111 - datasieve.pipeline - INFO - DI tossed 375 predictions for being too far from training data.
-2026-10-23 22:31:14,113 - freqtrade.freqai.base_models.BaseRegressionModel - INFO - Training model on 758 features
-2026-10-23 22:31:14,113 - freqtrade.freqai.base_models.BaseRegressionModel - INFO - Training model on 1905 data points
-2026-10-23 22:31:16,803 - freqtrade.freqai.base_models.BaseRegressionModel - INFO - -------------------- Done training DOT/USDT (3.01 secs) --------------------
-2026-10-23 22:31:18,396 - freqtrade.freqai.base_models.BaseRegressionModel - INFO - -------------------- Starting training TRX/USDT --------------------
-2026-10-23 22:31:18,406 - freqtrade.freqai.data_kitchen - INFO - TRX/USDT: dropped 20 training points due to NaNs in populated dataset 2879.
-2026-10-23 22:31:18,407 - freqtrade.freqai.base_models.BaseRegressionModel - INFO - -------------------- Training on data from 2026-09-23 to 2026-10-23 --------------------
-2026-10-23 22:31:18,456 - datasieve.pipeline - INFO - SVM detected 54 data points as outliers.
-2026-10-23 22:31:18,668 - datasieve.pipeline - INFO - SVM detected 148 data points as outliers.
-2026-10-23 22:31:18,716 - datasieve.pipeline - INFO - DI tossed 597 predictions for being too far from training data.
-2026-10-23 22:31:18,718 - freqtrade.freqai.base_models.BaseRegressionModel - INFO - Training model on 758 features
-2026-10-23 22:31:18,718 - freqtrade.freqai.base_models.BaseRegressionModel - INFO - Training model on 1861 data points
-2026-10-23 22:31:21,189 - freqtrade.freqai.base_models.BaseRegressionModel - INFO - -------------------- Done training TRX/USDT (2.79 secs) --------------------
-2026-10-23 22:31:22,767 - freqtrade.freqai.base_models.BaseRegressionModel - INFO - -------------------- Starting training SUI/USDT --------------------
-2026-10-23 22:31:22,777 - freqtrade.freqai.data_kitchen - INFO - SUI/USDT: dropped 20 training points due to NaNs in populated dataset 2879.
-2026-10-23 22:31:22,778 - freqtrade.freqai.base_models.BaseRegressionModel - INFO - -------------------- Training on data from 2026-09-23 to 2026-10-23 --------------------
-2026-10-23 22:31:22,823 - datasieve.pipeline - INFO - SVM detected 59 data points as outliers.
-2026-10-23 22:31:23,049 - datasieve.pipeline - INFO - SVM detected 269 data points as outliers.
-2026-10-23 22:31:23,103 - datasieve.pipeline - INFO - DI tossed 216 predictions for being too far from training data.
-2026-10-23 22:31:23,105 - freqtrade.freqai.base_models.BaseRegressionModel - INFO - Training model on 758 features
-2026-10-23 22:31:23,105 - freqtrade.freqai.base_models.BaseRegressionModel - INFO - Training model on 1856 data points
-2026-10-23 22:31:25,605 - freqtrade.freqai.base_models.BaseRegressionModel - INFO - -------------------- Done training SUI/USDT (2.84 secs) --------------------
-2026-10-23 22:31:27,174 - freqtrade.freqai.base_models.BaseRegressionModel - INFO - -------------------- Starting training NEAR/USDT --------------------
-2026-10-23 22:31:27,184 - freqtrade.freqai.data_kitchen - INFO - NEAR/USDT: dropped 20 training points due to NaNs in populated dataset 2879.
-2026-10-23 22:31:27,185 - freqtrade.freqai.base_models.BaseRegressionModel - INFO - -------------------- Training on data from 2026-09-23 to 2026-10-23 --------------------
-2026-10-23 22:31:27,232 - datasieve.pipeline - INFO - SVM detected 19 data points as outliers.
-2026-10-23 22:31:27,448 - datasieve.pipeline - INFO - SVM detected 83 data points as outliers.
-2026-10-23 22:31:27,510 - datasieve.pipeline - INFO - DI tossed 394 predictions for being too far from training data.
-2026-10-23 22:31:27,512 - freqtrade.freqai.base_models.BaseRegressionModel - INFO - Training model on 758 features
-2026-10-23 22:31:27,512 - freqtrade.freqai.base_models.BaseRegressionModel - INFO - Training model on 1896 data points
-2026-10-23 22:31:30,023 - freqtrade.freqai.base_models.BaseRegressionModel - INFO - -------------------- Done training NEAR/USDT (2.85 secs) --------------------
-2026-10-23 22:31:31,589 - freqtrade.freqai.base_models.BaseRegressionModel - INFO - -------------------- Starting training APT/USDT --------------------
-2026-10-23 22:31:31,599 - freqtrade.freqai.data_kitchen - INFO - APT/USDT: dropped 20 training points due to NaNs in populated dataset 2879.
-2026-10-23 22:31:31,600 - freqtrade.freqai.base_models.BaseRegressionModel - INFO - -------------------- Training on data from 2026-09-23 to 2026-10-23 --------------------
-2026-10-23 22:31:31,642 - datasieve.pipeline - INFO - SVM detected 40 data points as outliers.
-2026-10-23 22:31:31,851 - datasieve.pipeline - INFO - SVM detected 72 data points as outliers.
-2026-10-23 22:31:31,913 - datasieve.pipeline - INFO - DI tossed 457 predictions for being too far from training data.
-2026-10-23 22:31:31,915 - freqtrade.freqai.base_models.BaseRegressionModel - INFO - Training model on 758 features
-2026-10-23 22:31:31,915 - freqtrade.freqai.base_models.BaseRegressionModel - INFO - Training model on 1875 data points
-2026-10-23 22:31:34,431 - freqtrade.freqai.base_models.BaseRegressionModel - INFO - -------------------- Done training APT/USDT (2.84 secs) --------------------
-2026-10-23 22:31:34,444 - freqtrade.freqai.freqai_interface - INFO - Total time spent training pairlist 66.70 seconds
-2026-10-23 22:31:45,389 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.9', state='RUNNING'
-2026-10-23 22:32:45,392 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.9', state='RUNNING'
-2026-10-23 22:33:45,395 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.9', state='RUNNING'
-2026-10-23 22:34:45,398 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.9', state='RUNNING'
-2026-10-23 22:35:45,401 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.9', state='RUNNING'
-2026-10-23 22:36:45,404 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.9', state='RUNNING'
-2026-10-23 22:37:45,407 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.9', state='RUNNING'
-2026-10-23 22:38:45,410 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.9', state='RUNNING'
-2026-10-23 22:39:45,413 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.9', state='RUNNING'
-2026-10-23 22:40:45,416 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.9', state='RUNNING'
-2026-10-23 22:41:45,419 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.9', state='RUNNING'
-2026-10-23 22:42:45,423 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.9', state='RUNNING'
-2026-10-23 22:43:45,426 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.9', state='RUNNING'
-2026-10-23 22:44:45,428 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.9', state='RUNNING'
-2026-10-23 22:45:03,688 - freqtrade.freqai.data_kitchen - INFO - dropped 41 of 1000 prediction data points due to NaNs.
-2026-10-23 22:45:04,264 - freqtrade.freqai.data_kitchen - INFO - dropped 41 of 1000 prediction data points due to NaNs.
-2026-10-23 22:45:04,866 - freqtrade.freqai.data_kitchen - INFO - dropped 41 of 1000 prediction data points due to NaNs.
-2026-10-23 22:45:05,487 - freqtrade.freqai.data_kitchen - INFO - dropped 41 of 1000 prediction data points due to NaNs.
-2026-10-23 22:45:06,098 - freqtrade.freqai.data_kitchen - INFO - dropped 41 of 1000 prediction data points due to NaNs.
-2026-10-23 22:45:06,706 - freqtrade.freqai.data_kitchen - INFO - dropped 41 of 1000 prediction data points due to NaNs.
-2026-10-23 22:45:07,336 - freqtrade.freqai.data_kitchen - INFO - dropped 41 of 1000 prediction data points due to NaNs.
-2026-10-23 22:45:07,881 - freqtrade.freqai.data_kitchen - INFO - dropped 41 of 1000 prediction data points due to NaNs.
-2026-10-23 22:45:08,492 - freqtrade.freqai.data_kitchen - INFO - dropped 41 of 1000 prediction data points due to NaNs.
-2026-10-23 22:45:09,122 - freqtrade.freqai.data_kitchen - INFO - dropped 41 of 1000 prediction data points due to NaNs.
-2026-10-23 22:45:09,651 - freqtrade.freqai.data_kitchen - INFO - dropped 41 of 1000 prediction data points due to NaNs.
-2026-10-23 22:45:10,192 - freqtrade.freqai.data_kitchen - INFO - dropped 41 of 1000 prediction data points due to NaNs.
-2026-10-23 22:45:10,723 - freqtrade.freqai.data_kitchen - INFO - dropped 41 of 1000 prediction data points due to NaNs.
-2026-10-23 22:45:11,244 - freqtrade.freqai.data_kitchen - INFO - dropped 41 of 1000 prediction data points due to NaNs.
-2026-10-23 22:45:11,971 - freqtrade.freqai.data_kitchen - INFO - dropped 41 of 1000 prediction data points due to NaNs.
-2026-10-23 22:45:12,076 - freqtrade.freqai.freqai_interface - INFO - Total time spent inferencing pairlist 41.41 seconds
-2026-10-23 22:45:46,383 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.9', state='RUNNING'
-2026-10-23 22:46:46,386 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.9', state='RUNNING'
-2026-10-23 22:47:46,389 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.9', state='RUNNING'
-2026-10-23 22:48:46,392 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.9', state='RUNNING'
-2026-10-23 22:49:46,395 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.9', state='RUNNING'
-2026-10-23 22:50:46,398 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.9', state='RUNNING'
-2026-10-23 22:51:46,401 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.9', state='RUNNING'
-2026-10-23 22:52:46,403 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.9', state='RUNNING'
-2026-10-23 22:53:46,406 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.9', state='RUNNING'
-2026-10-23 22:54:46,409 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.9', state='RUNNING'
-2026-10-23 22:55:46,412 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.9', state='RUNNING'
-2026-10-23 22:56:46,415 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.9', state='RUNNING'
-2026-10-23 22:57:46,418 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.9', state='RUNNING'
-2026-10-23 22:58:46,421 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.9', state='RUNNING'
-2026-10-23 22:59:46,424 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.9', state='RUNNING'
-2026-10-23 23:00:05,747 - freqtrade.exchange.common - WARNING - _async_get_candle_history() returned exception: "Could not fetch historical candle (OHLCV) data for AVAX/USDT, 1h, spot due to OperationFailed. Message: binance {"code":-1001,"msg":"Internal error; unable to process your request. Please try again."}". Retrying still for 4 times.
-2026-10-23 23:00:15,693 - freqtrade.freqai.freqai_interface - INFO - Total time spent inferencing pairlist 7.07 seconds
-2026-10-23 23:00:49,060 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.9', state='RUNNING'
-2026-10-23 23:01:49,063 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.9', state='RUNNING'
-2026-10-23 23:02:49,066 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.9', state='RUNNING'
-2026-10-23 23:03:49,069 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.9', state='RUNNING'
-2026-10-23 23:04:49,072 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.9', state='RUNNING'
-2026-10-23 23:05:49,075 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.9', state='RUNNING'
-2026-10-23 23:06:49,078 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.9', state='RUNNING'
-2026-10-23 23:07:49,080 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.9', state='RUNNING'
-2026-10-23 23:08:49,083 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.9', state='RUNNING'
-2026-10-23 23:09:49,086 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.9', state='RUNNING'
-2026-10-23 23:10:49,089 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.9', state='RUNNING'
-2026-10-23 23:11:49,092 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.9', state='RUNNING'
-2026-10-23 23:12:49,095 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.9', state='RUNNING'
-2026-10-23 23:13:49,098 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.9', state='RUNNING'
-2026-10-23 23:14:49,100 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.9', state='RUNNING'
-2026-10-23 23:15:10,567 - freqtrade.freqai.freqai_interface - INFO - Total time spent inferencing pairlist 6.91 seconds
-2026-10-23 23:15:49,475 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.9', state='RUNNING'
-2026-10-23 23:16:49,478 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.9', state='RUNNING'
-2026-10-23 23:17:49,481 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.9', state='RUNNING'
-2026-10-23 23:18:49,484 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.9', state='RUNNING'
-2026-10-23 23:19:49,487 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.9', state='RUNNING'
-2026-10-23 23:20:49,490 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.9', state='RUNNING'
-2026-10-23 23:21:49,493 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.9', state='RUNNING'
-2026-10-23 23:22:49,495 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.9', state='RUNNING'
-2026-10-23 23:23:49,498 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.9', state='RUNNING'
-2026-10-23 23:24:49,501 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.9', state='RUNNING'
-2026-10-23 23:25:49,504 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.9', state='RUNNING'
-2026-10-23 23:26:49,506 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.9', state='RUNNING'
-2026-10-23 23:27:49,509 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.9', state='RUNNING'
-2026-10-23 23:28:49,512 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.9', state='RUNNING'
-2026-10-23 23:29:46,100 - freqtrade.plugins.pairlistmanager - INFO - Whitelist with 15 pairs: ['BTC/USDT', 'ETH/USDT', 'SOL/USDT', 'XRP/USDT', 'DOGE/USDT', 'ADA/USDT', 'AVAX/USDT', 'LINK/USDT', 'LTC/USDT', 'BNB/USDT', 'DOT/USDT', 'TRX/USDT', 'SUI/USDT', 'NEAR/USDT', 'APT/USDT']
-2026-10-23 23:29:49,514 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.9', state='RUNNING'
-2026-10-23 23:30:10,737 - freqtrade.freqai.freqai_interface - INFO - Total time spent inferencing pairlist 7.07 seconds
-2026-10-23 23:30:50,775 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.9', state='RUNNING'
-2026-10-23 23:31:50,777 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.9', state='RUNNING'
-2026-10-23 23:32:50,780 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.9', state='RUNNING'
-2026-10-23 23:33:50,783 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.9', state='RUNNING'
-2026-10-23 23:34:50,786 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.9', state='RUNNING'
-2026-10-23 23:35:50,789 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.9', state='RUNNING'
-2026-10-23 23:36:50,792 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.9', state='RUNNING'
-2026-10-23 23:37:50,794 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.9', state='RUNNING'
-2026-10-23 23:38:50,797 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.9', state='RUNNING'
-2026-10-23 23:39:50,800 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.9', state='RUNNING'
-2026-10-23 23:40:50,803 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.9', state='RUNNING'
-2026-10-23 23:41:50,805 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.9', state='RUNNING'
-2026-10-23 23:42:50,808 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.9', state='RUNNING'
-2026-10-23 23:43:50,811 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.9', state='RUNNING'
-2026-10-23 23:44:50,813 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.9', state='RUNNING'
-2026-10-23 23:45:10,608 - freqtrade.freqai.freqai_interface - INFO - Total time spent inferencing pairlist 6.97 seconds
-2026-10-23 23:45:54,516 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.9', state='RUNNING'
-2026-10-23 23:46:54,519 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.9', state='RUNNING'
-2026-10-23 23:47:54,522 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.9', state='RUNNING'
-2026-10-23 23:48:54,525 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.9', state='RUNNING'
-2026-10-23 23:49:54,528 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.9', state='RUNNING'
-2026-10-23 23:50:54,531 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.9', state='RUNNING'
-2026-10-23 23:51:54,533 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.9', state='RUNNING'
-2026-10-23 23:52:54,536 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.9', state='RUNNING'
-2026-10-23 23:53:54,539 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.9', state='RUNNING'
-2026-10-23 23:54:54,542 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.9', state='RUNNING'
-2026-10-23 23:55:54,545 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.9', state='RUNNING'
-2026-10-23 23:56:54,548 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.9', state='RUNNING'
-2026-10-23 23:57:54,550 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.9', state='RUNNING'
-2026-10-23 23:58:54,553 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.9', state='RUNNING'
-2026-10-23 23:59:54,556 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.9', state='RUNNING'
-2026-10-24 00:00:05,725 - freqtrade.exchange.common - WARNING - _async_get_candle_history() returned exception: "Could not fetch historical candle (OHLCV) data for DOT/USDT, 4h, spot due to OperationFailed. Message: binance {"code":-1001,"msg":"Internal error; unable to process your request. Please try again."}". Retrying still for 4 times.
-2026-10-24 00:00:06,066 - freqtrade.exchange.common - WARNING - _async_get_candle_history() returned exception: "Could not fetch historical candle (OHLCV) data for NEAR/USDT, 4h, spot due to OperationFailed. Message: binance {"code":-1001,"msg":"Internal error; unable to process your request. Please try again."}". Retrying still for 4 times.
-2026-10-24 00:00:16,352 - freqtrade.freqai.freqai_interface - INFO - Total time spent inferencing pairlist 7.03 seconds
-2026-10-24 00:00:57,079 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.9', state='RUNNING'
-2026-10-24 00:01:57,081 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.9', state='RUNNING'
-2026-10-24 00:02:57,084 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.9', state='RUNNING'
-2026-10-24 00:03:57,087 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.9', state='RUNNING'
-2026-10-24 00:04:57,090 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.9', state='RUNNING'
-2026-10-24 00:05:57,093 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.9', state='RUNNING'
-2026-10-24 00:06:57,095 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.9', state='RUNNING'
-2026-10-24 00:07:57,098 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.9', state='RUNNING'
-2026-10-24 00:08:57,101 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.9', state='RUNNING'
-2026-10-24 00:09:57,104 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.9', state='RUNNING'
-2026-10-24 00:10:57,107 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.9', state='RUNNING'
-2026-10-24 00:11:57,109 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.9', state='RUNNING'
-2026-10-24 00:12:57,112 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.9', state='RUNNING'
-2026-10-24 00:13:57,114 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.9', state='RUNNING'
-2026-10-24 00:14:57,117 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.9', state='RUNNING'
-2026-10-24 00:15:12,140 - freqtrade.freqai.freqai_interface - INFO - Total time spent inferencing pairlist 6.82 seconds
-2026-10-24 00:16:01,071 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.9', state='RUNNING'
-2026-10-24 00:17:01,073 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.9', state='RUNNING'
-2026-10-24 00:18:01,076 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.9', state='RUNNING'
-2026-10-24 00:19:01,080 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.9', state='RUNNING'
-2026-10-24 00:20:01,083 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.9', state='RUNNING'
-2026-10-24 00:21:01,086 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.9', state='RUNNING'
-2026-10-24 00:22:01,088 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.9', state='RUNNING'
-2026-10-24 00:23:01,091 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.9', state='RUNNING'
-2026-10-24 00:24:01,095 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.9', state='RUNNING'
-2026-10-24 00:25:01,098 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.9', state='RUNNING'
-2026-10-24 00:26:01,101 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.9', state='RUNNING'
-2026-10-24 00:27:01,103 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.9', state='RUNNING'
-2026-10-24 00:28:01,106 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.9', state='RUNNING'
-2026-10-24 00:29:01,109 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.9', state='RUNNING'
-2026-10-24 00:29:47,673 - freqtrade.plugins.pairlistmanager - INFO - Whitelist with 15 pairs: ['BTC/USDT', 'ETH/USDT', 'SOL/USDT', 'XRP/USDT', 'DOGE/USDT', 'ADA/USDT', 'AVAX/USDT', 'LINK/USDT', 'LTC/USDT', 'BNB/USDT', 'DOT/USDT', 'TRX/USDT', 'SUI/USDT', 'NEAR/USDT', 'APT/USDT']
-2026-10-24 00:30:09,863 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.9', state='RUNNING'
-2026-10-24 00:30:11,028 - freqtrade.freqai.freqai_interface - INFO - Total time spent inferencing pairlist 7.10 seconds
-2026-10-24 00:31:09,865 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.9', state='RUNNING'
-2026-10-24 00:32:09,868 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.9', state='RUNNING'
-2026-10-24 00:33:09,871 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.9', state='RUNNING'
-2026-10-24 00:34:09,874 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.9', state='RUNNING'
-2026-10-24 00:35:09,877 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.9', state='RUNNING'
-2026-10-24 00:36:09,880 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.9', state='RUNNING'
-2026-10-24 00:37:09,883 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.9', state='RUNNING'
-2026-10-24 00:38:09,886 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.9', state='RUNNING'
-2026-10-24 00:39:09,888 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.9', state='RUNNING'
-2026-10-24 00:40:09,891 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.9', state='RUNNING'
-2026-10-24 00:41:09,894 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.9', state='RUNNING'
-2026-10-24 00:42:09,897 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.9', state='RUNNING'
-2026-10-24 00:43:09,900 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.9', state='RUNNING'
-2026-10-24 00:44:09,902 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.9', state='RUNNING'
-2026-10-24 00:45:10,667 - freqtrade.freqai.freqai_interface - INFO - Total time spent inferencing pairlist 6.80 seconds
-2026-10-24 00:45:13,169 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.9', state='RUNNING'
-2026-10-24 00:46:13,172 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.9', state='RUNNING'
-2026-10-24 00:47:13,175 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.9', state='RUNNING'
-2026-10-24 00:48:13,177 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.9', state='RUNNING'
-2026-10-24 00:49:13,180 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.9', state='RUNNING'
-2026-10-24 00:50:13,183 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.9', state='RUNNING'
-2026-10-24 00:51:13,186 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.9', state='RUNNING'
-2026-10-24 00:52:13,188 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.9', state='RUNNING'
-2026-10-24 00:53:13,191 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.9', state='RUNNING'
-2026-10-24 00:54:13,194 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.9', state='RUNNING'
-2026-10-24 00:55:13,197 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.9', state='RUNNING'
-2026-10-24 00:56:13,200 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.9', state='RUNNING'
-2026-10-24 00:57:13,202 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.9', state='RUNNING'
-2026-10-24 00:58:13,205 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.9', state='RUNNING'
-2026-10-24 00:59:13,208 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.9', state='RUNNING'
-2026-10-24 01:00:05,808 - freqtrade.exchange.common - WARNING - _async_get_candle_history() returned exception: "Could not fetch historical candle (OHLCV) data for NEAR/USDT, 15m, spot due to OperationFailed. Message: binance {"code":-1001,"msg":"Internal error; unable to process your request. Please try again."}". Retrying still for 4 times.
-2026-10-24 01:00:13,476 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.9', state='RUNNING'
-2026-10-24 01:00:15,737 - freqtrade.freqai.freqai_interface - INFO - Total time spent inferencing pairlist 6.96 seconds
-2026-10-24 01:01:13,479 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.9', state='RUNNING'
-2026-10-24 01:02:13,481 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.9', state='RUNNING'
-2026-10-24 01:03:13,484 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.9', state='RUNNING'
-2026-10-24 01:04:13,487 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.9', state='RUNNING'
-2026-10-24 01:05:13,490 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.9', state='RUNNING'
-2026-10-24 01:06:13,493 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.9', state='RUNNING'
-2026-10-24 01:07:13,496 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.9', state='RUNNING'
-2026-10-24 01:08:13,499 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.9', state='RUNNING'
-2026-10-24 01:09:13,502 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.9', state='RUNNING'
-2026-10-24 01:10:13,505 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.9', state='RUNNING'
-2026-10-24 01:11:13,508 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.9', state='RUNNING'
-2026-10-24 01:12:13,511 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.9', state='RUNNING'
-2026-10-24 01:13:13,514 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.9', state='RUNNING'
-2026-10-24 01:14:13,517 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.9', state='RUNNING'
-2026-10-24 01:15:11,273 - freqtrade.freqai.freqai_interface - INFO - Total time spent inferencing pairlist 7.07 seconds
-2026-10-24 01:15:15,664 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.9', state='RUNNING'
-2026-10-24 01:16:15,667 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.9', state='RUNNING'
-2026-10-24 01:17:15,670 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.9', state='RUNNING'
-2026-10-24 01:18:15,673 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.9', state='RUNNING'
-2026-10-24 01:19:15,676 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.9', state='RUNNING'
-2026-10-24 01:20:15,679 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.9', state='RUNNING'
-2026-10-24 01:21:15,682 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.9', state='RUNNING'
-2026-10-24 01:22:15,685 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.9', state='RUNNING'
-2026-10-24 01:23:15,687 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.9', state='RUNNING'
-2026-10-24 01:24:15,690 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.9', state='RUNNING'
-2026-10-24 01:25:15,693 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.9', state='RUNNING'
-2026-10-24 01:26:15,696 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.9', state='RUNNING'
-2026-10-24 01:27:15,699 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.9', state='RUNNING'
-2026-10-24 01:28:15,701 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.9', state='RUNNING'
-2026-10-24 01:29:15,704 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.9', state='RUNNING'
-2026-10-24 01:29:52,285 - freqtrade.plugins.pairlistmanager - INFO - Whitelist with 15 pairs: ['BTC/USDT', 'ETH/USDT', 'SOL/USDT', 'XRP/USDT', 'DOGE/USDT', 'ADA/USDT', 'AVAX/USDT', 'LINK/USDT', 'LTC/USDT', 'BNB/USDT', 'DOT/USDT', 'TRX/USDT', 'SUI/USDT', 'NEAR/USDT', 'APT/USDT']
-2026-10-24 01:30:10,968 - freqtrade.freqai.freqai_interface - INFO - Total time spent inferencing pairlist 6.87 seconds
-2026-10-24 01:30:20,352 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.9', state='RUNNING'
-2026-10-24 01:31:20,354 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.9', state='RUNNING'
-2026-10-24 01:32:20,357 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.9', state='RUNNING'
-2026-10-24 01:33:20,360 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.9', state='RUNNING'
-2026-10-24 01:34:20,363 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.9', state='RUNNING'
-2026-10-24 01:35:20,365 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.9', state='RUNNING'
-2026-10-24 01:36:20,368 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.9', state='RUNNING'
-2026-10-24 01:37:20,371 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.9', state='RUNNING'
-2026-10-24 01:38:20,374 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.9', state='RUNNING'
-2026-10-24 01:39:20,377 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.9', state='RUNNING'
-2026-10-24 01:40:20,380 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.9', state='RUNNING'
-2026-10-24 01:41:20,383 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.9', state='RUNNING'
-2026-10-24 01:42:20,385 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.9', state='RUNNING'
-2026-10-24 01:43:20,388 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.9', state='RUNNING'
-2026-10-24 01:44:20,391 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.9', state='RUNNING'
-2026-10-24 01:45:10,603 - freqtrade.freqai.freqai_interface - INFO - Total time spent inferencing pairlist 6.93 seconds
-2026-10-24 01:45:24,994 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.9', state='RUNNING'
-2026-10-24 01:46:24,996 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.9', state='RUNNING'
-2026-10-24 01:47:24,999 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.9', state='RUNNING'
-2026-10-24 01:48:25,002 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.9', state='RUNNING'
-2026-10-24 01:49:25,005 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.9', state='RUNNING'
-2026-10-24 01:50:25,008 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.9', state='RUNNING'
-2026-10-24 01:51:25,010 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.9', state='RUNNING'
-2026-10-24 01:52:25,013 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.9', state='RUNNING'
-2026-10-24 01:53:25,016 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.9', state='RUNNING'
-2026-10-24 01:54:25,018 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.9', state='RUNNING'
-2026-10-24 01:55:25,021 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.9', state='RUNNING'
-2026-10-24 01:56:25,024 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.9', state='RUNNING'
-2026-10-24 01:57:25,027 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.9', state='RUNNING'
-2026-10-24 01:58:25,030 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.9', state='RUNNING'
-2026-10-24 01:59:25,032 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.9', state='RUNNING'
-2026-10-24 02:00:05,862 - freqtrade.exchange.common - WARNING - _async_get_candle_history() returned exception: "Could not fetch historical candle (OHLCV) data for DOT/USDT, 15m, spot due to OperationFailed. Message: binance {"code":-1001,"msg":"Internal error; unable to process your request. Please try again."}". Retrying still for 4 times.
-2026-10-24 02:00:06,004 - freqtrade.exchange.common - WARNING - _async_get_candle_history() returned exception: "Could not fetch historical candle (OHLCV) data for NEAR/USDT, 1h, spot due to OperationFailed. Message: binance {"code":-1001,"msg":"Internal error; unable to process your request. Please try again."}". Retrying still for 4 times.
-2026-10-24 02:00:15,798 - freqtrade.freqai.freqai_interface - INFO - Total time spent inferencing pairlist 7.04 seconds
-2026-10-24 02:00:29,570 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.9', state='RUNNING'
-2026-10-24 02:01:29,573 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.9', state='RUNNING'
-2026-10-24 02:02:29,576 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.9', state='RUNNING'
-2026-10-24 02:03:29,578 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.9', state='RUNNING'
-2026-10-24 02:04:29,581 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.9', state='RUNNING'
-2026-10-24 02:05:29,584 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.9', state='RUNNING'
-2026-10-24 02:06:29,586 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.9', state='RUNNING'
-2026-10-24 02:07:29,589 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.9', state='RUNNING'
-2026-10-24 02:08:29,592 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.9', state='RUNNING'
-2026-10-24 02:09:29,594 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.9', state='RUNNING'
-2026-10-24 02:10:29,597 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.9', state='RUNNING'
-2026-10-24 02:11:29,600 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.9', state='RUNNING'
-2026-10-24 02:12:29,603 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.9', state='RUNNING'
-2026-10-24 02:13:29,606 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.9', state='RUNNING'
-2026-10-24 02:14:29,609 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.9', state='RUNNING'
-2026-10-24 02:15:10,992 - freqtrade.freqai.freqai_interface - INFO - Total time spent inferencing pairlist 7.21 seconds
-2026-10-24 02:15:30,371 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.9', state='RUNNING'
-2026-10-24 02:16:30,374 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.9', state='RUNNING'
-2026-10-24 02:17:30,377 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.9', state='RUNNING'
-2026-10-24 02:18:30,379 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.9', state='RUNNING'
-2026-10-24 02:19:30,382 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.9', state='RUNNING'
-2026-10-24 02:20:30,385 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.9', state='RUNNING'
-2026-10-24 02:21:30,388 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.9', state='RUNNING'
-2026-10-24 02:22:30,391 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.9', state='RUNNING'
-2026-10-24 02:23:30,394 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.9', state='RUNNING'
-2026-10-24 02:24:30,397 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.9', state='RUNNING'
-2026-10-24 02:25:30,400 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.9', state='RUNNING'
-2026-10-24 02:26:30,403 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.9', state='RUNNING'
-2026-10-24 02:27:30,406 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.9', state='RUNNING'
-2026-10-24 02:28:30,409 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.9', state='RUNNING'
-2026-10-24 02:29:30,412 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.9', state='RUNNING'
-2026-10-24 02:29:57,270 - freqtrade.plugins.pairlistmanager - INFO - Whitelist with 15 pairs: ['BTC/USDT', 'ETH/USDT', 'SOL/USDT', 'XRP/USDT', 'DOGE/USDT', 'ADA/USDT', 'AVAX/USDT', 'LINK/USDT', 'LTC/USDT', 'BNB/USDT', 'DOT/USDT', 'TRX/USDT', 'SUI/USDT', 'NEAR/USDT', 'APT/USDT']
-2026-10-24 02:30:11,350 - freqtrade.freqai.freqai_interface - INFO - Total time spent inferencing pairlist 7.30 seconds
-2026-10-24 02:30:34,680 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.9', state='RUNNING'
-2026-10-24 02:31:34,683 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.9', state='RUNNING'
-2026-10-24 02:32:34,686 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.9', state='RUNNING'
-2026-10-24 02:33:34,688 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.9', state='RUNNING'
-2026-10-24 02:34:34,691 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.9', state='RUNNING'
-2026-10-24 02:35:34,694 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.9', state='RUNNING'
-2026-10-24 02:36:34,696 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.9', state='RUNNING'
-2026-10-24 02:37:34,699 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.9', state='RUNNING'
-2026-10-24 02:38:34,702 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.9', state='RUNNING'
-2026-10-24 02:39:34,705 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.9', state='RUNNING'
-2026-10-24 02:40:34,708 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.9', state='RUNNING'
-2026-10-24 02:41:34,711 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.9', state='RUNNING'
-2026-10-24 02:42:34,714 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.9', state='RUNNING'
-2026-10-24 02:43:34,717 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.9', state='RUNNING'
-2026-10-24 02:44:34,720 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.9', state='RUNNING'
-2026-10-24 02:45:11,665 - freqtrade.freqai.freqai_interface - INFO - Total time spent inferencing pairlist 7.33 seconds
-2026-10-24 02:45:39,519 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.9', state='RUNNING'
-2026-10-24 02:46:39,521 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.9', state='RUNNING'
-2026-10-24 02:47:39,524 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.9', state='RUNNING'
-2026-10-24 02:48:39,527 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.9', state='RUNNING'
-2026-10-24 02:49:39,530 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.9', state='RUNNING'
-2026-10-24 02:50:39,533 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.9', state='RUNNING'
-2026-10-24 02:51:39,536 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.9', state='RUNNING'
-2026-10-24 02:52:39,539 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.9', state='RUNNING'
-2026-10-24 02:53:39,542 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.9', state='RUNNING'
-2026-10-24 02:54:39,545 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.9', state='RUNNING'
-2026-10-24 02:55:39,547 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.9', state='RUNNING'
-2026-10-24 02:56:39,550 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.9', state='RUNNING'
-2026-10-24 02:57:39,553 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.9', state='RUNNING'
-2026-10-24 02:58:39,556 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.9', state='RUNNING'
-2026-10-24 02:59:39,558 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.9', state='RUNNING'
-2026-10-24 03:00:12,861 - freqtrade.freqai.freqai_interface - INFO - Total time spent inferencing pairlist 6.94 seconds
-2026-10-24 03:00:39,962 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.9', state='RUNNING'
-2026-10-24 03:01:39,965 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.9', state='RUNNING'
-2026-10-24 03:02:39,968 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.9', state='RUNNING'
-2026-10-24 03:03:39,970 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.9', state='RUNNING'
-2026-10-24 03:04:39,973 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.9', state='RUNNING'
-2026-10-24 03:05:39,976 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.9', state='RUNNING'
-2026-10-24 03:06:39,979 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.9', state='RUNNING'
-2026-10-24 03:07:39,982 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.9', state='RUNNING'
-2026-10-24 03:08:39,984 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.9', state='RUNNING'
-2026-10-24 03:09:39,987 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.9', state='RUNNING'
-2026-10-24 03:10:39,990 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.9', state='RUNNING'
-2026-10-24 03:11:39,993 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.9', state='RUNNING'
-2026-10-24 03:12:39,995 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.9', state='RUNNING'
-2026-10-24 03:13:39,998 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.9', state='RUNNING'
-2026-10-24 03:14:40,001 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.9', state='RUNNING'
-2026-10-24 03:15:10,692 - freqtrade.freqai.freqai_interface - INFO - Total time spent inferencing pairlist 6.92 seconds
-2026-10-24 03:15:40,071 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.9', state='RUNNING'
-2026-10-24 03:16:40,074 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.9', state='RUNNING'
-2026-10-24 03:17:40,077 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.9', state='RUNNING'
-2026-10-24 03:18:40,079 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.9', state='RUNNING'
-2026-10-24 03:19:40,082 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.9', state='RUNNING'
-2026-10-24 03:20:40,085 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.9', state='RUNNING'
-2026-10-24 03:21:40,088 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.9', state='RUNNING'
-2026-10-24 03:22:40,090 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.9', state='RUNNING'
-2026-10-24 03:23:40,093 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.9', state='RUNNING'
-2026-10-24 03:24:40,096 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.9', state='RUNNING'
-2026-10-24 03:25:40,099 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.9', state='RUNNING'
-2026-10-24 03:26:40,102 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.9', state='RUNNING'
-2026-10-24 03:27:40,105 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.9', state='RUNNING'
-2026-10-24 03:28:40,108 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.9', state='RUNNING'
-2026-10-24 03:29:40,111 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.9', state='RUNNING'
-2026-10-24 03:30:02,807 - freqtrade.plugins.pairlistmanager - INFO - Whitelist with 15 pairs: ['BTC/USDT', 'ETH/USDT', 'SOL/USDT', 'XRP/USDT', 'DOGE/USDT', 'ADA/USDT', 'AVAX/USDT', 'LINK/USDT', 'LTC/USDT', 'BNB/USDT', 'DOT/USDT', 'TRX/USDT', 'SUI/USDT', 'NEAR/USDT', 'APT/USDT']
-2026-10-24 03:30:12,248 - freqtrade.freqai.freqai_interface - INFO - Total time spent inferencing pairlist 6.98 seconds
-2026-10-24 03:30:42,285 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.9', state='RUNNING'
-2026-10-24 03:31:42,288 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.9', state='RUNNING'
-2026-10-24 03:32:42,291 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.9', state='RUNNING'
-2026-10-24 03:33:42,294 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.9', state='RUNNING'
-2026-10-24 03:34:42,297 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.9', state='RUNNING'
-2026-10-24 03:35:42,300 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.9', state='RUNNING'
-2026-10-24 03:36:42,303 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.9', state='RUNNING'
-2026-10-24 03:37:42,305 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.9', state='RUNNING'
-2026-10-24 03:38:42,308 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.9', state='RUNNING'
-2026-10-24 03:39:42,311 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.9', state='RUNNING'
-2026-10-24 03:40:42,313 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.9', state='RUNNING'
-2026-10-24 03:41:42,316 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.9', state='RUNNING'
-2026-10-24 03:42:42,319 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.9', state='RUNNING'
-2026-10-24 03:43:42,322 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.9', state='RUNNING'
-2026-10-24 03:44:42,324 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.9', state='RUNNING'
-2026-10-24 03:45:10,598 - freqtrade.freqai.freqai_interface - INFO - Total time spent inferencing pairlist 6.91 seconds
-2026-10-24 03:45:44,514 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.9', state='RUNNING'
-2026-10-24 03:46:44,517 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.9', state='RUNNING'
-2026-10-24 03:47:44,520 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.9', state='RUNNING'
-2026-10-24 03:48:44,523 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.9', state='RUNNING'
-2026-10-24 03:49:44,526 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.9', state='RUNNING'
-2026-10-24 03:50:44,528 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.9', state='RUNNING'
-2026-10-24 03:51:44,531 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.9', state='RUNNING'
-2026-10-24 03:52:44,534 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.9', state='RUNNING'
-2026-10-24 03:53:44,536 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.9', state='RUNNING'
-2026-10-24 03:54:44,539 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.9', state='RUNNING'
-2026-10-24 03:55:44,542 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.9', state='RUNNING'
-2026-10-24 03:56:44,545 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.9', state='RUNNING'
-2026-10-24 03:57:44,547 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.9', state='RUNNING'
-2026-10-24 03:58:44,550 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.9', state='RUNNING'
-2026-10-24 03:59:44,553 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.9', state='RUNNING'
-2026-10-24 04:00:05,885 - freqtrade.exchange.common - WARNING - _async_get_candle_history() returned exception: "Could not fetch historical candle (OHLCV) data for ETH/USDT, 1h, spot due to OperationFailed. Message: binance {"code":-1001,"msg":"Internal error; unable to process your request. Please try again."}". Retrying still for 4 times.
-2026-10-24 04:00:05,961 - freqtrade.exchange.common - WARNING - _async_get_candle_history() returned exception: "Could not fetch historical candle (OHLCV) data for APT/USDT, 4h, spot due to OperationFailed. Message: binance {"code":-1001,"msg":"Internal error; unable to process your request. Please try again."}". Retrying still for 4 times.
-2026-10-24 04:00:06,183 - freqtrade.exchange.common - WARNING - _async_get_candle_history() returned exception: "Could not fetch historical candle (OHLCV) data for ETH/USDT, 15m, spot due to OperationFailed. Message: binance {"code":-1001,"msg":"Internal error; unable to process your request. Please try again."}". Retrying still for 4 times.
-2026-10-24 04:00:06,322 - freqtrade.exchange.common - WARNING - _async_get_candle_history() returned exception: "Could not fetch historical candle (OHLCV) data for XRP/USDT, 1h, spot due to OperationFailed. Message: binance {"code":-1001,"msg":"Internal error; unable to process your request. Please try again."}". Retrying still for 4 times.
-2026-10-24 04:00:16,260 - freqtrade.freqai.freqai_interface - INFO - Total time spent inferencing pairlist 6.88 seconds
-2026-10-24 04:00:45,031 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.9', state='RUNNING'
-2026-10-24 04:01:45,034 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.9', state='RUNNING'
-2026-10-24 04:02:45,037 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.9', state='RUNNING'
-2026-10-24 04:03:45,040 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.9', state='RUNNING'
-2026-10-24 04:04:45,042 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.9', state='RUNNING'
-2026-10-24 04:05:45,045 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.9', state='RUNNING'
-2026-10-24 04:06:45,048 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.9', state='RUNNING'
-2026-10-24 04:07:45,051 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.9', state='RUNNING'
-2026-10-24 04:08:45,053 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.9', state='RUNNING'
-2026-10-24 04:09:45,056 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.9', state='RUNNING'
-2026-10-24 04:10:45,059 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.9', state='RUNNING'
-2026-10-24 04:11:45,062 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.9', state='RUNNING'
-2026-10-24 04:12:45,064 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.9', state='RUNNING'
-2026-10-24 04:13:45,067 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.9', state='RUNNING'
-2026-10-24 04:14:45,070 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.9', state='RUNNING'
-2026-10-24 04:15:09,228 - freqtrade.commands.trade_commands - INFO - worker found ... calling exit
-2026-10-24 04:15:09,229 - freqtrade.rpc.rpc_manager - INFO - Sending rpc message: {'type': status, 'status': 'process died'}
-2026-10-24 04:15:09,229 - freqtrade.freqtradebot - INFO - Cleaning up modules ...
-2026-10-24 04:15:09,231 - freqtrade.freqai.freqai_interface - INFO - Stopping FreqAI
-2026-10-24 04:15:09,238 - freqtrade.freqai.freqai_interface - INFO - Waiting on Training iteration
-2026-10-24 04:15:09,810 - freqtrade.rpc.rpc_manager - INFO - Cleaning up rpc modules ...
-2026-10-24 04:15:10,065 - freqtrade - INFO - SIGINT received, aborting ...
+2026-10-24 04:15:54,818 - freqtrade.loggers - INFO - Enabling colorized output.
+2026-10-24 04:15:54,818 - freqtrade.loggers - INFO - Logfile configured
+2026-10-24 04:15:54,818 - freqtrade.loggers - INFO - Verbosity set to 0
+2026-10-24 04:15:54,818 - freqtrade.configuration.configuration - INFO - Runmode set to dry_run.
+2026-10-24 04:15:54,819 - freqtrade.configuration.configuration - INFO - Parameter --db-url detected ...
+2026-10-24 04:15:54,819 - freqtrade.configuration.configuration - INFO - Dry run is enabled
+2026-10-24 04:15:54,819 - freqtrade.configuration.configuration - INFO - Using DB: "sqlite:////freqtrade/user_data/trades.sqlite"
+2026-10-24 04:15:54,819 - freqtrade.configuration.configuration - INFO - Using max_open_trades: 5 ...
+2026-10-24 04:15:54,829 - freqtrade.configuration.configuration - INFO - Using user-data directory: /freqtrade/user_data ...
+2026-10-24 04:15:54,830 - freqtrade.configuration.directory_operations - INFO - Created data directory: None
+2026-10-24 04:15:54,830 - freqtrade.configuration.configuration - INFO - Using data directory: /freqtrade/user_data/data/binance ...
+2026-10-24 04:15:54,830 - freqtrade.configuration.configuration - INFO - Using freqaimodel class name: LightGBMRegressor
+2026-10-24 04:15:54,831 - freqtrade.exchange.check_exchange - INFO - Checking exchange...
+2026-10-24 04:15:54,837 - freqtrade.exchange.check_exchange - INFO - Exchange "binance" is officially supported by the Freqtrade development team.
+2026-10-24 04:15:54,838 - freqtrade.configuration.configuration - INFO - Using pairlist from configuration.
+2026-10-24 04:15:54,838 - freqtrade.exchange.exchange - INFO - Instance is running with dry_run enabled
+2026-10-24 04:15:54,838 - freqtrade.exchange.exchange - INFO - Using CCXT 4.5.84
+2026-10-24 04:15:54,839 - freqtrade.exchange.exchange - INFO - Applying additional ccxt config: {'enableRateLimit': True, 'urls': {'api': {'public': 'https://data-api.binance.vision/api/v3'}}, 'options': {'fetchMarkets': {'types': ['spot']}}}
+2026-10-24 04:15:54,841 - freqtrade.exchange.exchange - INFO - Applying additional ccxt config: {'enableRateLimit': True, 'urls': {'api': {'public': 'https://data-api.binance.vision/api/v3'}}, 'options': {'fetchMarkets': {'types': ['spot']}}}
+2026-10-24 04:15:54,844 - freqtrade.exchange.exchange - INFO - Using Exchange "Binance"
+2026-10-24 04:15:57,020 - freqtrade.exchange.exchange - INFO - Time offset to Binance is -215ms.
+2026-10-24 04:15:57,021 - freqtrade.resolvers.exchange_resolver - INFO - Using resolved exchange class 'Binance' ...
+2026-10-24 04:15:57,032 - freqtrade.resolvers.iresolver - INFO - Using resolved strategy RedlineAI from '/freqtrade/user_data/strategies/RedlineAI.py'...
+2026-10-24 04:15:57,033 - freqtrade.strategy.hyper - INFO - Found no parameter file.
+2026-10-24 04:15:57,033 - freqtrade.resolvers.strategy_resolver - INFO - Override strategy 'timeframe' with value from the configuration: 15m.
+2026-10-24 04:15:57,033 - freqtrade.resolvers.strategy_resolver - INFO - Override strategy 'stake_currency' with value from the configuration: USDT.
+2026-10-24 04:15:57,033 - freqtrade.resolvers.strategy_resolver - INFO - Override strategy 'stake_amount' with value from the configuration: 190.
+2026-10-24 04:15:57,034 - freqtrade.resolvers.strategy_resolver - INFO - Override strategy 'unfilledtimeout' with value from the configuration: {'entry': 10, 'exit': 30}.
+2026-10-24 04:15:57,034 - freqtrade.resolvers.strategy_resolver - INFO - Override strategy 'max_open_trades' with value from the configuration: 5.
+2026-10-24 04:15:57,034 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using minimal_roi: {'0': 0.1, '240': -1}
+2026-10-24 04:15:57,034 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using timeframe: 15m
+2026-10-24 04:15:57,034 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using stoploss: -0.05
+2026-10-24 04:15:57,035 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using trailing_stop: False
+2026-10-24 04:15:57,035 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using trailing_stop_positive_offset: 0.0
+2026-10-24 04:15:57,035 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using trailing_only_offset_is_reached: False
+2026-10-24 04:15:57,035 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using use_custom_stoploss: False
+2026-10-24 04:15:57,035 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using process_only_new_candles: True
+2026-10-24 04:15:57,036 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using order_types: {'entry': 'limit', 'exit': 'limit', 'stoploss': 'limit', 'stoploss_on_exchange': False, 'stoploss_on_exchange_interval': 60}
+2026-10-24 04:15:57,036 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using order_time_in_force: {'entry': 'GTC', 'exit': 'GTC'}
+2026-10-24 04:15:57,036 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using stake_currency: USDT
+2026-10-24 04:15:57,036 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using stake_amount: 190
+2026-10-24 04:15:57,036 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using startup_candle_count: 60
+2026-10-24 04:15:57,036 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using unfilledtimeout: {'entry': 10, 'exit': 30}
+2026-10-24 04:15:57,037 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using use_exit_signal: True
+2026-10-24 04:15:57,037 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using exit_profit_only: False
+2026-10-24 04:15:57,037 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using ignore_roi_if_entry_signal: False
+2026-10-24 04:15:57,037 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using exit_profit_offset: 0.0
+2026-10-24 04:15:57,037 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using disable_dataframe_checks: False
+2026-10-24 04:15:57,037 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using ignore_buying_expired_candle_after: 0
+2026-10-24 04:15:57,038 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using position_adjustment_enable: False
+2026-10-24 04:15:57,038 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using max_entry_position_adjustment: -1
+2026-10-24 04:15:57,038 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using max_open_trades: 5
+2026-10-24 04:15:57,039 - freqtrade.configuration.config_validation - INFO - Validating configuration ...
+2026-10-24 04:15:57,075 - freqtrade.wallets - INFO - Wallets synced.
+2026-10-24 04:15:57,078 - freqtrade.resolvers.iresolver - INFO - Using resolved pairlist StaticPairList from '/freqtrade/freqtrade/plugins/pairlist/StaticPairList.py'...
+2026-10-24 04:15:57,078 - freqtrade.freqtradebot - INFO - Starting initial pairlist refresh
+2026-10-24 04:15:57,089 - freqtrade.plugins.pairlistmanager - INFO - Whitelist with 15 pairs: ['BTC/USDT', 'ETH/USDT', 'SOL/USDT', 'XRP/USDT', 'DOGE/USDT', 'ADA/USDT', 'AVAX/USDT', 'LINK/USDT', 'LTC/USDT', 'BNB/USDT', 'DOT/USDT', 'TRX/USDT', 'SUI/USDT', 'NEAR/USDT', 'APT/USDT']
+2026-10-24 04:15:57,089 - freqtrade.freqtradebot - INFO - Initial Pairlist refresh took 0.01s
+2026-10-24 04:15:57,332 - freqtrade.resolvers.iresolver - INFO - Using resolved freqaimodel LightGBMRegressor from '/freqtrade/freqtrade/freqai/prediction_models/LightGBMRegressor.py'...
+2026-10-24 04:15:57,333 - freqtrade.freqai.data_drawer - INFO - Could not find existing datadrawer, starting from scratch
+2026-10-24 04:15:57,334 - freqtrade.freqai.data_drawer - INFO - Could not find existing historic_predictions, starting from scratch
+2026-10-24 04:15:57,334 - freqtrade.freqai.freqai_interface - INFO - Set fresh train queue from whitelist. Queue: ['BTC/USDT', 'ETH/USDT', 'SOL/USDT', 'XRP/USDT', 'DOGE/USDT', 'ADA/USDT', 'AVAX/USDT', 'LINK/USDT', 'LTC/USDT', 'BNB/USDT', 'DOT/USDT', 'TRX/USDT', 'SUI/USDT', 'NEAR/USDT', 'APT/USDT']
+2026-10-24 04:15:57,334 - freqtrade.strategy.interface - INFO - Downloading all training data for all pairs in whitelist and corr_pairlist, this may take a while if the data is not already on disk.
+2026-10-24 04:15:57,342 - freqtrade.freqai.utils - INFO - FreqAI auto-downloader using 90 startup candles.
+2026-10-24 04:15:57,362 - freqtrade.data.history.history_utils - INFO - Download history data for "BTC/USDT", 15m, spot and store in /freqtrade/user_data/data/binance. From 2026-06-26T04:15:57 to 2026-10-24T04:15:57
+2026-10-24 04:15:58,775 - freqtrade.data.history.history_utils - INFO - Downloaded data for BTC/USDT, 15m, spot with length 11519.
+2026-10-24 04:15:58,785 - freqtrade.data.history.history_utils - INFO - Download history data for "BTC/USDT", 1h, spot and store in /freqtrade/user_data/data/binance. From 2026-06-26T04:15:57 to 2026-10-24T04:15:57
+2026-10-24 04:15:59,175 - freqtrade.data.history.history_utils - INFO - Downloaded data for BTC/USDT, 1h, spot with length 2879.
+2026-10-24 04:15:59,179 - freqtrade.data.history.history_utils - INFO - Downloading parallel candles for 4h for all pairs since 2026-06-26T04:15:57
+2026-10-24 04:15:59,721 - freqtrade.data.history.history_utils - INFO - Download history data for "BTC/USDT", 4h, spot and store in /freqtrade/user_data/data/binance. From 2026-06-26T04:15:57 to 2026-10-24T04:15:57
+2026-10-24 04:16:00,069 - freqtrade.data.history.history_utils - INFO - Downloaded data for BTC/USDT, 4h, spot with length 719.
+2026-10-24 04:16:00,072 - freqtrade.data.history.history_utils - INFO - Downloading parallel candles for 1d for all pairs since 2026-06-26T04:15:57
+2026-10-24 04:16:00,595 - freqtrade.data.history.history_utils - INFO - Download history data for "BTC/USDT", 1d, spot and store in /freqtrade/user_data/data/binance. From 2026-06-26T04:15:57 to 2026-10-24T04:15:57
+2026-10-24 04:16:01,066 - freqtrade.data.history.history_utils - INFO - Downloaded data for BTC/USDT, 1d, spot with length 119.
+2026-10-24 04:16:01,068 - freqtrade.data.history.history_utils - INFO - Download history data for "ETH/USDT", 15m, spot and store in /freqtrade/user_data/data/binance. From 2026-06-26T04:15:57 to 2026-10-24T04:15:57
+2026-10-24 04:16:01,641 - freqtrade.data.history.history_utils - INFO - Downloaded data for ETH/USDT, 15m, spot with length 11519.
+2026-10-24 04:16:01,650 - freqtrade.data.history.history_utils - INFO - Download history data for "ETH/USDT", 1h, spot and store in /freqtrade/user_data/data/binance. From 2026-06-26T04:15:57 to 2026-10-24T04:15:57
+2026-10-24 04:16:02,040 - freqtrade.data.history.history_utils - INFO - Downloaded data for ETH/USDT, 1h, spot with length 2879.
+2026-10-24 04:16:02,044 - freqtrade.data.history.history_utils - INFO - Download history data for "ETH/USDT", 4h, spot and store in /freqtrade/user_data/data/binance. From 2026-06-26T04:15:57 to 2026-10-24T04:15:57
+2026-10-24 04:16:02,391 - freqtrade.data.history.history_utils - INFO - Downloaded data for ETH/USDT, 4h, spot with length 719.
+2026-10-24 04:16:02,394 - freqtrade.data.history.history_utils - INFO - Download history data for "ETH/USDT", 1d, spot and store in /freqtrade/user_data/data/binance. From 2026-06-26T04:15:57 to 2026-10-24T04:15:57
+2026-10-24 04:16:02,732 - freqtrade.data.history.history_utils - INFO - Downloaded data for ETH/USDT, 1d, spot with length 119.
+2026-10-24 04:16:02,734 - freqtrade.data.history.history_utils - INFO - Download history data for "SOL/USDT", 15m, spot and store in /freqtrade/user_data/data/binance. From 2026-06-26T04:15:57 to 2026-10-24T04:15:57
+2026-10-24 04:16:03,302 - freqtrade.data.history.history_utils - INFO - Downloaded data for SOL/USDT, 15m, spot with length 11519.
+2026-10-24 04:16:03,313 - freqtrade.data.history.history_utils - INFO - Download history data for "SOL/USDT", 1h, spot and store in /freqtrade/user_data/data/binance. From 2026-06-26T04:15:57 to 2026-10-24T04:15:57
+2026-10-24 04:16:03,709 - freqtrade.data.history.history_utils - INFO - Downloaded data for SOL/USDT, 1h, spot with length 2879.
+2026-10-24 04:16:03,714 - freqtrade.data.history.history_utils - INFO - Download history data for "SOL/USDT", 4h, spot and store in /freqtrade/user_data/data/binance. From 2026-06-26T04:15:57 to 2026-10-24T04:15:57
+2026-10-24 04:16:04,063 - freqtrade.data.history.history_utils - INFO - Downloaded data for SOL/USDT, 4h, spot with length 719.
+2026-10-24 04:16:04,066 - freqtrade.data.history.history_utils - INFO - Download history data for "SOL/USDT", 1d, spot and store in /freqtrade/user_data/data/binance. From 2026-06-26T04:15:57 to 2026-10-24T04:15:57
+2026-10-24 04:16:04,404 - freqtrade.data.history.history_utils - INFO - Downloaded data for SOL/USDT, 1d, spot with length 119.
+2026-10-24 04:16:04,407 - freqtrade.data.history.history_utils - INFO - Download history data for "XRP/USDT", 15m, spot and store in /freqtrade/user_data/data/binance. From 2026-06-26T04:15:57 to 2026-10-24T04:15:57
+2026-10-24 04:16:04,973 - freqtrade.data.history.history_utils - INFO - Downloaded data for XRP/USDT, 15m, spot with length 11519.
+2026-10-24 04:16:04,980 - freqtrade.data.history.history_utils - INFO - Download history data for "XRP/USDT", 1h, spot and store in /freqtrade/user_data/data/binance. From 2026-06-26T04:15:57 to 2026-10-24T04:15:57
+2026-10-24 04:16:05,376 - freqtrade.data.history.history_utils - INFO - Downloaded data for XRP/USDT, 1h, spot with length 2879.
+2026-10-24 04:16:05,380 - freqtrade.data.history.history_utils - INFO - Download history data for "XRP/USDT", 4h, spot and store in /freqtrade/user_data/data/binance. From 2026-06-26T04:15:57 to 2026-10-24T04:15:57
+2026-10-24 04:16:05,733 - freqtrade.data.history.history_utils - INFO - Downloaded data for XRP/USDT, 4h, spot with length 719.
+2026-10-24 04:16:05,736 - freqtrade.data.history.history_utils - INFO - Download history data for "XRP/USDT", 1d, spot and store in /freqtrade/user_data/data/binance. From 2026-06-26T04:15:57 to 2026-10-24T04:15:57
+2026-10-24 04:16:06,073 - freqtrade.data.history.history_utils - INFO - Downloaded data for XRP/USDT, 1d, spot with length 119.
+2026-10-24 04:16:06,076 - freqtrade.data.history.history_utils - INFO - Download history data for "DOGE/USDT", 15m, spot and store in /freqtrade/user_data/data/binance. From 2026-06-26T04:15:57 to 2026-10-24T04:15:57
+2026-10-24 04:16:06,641 - freqtrade.data.history.history_utils - INFO - Downloaded data for DOGE/USDT, 15m, spot with length 11519.
+2026-10-24 04:16:06,648 - freqtrade.data.history.history_utils - INFO - Download history data for "DOGE/USDT", 1h, spot and store in /freqtrade/user_data/data/binance. From 2026-06-26T04:15:57 to 2026-10-24T04:15:57
+2026-10-24 04:16:07,042 - freqtrade.data.history.history_utils - INFO - Downloaded data for DOGE/USDT, 1h, spot with length 2879.
+2026-10-24 04:16:07,046 - freqtrade.data.history.history_utils - INFO - Download history data for "DOGE/USDT", 4h, spot and store in /freqtrade/user_data/data/binance. From 2026-06-26T04:15:57 to 2026-10-24T04:15:57
+2026-10-24 04:16:07,395 - freqtrade.data.history.history_utils - INFO - Downloaded data for DOGE/USDT, 4h, spot with length 719.
+2026-10-24 04:16:07,399 - freqtrade.data.history.history_utils - INFO - Download history data for "DOGE/USDT", 1d, spot and store in /freqtrade/user_data/data/binance. From 2026-06-26T04:15:57 to 2026-10-24T04:15:57
+2026-10-24 04:16:07,734 - freqtrade.data.history.history_utils - INFO - Downloaded data for DOGE/USDT, 1d, spot with length 119.
+2026-10-24 04:16:07,737 - freqtrade.data.history.history_utils - INFO - Download history data for "ADA/USDT", 15m, spot and store in /freqtrade/user_data/data/binance. From 2026-06-26T04:15:57 to 2026-10-24T04:15:57
+2026-10-24 04:16:08,304 - freqtrade.data.history.history_utils - INFO - Downloaded data for ADA/USDT, 15m, spot with length 11519.
+2026-10-24 04:16:08,312 - freqtrade.data.history.history_utils - INFO - Download history data for "ADA/USDT", 1h, spot and store in /freqtrade/user_data/data/binance. From 2026-06-26T04:15:57 to 2026-10-24T04:15:57
+2026-10-24 04:16:08,703 - freqtrade.data.history.history_utils - INFO - Downloaded data for ADA/USDT, 1h, spot with length 2879.
+2026-10-24 04:16:08,707 - freqtrade.data.history.history_utils - INFO - Download history data for "ADA/USDT", 4h, spot and store in /freqtrade/user_data/data/binance. From 2026-06-26T04:15:57 to 2026-10-24T04:15:57
+2026-10-24 04:16:09,193 - freqtrade.data.history.history_utils - INFO - Downloaded data for ADA/USDT, 4h, spot with length 719.
+2026-10-24 04:16:09,196 - freqtrade.data.history.history_utils - INFO - Download history data for "ADA/USDT", 1d, spot and store in /freqtrade/user_data/data/binance. From 2026-06-26T04:15:57 to 2026-10-24T04:15:57
+2026-10-24 04:16:09,536 - freqtrade.data.history.history_utils - INFO - Downloaded data for ADA/USDT, 1d, spot with length 119.
+2026-10-24 04:16:09,539 - freqtrade.data.history.history_utils - INFO - Download history data for "AVAX/USDT", 15m, spot and store in /freqtrade/user_data/data/binance. From 2026-06-26T04:15:57 to 2026-10-24T04:15:57
+2026-10-24 04:16:10,108 - freqtrade.data.history.history_utils - INFO - Downloaded data for AVAX/USDT, 15m, spot with length 11519.
+2026-10-24 04:16:10,118 - freqtrade.data.history.history_utils - INFO - Download history data for "AVAX/USDT", 1h, spot and store in /freqtrade/user_data/data/binance. From 2026-06-26T04:15:57 to 2026-10-24T04:15:57
+2026-10-24 04:16:10,513 - freqtrade.data.history.history_utils - INFO - Downloaded data for AVAX/USDT, 1h, spot with length 2879.
+2026-10-24 04:16:10,518 - freqtrade.data.history.history_utils - INFO - Download history data for "AVAX/USDT", 4h, spot and store in /freqtrade/user_data/data/binance. From 2026-06-26T04:15:57 to 2026-10-24T04:15:57
+2026-10-24 04:16:10,868 - freqtrade.data.history.history_utils - INFO - Downloaded data for AVAX/USDT, 4h, spot with length 719.
+2026-10-24 04:16:10,872 - freqtrade.data.history.history_utils - INFO - Download history data for "AVAX/USDT", 1d, spot and store in /freqtrade/user_data/data/binance. From 2026-06-26T04:15:57 to 2026-10-24T04:15:57
+2026-10-24 04:16:11,211 - freqtrade.data.history.history_utils - INFO - Downloaded data for AVAX/USDT, 1d, spot with length 119.
+2026-10-24 04:16:11,214 - freqtrade.data.history.history_utils - INFO - Download history data for "LINK/USDT", 15m, spot and store in /freqtrade/user_data/data/binance. From 2026-06-26T04:15:57 to 2026-10-24T04:15:57
+2026-10-24 04:16:11,781 - freqtrade.data.history.history_utils - INFO - Downloaded data for LINK/USDT, 15m, spot with length 11519.
+2026-10-24 04:16:11,789 - freqtrade.data.history.history_utils - INFO - Download history data for "LINK/USDT", 1h, spot and store in /freqtrade/user_data/data/binance. From 2026-06-26T04:15:57 to 2026-10-24T04:15:57
+2026-10-24 04:16:12,178 - freqtrade.data.history.history_utils - INFO - Downloaded data for LINK/USDT, 1h, spot with length 2879.
+2026-10-24 04:16:12,182 - freqtrade.data.history.history_utils - INFO - Download history data for "LINK/USDT", 4h, spot and store in /freqtrade/user_data/data/binance. From 2026-06-26T04:15:57 to 2026-10-24T04:15:57
+2026-10-24 04:16:12,533 - freqtrade.data.history.history_utils - INFO - Downloaded data for LINK/USDT, 4h, spot with length 719.
+2026-10-24 04:16:12,536 - freqtrade.data.history.history_utils - INFO - Download history data for "LINK/USDT", 1d, spot and store in /freqtrade/user_data/data/binance. From 2026-06-26T04:15:57 to 2026-10-24T04:15:57
+2026-10-24 04:16:12,876 - freqtrade.data.history.history_utils - INFO - Downloaded data for LINK/USDT, 1d, spot with length 119.
+2026-10-24 04:16:12,879 - freqtrade.data.history.history_utils - INFO - Download history data for "LTC/USDT", 15m, spot and store in /freqtrade/user_data/data/binance. From 2026-06-26T04:15:57 to 2026-10-24T04:15:57
+2026-10-24 04:16:13,446 - freqtrade.data.history.history_utils - INFO - Downloaded data for LTC/USDT, 15m, spot with length 11519.
+2026-10-24 04:16:13,457 - freqtrade.data.history.history_utils - INFO - Download history data for "LTC/USDT", 1h, spot and store in /freqtrade/user_data/data/binance. From 2026-06-26T04:15:57 to 2026-10-24T04:15:57
+2026-10-24 04:16:13,846 - freqtrade.data.history.history_utils - INFO - Downloaded data for LTC/USDT, 1h, spot with length 2879.
+2026-10-24 04:16:13,850 - freqtrade.data.history.history_utils - INFO - Download history data for "LTC/USDT", 4h, spot and store in /freqtrade/user_data/data/binance. From 2026-06-26T04:15:57 to 2026-10-24T04:15:57
+2026-10-24 04:16:14,197 - freqtrade.data.history.history_utils - INFO - Downloaded data for LTC/USDT, 4h, spot with length 719.
+2026-10-24 04:16:14,200 - freqtrade.data.history.history_utils - INFO - Download history data for "LTC/USDT", 1d, spot and store in /freqtrade/user_data/data/binance. From 2026-06-26T04:15:57 to 2026-10-24T04:15:57
+2026-10-24 04:16:14,539 - freqtrade.data.history.history_utils - INFO - Downloaded data for LTC/USDT, 1d, spot with length 119.
+2026-10-24 04:16:14,541 - freqtrade.data.history.history_utils - INFO - Download history data for "BNB/USDT", 15m, spot and store in /freqtrade/user_data/data/binance. From 2026-06-26T04:15:57 to 2026-10-24T04:15:57
+2026-10-24 04:16:15,109 - freqtrade.data.history.history_utils - INFO - Downloaded data for BNB/USDT, 15m, spot with length 11519.
+2026-10-24 04:16:15,118 - freqtrade.data.history.history_utils - INFO - Download history data for "BNB/USDT", 1h, spot and store in /freqtrade/user_data/data/binance. From 2026-06-26T04:15:57 to 2026-10-24T04:15:57
+2026-10-24 04:16:15,507 - freqtrade.data.history.history_utils - INFO - Downloaded data for BNB/USDT, 1h, spot with length 2879.
+2026-10-24 04:16:15,511 - freqtrade.data.history.history_utils - INFO - Download history data for "BNB/USDT", 4h, spot and store in /freqtrade/user_data/data/binance. From 2026-06-26T04:15:57 to 2026-10-24T04:15:57
+2026-10-24 04:16:15,861 - freqtrade.data.history.history_utils - INFO - Downloaded data for BNB/USDT, 4h, spot with length 719.
+2026-10-24 04:16:15,864 - freqtrade.data.history.history_utils - INFO - Download history data for "BNB/USDT", 1d, spot and store in /freqtrade/user_data/data/binance. From 2026-06-26T04:15:57 to 2026-10-24T04:15:57
+2026-10-24 04:16:16,208 - freqtrade.data.history.history_utils - INFO - Downloaded data for BNB/USDT, 1d, spot with length 119.
+2026-10-24 04:16:16,211 - freqtrade.data.history.history_utils - INFO - Download history data for "DOT/USDT", 15m, spot and store in /freqtrade/user_data/data/binance. From 2026-06-26T04:15:57 to 2026-10-24T04:15:57
+2026-10-24 04:16:16,783 - freqtrade.data.history.history_utils - INFO - Downloaded data for DOT/USDT, 15m, spot with length 11519.
+2026-10-24 04:16:16,790 - freqtrade.data.history.history_utils - INFO - Download history data for "DOT/USDT", 1h, spot and store in /freqtrade/user_data/data/binance. From 2026-06-26T04:15:57 to 2026-10-24T04:15:57
+2026-10-24 04:16:17,181 - freqtrade.data.history.history_utils - INFO - Downloaded data for DOT/USDT, 1h, spot with length 2879.
+2026-10-24 04:16:17,185 - freqtrade.data.history.history_utils - INFO - Download history data for "DOT/USDT", 4h, spot and store in /freqtrade/user_data/data/binance. From 2026-06-26T04:15:57 to 2026-10-24T04:15:57
+2026-10-24 04:16:17,534 - freqtrade.data.history.history_utils - INFO - Downloaded data for DOT/USDT, 4h, spot with length 719.
+2026-10-24 04:16:17,537 - freqtrade.data.history.history_utils - INFO - Download history data for "DOT/USDT", 1d, spot and store in /freqtrade/user_data/data/binance. From 2026-06-26T04:15:57 to 2026-10-24T04:15:57
+2026-10-24 04:16:17,880 - freqtrade.data.history.history_utils - INFO - Downloaded data for DOT/USDT, 1d, spot with length 119.
+2026-10-24 04:16:17,883 - freqtrade.data.history.history_utils - INFO - Download history data for "TRX/USDT", 15m, spot and store in /freqtrade/user_data/data/binance. From 2026-06-26T04:15:57 to 2026-10-24T04:15:57
+2026-10-24 04:16:18,450 - freqtrade.data.history.history_utils - INFO - Downloaded data for TRX/USDT, 15m, spot with length 11519.
+2026-10-24 04:16:18,456 - freqtrade.data.history.history_utils - INFO - Download history data for "TRX/USDT", 1h, spot and store in /freqtrade/user_data/data/binance. From 2026-06-26T04:15:57 to 2026-10-24T04:15:57
+2026-10-24 04:16:18,847 - freqtrade.data.history.history_utils - INFO - Downloaded data for TRX/USDT, 1h, spot with length 2879.
+2026-10-24 04:16:18,850 - freqtrade.data.history.history_utils - INFO - Download history data for "TRX/USDT", 4h, spot and store in /freqtrade/user_data/data/binance. From 2026-06-26T04:15:57 to 2026-10-24T04:15:57
+2026-10-24 04:16:19,198 - freqtrade.data.history.history_utils - INFO - Downloaded data for TRX/USDT, 4h, spot with length 719.
+2026-10-24 04:16:19,201 - freqtrade.data.history.history_utils - INFO - Download history data for "TRX/USDT", 1d, spot and store in /freqtrade/user_data/data/binance. From 2026-06-26T04:15:57 to 2026-10-24T04:15:57
+2026-10-24 04:16:19,538 - freqtrade.data.history.history_utils - INFO - Downloaded data for TRX/USDT, 1d, spot with length 119.
+2026-10-24 04:16:19,541 - freqtrade.data.history.history_utils - INFO - Download history data for "SUI/USDT", 15m, spot and store in /freqtrade/user_data/data/binance. From 2026-06-26T04:15:57 to 2026-10-24T04:15:57
+2026-10-24 04:16:20,109 - freqtrade.data.history.history_utils - INFO - Downloaded data for SUI/USDT, 15m, spot with length 11519.
+2026-10-24 04:16:20,115 - freqtrade.data.history.history_utils - INFO - Download history data for "SUI/USDT", 1h, spot and store in /freqtrade/user_data/data/binance. From 2026-06-26T04:15:57 to 2026-10-24T04:15:57
+2026-10-24 04:16:20,511 - freqtrade.data.history.history_utils - INFO - Downloaded data for SUI/USDT, 1h, spot with length 2879.
+2026-10-24 04:16:20,516 - freqtrade.data.history.history_utils - INFO - Download history data for "SUI/USDT", 4h, spot and store in /freqtrade/user_data/data/binance. From 2026-06-26T04:15:57 to 2026-10-24T04:15:57
+2026-10-24 04:16:20,863 - freqtrade.data.history.history_utils - INFO - Downloaded data for SUI/USDT, 4h, spot with length 719.
+2026-10-24 04:16:20,867 - freqtrade.data.history.history_utils - INFO - Download history data for "SUI/USDT", 1d, spot and store in /freqtrade/user_data/data/binance. From 2026-06-26T04:15:57 to 2026-10-24T04:15:57
+2026-10-24 04:16:21,204 - freqtrade.data.history.history_utils - INFO - Downloaded data for SUI/USDT, 1d, spot with length 119.
+2026-10-24 04:16:21,207 - freqtrade.data.history.history_utils - INFO - Download history data for "NEAR/USDT", 15m, spot and store in /freqtrade/user_data/data/binance. From 2026-06-26T04:15:57 to 2026-10-24T04:15:57
+2026-10-24 04:16:21,774 - freqtrade.data.history.history_utils - INFO - Downloaded data for NEAR/USDT, 15m, spot with length 11519.
+2026-10-24 04:16:21,781 - freqtrade.data.history.history_utils - INFO - Download history data for "NEAR/USDT", 1h, spot and store in /freqtrade/user_data/data/binance. From 2026-06-26T04:15:57 to 2026-10-24T04:15:57
+2026-10-24 04:16:22,172 - freqtrade.data.history.history_utils - INFO - Downloaded data for NEAR/USDT, 1h, spot with length 2879.
+2026-10-24 04:16:22,176 - freqtrade.data.history.history_utils - INFO - Download history data for "NEAR/USDT", 4h, spot and store in /freqtrade/user_data/data/binance. From 2026-06-26T04:15:57 to 2026-10-24T04:15:57
+2026-10-24 04:16:22,524 - freqtrade.data.history.history_utils - INFO - Downloaded data for NEAR/USDT, 4h, spot with length 719.
+2026-10-24 04:16:22,527 - freqtrade.data.history.history_utils - INFO - Download history data for "NEAR/USDT", 1d, spot and store in /freqtrade/user_data/data/binance. From 2026-06-26T04:15:57 to 2026-10-24T04:15:57
+2026-10-24 04:16:22,865 - freqtrade.data.history.history_utils - INFO - Downloaded data for NEAR/USDT, 1d, spot with length 119.
+2026-10-24 04:16:22,867 - freqtrade.data.history.history_utils - INFO - Download history data for "APT/USDT", 15m, spot and store in /freqtrade/user_data/data/binance. From 2026-06-26T04:15:57 to 2026-10-24T04:15:57
+2026-10-24 04:16:23,440 - freqtrade.data.history.history_utils - INFO - Downloaded data for APT/USDT, 15m, spot with length 11519.
+2026-10-24 04:16:23,447 - freqtrade.data.history.history_utils - INFO - Download history data for "APT/USDT", 1h, spot and store in /freqtrade/user_data/data/binance. From 2026-06-26T04:15:57 to 2026-10-24T04:15:57
+2026-10-24 04:16:23,839 - freqtrade.data.history.history_utils - INFO - Downloaded data for APT/USDT, 1h, spot with length 2879.
+2026-10-24 04:16:23,843 - freqtrade.data.history.history_utils - INFO - Download history data for "APT/USDT", 4h, spot and store in /freqtrade/user_data/data/binance. From 2026-06-26T04:15:57 to 2026-10-24T04:15:57
+2026-10-24 04:16:24,194 - freqtrade.data.history.history_utils - INFO - Downloaded data for APT/USDT, 4h, spot with length 719.
+2026-10-24 04:16:24,197 - freqtrade.data.history.history_utils - INFO - Download history data for "APT/USDT", 1d, spot and store in /freqtrade/user_data/data/binance. From 2026-06-26T04:15:57 to 2026-10-24T04:15:57
+2026-10-24 04:16:24,533 - freqtrade.data.history.history_utils - INFO - Downloaded data for APT/USDT, 1d, spot with length 119.
+2026-10-24 04:16:24,537 - freqtrade.plugins.protectionmanager - INFO - No protection Handlers defined.
+2026-10-24 04:16:24,537 - freqtrade.rpc.rpc_manager - INFO - Sending rpc message: {'type': status, 'status': 'running'}
+2026-10-24 04:16:24,538 - freqtrade.worker - INFO - Changing state to: RUNNING
+2026-10-24 04:16:24,543 - freqtrade.rpc.rpc_manager - INFO - Sending rpc message: {'type': warning, 'status': 'Dry run is enabled. All trades are simulated.'}
+2026-10-24 04:16:24,543 - freqtrade.rpc.rpc_manager - INFO - Sending rpc message: {'type': startup, 'status': "*Exchange:* `binance`\n*Stake per trade:* `190 USDT`\n*Minimum ROI:* `{'0': 0.1, '240': -1}`\n*Stoploss:* `-0.05`\n*Position adjustment:* `Off`\n*Timeframe:* `15m`\n*Strategy:* `RedlineAI`"}
+2026-10-24 04:16:24,544 - freqtrade.rpc.rpc_manager - INFO - Sending rpc message: {'type': startup, 'status': "Searching for USDT pairs to buy and sell based on [{'StaticPairList': 'StaticPairList'}]"}
+2026-10-24 04:16:27,668 - freqtrade.freqai.freqai_interface - WARNING - No model ready for BTC/USDT, returning null values to strategy.
+2026-10-24 04:16:28,225 - freqtrade.freqai.freqai_interface - WARNING - No model ready for ETH/USDT, returning null values to strategy.
+2026-10-24 04:16:28,979 - freqtrade.freqai.base_models.BaseRegressionModel - INFO - -------------------- Starting training BTC/USDT --------------------
+2026-10-24 04:16:28,989 - freqtrade.freqai.data_kitchen - INFO - BTC/USDT: dropped 20 training points due to NaNs in populated dataset 2879.
+2026-10-24 04:16:28,990 - freqtrade.freqai.base_models.BaseRegressionModel - INFO - -------------------- Training on data from 2026-09-24 to 2026-10-24 --------------------
+2026-10-24 04:16:29,170 - datasieve.pipeline - INFO - SVM detected 29 data points as outliers.
+2026-10-24 04:16:29,515 - datasieve.pipeline - INFO - SVM detected 353 data points as outliers.
+2026-10-24 04:16:29,567 - datasieve.pipeline - INFO - DI tossed 143 predictions for being too far from training data.
+2026-10-24 04:16:29,569 - freqtrade.freqai.base_models.BaseRegressionModel - INFO - Training model on 506 features
+2026-10-24 04:16:29,569 - freqtrade.freqai.base_models.BaseRegressionModel - INFO - Training model on 1886 data points
+2026-10-24 04:16:29,723 - freqtrade.freqai.freqai_interface - WARNING - No model ready for SOL/USDT, returning null values to strategy.
+2026-10-24 04:16:30,938 - freqtrade.freqai.freqai_interface - WARNING - No model ready for XRP/USDT, returning null values to strategy.
+2026-10-24 04:16:32,225 - freqtrade.freqai.freqai_interface - WARNING - No model ready for DOGE/USDT, returning null values to strategy.
+2026-10-24 04:16:32,493 - freqtrade.freqai.base_models.BaseRegressionModel - INFO - -------------------- Done training BTC/USDT (3.51 secs) --------------------
+2026-10-24 04:16:33,302 - freqtrade.freqai.freqai_interface - WARNING - No model ready for ADA/USDT, returning null values to strategy.
+2026-10-24 04:16:34,692 - freqtrade.freqai.base_models.BaseRegressionModel - INFO - -------------------- Starting training ETH/USDT --------------------
+2026-10-24 04:16:34,702 - freqtrade.freqai.data_kitchen - INFO - ETH/USDT: dropped 20 training points due to NaNs in populated dataset 2879.
+2026-10-24 04:16:34,703 - freqtrade.freqai.base_models.BaseRegressionModel - INFO - -------------------- Training on data from 2026-09-24 to 2026-10-24 --------------------
+2026-10-24 04:16:34,711 - freqtrade.freqai.freqai_interface - WARNING - No model ready for AVAX/USDT, returning null values to strategy.
+2026-10-24 04:16:34,747 - datasieve.pipeline - INFO - SVM detected 29 data points as outliers.
+2026-10-24 04:16:34,937 - datasieve.pipeline - INFO - SVM detected 353 data points as outliers.
+2026-10-24 04:16:35,015 - datasieve.pipeline - INFO - DI tossed 143 predictions for being too far from training data.
+2026-10-24 04:16:35,018 - freqtrade.freqai.base_models.BaseRegressionModel - INFO - Training model on 506 features
+2026-10-24 04:16:35,019 - freqtrade.freqai.base_models.BaseRegressionModel - INFO - Training model on 1886 data points
+2026-10-24 04:16:36,335 - freqtrade.freqai.freqai_interface - WARNING - No model ready for LINK/USDT, returning null values to strategy.
+2026-10-24 04:16:37,706 - freqtrade.freqai.freqai_interface - WARNING - No model ready for LTC/USDT, returning null values to strategy.
+2026-10-24 04:16:37,822 - freqtrade.freqai.base_models.BaseRegressionModel - INFO - -------------------- Done training ETH/USDT (3.13 secs) --------------------
+2026-10-24 04:16:38,728 - freqtrade.freqai.freqai_interface - WARNING - No model ready for BNB/USDT, returning null values to strategy.
+2026-10-24 04:16:40,044 - freqtrade.freqai.freqai_interface - WARNING - No model ready for DOT/USDT, returning null values to strategy.
+2026-10-24 04:16:40,260 - freqtrade.freqai.base_models.BaseRegressionModel - INFO - -------------------- Starting training SOL/USDT --------------------
+2026-10-24 04:16:40,276 - freqtrade.freqai.data_kitchen - INFO - SOL/USDT: dropped 20 training points due to NaNs in populated dataset 2879.
+2026-10-24 04:16:40,277 - freqtrade.freqai.base_models.BaseRegressionModel - INFO - -------------------- Training on data from 2026-09-24 to 2026-10-24 --------------------
+2026-10-24 04:16:40,378 - datasieve.pipeline - INFO - SVM detected 31 data points as outliers.
+2026-10-24 04:16:40,759 - datasieve.pipeline - INFO - SVM detected 330 data points as outliers.
+2026-10-24 04:16:40,929 - datasieve.pipeline - INFO - DI tossed 131 predictions for being too far from training data.
+2026-10-24 04:16:40,933 - freqtrade.freqai.base_models.BaseRegressionModel - INFO - Training model on 758 features
+2026-10-24 04:16:40,933 - freqtrade.freqai.base_models.BaseRegressionModel - INFO - Training model on 1884 data points
+2026-10-24 04:16:41,559 - freqtrade.freqai.freqai_interface - WARNING - No model ready for TRX/USDT, returning null values to strategy.
+2026-10-24 04:16:42,736 - freqtrade.freqai.freqai_interface - WARNING - No model ready for SUI/USDT, returning null values to strategy.
+2026-10-24 04:16:44,113 - freqtrade.freqai.freqai_interface - WARNING - No model ready for NEAR/USDT, returning null values to strategy.
+2026-10-24 04:16:45,013 - freqtrade.freqai.base_models.BaseRegressionModel - INFO - -------------------- Done training SOL/USDT (4.75 secs) --------------------
+2026-10-24 04:16:45,358 - freqtrade.freqai.freqai_interface - WARNING - No model ready for APT/USDT, returning null values to strategy.
+2026-10-24 04:16:45,378 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.9', state='RUNNING'
+2026-10-24 04:16:46,392 - freqtrade.freqai.base_models.BaseRegressionModel - INFO - -------------------- Starting training XRP/USDT --------------------
+2026-10-24 04:16:46,401 - freqtrade.freqai.data_kitchen - INFO - XRP/USDT: dropped 20 training points due to NaNs in populated dataset 2879.
+2026-10-24 04:16:46,402 - freqtrade.freqai.base_models.BaseRegressionModel - INFO - -------------------- Training on data from 2026-09-24 to 2026-10-24 --------------------
+2026-10-24 04:16:46,429 - datasieve.pipeline - INFO - SVM detected 22 data points as outliers.
+2026-10-24 04:16:46,567 - datasieve.pipeline - INFO - SVM detected 286 data points as outliers.
+2026-10-24 04:16:46,609 - datasieve.pipeline - INFO - DI tossed 219 predictions for being too far from training data.
+2026-10-24 04:16:46,611 - freqtrade.freqai.base_models.BaseRegressionModel - INFO - Training model on 758 features
+2026-10-24 04:16:46,611 - freqtrade.freqai.base_models.BaseRegressionModel - INFO - Training model on 1893 data points
+2026-10-24 04:16:48,258 - freqtrade.freqai.base_models.BaseRegressionModel - INFO - -------------------- Done training XRP/USDT (1.87 secs) --------------------
+2026-10-24 04:16:49,633 - freqtrade.freqai.base_models.BaseRegressionModel - INFO - -------------------- Starting training DOGE/USDT --------------------
+2026-10-24 04:16:49,641 - freqtrade.freqai.data_kitchen - INFO - DOGE/USDT: dropped 20 training points due to NaNs in populated dataset 2879.
+2026-10-24 04:16:49,642 - freqtrade.freqai.base_models.BaseRegressionModel - INFO - -------------------- Training on data from 2026-09-24 to 2026-10-24 --------------------
+2026-10-24 04:16:49,669 - datasieve.pipeline - INFO - SVM detected 44 data points as outliers.
+2026-10-24 04:16:49,798 - datasieve.pipeline - INFO - SVM detected 269 data points as outliers.
+2026-10-24 04:16:49,829 - datasieve.pipeline - INFO - DI tossed 209 predictions for being too far from training data.
+2026-10-24 04:16:49,831 - freqtrade.freqai.base_models.BaseRegressionModel - INFO - Training model on 758 features
+2026-10-24 04:16:49,831 - freqtrade.freqai.base_models.BaseRegressionModel - INFO - Training model on 1871 data points
+2026-10-24 04:16:51,550 - freqtrade.freqai.base_models.BaseRegressionModel - INFO - -------------------- Done training DOGE/USDT (1.92 secs) --------------------
+2026-10-24 04:16:52,918 - freqtrade.freqai.base_models.BaseRegressionModel - INFO - -------------------- Starting training ADA/USDT --------------------
+2026-10-24 04:16:52,925 - freqtrade.freqai.data_kitchen - INFO - ADA/USDT: dropped 20 training points due to NaNs in populated dataset 2879.
+2026-10-24 04:16:52,925 - freqtrade.freqai.base_models.BaseRegressionModel - INFO - -------------------- Training on data from 2026-09-24 to 2026-10-24 --------------------
+2026-10-24 04:16:52,952 - datasieve.pipeline - INFO - SVM detected 28 data points as outliers.
+2026-10-24 04:16:53,073 - datasieve.pipeline - INFO - SVM detected 197 data points as outliers.
+2026-10-24 04:16:53,104 - datasieve.pipeline - INFO - DI tossed 395 predictions for being too far from training data.
+2026-10-24 04:16:53,106 - freqtrade.freqai.base_models.BaseRegressionModel - INFO - Training model on 758 features
+2026-10-24 04:16:53,107 - freqtrade.freqai.base_models.BaseRegressionModel - INFO - Training model on 1887 data points
+2026-10-24 04:16:54,764 - freqtrade.freqai.base_models.BaseRegressionModel - INFO - -------------------- Done training ADA/USDT (1.85 secs) --------------------
+2026-10-24 04:16:56,129 - freqtrade.freqai.base_models.BaseRegressionModel - INFO - -------------------- Starting training AVAX/USDT --------------------
+2026-10-24 04:16:56,136 - freqtrade.freqai.data_kitchen - INFO - AVAX/USDT: dropped 20 training points due to NaNs in populated dataset 2879.
+2026-10-24 04:16:56,136 - freqtrade.freqai.base_models.BaseRegressionModel - INFO - -------------------- Training on data from 2026-09-24 to 2026-10-24 --------------------
+2026-10-24 04:16:56,171 - datasieve.pipeline - INFO - SVM detected 57 data points as outliers.
+2026-10-24 04:16:56,296 - datasieve.pipeline - INFO - SVM detected 90 data points as outliers.
+2026-10-24 04:16:56,328 - datasieve.pipeline - INFO - DI tossed 396 predictions for being too far from training data.
+2026-10-24 04:16:56,330 - freqtrade.freqai.base_models.BaseRegressionModel - INFO - Training model on 758 features
+2026-10-24 04:16:56,331 - freqtrade.freqai.base_models.BaseRegressionModel - INFO - Training model on 1858 data points
+2026-10-24 04:16:57,988 - freqtrade.freqai.base_models.BaseRegressionModel - INFO - -------------------- Done training AVAX/USDT (1.86 secs) --------------------
+2026-10-24 04:16:59,353 - freqtrade.freqai.base_models.BaseRegressionModel - INFO - -------------------- Starting training LINK/USDT --------------------
+2026-10-24 04:16:59,360 - freqtrade.freqai.data_kitchen - INFO - LINK/USDT: dropped 20 training points due to NaNs in populated dataset 2879.
+2026-10-24 04:16:59,361 - freqtrade.freqai.base_models.BaseRegressionModel - INFO - -------------------- Training on data from 2026-09-24 to 2026-10-24 --------------------
+2026-10-24 04:16:59,389 - datasieve.pipeline - INFO - SVM detected 38 data points as outliers.
+2026-10-24 04:16:59,527 - datasieve.pipeline - INFO - SVM detected 308 data points as outliers.
+2026-10-24 04:16:59,565 - datasieve.pipeline - INFO - DI tossed 170 predictions for being too far from training data.
+2026-10-24 04:16:59,568 - freqtrade.freqai.base_models.BaseRegressionModel - INFO - Training model on 758 features
+2026-10-24 04:16:59,568 - freqtrade.freqai.base_models.BaseRegressionModel - INFO - Training model on 1877 data points
+2026-10-24 04:17:01,261 - freqtrade.freqai.base_models.BaseRegressionModel - INFO - -------------------- Done training LINK/USDT (1.91 secs) --------------------
+2026-10-24 04:17:02,644 - freqtrade.freqai.base_models.BaseRegressionModel - INFO - -------------------- Starting training LTC/USDT --------------------
+2026-10-24 04:17:02,651 - freqtrade.freqai.data_kitchen - INFO - LTC/USDT: dropped 20 training points due to NaNs in populated dataset 2879.
+2026-10-24 04:17:02,652 - freqtrade.freqai.base_models.BaseRegressionModel - INFO - -------------------- Training on data from 2026-09-24 to 2026-10-24 --------------------
+2026-10-24 04:17:02,681 - datasieve.pipeline - INFO - SVM detected 23 data points as outliers.
+2026-10-24 04:17:02,828 - datasieve.pipeline - INFO - SVM detected 103 data points as outliers.
+2026-10-24 04:17:02,868 - datasieve.pipeline - INFO - DI tossed 243 predictions for being too far from training data.
+2026-10-24 04:17:02,870 - freqtrade.freqai.base_models.BaseRegressionModel - INFO - Training model on 758 features
+2026-10-24 04:17:02,871 - freqtrade.freqai.base_models.BaseRegressionModel - INFO - Training model on 1892 data points
+2026-10-24 04:17:04,555 - freqtrade.freqai.base_models.BaseRegressionModel - INFO - -------------------- Done training LTC/USDT (1.91 secs) --------------------
+2026-10-24 04:17:05,934 - freqtrade.freqai.base_models.BaseRegressionModel - INFO - -------------------- Starting training BNB/USDT --------------------
+2026-10-24 04:17:05,941 - freqtrade.freqai.data_kitchen - INFO - BNB/USDT: dropped 20 training points due to NaNs in populated dataset 2879.
+2026-10-24 04:17:05,941 - freqtrade.freqai.base_models.BaseRegressionModel - INFO - -------------------- Training on data from 2026-09-24 to 2026-10-24 --------------------
+2026-10-24 04:17:05,971 - datasieve.pipeline - INFO - SVM detected 28 data points as outliers.
+2026-10-24 04:17:06,169 - datasieve.pipeline - INFO - SVM detected 272 data points as outliers.
+2026-10-24 04:17:06,201 - datasieve.pipeline - INFO - DI tossed 243 predictions for being too far from training data.
+2026-10-24 04:17:06,203 - freqtrade.freqai.base_models.BaseRegressionModel - INFO - Training model on 758 features
+2026-10-24 04:17:06,204 - freqtrade.freqai.base_models.BaseRegressionModel - INFO - Training model on 1887 data points
+2026-10-24 04:17:07,940 - freqtrade.freqai.base_models.BaseRegressionModel - INFO - -------------------- Done training BNB/USDT (2.01 secs) --------------------
+2026-10-24 04:17:09,312 - freqtrade.freqai.base_models.BaseRegressionModel - INFO - -------------------- Starting training DOT/USDT --------------------
+2026-10-24 04:17:09,319 - freqtrade.freqai.data_kitchen - INFO - DOT/USDT: dropped 20 training points due to NaNs in populated dataset 2879.
+2026-10-24 04:17:09,320 - freqtrade.freqai.base_models.BaseRegressionModel - INFO - -------------------- Training on data from 2026-09-24 to 2026-10-24 --------------------
+2026-10-24 04:17:09,350 - datasieve.pipeline - INFO - SVM detected 20 data points as outliers.
+2026-10-24 04:17:09,483 - datasieve.pipeline - INFO - SVM detected 280 data points as outliers.
+2026-10-24 04:17:09,523 - datasieve.pipeline - INFO - DI tossed 189 predictions for being too far from training data.
+2026-10-24 04:17:09,525 - freqtrade.freqai.base_models.BaseRegressionModel - INFO - Training model on 758 features
+2026-10-24 04:17:09,525 - freqtrade.freqai.base_models.BaseRegressionModel - INFO - Training model on 1895 data points
+2026-10-24 04:17:11,285 - freqtrade.freqai.base_models.BaseRegressionModel - INFO - -------------------- Done training DOT/USDT (1.97 secs) --------------------
+2026-10-24 04:17:12,700 - freqtrade.freqai.base_models.BaseRegressionModel - INFO - -------------------- Starting training TRX/USDT --------------------
+2026-10-24 04:17:12,708 - freqtrade.freqai.data_kitchen - INFO - TRX/USDT: dropped 20 training points due to NaNs in populated dataset 2879.
+2026-10-24 04:17:12,709 - freqtrade.freqai.base_models.BaseRegressionModel - INFO - -------------------- Training on data from 2026-09-24 to 2026-10-24 --------------------
+2026-10-24 04:17:12,739 - datasieve.pipeline - INFO - SVM detected 34 data points as outliers.
+2026-10-24 04:17:12,861 - datasieve.pipeline - INFO - SVM detected 195 data points as outliers.
+2026-10-24 04:17:12,901 - datasieve.pipeline - INFO - DI tossed 442 predictions for being too far from training data.
+2026-10-24 04:17:12,903 - freqtrade.freqai.base_models.BaseRegressionModel - INFO - Training model on 758 features
+2026-10-24 04:17:12,904 - freqtrade.freqai.base_models.BaseRegressionModel - INFO - Training model on 1881 data points
+2026-10-24 04:17:14,599 - freqtrade.freqai.base_models.BaseRegressionModel - INFO - -------------------- Done training TRX/USDT (1.90 secs) --------------------
+2026-10-24 04:17:15,970 - freqtrade.freqai.base_models.BaseRegressionModel - INFO - -------------------- Starting training SUI/USDT --------------------
+2026-10-24 04:17:15,977 - freqtrade.freqai.data_kitchen - INFO - SUI/USDT: dropped 20 training points due to NaNs in populated dataset 2879.
+2026-10-24 04:17:15,978 - freqtrade.freqai.base_models.BaseRegressionModel - INFO - -------------------- Training on data from 2026-09-24 to 2026-10-24 --------------------
+2026-10-24 04:17:16,008 - datasieve.pipeline - INFO - SVM detected 48 data points as outliers.
+2026-10-24 04:17:16,145 - datasieve.pipeline - INFO - SVM detected 356 data points as outliers.
+2026-10-24 04:17:16,173 - datasieve.pipeline - INFO - DI tossed 106 predictions for being too far from training data.
+2026-10-24 04:17:16,178 - freqtrade.freqai.base_models.BaseRegressionModel - INFO - Training model on 758 features
+2026-10-24 04:17:16,179 - freqtrade.freqai.base_models.BaseRegressionModel - INFO - Training model on 1867 data points
+2026-10-24 04:17:17,853 - freqtrade.freqai.base_models.BaseRegressionModel - INFO - -------------------- Done training SUI/USDT (1.88 secs) --------------------
+2026-10-24 04:17:19,225 - freqtrade.freqai.base_models.BaseRegressionModel - INFO - -------------------- Starting training NEAR/USDT --------------------
+2026-10-24 04:17:19,233 - freqtrade.freqai.data_kitchen - INFO - NEAR/USDT: dropped 20 training points due to NaNs in populated dataset 2879.
+2026-10-24 04:17:19,233 - freqtrade.freqai.base_models.BaseRegressionModel - INFO - -------------------- Training on data from 2026-09-24 to 2026-10-24 --------------------
+2026-10-24 04:17:19,261 - datasieve.pipeline - INFO - SVM detected 32 data points as outliers.
+2026-10-24 04:17:19,407 - datasieve.pipeline - INFO - SVM detected 65 data points as outliers.
+2026-10-24 04:17:19,455 - datasieve.pipeline - INFO - DI tossed 262 predictions for being too far from training data.
+2026-10-24 04:17:19,457 - freqtrade.freqai.base_models.BaseRegressionModel - INFO - Training model on 758 features
+2026-10-24 04:17:19,457 - freqtrade.freqai.base_models.BaseRegressionModel - INFO - Training model on 1883 data points
+2026-10-24 04:17:21,218 - freqtrade.freqai.base_models.BaseRegressionModel - INFO - -------------------- Done training NEAR/USDT (1.99 secs) --------------------
+2026-10-24 04:17:22,587 - freqtrade.freqai.base_models.BaseRegressionModel - INFO - -------------------- Starting training APT/USDT --------------------
+2026-10-24 04:17:22,594 - freqtrade.freqai.data_kitchen - INFO - APT/USDT: dropped 20 training points due to NaNs in populated dataset 2879.
+2026-10-24 04:17:22,595 - freqtrade.freqai.base_models.BaseRegressionModel - INFO - -------------------- Training on data from 2026-09-24 to 2026-10-24 --------------------
+2026-10-24 04:17:22,624 - datasieve.pipeline - INFO - SVM detected 29 data points as outliers.
+2026-10-24 04:17:22,750 - datasieve.pipeline - INFO - SVM detected 83 data points as outliers.
+2026-10-24 04:17:22,795 - datasieve.pipeline - INFO - DI tossed 345 predictions for being too far from training data.
+2026-10-24 04:17:22,797 - freqtrade.freqai.base_models.BaseRegressionModel - INFO - Training model on 758 features
+2026-10-24 04:17:22,798 - freqtrade.freqai.base_models.BaseRegressionModel - INFO - Training model on 1886 data points
+2026-10-24 04:17:24,458 - freqtrade.freqai.base_models.BaseRegressionModel - INFO - -------------------- Done training APT/USDT (1.87 secs) --------------------
+2026-10-24 04:17:24,468 - freqtrade.freqai.freqai_interface - INFO - Total time spent training pairlist 42.25 seconds
+2026-10-24 04:17:45,381 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.9', state='RUNNING'
+2026-10-24 04:18:45,383 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.9', state='RUNNING'
+2026-10-24 04:19:45,386 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.9', state='RUNNING'
+2026-10-24 04:20:45,388 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.9', state='RUNNING'
