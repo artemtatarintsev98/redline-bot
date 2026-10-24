@@ -26,7 +26,7 @@
 **Баланс:** 955.91 USDT (старт 1000) · за день +0.0 · всього -44.09
 **Угоди сьогодні:** 0 (виграшних 0), P&L +0 USDT
 **Всього угод:** 26 · win rate 0.346
-**Сканувань за день:** 174 · помилок даних 0
+**Сканувань за день:** 175 · помилок даних 0
 
 ## Що бот торгує (перевірено 46 комбінацій)
 - Активні (довів прибутковість на нових даних): DOT/trend_pullback, LTC/breakout, ADA/breakout, ETH/breakout, AVAX/trend_pullback, DOGE/breakout, ADA/trend_pullback, NASDAQ/breakout, BNB/trend_pullback, ETH/trend_pullback
