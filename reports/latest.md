@@ -2,7 +2,7 @@
 
 ## Основна стратегія: моментум-ротація (з 17.10)
 
-**Баланс:** 943.88 USDT зі старту 1000 (-5.61%)
+**Баланс:** 943.32 USDT зі старту 1000 (-5.67%)
 **Зараз тримає:** BNB+BTC+DOT · режим ринку: BTC вище SMA100, торгуємо
 **Угод ротації:** 9
 
@@ -26,11 +26,11 @@
 **Баланс:** 955.91 USDT (старт 1000) · за день +0.0 · всього -44.09
 **Угоди сьогодні:** 0 (виграшних 0), P&L +0 USDT
 **Всього угод:** 26 · win rate 0.346
-**Сканувань за день:** 698 · помилок даних 0
+**Сканувань за день:** 727 · помилок даних 0
 
-## Що бот торгує (перевірено 46 комбінацій)
-- Активні (довів прибутковість на нових даних): DOT/trend_pullback, LTC/breakout, ADA/breakout, ETH/breakout, AVAX/trend_pullback, DOGE/breakout, ADA/trend_pullback, NASDAQ/breakout, BNB/trend_pullback, ETH/trend_pullback
-- Пробні (мінімальний ризик): LTC/trend_pullback, DOGE/trend_pullback, OIL/trend_pullback
+## Що бот торгує (перевірено 48 комбінацій)
+- Активні (довів прибутковість на нових даних): LTC/breakout, AVAX/trend_pullback, ADA/breakout, NASDAQ/breakout, DOT/trend_pullback, ADA/trend_pullback, ETH/breakout, OIL/breakout, ETH/trend_pullback
+- Пробні (мінімальний ризик): LTC/trend_pullback, OIL/trend_pullback, DOGE/trend_pullback
 
 ## Результат по активах (вся історія)
 | Актив | Стратегія | Угод | Win | P&L |
