@@ -732,3 +732,10 @@
 2026-10-24 10:00:05,997 - freqtrade.exchange.common - WARNING - _async_get_candle_history() returned exception: "Could not fetch historical candle (OHLCV) data for DOT/USDT, 15m, spot due to OperationFailed. Message: binance {"code":-1001,"msg":"Internal error; unable to process your request. Please try again."}". Retrying still for 4 times.
 2026-10-24 10:00:12,372 - freqtrade.freqai.freqai_interface - INFO - Total time spent inferencing pairlist 4.33 seconds
 2026-10-24 10:00:51,570 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.9', state='RUNNING'
+2026-10-24 10:01:22,778 - freqtrade.commands.trade_commands - INFO - worker found ... calling exit
+2026-10-24 10:01:22,779 - freqtrade.rpc.rpc_manager - INFO - Sending rpc message: {'type': status, 'status': 'process died'}
+2026-10-24 10:01:22,779 - freqtrade.freqtradebot - INFO - Cleaning up modules ...
+2026-10-24 10:01:22,781 - freqtrade.freqai.freqai_interface - INFO - Stopping FreqAI
+2026-10-24 10:01:22,785 - freqtrade.freqai.freqai_interface - INFO - Waiting on Training iteration
+2026-10-24 10:01:23,745 - freqtrade.rpc.rpc_manager - INFO - Cleaning up rpc modules ...
+2026-10-24 10:01:24,000 - freqtrade - INFO - SIGINT received, aborting ...
