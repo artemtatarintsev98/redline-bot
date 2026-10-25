@@ -1,50 +1,4 @@
-2026-10-25 03:20:54,781 - freqtrade.loggers - INFO - Enabling colorized output.
-2026-10-25 03:20:54,781 - freqtrade.loggers - INFO - Logfile configured
-2026-10-25 03:20:54,781 - freqtrade.loggers - INFO - Verbosity set to 0
-2026-10-25 03:20:54,782 - freqtrade.configuration.configuration - INFO - Runmode set to dry_run.
-2026-10-25 03:20:54,782 - freqtrade.configuration.configuration - INFO - Parameter --db-url detected ...
-2026-10-25 03:20:54,783 - freqtrade.configuration.configuration - WARNING - `force_entry_enable` RPC message enabled.
-2026-10-25 03:20:54,783 - freqtrade.configuration.configuration - INFO - Dry run is enabled
-2026-10-25 03:20:54,783 - freqtrade.configuration.configuration - INFO - Using DB: "sqlite:////freqtrade/user_data/trades.sqlite"
-2026-10-25 03:20:54,784 - freqtrade.configuration.configuration - INFO - Using max_open_trades: 6 ...
-2026-10-25 03:20:54,796 - freqtrade.configuration.configuration - INFO - Using user-data directory: /freqtrade/user_data ...
-2026-10-25 03:20:54,796 - freqtrade.configuration.directory_operations - INFO - Created data directory: None
-2026-10-25 03:20:54,797 - freqtrade.configuration.configuration - INFO - Using data directory: /freqtrade/user_data/data/binance ...
-2026-10-25 03:20:54,798 - freqtrade.exchange.check_exchange - INFO - Checking exchange...
-2026-10-25 03:20:54,806 - freqtrade.exchange.check_exchange - INFO - Exchange "binance" is officially supported by the Freqtrade development team.
-2026-10-25 03:20:54,807 - freqtrade.configuration.configuration - INFO - Using pairlist from configuration.
-2026-10-25 03:20:54,808 - freqtrade.exchange.exchange - INFO - Instance is running with dry_run enabled
-2026-10-25 03:20:54,808 - freqtrade.exchange.exchange - INFO - Using CCXT 4.5.84
-2026-10-25 03:20:54,808 - freqtrade.exchange.exchange - INFO - Applying additional ccxt config: {'enableRateLimit': True, 'rateLimit': 60, 'options': {'brokerId': None, 'partner': {'spot': {'id': None, 'key': None}, 'future': {'id': None, 'key': None}}, 'fetchMarkets': {'types': ['spot']}}, 'urls': {'api': {'public': 'https://data-api.binance.vision/api/v3'}}}
-2026-10-25 03:20:54,812 - freqtrade.exchange.exchange - INFO - Applying additional ccxt config: {'enableRateLimit': True, 'rateLimit': 60, 'options': {'brokerId': None, 'partner': {'spot': {'id': None, 'key': None}, 'future': {'id': None, 'key': None}}, 'fetchMarkets': {'types': ['spot']}}, 'urls': {'api': {'public': 'https://data-api.binance.vision/api/v3'}}}
-2026-10-25 03:20:54,816 - freqtrade.exchange.exchange - INFO - Using Exchange "Binance"
-2026-10-25 03:20:57,478 - freqtrade.exchange.exchange - INFO - Time offset to Binance is -240ms.
-2026-10-25 03:20:57,479 - freqtrade.resolvers.exchange_resolver - INFO - Using resolved exchange class 'Binance' ...
-2026-10-25 03:20:58,169 - freqtrade.resolvers.iresolver - INFO - Using resolved strategy NostalgiaForInfinityX8 from '/freqtrade/user_data/strategies/NostalgiaForInfinityX8.py'...
-2026-10-25 03:20:58,170 - freqtrade.strategy.hyper - INFO - Found no parameter file.
-2026-10-25 03:20:58,171 - freqtrade.resolvers.strategy_resolver - INFO - Override strategy 'timeframe' with value from the configuration: 5m.
-2026-10-25 03:20:58,172 - freqtrade.resolvers.strategy_resolver - INFO - Override strategy 'order_types' with value from the configuration: {'entry': 'limit', 'exit': 'limit', 'emergency_exit': 'limit', 'force_entry': 'limit', 'force_exit': 'limit', 'stoploss': 'limit', 'stoploss_on_exchange': False, 'stoploss_on_exchange_interval': 60, 'stoploss_on_exchange_limit_ratio': 0.99}.
-2026-10-25 03:20:58,172 - freqtrade.resolvers.strategy_resolver - INFO - Override strategy 'stake_currency' with value from the configuration: USDT.
-2026-10-25 03:20:58,173 - freqtrade.resolvers.strategy_resolver - INFO - Override strategy 'stake_amount' with value from the configuration: unlimited.
-2026-10-25 03:20:58,173 - freqtrade.resolvers.strategy_resolver - INFO - Override strategy 'unfilledtimeout' with value from the configuration: {'entry': 3, 'exit': 2, 'exit_timeout_count': 0, 'unit': 'minutes'}.
-2026-10-25 03:20:58,173 - freqtrade.resolvers.strategy_resolver - INFO - Override strategy 'max_open_trades' with value from the configuration: 6.
-2026-10-25 03:20:58,174 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using minimal_roi: {}
-2026-10-25 03:20:58,174 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using timeframe: 5m
-2026-10-25 03:20:58,175 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using stoploss: -0.99
-2026-10-25 03:20:58,175 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using trailing_stop: False
-2026-10-25 03:20:58,175 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using trailing_stop_positive: 0.01
-2026-10-25 03:20:58,176 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using trailing_stop_positive_offset: 0.03
-2026-10-25 03:20:58,176 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using trailing_only_offset_is_reached: True
-2026-10-25 03:20:58,176 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using use_custom_stoploss: False
-2026-10-25 03:20:58,177 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using process_only_new_candles: True
-2026-10-25 03:20:58,177 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using order_types: {'entry': 'limit', 'exit': 'limit', 'emergency_exit': 'limit', 'force_entry': 'limit', 'force_exit': 'limit', 'stoploss': 'limit', 'stoploss_on_exchange': False, 'stoploss_on_exchange_interval': 60, 'stoploss_on_exchange_limit_ratio': 0.99}
-2026-10-25 03:20:58,177 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using order_time_in_force: {'entry': 'GTC', 'exit': 'GTC'}
-2026-10-25 03:20:58,178 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using stake_currency: USDT
-2026-10-25 03:20:58,178 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using stake_amount: unlimited
-2026-10-25 03:20:58,179 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using startup_candle_count: 800
-2026-10-25 03:20:58,179 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using unfilledtimeout: {'entry': 3, 'exit': 2, 'exit_timeout_count': 0, 'unit': 'minutes'}
-2026-10-25 03:20:58,179 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using use_exit_signal: True
-2026-10-25 03:20:58,180 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using exit_profit_only: False
+solvers.strategy_resolver - INFO - Strategy using exit_profit_only: False
 2026-10-25 03:20:58,180 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using ignore_roi_if_entry_signal: True
 2026-10-25 03:20:58,180 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using exit_profit_offset: 0.0
 2026-10-25 03:20:58,181 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using disable_dataframe_checks: False
@@ -1071,3 +1025,86 @@
 2026-10-25 08:44:06,986 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.9, strategy_version: v18.0.159', state='RUNNING'
 2026-10-25 08:45:08,546 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.9, strategy_version: v18.0.159', state='RUNNING'
 2026-10-25 08:46:08,549 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.9, strategy_version: v18.0.159', state='RUNNING'
+2026-10-25 08:47:08,552 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.9, strategy_version: v18.0.159', state='RUNNING'
+2026-10-25 08:48:08,555 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.9, strategy_version: v18.0.159', state='RUNNING'
+2026-10-25 08:49:08,558 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.9, strategy_version: v18.0.159', state='RUNNING'
+2026-10-25 08:50:12,096 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.9, strategy_version: v18.0.159', state='RUNNING'
+2026-10-25 08:51:12,099 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.9, strategy_version: v18.0.159', state='RUNNING'
+2026-10-25 08:51:53,852 - PriceFilter - INFO - Removed AI/USDT from whitelist, because 1 unit is 0.515%
+2026-10-25 08:51:53,854 - rangestabilityfilter - INFO - Removed BMT/USDT from whitelist, because rate of change over 3 x 1d candles is 1.709, which is above the threshold of 0.95.
+2026-10-25 08:51:53,856 - rangestabilityfilter - INFO - Removed TREE/USDT from whitelist, because rate of change over 3 x 1d candles is 0.978, which is above the threshold of 0.95.
+2026-10-25 08:51:53,857 - rangestabilityfilter - INFO - Removed TRX/USDT from whitelist, because rate of change over 3 x 1d candles is 0.017, which is below the threshold of 0.03.
+2026-10-25 08:51:53,860 - rangestabilityfilter - INFO - Removed IOST/USDT from whitelist, because rate of change over 3 x 1d candles is 1.639, which is above the threshold of 0.95.
+2026-10-25 08:51:53,861 - rangestabilityfilter - INFO - Removed ALT/USDT from whitelist, because rate of change over 3 x 1d candles is 1.349, which is above the threshold of 0.95.
+2026-10-25 08:51:53,962 - freqtrade.plugins.pairlistmanager - INFO - Whitelist with 40 pairs: ['BTC/USDT', 'ETH/USDT', 'SOL/USDT', 'ZEC/USDT', 'NEAR/USDT', 'XRP/USDT', 'PEPE/USDT', 'DOGE/USDT', 'WLD/USDT', 'SUI/USDT', 'ENA/USDT', 'UNI/USDT', 'LINK/USDT', 'XAUT/USDT', 'TAO/USDT', 'AAVE/USDT', 'SNDKB/USDT', 'ERA/USDT', 'ADA/USDT', 'SOXLB/USDT', 'T/USDT', 'LTC/USDT', 'AVAX/USDT', 'MSTRB/USDT', 'GTC/USDT', 'PUMP/USDT', 'CRCLB/USDT', 'ONDO/USDT', 'GRAM/USDT', 'FIL/USDT', 'FET/USDT', 'ARB/USDT', 'DOT/USDT', 'QNT/USDT', 'XLM/USDT', 'PAXG/USDT', 'LA/USDT', 'INJ/USDT', 'STRK/USDT', 'HBAR/USDT']
+2026-10-25 08:52:12,102 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.9, strategy_version: v18.0.159', state='RUNNING'
+2026-10-25 08:53:12,105 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.9, strategy_version: v18.0.159', state='RUNNING'
+2026-10-25 08:54:12,108 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.9, strategy_version: v18.0.159', state='RUNNING'
+2026-10-25 08:55:07,019 - freqtrade.wallets - INFO - Wallets synced.
+2026-10-25 08:55:07,676 - freqtrade.freqtradebot - INFO - Long signal found: about create a new trade for WLD/USDT with stake_amount: 165.4412371491 and price: 0.4418 ...
+2026-10-25 08:55:07,837 - freqtrade.freqtradebot - INFO - Order dry_run_buy_WLD/USDT_327d408d-ee3a-46af-bd0c-14abd69478f4 was created for WLD/USDT and status is open.
+2026-10-25 08:55:07,847 - freqtrade.wallets - INFO - Wallets synced.
+2026-10-25 08:55:07,847 - freqtrade.rpc.rpc_manager - INFO - Sending rpc message: {'trade_id': 5, 'type': entry, 'buy_tag': '141 ', 'enter_tag': '141 ', 'exchange': 'Binance', 'pair': 'WLD/USDT', 'leverage': 1.0, 'direction': 'Long', 'limit': 0.4418, 'order_rate': 0.4418, 'open_rate': 0.4418, 'order_type': 'limit', 'stake_amount': 165.4412371491, 'stake_currency': 'USDT', 'base_currency': 'WLD', 'quote_currency': 'USDT', 'fiat_currency': '', 'amount': 374.4, 'open_date': datetime.datetime(2026, 10, 25, 8, 55, 7, 838239, tzinfo=datetime.timezone.utc), 'current_rate': 0.4418, 'sub_trade': False}
+2026-10-25 08:55:08,209 - freqtrade.freqtradebot - INFO - Found open order for Trade(id=5, pair=WLD/USDT, amount=0, is_short=False, leverage=1, open_rate=0.4418, open_since=2026-10-25 08:55:07)
+2026-10-25 08:55:12,878 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.9, strategy_version: v18.0.159', state='RUNNING'
+2026-10-25 08:55:13,209 - freqtrade.freqtradebot - INFO - Found open order for Trade(id=5, pair=WLD/USDT, amount=0, is_short=False, leverage=1, open_rate=0.4418, open_since=2026-10-25 08:55:07)
+2026-10-25 08:55:18,210 - freqtrade.freqtradebot - INFO - Found open order for Trade(id=5, pair=WLD/USDT, amount=0, is_short=False, leverage=1, open_rate=0.4418, open_since=2026-10-25 08:55:07)
+2026-10-25 08:55:23,220 - freqtrade.freqtradebot - INFO - Found open order for Trade(id=5, pair=WLD/USDT, amount=0, is_short=False, leverage=1, open_rate=0.4418, open_since=2026-10-25 08:55:07)
+2026-10-25 08:55:28,210 - freqtrade.freqtradebot - INFO - Found open order for Trade(id=5, pair=WLD/USDT, amount=0, is_short=False, leverage=1, open_rate=0.4418, open_since=2026-10-25 08:55:07)
+2026-10-25 08:55:33,211 - freqtrade.freqtradebot - INFO - Found open order for Trade(id=5, pair=WLD/USDT, amount=0, is_short=False, leverage=1, open_rate=0.4418, open_since=2026-10-25 08:55:07)
+2026-10-25 08:55:38,213 - freqtrade.freqtradebot - INFO - Found open order for Trade(id=5, pair=WLD/USDT, amount=0, is_short=False, leverage=1, open_rate=0.4418, open_since=2026-10-25 08:55:07)
+2026-10-25 08:55:43,211 - freqtrade.freqtradebot - INFO - Found open order for Trade(id=5, pair=WLD/USDT, amount=0, is_short=False, leverage=1, open_rate=0.4418, open_since=2026-10-25 08:55:07)
+2026-10-25 08:55:48,211 - freqtrade.freqtradebot - INFO - Found open order for Trade(id=5, pair=WLD/USDT, amount=0, is_short=False, leverage=1, open_rate=0.4418, open_since=2026-10-25 08:55:07)
+2026-10-25 08:55:53,211 - freqtrade.freqtradebot - INFO - Found open order for Trade(id=5, pair=WLD/USDT, amount=0, is_short=False, leverage=1, open_rate=0.4418, open_since=2026-10-25 08:55:07)
+2026-10-25 08:55:58,211 - freqtrade.freqtradebot - INFO - Found open order for Trade(id=5, pair=WLD/USDT, amount=0, is_short=False, leverage=1, open_rate=0.4418, open_since=2026-10-25 08:55:07)
+2026-10-25 08:56:03,209 - freqtrade.freqtradebot - INFO - Found open order for Trade(id=5, pair=WLD/USDT, amount=0, is_short=False, leverage=1, open_rate=0.4418, open_since=2026-10-25 08:55:07)
+2026-10-25 08:56:08,209 - freqtrade.freqtradebot - INFO - Found open order for Trade(id=5, pair=WLD/USDT, amount=0, is_short=False, leverage=1, open_rate=0.4418, open_since=2026-10-25 08:55:07)
+2026-10-25 08:56:12,881 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.9, strategy_version: v18.0.159', state='RUNNING'
+2026-10-25 08:56:13,212 - freqtrade.freqtradebot - INFO - Found open order for Trade(id=5, pair=WLD/USDT, amount=0, is_short=False, leverage=1, open_rate=0.4418, open_since=2026-10-25 08:55:07)
+2026-10-25 08:56:18,212 - freqtrade.freqtradebot - INFO - Found open order for Trade(id=5, pair=WLD/USDT, amount=0, is_short=False, leverage=1, open_rate=0.4418, open_since=2026-10-25 08:55:07)
+2026-10-25 08:56:23,212 - freqtrade.freqtradebot - INFO - Found open order for Trade(id=5, pair=WLD/USDT, amount=0, is_short=False, leverage=1, open_rate=0.4418, open_since=2026-10-25 08:55:07)
+2026-10-25 08:56:28,213 - freqtrade.freqtradebot - INFO - Found open order for Trade(id=5, pair=WLD/USDT, amount=0, is_short=False, leverage=1, open_rate=0.4418, open_since=2026-10-25 08:55:07)
+2026-10-25 08:56:33,213 - freqtrade.freqtradebot - INFO - Found open order for Trade(id=5, pair=WLD/USDT, amount=0, is_short=False, leverage=1, open_rate=0.4418, open_since=2026-10-25 08:55:07)
+2026-10-25 08:56:38,212 - freqtrade.freqtradebot - INFO - Found open order for Trade(id=5, pair=WLD/USDT, amount=0, is_short=False, leverage=1, open_rate=0.4418, open_since=2026-10-25 08:55:07)
+2026-10-25 08:56:43,213 - freqtrade.freqtradebot - INFO - Found open order for Trade(id=5, pair=WLD/USDT, amount=0, is_short=False, leverage=1, open_rate=0.4418, open_since=2026-10-25 08:55:07)
+2026-10-25 08:56:48,212 - freqtrade.freqtradebot - INFO - Found open order for Trade(id=5, pair=WLD/USDT, amount=0, is_short=False, leverage=1, open_rate=0.4418, open_since=2026-10-25 08:55:07)
+2026-10-25 08:56:53,213 - freqtrade.freqtradebot - INFO - Found open order for Trade(id=5, pair=WLD/USDT, amount=0, is_short=False, leverage=1, open_rate=0.4418, open_since=2026-10-25 08:55:07)
+2026-10-25 08:56:58,215 - freqtrade.freqtradebot - INFO - Found open order for Trade(id=5, pair=WLD/USDT, amount=0, is_short=False, leverage=1, open_rate=0.4418, open_since=2026-10-25 08:55:07)
+2026-10-25 08:57:03,212 - freqtrade.freqtradebot - INFO - Found open order for Trade(id=5, pair=WLD/USDT, amount=0, is_short=False, leverage=1, open_rate=0.4418, open_since=2026-10-25 08:55:07)
+2026-10-25 08:57:08,213 - freqtrade.freqtradebot - INFO - Found open order for Trade(id=5, pair=WLD/USDT, amount=0, is_short=False, leverage=1, open_rate=0.4418, open_since=2026-10-25 08:55:07)
+2026-10-25 08:57:12,883 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.9, strategy_version: v18.0.159', state='RUNNING'
+2026-10-25 08:57:13,214 - freqtrade.freqtradebot - INFO - Found open order for Trade(id=5, pair=WLD/USDT, amount=0, is_short=False, leverage=1, open_rate=0.4418, open_since=2026-10-25 08:55:07)
+2026-10-25 08:57:18,213 - freqtrade.freqtradebot - INFO - Found open order for Trade(id=5, pair=WLD/USDT, amount=0, is_short=False, leverage=1, open_rate=0.4418, open_since=2026-10-25 08:55:07)
+2026-10-25 08:57:23,215 - freqtrade.freqtradebot - INFO - Found open order for Trade(id=5, pair=WLD/USDT, amount=0, is_short=False, leverage=1, open_rate=0.4418, open_since=2026-10-25 08:55:07)
+2026-10-25 08:57:28,215 - freqtrade.freqtradebot - INFO - Found open order for Trade(id=5, pair=WLD/USDT, amount=0, is_short=False, leverage=1, open_rate=0.4418, open_since=2026-10-25 08:55:07)
+2026-10-25 08:57:33,214 - freqtrade.freqtradebot - INFO - Found open order for Trade(id=5, pair=WLD/USDT, amount=0, is_short=False, leverage=1, open_rate=0.4418, open_since=2026-10-25 08:55:07)
+2026-10-25 08:57:38,214 - freqtrade.freqtradebot - INFO - Found open order for Trade(id=5, pair=WLD/USDT, amount=0, is_short=False, leverage=1, open_rate=0.4418, open_since=2026-10-25 08:55:07)
+2026-10-25 08:57:43,215 - freqtrade.freqtradebot - INFO - Found open order for Trade(id=5, pair=WLD/USDT, amount=0, is_short=False, leverage=1, open_rate=0.4418, open_since=2026-10-25 08:55:07)
+2026-10-25 08:57:48,215 - freqtrade.freqtradebot - INFO - Found open order for Trade(id=5, pair=WLD/USDT, amount=0, is_short=False, leverage=1, open_rate=0.4418, open_since=2026-10-25 08:55:07)
+2026-10-25 08:57:53,216 - freqtrade.freqtradebot - INFO - Found open order for Trade(id=5, pair=WLD/USDT, amount=0, is_short=False, leverage=1, open_rate=0.4418, open_since=2026-10-25 08:55:07)
+2026-10-25 08:57:58,218 - freqtrade.freqtradebot - INFO - Found open order for Trade(id=5, pair=WLD/USDT, amount=0, is_short=False, leverage=1, open_rate=0.4418, open_since=2026-10-25 08:55:07)
+2026-10-25 08:58:03,215 - freqtrade.freqtradebot - INFO - Found open order for Trade(id=5, pair=WLD/USDT, amount=0, is_short=False, leverage=1, open_rate=0.4418, open_since=2026-10-25 08:55:07)
+2026-10-25 08:58:08,216 - freqtrade.freqtradebot - INFO - Found open order for Trade(id=5, pair=WLD/USDT, amount=0, is_short=False, leverage=1, open_rate=0.4418, open_since=2026-10-25 08:55:07)
+2026-10-25 08:58:08,539 - freqtrade.freqtradebot - INFO - Buy order cancelled due to timeout for Trade(id=5, pair=WLD/USDT, amount=0, is_short=False, leverage=1, open_rate=0.4418, open_since=2026-10-25 08:55:07).
+2026-10-25 08:58:08,539 - freqtrade.freqtradebot - INFO - Buy order fully cancelled. Removing Trade(id=5, pair=WLD/USDT, amount=0, is_short=False, leverage=1, open_rate=0.4418, open_since=2026-10-25 08:55:07) from database.
+2026-10-25 08:58:08,545 - freqtrade.wallets - INFO - Wallets synced.
+2026-10-25 08:58:08,545 - freqtrade.rpc.rpc_manager - INFO - Sending rpc message: {'trade_id': 5, 'type': entry_cancel, 'buy_tag': '141 ', 'enter_tag': '141 ', 'exchange': 'Binance', 'pair': 'WLD/USDT', 'leverage': 1.0, 'direction': 'Long', 'limit': 0.4418, 'order_rate': 0.4418, 'order_type': 'limit', 'stake_amount': 165.4412371491, 'open_rate': 0.4418, 'stake_currency': 'USDT', 'base_currency': 'WLD', 'quote_currency': 'USDT', 'fiat_currency': '', 'amount': 0.0, 'open_date': datetime.datetime(2026, 10, 25, 8, 55, 7, 838239), 'current_rate': 0.443, 'reason': 'cancelled due to timeout, fully cancelled', 'sub_trade': False}
+2026-10-25 08:58:08,557 - freqtrade.wallets - INFO - Wallets synced.
+2026-10-25 08:58:08,719 - freqtrade.freqtradebot - INFO - Long signal found: about create a new trade for WLD/USDT with stake_amount: 165.4412371491 and price: 0.4424 ...
+2026-10-25 08:58:08,879 - freqtrade.freqtradebot - INFO - Order dry_run_buy_WLD/USDT_f671444a-386e-4ec7-b62b-4db5ad32d02e was created for WLD/USDT and status is closed.
+2026-10-25 08:58:08,884 - freqtrade.wallets - INFO - Wallets synced.
+2026-10-25 08:58:08,884 - freqtrade.rpc.rpc_manager - INFO - Sending rpc message: {'trade_id': 5, 'type': entry, 'buy_tag': '141 ', 'enter_tag': '141 ', 'exchange': 'Binance', 'pair': 'WLD/USDT', 'leverage': 1.0, 'direction': 'Long', 'limit': 0.4424, 'order_rate': 0.4424, 'open_rate': 0.4424, 'order_type': 'limit', 'stake_amount': 165.41336, 'stake_currency': 'USDT', 'base_currency': 'WLD', 'quote_currency': 'USDT', 'fiat_currency': '', 'amount': 373.9, 'open_date': datetime.datetime(2026, 10, 25, 8, 58, 8, 879600, tzinfo=datetime.timezone.utc), 'current_rate': 0.4424, 'sub_trade': False}
+2026-10-25 08:58:08,885 - freqtrade.freqtradebot - INFO - Found open order for Trade(id=5, pair=WLD/USDT, amount=373.9, is_short=False, leverage=1, open_rate=0.4424, open_since=2026-10-25 08:58:08)
+2026-10-25 08:58:08,887 - freqtrade.freqtradebot - INFO - Fee for Trade Trade(id=5, pair=WLD/USDT, amount=373.9, is_short=False, leverage=1, open_rate=0.4424, open_since=2026-10-25 08:58:08) [buy]: 0.16541336 USDT - rate: 0.001
+2026-10-25 08:58:08,887 - freqtrade.persistence.trade_model - INFO - Updating trade (id=5) ...
+2026-10-25 08:58:08,888 - freqtrade.persistence.trade_model - INFO - LIMIT_BUY has been fulfilled for Trade(id=5, pair=WLD/USDT, amount=373.9, is_short=False, leverage=1, open_rate=0.4424, open_since=2026-10-25 08:58:08).
+2026-10-25 08:58:08,894 - freqtrade.wallets - INFO - Wallets synced.
+2026-10-25 08:58:08,896 - freqtrade.rpc.rpc_manager - INFO - Sending rpc message: {'trade_id': 5, 'type': entry_fill, 'buy_tag': '141 ', 'enter_tag': '141 ', 'exchange': 'Binance', 'pair': 'WLD/USDT', 'leverage': 1.0, 'direction': 'Long', 'limit': 0.4424, 'order_rate': 0.4424, 'open_rate': 0.4424, 'order_type': 'limit', 'stake_amount': 165.41336, 'stake_currency': 'USDT', 'base_currency': 'WLD', 'quote_currency': 'USDT', 'fiat_currency': '', 'amount': 373.9, 'open_date': datetime.datetime(2026, 10, 25, 8, 58, 8, 879600, tzinfo=datetime.timezone.utc), 'current_rate': 0.4424, 'sub_trade': False}
+2026-10-25 08:58:12,886 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.9, strategy_version: v18.0.159', state='RUNNING'
+2026-10-25 08:59:12,889 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.9, strategy_version: v18.0.159', state='RUNNING'
+2026-10-25 09:00:13,496 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.9, strategy_version: v18.0.159', state='RUNNING'
+2026-10-25 09:01:13,499 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.9, strategy_version: v18.0.159', state='RUNNING'
+2026-10-25 09:02:13,502 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.9, strategy_version: v18.0.159', state='RUNNING'
+2026-10-25 09:03:13,505 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.9, strategy_version: v18.0.159', state='RUNNING'
+2026-10-25 09:04:13,508 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.9, strategy_version: v18.0.159', state='RUNNING'
+2026-10-25 09:05:17,798 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.9, strategy_version: v18.0.159', state='RUNNING'
