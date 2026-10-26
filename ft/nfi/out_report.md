@@ -1,8 +1,8 @@
-# nfi (demo) — 2026-10-26 11:37 UTC
+# nfi (demo) — 2026-10-26 11:57 UTC
 
 **Balance:** 1007.62 USDT (start 1000, +7.62)
 **Closed trades:** 8, wins 8 (100%)
-**Open now:** 0
+**Open now:** 1
 
 | Pair | Opened | Closed | Profit | Reason |
 |---|---|---|---|---|
@@ -14,3 +14,4 @@
 | STEEM/USDT | 2026-10-25 13:28 | 2026-10-25 23:55 | +3.37 | exit_long_quick_q_2 ( 42 ) |
 | GTC/USDT | 2026-10-26 02:40 | 2026-10-26 09:14 | +0.26 | exit_profit_long_rebuy_t_0_1_m ( 62 ) |
 | ERA/USDT | 2026-10-26 04:21 | 2026-10-26 05:34 | +0.22 | exit_profit_long_rebuy_t_0_1_m ( 65 ) |
+| ERA/USDT | 2026-10-26 11:45 | open | +0.00 |  |
