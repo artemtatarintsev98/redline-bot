@@ -880,3 +880,33 @@
 2026-10-26 12:15:06,443 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.9, strategy_version: v18.0.160', state='RUNNING'
 2026-10-26 12:16:06,444 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.9, strategy_version: v18.0.160', state='RUNNING'
 2026-10-26 12:17:06,446 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.9, strategy_version: v18.0.160', state='RUNNING'
+2026-10-26 12:18:06,448 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.9, strategy_version: v18.0.160', state='RUNNING'
+2026-10-26 12:19:06,450 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.9, strategy_version: v18.0.160', state='RUNNING'
+2026-10-26 12:20:11,000 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.9, strategy_version: v18.0.160', state='RUNNING'
+2026-10-26 12:21:11,003 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.9, strategy_version: v18.0.160', state='RUNNING'
+2026-10-26 12:22:11,005 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.9, strategy_version: v18.0.160', state='RUNNING'
+2026-10-26 12:23:11,008 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.9, strategy_version: v18.0.160', state='RUNNING'
+2026-10-26 12:24:11,010 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.9, strategy_version: v18.0.160', state='RUNNING'
+2026-10-26 12:25:16,000 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.9, strategy_version: v18.0.160', state='RUNNING'
+2026-10-26 12:26:16,002 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.9, strategy_version: v18.0.160', state='RUNNING'
+2026-10-26 12:27:16,005 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.9, strategy_version: v18.0.160', state='RUNNING'
+2026-10-26 12:28:16,007 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.9, strategy_version: v18.0.160', state='RUNNING'
+2026-10-26 12:28:36,210 - freqtrade.freqtradebot - INFO - Exit for ERA/USDT detected. Reason: custom_exit
+2026-10-26 12:28:36,212 - freqtrade.wallets - INFO - Wallets synced.
+2026-10-26 12:28:36,323 - freqtrade.rpc.rpc_manager - INFO - Sending rpc message: {'type': exit, 'trade_id': 9, 'exchange': 'Binance', 'pair': 'ERA/USDT', 'leverage': 1.0, 'direction': 'Long', 'gain': 'profit', 'limit': 0.085, 'order_rate': 0.085, 'order_type': 'limit', 'amount': 1962.8, 'open_rate': 0.0847, 'close_rate': 0.085, 'current_rate': 0.085, 'profit_amount': 0.25575284, 'profit_ratio': 0.00153683, 'buy_tag': '103 ', 'enter_tag': '103 ', 'exit_reason': 'exit_profit_long_rapid_t_0_1_m ( 103 )', 'open_date': datetime.datetime(2026, 10, 26, 11, 45, 6, 370163, tzinfo=datetime.timezone.utc), 'close_date': datetime.datetime(2026, 10, 26, 12, 28, 36, 323915, tzinfo=datetime.timezone.utc), 'stake_amount': 166.24916, 'stake_currency': 'USDT', 'base_currency': 'ERA', 'quote_currency': 'USDT', 'fiat_currency': '', 'sub_trade': False, 'cumulative_profit': 0.0, 'final_profit_ratio': None, 'is_final_exit': False}
+2026-10-26 12:28:36,324 - freqtrade.freqtradebot - INFO - Found open order for Trade(id=9, pair=ERA/USDT, amount=1962.8, is_short=False, leverage=1, open_rate=0.0847, open_since=2026-10-26 11:45:06)
+2026-10-26 12:28:36,327 - freqtrade.freqtradebot - INFO - Fee for Trade Trade(id=9, pair=ERA/USDT, amount=1962.8, is_short=False, leverage=1, open_rate=0.0847, open_since=2026-10-26 11:45:06) [sell]: 0.166838 USDT - rate: 0.001
+2026-10-26 12:28:36,327 - freqtrade.persistence.trade_model - INFO - Updating trade (id=9) ...
+2026-10-26 12:28:36,327 - freqtrade.persistence.trade_model - INFO - LIMIT_SELL has been fulfilled for Trade(id=9, pair=ERA/USDT, amount=1962.8, is_short=False, leverage=1, open_rate=0.0847, open_since=2026-10-26 11:45:06).
+2026-10-26 12:28:36,328 - freqtrade.persistence.trade_model - INFO - Marking Trade(id=9, pair=ERA/USDT, amount=1962.8, is_short=False, leverage=1, open_rate=0.0847, open_since=closed) as closed as the trade is fulfilled and found no open orders for it.
+2026-10-26 12:28:36,330 - freqtrade.wallets - INFO - Wallets synced.
+2026-10-26 12:28:36,331 - freqtrade.rpc.rpc_manager - INFO - Sending rpc message: {'type': exit_fill, 'trade_id': 9, 'exchange': 'Binance', 'pair': 'ERA/USDT', 'leverage': 1.0, 'direction': 'Long', 'gain': 'profit', 'limit': 0.085, 'order_rate': 0.085, 'order_type': 'limit', 'amount': 1962.8, 'open_rate': 0.0847, 'close_rate': 0.085, 'current_rate': None, 'profit_amount': 0.25575284, 'profit_ratio': 0.00153683, 'buy_tag': '103 ', 'enter_tag': '103 ', 'exit_reason': 'exit_profit_long_rapid_t_0_1_m ( 103 )', 'open_date': datetime.datetime(2026, 10, 26, 11, 45, 6, 370163, tzinfo=datetime.timezone.utc), 'close_date': datetime.datetime(2026, 10, 26, 12, 28, 36, 323000, tzinfo=datetime.timezone.utc), 'stake_amount': 166.24916, 'stake_currency': 'USDT', 'base_currency': 'ERA', 'quote_currency': 'USDT', 'fiat_currency': '', 'sub_trade': False, 'cumulative_profit': 0.25575284, 'final_profit_ratio': 0.0015368338863025993, 'is_final_exit': True}
+2026-10-26 12:28:36,334 - freqtrade.wallets - INFO - Wallets synced.
+2026-10-26 12:29:16,010 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.9, strategy_version: v18.0.160', state='RUNNING'
+2026-10-26 12:30:16,054 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.9, strategy_version: v18.0.160', state='RUNNING'
+2026-10-26 12:31:16,057 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.9, strategy_version: v18.0.160', state='RUNNING'
+2026-10-26 12:32:16,059 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.9, strategy_version: v18.0.160', state='RUNNING'
+2026-10-26 12:33:16,061 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.9, strategy_version: v18.0.160', state='RUNNING'
+2026-10-26 12:34:16,063 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.9, strategy_version: v18.0.160', state='RUNNING'
+2026-10-26 12:35:21,000 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.9, strategy_version: v18.0.160', state='RUNNING'
+2026-10-26 12:36:21,003 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.9, strategy_version: v18.0.160', state='RUNNING'
