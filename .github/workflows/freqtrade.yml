@@ -25,26 +25,23 @@ jobs:
         run: |
           git clone -q --depth 1 https://github.com/iterativv/NostalgiaForInfinity.git /tmp/nfi
           echo "NFI commit: $(git -C /tmp/nfi log -1 --format='%h %cd')"
-          mkdir -p ft/ai/user_data/strategies ft/nfi/user_data/strategies
-          cp ft/ai/RedlineAI.py ft/ai/user_data/strategies/
-          cp /tmp/nfi/NostalgiaForInfinityX8.py ft/nfi/user_data/strategies/
-          docker pull -q freqtradeorg/freqtrade:stable_freqai
+          for b in nfi nfi10k; do mkdir -p ft/$b/user_data/strategies; cp /tmp/nfi/NostalgiaForInfinityX8.py ft/$b/user_data/strategies/; done
           docker pull -q freqtradeorg/freqtrade:stable
           sudo chmod -R 777 ft /tmp/nfi
       - name: Run both bots (dry-run) and save state
         run: |
-          docker run -d --name ai -v $PWD/ft/ai/user_data:/freqtrade/user_data -v $PWD/ft/ai/config.json:/freqtrade/config.json:ro \
-            freqtradeorg/freqtrade:stable_freqai trade --config /freqtrade/config.json --strategy RedlineAI --freqaimodel LightGBMRegressor \
-            --db-url sqlite:////freqtrade/user_data/trades.sqlite --logfile /freqtrade/user_data/bot.log
-          docker run -d --name nfi -v $PWD/ft/nfi/user_data:/freqtrade/user_data -v $PWD/ft/nfi/config.json:/freqtrade/config.json:ro \
-            -v /tmp/nfi:/freqtrade/nfi:ro freqtradeorg/freqtrade:stable trade --config /freqtrade/config.json \
-            --db-url sqlite:////freqtrade/user_data/trades.sqlite --logfile /freqtrade/user_data/bot.log
+          for b in nfi nfi10k; do
+            docker run -d --name $b -v $PWD/ft/$b/user_data:/freqtrade/user_data -v $PWD/ft/$b/config.json:/freqtrade/config.json:ro \
+              -v /tmp/nfi:/freqtrade/nfi:ro freqtradeorg/freqtrade:stable trade --config /freqtrade/config.json \
+              --db-url sqlite:////freqtrade/user_data/trades.sqlite --logfile /freqtrade/user_data/bot.log
+          done
           git config user.name redline-bot; git config user.email bot@users.noreply.github.com
           save() {
             sudo chmod -R 777 ft || true
-            for b in ai nfi; do
+            for b in nfi nfi10k; do
               d=ft/$b/user_data
-              [ -f $d/trades.sqlite ] && python3 ft/report.py $d/trades.sqlite "$b" ft/$b/out || true
+              start=$(python3 -c "import json;print(json.load(open('ft/$b/config.json'))['dry_run_wallet'])")
+              [ -f $d/trades.sqlite ] && python3 ft/report.py $d/trades.sqlite "$b" ft/$b/out $start || true
               tail -c 150000 $d/bot.log > ft/$b/last_log.txt 2>/dev/null || true
               git add -f $d/trades.sqlite ft/$b/out_report.md ft/$b/out_trades.csv ft/$b/last_log.txt 2>/dev/null || true
             done
@@ -56,10 +53,10 @@ jobs:
           end=$(( $(date +%s) + 330*60 ))
           while [ $(date +%s) -lt $end ]; do
             sleep 1200
-            for b in ai nfi; do docker ps -q -f name=^$b$ | grep -q . || { echo "$b stopped"; docker logs --tail 60 $b; }; done
+            for b in nfi nfi10k; do docker ps -q -f name=^$b$ | grep -q . || { echo "$b stopped"; docker logs --tail 60 $b; }; done
             save
           done
-          docker stop -t 60 ai nfi || true
+          docker stop -t 60 nfi nfi10k || true
           save
       - name: Relaunch
         if: ${{ !cancelled() }}
