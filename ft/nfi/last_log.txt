@@ -567,3 +567,42 @@
 2026-10-29 16:02:13,686 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.9, strategy_version: v18.0.169', state='RUNNING'
 2026-10-29 16:03:13,689 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.9, strategy_version: v18.0.169', state='RUNNING'
 2026-10-29 16:04:13,691 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.9, strategy_version: v18.0.169', state='RUNNING'
+2026-10-29 16:05:05,999 - freqtrade.freqtradebot - INFO - Exit for PEPE/USDT detected. Reason: custom_exit
+2026-10-29 16:05:06,000 - freqtrade.wallets - INFO - Wallets synced.
+2026-10-29 16:05:06,113 - freqtrade.rpc.rpc_manager - INFO - Sending rpc message: {'type': exit, 'trade_id': 10, 'exchange': 'Binance', 'pair': 'PEPE/USDT', 'leverage': 1.0, 'direction': 'Long', 'gain': 'profit', 'limit': 5.55e-06, 'order_rate': 5.55e-06, 'order_type': 'limit', 'amount': 7713305.0, 'open_rate': 5.39e-06, 'close_rate': 5.55e-06, 'current_rate': 5.55e-06, 'profit_amount': 1.14974524, 'profit_ratio': 0.02762729, 'buy_tag': '65 ', 'enter_tag': '65 ', 'exit_reason': 'exit_long_rebuy_1_1_1 ( 65 )', 'open_date': datetime.datetime(2026, 10, 29, 15, 55, 6, 382628, tzinfo=datetime.timezone.utc), 'close_date': datetime.datetime(2026, 10, 29, 16, 5, 6, 113158, tzinfo=datetime.timezone.utc), 'stake_amount': 41.57471395, 'stake_currency': 'USDT', 'base_currency': 'PEPE', 'quote_currency': 'USDT', 'fiat_currency': '', 'sub_trade': False, 'cumulative_profit': 0.0, 'final_profit_ratio': None, 'is_final_exit': False}
+2026-10-29 16:05:06,113 - freqtrade.freqtradebot - INFO - Found open order for Trade(id=10, pair=PEPE/USDT, amount=7713305, is_short=False, leverage=1, open_rate=0.00000539, open_since=2026-10-29 15:55:06)
+2026-10-29 16:05:06,117 - freqtrade.freqtradebot - INFO - Fee for Trade Trade(id=10, pair=PEPE/USDT, amount=7713305, is_short=False, leverage=1, open_rate=0.00000539, open_since=2026-10-29 15:55:06) [sell]: 0.042808843 USDT - rate: 0.001
+2026-10-29 16:05:06,117 - freqtrade.persistence.trade_model - INFO - Updating trade (id=10) ...
+2026-10-29 16:05:06,118 - freqtrade.persistence.trade_model - INFO - LIMIT_SELL has been fulfilled for Trade(id=10, pair=PEPE/USDT, amount=7713305, is_short=False, leverage=1, open_rate=0.00000539, open_since=2026-10-29 15:55:06).
+2026-10-29 16:05:06,118 - freqtrade.persistence.trade_model - INFO - Marking Trade(id=10, pair=PEPE/USDT, amount=7713305, is_short=False, leverage=1, open_rate=0.00000539, open_since=closed) as closed as the trade is fulfilled and found no open orders for it.
+2026-10-29 16:05:06,122 - freqtrade.wallets - INFO - Wallets synced.
+2026-10-29 16:05:06,123 - freqtrade.rpc.rpc_manager - INFO - Sending rpc message: {'type': exit_fill, 'trade_id': 10, 'exchange': 'Binance', 'pair': 'PEPE/USDT', 'leverage': 1.0, 'direction': 'Long', 'gain': 'profit', 'limit': 5.55e-06, 'order_rate': 5.55e-06, 'order_type': 'limit', 'amount': 7713305.0, 'open_rate': 5.39e-06, 'close_rate': 5.55e-06, 'current_rate': None, 'profit_amount': 1.14974524, 'profit_ratio': 0.02762729, 'buy_tag': '65 ', 'enter_tag': '65 ', 'exit_reason': 'exit_long_rebuy_1_1_1 ( 65 )', 'open_date': datetime.datetime(2026, 10, 29, 15, 55, 6, 382628, tzinfo=datetime.timezone.utc), 'close_date': datetime.datetime(2026, 10, 29, 16, 5, 6, 112000, tzinfo=datetime.timezone.utc), 'stake_amount': 41.57471395, 'stake_currency': 'USDT', 'base_currency': 'PEPE', 'quote_currency': 'USDT', 'fiat_currency': '', 'sub_trade': False, 'cumulative_profit': 1.14974524, 'final_profit_ratio': 0.027627289143540654, 'is_final_exit': True}
+2026-10-29 16:05:06,126 - freqtrade.wallets - INFO - Wallets synced.
+2026-10-29 16:05:16,156 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.9, strategy_version: v18.0.169', state='RUNNING'
+2026-10-29 16:06:16,158 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.9, strategy_version: v18.0.169', state='RUNNING'
+2026-10-29 16:07:16,160 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.9, strategy_version: v18.0.169', state='RUNNING'
+2026-10-29 16:08:16,162 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.9, strategy_version: v18.0.169', state='RUNNING'
+2026-10-29 16:09:16,165 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.9, strategy_version: v18.0.169', state='RUNNING'
+2026-10-29 16:09:52,804 - AgeFilter - INFO - Removed MARSCOIN/USDT from whitelist, because age 55 is less than 60 days
+2026-10-29 16:09:52,805 - AgeFilter - INFO - Validated 58 pairs.
+2026-10-29 16:09:52,805 - PriceFilter - INFO - Removed AI/USDT from whitelist, because 1 unit is 0.518%
+2026-10-29 16:09:52,951 - rangestabilityfilter - INFO - Removed TRX/USDT from whitelist, because rate of change over 3 x 1d candles is 0.016, which is below the threshold of 0.03.
+2026-10-29 16:09:52,952 - rangestabilityfilter - INFO - Removed XAUT/USDT from whitelist, because rate of change over 3 x 1d candles is 0.025, which is below the threshold of 0.03.
+2026-10-29 16:09:52,953 - rangestabilityfilter - INFO - Removed PAXG/USDT from whitelist, because rate of change over 3 x 1d candles is 0.022, which is below the threshold of 0.03.
+2026-10-29 16:09:52,954 - rangestabilityfilter - INFO - Removed BFUSD/USDT from whitelist, because rate of change over 3 x 1d candles is 0.000, which is below the threshold of 0.03.
+2026-10-29 16:09:53,033 - freqtrade.plugins.pairlistmanager - INFO - Whitelist with 40 pairs: ['BTC/USDT', 'ETH/USDT', 'SOL/USDT', 'ZEC/USDT', 'PEPE/USDT', 'NEAR/USDT', 'XRP/USDT', 'GOOGLB/USDT', 'ENA/USDT', 'SUI/USDT', 'SNDKB/USDT', 'UNI/USDT', 'SPCXB/USDT', 'WLD/USDT', 'SOXLB/USDT', 'DOGE/USDT', 'ADA/USDT', 'PUMP/USDT', 'LTC/USDT', 'SKHYB/USDT', 'LINK/USDT', 'CRCLB/USDT', 'AAVE/USDT', 'MUB/USDT', 'AVAX/USDT', 'INJ/USDT', 'ARB/USDT', 'TAO/USDT', 'NVDAB/USDT', 'HBAR/USDT', 'QNT/USDT', 'MSTRB/USDT', 'CELO/USDT', 'ZRO/USDT', 'FET/USDT', 'ONDO/USDT', 'BCH/USDT', 'INTCB/USDT', 'FIL/USDT', 'KORUB/USDT']
+2026-10-29 16:10:21,000 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.9, strategy_version: v18.0.169', state='RUNNING'
+2026-10-29 16:11:21,003 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.9, strategy_version: v18.0.169', state='RUNNING'
+2026-10-29 16:12:21,006 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.9, strategy_version: v18.0.169', state='RUNNING'
+2026-10-29 16:13:21,008 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.9, strategy_version: v18.0.169', state='RUNNING'
+2026-10-29 16:14:21,011 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.9, strategy_version: v18.0.169', state='RUNNING'
+2026-10-29 16:15:22,569 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.9, strategy_version: v18.0.169', state='RUNNING'
+2026-10-29 16:16:22,572 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.9, strategy_version: v18.0.169', state='RUNNING'
+2026-10-29 16:17:22,575 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.9, strategy_version: v18.0.169', state='RUNNING'
+2026-10-29 16:18:22,577 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.9, strategy_version: v18.0.169', state='RUNNING'
+2026-10-29 16:19:22,580 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.9, strategy_version: v18.0.169', state='RUNNING'
+2026-10-29 16:20:26,000 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.9, strategy_version: v18.0.169', state='RUNNING'
+2026-10-29 16:21:26,003 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.9, strategy_version: v18.0.169', state='RUNNING'
+2026-10-29 16:22:26,006 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.9, strategy_version: v18.0.169', state='RUNNING'
+2026-10-29 16:23:26,009 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.9, strategy_version: v18.0.169', state='RUNNING'
+2026-10-29 16:24:26,011 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.9, strategy_version: v18.0.169', state='RUNNING'

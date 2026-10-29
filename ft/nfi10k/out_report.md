@@ -1,9 +1,9 @@
-# nfi10k (demo) — 2026-10-29 16:04 UTC
+# nfi10k (demo) — 2026-10-29 16:24 UTC
 
-**Balance:** 10000.00 USDT (start 10000, +0.00, +0.00%)
-**Closed trades:** 0, wins 0
-**Open now:** 1
+**Balance:** 10008.56 USDT (start 10000, +8.56, +0.09%)
+**Closed trades:** 1, wins 1 (100%)
+**Open now:** 0
 
 | Pair | Opened | Closed | Profit | Reason |
 |---|---|---|---|---|
-| PEPE/USDT | 2026-10-29 15:55 | open | +0.00 |  |
+| PEPE/USDT | 2026-10-29 15:55 | 2026-10-29 16:05 | +8.56 | exit_long_rebuy_1_1_1 ( 65 ) |
