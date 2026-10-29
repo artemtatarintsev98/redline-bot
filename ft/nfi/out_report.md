@@ -1,8 +1,8 @@
-# nfi (demo) — 2026-10-29 19:50 UTC
+# nfi (demo) — 2026-10-29 20:10 UTC
 
 **Balance:** 1009.02 USDT (start 1000, +9.02, +0.90%)
 **Closed trades:** 10, wins 10 (100%)
-**Open now:** 0
+**Open now:** 1
 
 | Pair | Opened | Closed | Profit | Reason |
 |---|---|---|---|---|
@@ -16,3 +16,4 @@
 | ERA/USDT | 2026-10-26 04:21 | 2026-10-26 05:34 | +0.22 | exit_profit_long_rebuy_t_0_1_m ( 65 ) |
 | ERA/USDT | 2026-10-26 11:45 | 2026-10-26 12:28 | +0.26 | exit_profit_long_rapid_t_0_1_m ( 103 ) |
 | PEPE/USDT | 2026-10-29 15:55 | 2026-10-29 16:05 | +1.15 | exit_long_rebuy_1_1_1 ( 65 ) |
+| WLD/USDT | 2026-10-29 20:05 | open | +0.00 |  |
