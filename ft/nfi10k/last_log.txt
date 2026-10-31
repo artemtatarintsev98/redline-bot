@@ -812,3 +812,44 @@
 2026-10-31 14:50:31,442 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.10, strategy_version: v18.0.183', state='RUNNING'
 2026-10-31 14:51:31,445 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.10, strategy_version: v18.0.183', state='RUNNING'
 2026-10-31 14:52:31,448 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.10, strategy_version: v18.0.183', state='RUNNING'
+2026-10-31 14:53:31,451 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.10, strategy_version: v18.0.183', state='RUNNING'
+2026-10-31 14:54:31,454 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.10, strategy_version: v18.0.183', state='RUNNING'
+2026-10-31 14:55:33,715 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.10, strategy_version: v18.0.183', state='RUNNING'
+2026-10-31 14:56:33,718 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.10, strategy_version: v18.0.183', state='RUNNING'
+2026-10-31 14:57:33,721 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.10, strategy_version: v18.0.183', state='RUNNING'
+2026-10-31 14:58:33,723 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.10, strategy_version: v18.0.183', state='RUNNING'
+2026-10-31 14:59:33,726 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.10, strategy_version: v18.0.183', state='RUNNING'
+2026-10-31 15:00:05,835 - freqtrade.exchange.common - WARNING - _async_get_candle_history() returned exception: "Could not fetch historical candle (OHLCV) data for ZAMA/USDT, 5m, spot due to OperationFailed. Message: binance {"code":-1001,"msg":"Internal error; unable to process your request. Please try again."}". Retrying still for 4 times.
+2026-10-31 15:00:13,539 - NostalgiaForInfinityX8 - INFO - Grinding entry (grind_2_entry) [2026-10-31 15:00:13.373520+00:00] [WLD/USDT] | Rate: 0.3982 | Stake amount: 123.853 | Profit (stake): -49.519 | Profit: -2.75% | Tag: g22
+2026-10-31 15:00:13,541 - freqtrade.freqtradebot - INFO - Position adjust: about to create a new order for WLD/USDT with stake_amount: 123.853275 and price: 0.3982 for Trade(id=2, pair=WLD/USDT, amount=3041.9, is_short=False, leverage=1, open_rate=0.4045, open_since=2026-10-29 20:05:07)
+2026-10-31 15:00:13,702 - freqtrade.freqtradebot - INFO - Order dry_run_buy_WLD/USDT_0c4645c7-f6e3-472b-a6b7-64060994527b was created for WLD/USDT and status is closed.
+2026-10-31 15:00:13,708 - freqtrade.wallets - INFO - Wallets synced.
+2026-10-31 15:00:13,709 - freqtrade.rpc.rpc_manager - INFO - Sending rpc message: {'trade_id': 2, 'type': entry, 'buy_tag': '145 ', 'enter_tag': '145 ', 'exchange': 'Binance', 'pair': 'WLD/USDT', 'leverage': 1.0, 'direction': 'Long', 'limit': 0.3982, 'order_rate': 0.3982, 'open_rate': 0.3982, 'order_type': 'limit', 'stake_amount': 1354.2740195149638, 'stake_currency': 'USDT', 'base_currency': 'WLD', 'quote_currency': 'USDT', 'fiat_currency': '', 'amount': 311.0, 'open_date': datetime.datetime(2026, 10, 29, 20, 5, 7, 233770, tzinfo=datetime.timezone.utc), 'current_rate': 0.3982, 'sub_trade': True}
+2026-10-31 15:00:13,709 - freqtrade.freqtradebot - INFO - DCA order closed, trade should be up to date: Trade(id=2, pair=WLD/USDT, amount=3352.9, is_short=False, leverage=1, open_rate=0.4039, open_since=2026-10-29 20:05:07)
+2026-10-31 15:00:13,710 - freqtrade.freqtradebot - INFO - Found open order for Trade(id=2, pair=WLD/USDT, amount=3352.9, is_short=False, leverage=1, open_rate=0.4039, open_since=2026-10-29 20:05:07)
+2026-10-31 15:00:13,715 - freqtrade.freqtradebot - INFO - Fee for Trade Trade(id=2, pair=WLD/USDT, amount=3352.9, is_short=False, leverage=1, open_rate=0.4039, open_since=2026-10-29 20:05:07) [buy]: 0.1238402 USDT - rate: 0.001
+2026-10-31 15:00:13,716 - freqtrade.persistence.trade_model - INFO - Updating trade (id=2) ...
+2026-10-31 15:00:13,716 - freqtrade.persistence.trade_model - INFO - LIMIT_BUY has been fulfilled for Trade(id=2, pair=WLD/USDT, amount=311, is_short=False, leverage=1, open_rate=0.3982, open_since=2026-10-29 20:05:07).
+2026-10-31 15:00:13,723 - freqtrade.wallets - INFO - Wallets synced.
+2026-10-31 15:00:13,725 - freqtrade.rpc.rpc_manager - INFO - Sending rpc message: {'trade_id': 2, 'type': entry_fill, 'buy_tag': '145 ', 'enter_tag': '145 ', 'exchange': 'Binance', 'pair': 'WLD/USDT', 'leverage': 1.0, 'direction': 'Long', 'limit': 0.3982, 'order_rate': 0.3982, 'open_rate': 0.3982, 'order_type': 'limit', 'stake_amount': 1354.2740195149638, 'stake_currency': 'USDT', 'base_currency': 'WLD', 'quote_currency': 'USDT', 'fiat_currency': '', 'amount': 311.0, 'open_date': datetime.datetime(2026, 10, 29, 20, 5, 7, 233770, tzinfo=datetime.timezone.utc), 'current_rate': 0.3982, 'sub_trade': True}
+2026-10-31 15:00:14,096 - freqtrade.rpc.rpc_manager - INFO - Sending rpc strategy_msg: ✅ ​**Grinding entry:** `(grind_2_entry)`
+🏦 **Exchange:** `Binance`
+🪙 **Pair:** `WLD/USDT`
+〽️ **Rate:** `0.3982`
+💰 **Stake amount:** `123.85 USDT`
+💵 **Profit (stake):** `-49.52 USDT`
+💸 **Profit (percent):** `-2.75%`
+
+2026-10-31 15:00:34,097 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.10, strategy_version: v18.0.183', state='RUNNING'
+2026-10-31 15:01:34,100 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.10, strategy_version: v18.0.183', state='RUNNING'
+2026-10-31 15:02:34,103 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.10, strategy_version: v18.0.183', state='RUNNING'
+2026-10-31 15:03:34,106 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.10, strategy_version: v18.0.183', state='RUNNING'
+2026-10-31 15:04:34,109 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.10, strategy_version: v18.0.183', state='RUNNING'
+2026-10-31 15:05:36,470 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.10, strategy_version: v18.0.183', state='RUNNING'
+2026-10-31 15:06:36,473 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.10, strategy_version: v18.0.183', state='RUNNING'
+2026-10-31 15:07:36,476 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.10, strategy_version: v18.0.183', state='RUNNING'
+2026-10-31 15:08:36,479 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.10, strategy_version: v18.0.183', state='RUNNING'
+2026-10-31 15:09:36,482 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.10, strategy_version: v18.0.183', state='RUNNING'
+2026-10-31 15:10:38,858 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.10, strategy_version: v18.0.183', state='RUNNING'
+2026-10-31 15:11:38,861 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.10, strategy_version: v18.0.183', state='RUNNING'
+2026-10-31 15:12:38,864 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.10, strategy_version: v18.0.183', state='RUNNING'
