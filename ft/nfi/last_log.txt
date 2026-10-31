@@ -1,10 +1,4 @@
-1 06:02:00,300 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using stake_amount: unlimited
-2026-10-31 06:02:00,301 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using startup_candle_count: 800
-2026-10-31 06:02:00,301 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using unfilledtimeout: {'entry': 3, 'exit': 2, 'exit_timeout_count': 0, 'unit': 'minutes'}
-2026-10-31 06:02:00,301 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using use_exit_signal: True
-2026-10-31 06:02:00,302 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using exit_profit_only: False
-2026-10-31 06:02:00,302 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using ignore_roi_if_entry_signal: True
-2026-10-31 06:02:00,302 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using exit_profit_offset: 0.0
+esolvers.strategy_resolver - INFO - Strategy using exit_profit_offset: 0.0
 2026-10-31 06:02:00,303 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using disable_dataframe_checks: False
 2026-10-31 06:02:00,303 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using ignore_buying_expired_candle_after: 0
 2026-10-31 06:02:00,303 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using position_adjustment_enable: True
@@ -1157,3 +1151,9 @@
 2026-10-31 11:44:32,766 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.10, strategy_version: v18.0.182', state='RUNNING'
 2026-10-31 11:45:34,190 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.10, strategy_version: v18.0.182', state='RUNNING'
 2026-10-31 11:46:34,192 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.10, strategy_version: v18.0.182', state='RUNNING'
+2026-10-31 11:47:21,935 - freqtrade.commands.trade_commands - INFO - worker found ... calling exit
+2026-10-31 11:47:21,935 - freqtrade.rpc.rpc_manager - INFO - Sending rpc message: {'type': status, 'status': 'process died'}
+2026-10-31 11:47:21,936 - freqtrade.freqtradebot - INFO - Cleaning up modules ...
+2026-10-31 11:47:21,938 - freqtrade.rpc.rpc_manager - INFO - Sending rpc message: {'type': warning, 'status': "2 open trades active.\n\nHandle these trades manually on Binance, or '/start' the bot again and use '/stopentry' to handle open trades gracefully. \nNote: Trades are simulated (dry run)."}
+2026-10-31 11:47:21,939 - freqtrade.rpc.rpc_manager - INFO - Cleaning up rpc modules ...
+2026-10-31 11:47:22,199 - freqtrade - INFO - SIGINT received, aborting ...
