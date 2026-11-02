@@ -1,0 +1,28 @@
+{
+    "trading_mode": "spot",
+    "max_open_trades": 5,
+    "stake_currency": "USDT",
+    "stake_amount": "unlimited",
+    "tradable_balance_ratio": 0.99,
+    "dry_run": true,
+    "dry_run_wallet": 1000,
+    "cancel_open_orders_on_exit": false,
+    "dataformat_ohlcv": "feather",
+    "unfilledtimeout": {"entry": 10, "exit": 10},
+    "entry_pricing": {"price_side": "same", "use_order_book": true, "order_book_top": 1},
+    "exit_pricing": {"price_side": "same", "use_order_book": true, "order_book_top": 1},
+    "exchange": {
+        "name": "binance", "key": "", "secret": "",
+        "ccxt_config": {"urls": {"api": {"public": "https://data-api.binance.vision/api/v3"}},
+                        "options": {"fetchMarkets": {"types": ["spot"]}}},
+        "pair_whitelist": ["BTC/USDT", "ETH/USDT", "SOL/USDT", "XRP/USDT", "DOGE/USDT", "ADA/USDT", "AVAX/USDT",
+                           "LINK/USDT", "LTC/USDT", "DOT/USDT", "TRX/USDT", "SUI/USDT", "NEAR/USDT", "APT/USDT",
+                           "PEPE/USDT", "UNI/USDT", "AAVE/USDT", "ENA/USDT", "WLD/USDT", "ARB/USDT", "OP/USDT",
+                           "INJ/USDT", "TAO/USDT", "FET/USDT", "SEI/USDT", "TIA/USDT", "ONDO/USDT", "BONK/USDT",
+                           "WIF/USDT", "FLOKI/USDT"],
+        "pair_blacklist": []
+    },
+    "pairlists": [{"method": "StaticPairList"}],
+    "bot_name": "lab",
+    "internals": {"process_throttle_secs": 5}
+}
