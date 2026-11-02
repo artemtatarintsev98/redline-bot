@@ -1,0 +1,46 @@
+name: strategy-lab
+on:
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  lab:
+    runs-on: ubuntu-latest
+    timeout-minutes: 350
+    env:
+      IMG: freqtradeorg/freqtrade:stable_freqai
+    steps:
+      - uses: actions/checkout@v4
+      - name: Collect candidate strategies
+        run: |
+          mkdir -p /tmp/strats /tmp/src
+          git clone -q --depth 1 https://github.com/freqtrade/freqtrade-strategies.git /tmp/src/official
+          git clone -q --depth 1 https://github.com/28dec/E0V1E-HO.git /tmp/src/e0v1e
+          git clone -q --depth 1 https://github.com/jilv220/BB_RPB_TSL.git /tmp/src/bbrpb
+          git clone -q --depth 1 https://github.com/iterativv/NostalgiaForInfinity.git /tmp/src/nfi
+          cp /tmp/src/official/user_data/strategies/*.py /tmp/strats/
+          cp $(ls /tmp/src/e0v1e/user_data/strategies/E0V1E_*.py | sort | tail -1) /tmp/strats/
+          cp /tmp/src/bbrpb/BB_RPB_TSL.py /tmp/strats/
+          cp /tmp/src/nfi/NostalgiaForInfinityX8.py /tmp/strats/
+          ls /tmp/strats
+          docker pull -q $IMG
+          mkdir -p /tmp/ud && sudo chmod -R 777 /tmp/strats /tmp/ud
+      - name: Download data (Binance spot)
+        run: |
+          START=$(date -u -d '-150 days' +%Y%m%d)
+          docker run --rm -v /tmp/ud:/freqtrade/user_data -v $PWD/ft/lab:/lab $IMG download-data -c /lab/config.json \
+            --timeframes 1m 5m 15m 30m 1h 4h 1d --timerange ${START}- --data-format-ohlcv feather
+      - name: Backtest all strategies (last 60 days)
+        run: |
+          TR="$(date -u -d '-60 days' +%Y%m%d)-$(date -u +%Y%m%d)"
+          sudo chmod -R 777 /tmp/ud ft/lab
+          docker run --rm -v /tmp/ud:/freqtrade/user_data -v $PWD/ft/lab:/lab -v /tmp/strats:/strats --entrypoint python $IMG \
+            /lab/run_lab.py "$TR" /strats /lab/out
+      - name: Save report
+        if: ${{ !cancelled() }}
+        run: |
+          sudo chmod -R 777 ft/lab || true
+          git config user.name redline-bot; git config user.email bot@users.noreply.github.com
+          git add -f ft/lab/out/lab_report.md ft/lab/out/lab_results.json || true
+          git commit -qm "strategy lab results $(date -u +%F)" || true
+          for i in 1 2 3; do git pull -q --rebase -X theirs && git push -q && break; sleep 5; done
