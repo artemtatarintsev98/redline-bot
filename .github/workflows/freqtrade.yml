@@ -26,13 +26,14 @@ jobs:
           git clone -q --depth 1 https://github.com/iterativv/NostalgiaForInfinity.git /tmp/nfi
           echo "NFI commit: $(git -C /tmp/nfi log -1 --format='%h %cd')"
           for b in nfi nfi10k; do mkdir -p ft/$b/user_data/strategies; cp /tmp/nfi/NostalgiaForInfinityX8.py ft/$b/user_data/strategies/; done
+          python3 ft/merge_blacklist.py /tmp/nfi/configs/blacklist-binance.json ft/blacklist-extra.json /tmp/blacklist.json
           docker pull -q freqtradeorg/freqtrade:stable
           sudo chmod -R 777 ft /tmp/nfi
       - name: Run both bots (dry-run) and save state
         run: |
           for b in nfi nfi10k; do
             docker run -d --name $b -v $PWD/ft/$b/user_data:/freqtrade/user_data -v $PWD/ft/$b/config.json:/freqtrade/config.json:ro \
-              -v /tmp/nfi:/freqtrade/nfi:ro freqtradeorg/freqtrade:stable trade --config /freqtrade/config.json \
+              -v /tmp/nfi:/freqtrade/nfi:ro -v /tmp/blacklist.json:/freqtrade/blacklist.json:ro freqtradeorg/freqtrade:stable trade --config /freqtrade/config.json \
               --db-url sqlite:////freqtrade/user_data/trades.sqlite --logfile /freqtrade/user_data/bot.log
           done
           git config user.name redline-bot; git config user.email bot@users.noreply.github.com
