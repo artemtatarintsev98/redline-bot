@@ -1,8 +1,4 @@
- PID=1, version='2026.10, strategy_version: v18.0.195', state='RUNNING'
-2026-11-02 22:00:05,968 - freqtrade.exchange.common - WARNING - _async_get_candle_history() returned exception: "Could not fetch historical candle (OHLCV) data for TAO/USDT, 1h, spot due to OperationFailed. Message: binance {"code":-1001,"msg":"Internal error; unable to process your request. Please try again."}". Retrying still for 4 times.
-2026-11-02 22:00:17,538 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.10, strategy_version: v18.0.195', state='RUNNING'
-2026-11-02 22:01:17,541 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.10, strategy_version: v18.0.195', state='RUNNING'
-2026-11-02 22:02:17,543 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.10, strategy_version: v18.0.195', state='RUNNING'
+on='2026.10, strategy_version: v18.0.195', state='RUNNING'
 2026-11-02 22:03:17,546 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.10, strategy_version: v18.0.195', state='RUNNING'
 2026-11-02 22:04:17,548 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.10, strategy_version: v18.0.195', state='RUNNING'
 2026-11-02 22:05:22,041 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.10, strategy_version: v18.0.195', state='RUNNING'
@@ -1180,3 +1176,9 @@
 2026-11-03 03:12:07,175 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.10, strategy_version: v18.0.195', state='RUNNING'
 2026-11-03 03:13:07,177 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.10, strategy_version: v18.0.195', state='RUNNING'
 2026-11-03 03:14:07,180 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.10, strategy_version: v18.0.195', state='RUNNING'
+2026-11-03 03:14:12,370 - freqtrade.commands.trade_commands - INFO - worker found ... calling exit
+2026-11-03 03:14:12,370 - freqtrade.rpc.rpc_manager - INFO - Sending rpc message: {'type': status, 'status': 'process died'}
+2026-11-03 03:14:12,371 - freqtrade.freqtradebot - INFO - Cleaning up modules ...
+2026-11-03 03:14:12,373 - freqtrade.rpc.rpc_manager - INFO - Sending rpc message: {'type': warning, 'status': "2 open trades active.\n\nHandle these trades manually on Binance, or '/start' the bot again and use '/stopentry' to handle open trades gracefully. \nNote: Trades are simulated (dry run)."}
+2026-11-03 03:14:12,373 - freqtrade.rpc.rpc_manager - INFO - Cleaning up rpc modules ...
+2026-11-03 03:14:12,631 - freqtrade - INFO - SIGINT received, aborting ...
