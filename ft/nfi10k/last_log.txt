@@ -727,3 +727,45 @@
 2026-11-03 11:03:29,809 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.10, strategy_version: v18.0.196', state='RUNNING'
 2026-11-03 11:04:29,811 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.10, strategy_version: v18.0.196', state='RUNNING'
 2026-11-03 11:05:32,506 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.10, strategy_version: v18.0.196', state='RUNNING'
+2026-11-03 11:06:32,509 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.10, strategy_version: v18.0.196', state='RUNNING'
+2026-11-03 11:07:32,512 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.10, strategy_version: v18.0.196', state='RUNNING'
+2026-11-03 11:08:32,515 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.10, strategy_version: v18.0.196', state='RUNNING'
+2026-11-03 11:09:32,518 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.10, strategy_version: v18.0.196', state='RUNNING'
+2026-11-03 11:10:13,804 - freqtrade.wallets - INFO - Wallets synced.
+2026-11-03 11:10:13,929 - freqtrade.freqtradebot - INFO - Long signal found: about create a new trade for HOT/USDT with stake_amount: 201.49618273867497 and price: 0.000487 ...
+2026-11-03 11:10:14,054 - freqtrade.freqtradebot - INFO - Order dry_run_buy_HOT/USDT_8569c10d-3b8a-4603-8fba-c3e2d7da79c1 was created for HOT/USDT and status is closed.
+2026-11-03 11:10:14,061 - freqtrade.wallets - INFO - Wallets synced.
+2026-11-03 11:10:14,062 - freqtrade.rpc.rpc_manager - INFO - Sending rpc message: {'trade_id': 6, 'type': entry, 'buy_tag': '65 ', 'enter_tag': '65 ', 'exchange': 'Binance', 'pair': 'HOT/USDT', 'leverage': 1.0, 'direction': 'Long', 'limit': 0.000487, 'order_rate': 0.000487, 'open_rate': 0.000487, 'order_type': 'limit', 'stake_amount': 201.495763, 'stake_currency': 'USDT', 'base_currency': 'HOT', 'quote_currency': 'USDT', 'fiat_currency': '', 'amount': 413749.0, 'open_date': datetime.datetime(2026, 11, 3, 11, 10, 14, 54756, tzinfo=datetime.timezone.utc), 'current_rate': 0.000487, 'sub_trade': False}
+2026-11-03 11:10:14,062 - freqtrade.freqtradebot - INFO - Found open order for Trade(id=6, pair=HOT/USDT, amount=413749, is_short=False, leverage=1, open_rate=0.000487, open_since=2026-11-03 11:10:14)
+2026-11-03 11:10:14,067 - freqtrade.freqtradebot - INFO - Fee for Trade Trade(id=6, pair=HOT/USDT, amount=413749, is_short=False, leverage=1, open_rate=0.000487, open_since=2026-11-03 11:10:14) [buy]: 0.20149576 USDT - rate: 0.001
+2026-11-03 11:10:14,068 - freqtrade.persistence.trade_model - INFO - Updating trade (id=6) ...
+2026-11-03 11:10:14,068 - freqtrade.persistence.trade_model - INFO - LIMIT_BUY has been fulfilled for Trade(id=6, pair=HOT/USDT, amount=413749, is_short=False, leverage=1, open_rate=0.000487, open_since=2026-11-03 11:10:14).
+2026-11-03 11:10:14,076 - freqtrade.wallets - INFO - Wallets synced.
+2026-11-03 11:10:14,078 - freqtrade.rpc.rpc_manager - INFO - Sending rpc message: {'trade_id': 6, 'type': entry_fill, 'buy_tag': '65 ', 'enter_tag': '65 ', 'exchange': 'Binance', 'pair': 'HOT/USDT', 'leverage': 1.0, 'direction': 'Long', 'limit': 0.000487, 'order_rate': 0.000487, 'open_rate': 0.000487, 'order_type': 'limit', 'stake_amount': 201.495763, 'stake_currency': 'USDT', 'base_currency': 'HOT', 'quote_currency': 'USDT', 'fiat_currency': '', 'amount': 413749.0, 'open_date': datetime.datetime(2026, 11, 3, 11, 10, 14, 54756, tzinfo=datetime.timezone.utc), 'current_rate': 0.000487, 'sub_trade': False}
+2026-11-03 11:10:34,143 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.10, strategy_version: v18.0.196', state='RUNNING'
+2026-11-03 11:11:34,145 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.10, strategy_version: v18.0.196', state='RUNNING'
+2026-11-03 11:12:34,148 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.10, strategy_version: v18.0.196', state='RUNNING'
+2026-11-03 11:13:34,151 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.10, strategy_version: v18.0.196', state='RUNNING'
+2026-11-03 11:14:34,154 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.10, strategy_version: v18.0.196', state='RUNNING'
+2026-11-03 11:15:22,207 - freqtrade.freqtradebot - INFO - Exit for HOT/USDT detected. Reason: custom_exit
+2026-11-03 11:15:22,209 - freqtrade.wallets - INFO - Wallets synced.
+2026-11-03 11:15:22,333 - freqtrade.rpc.rpc_manager - INFO - Sending rpc message: {'type': exit, 'trade_id': 6, 'exchange': 'Binance', 'pair': 'HOT/USDT', 'leverage': 1.0, 'direction': 'Long', 'gain': 'profit', 'limit': 0.000526, 'order_rate': 0.000526, 'order_type': 'limit', 'amount': 413749.0, 'open_rate': 0.000487, 'close_rate': 0.000526, 'current_rate': 0.000526, 'profit_amount': 15.71708326, 'profit_ratio': 0.07792413, 'buy_tag': '65 ', 'enter_tag': '65 ', 'exit_reason': 'exit_long_rebuy_d_7_1 ( 65 )', 'open_date': datetime.datetime(2026, 11, 3, 11, 10, 14, 54756, tzinfo=datetime.timezone.utc), 'close_date': datetime.datetime(2026, 11, 3, 11, 15, 22, 333232, tzinfo=datetime.timezone.utc), 'stake_amount': 201.495763, 'stake_currency': 'USDT', 'base_currency': 'HOT', 'quote_currency': 'USDT', 'fiat_currency': '', 'sub_trade': False, 'cumulative_profit': 0.0, 'final_profit_ratio': None, 'is_final_exit': False}
+2026-11-03 11:15:22,334 - freqtrade.freqtradebot - INFO - Found open order for Trade(id=6, pair=HOT/USDT, amount=413749, is_short=False, leverage=1, open_rate=0.000487, open_since=2026-11-03 11:10:14)
+2026-11-03 11:15:22,338 - freqtrade.freqtradebot - INFO - Fee for Trade Trade(id=6, pair=HOT/USDT, amount=413749, is_short=False, leverage=1, open_rate=0.000487, open_since=2026-11-03 11:10:14) [sell]: 0.21763197 USDT - rate: 0.001
+2026-11-03 11:15:22,338 - freqtrade.persistence.trade_model - INFO - Updating trade (id=6) ...
+2026-11-03 11:15:22,339 - freqtrade.persistence.trade_model - INFO - LIMIT_SELL has been fulfilled for Trade(id=6, pair=HOT/USDT, amount=413749, is_short=False, leverage=1, open_rate=0.000487, open_since=2026-11-03 11:10:14).
+2026-11-03 11:15:22,339 - freqtrade.persistence.trade_model - INFO - Marking Trade(id=6, pair=HOT/USDT, amount=413749, is_short=False, leverage=1, open_rate=0.000487, open_since=closed) as closed as the trade is fulfilled and found no open orders for it.
+2026-11-03 11:15:22,345 - freqtrade.wallets - INFO - Wallets synced.
+2026-11-03 11:15:22,346 - freqtrade.rpc.rpc_manager - INFO - Sending rpc message: {'type': exit_fill, 'trade_id': 6, 'exchange': 'Binance', 'pair': 'HOT/USDT', 'leverage': 1.0, 'direction': 'Long', 'gain': 'profit', 'limit': 0.000526, 'order_rate': 0.000526, 'order_type': 'limit', 'amount': 413749.0, 'open_rate': 0.000487, 'close_rate': 0.000526, 'current_rate': None, 'profit_amount': 15.71708326, 'profit_ratio': 0.07792413, 'buy_tag': '65 ', 'enter_tag': '65 ', 'exit_reason': 'exit_long_rebuy_d_7_1 ( 65 )', 'open_date': datetime.datetime(2026, 11, 3, 11, 10, 14, 54756, tzinfo=datetime.timezone.utc), 'close_date': datetime.datetime(2026, 11, 3, 11, 15, 22, 332000, tzinfo=datetime.timezone.utc), 'stake_amount': 201.495763, 'stake_currency': 'USDT', 'base_currency': 'HOT', 'quote_currency': 'USDT', 'fiat_currency': '', 'sub_trade': False, 'cumulative_profit': 15.71708326, 'final_profit_ratio': 0.07792412924395774, 'is_final_exit': True}
+2026-11-03 11:15:22,351 - freqtrade.wallets - INFO - Wallets synced.
+2026-11-03 11:15:36,435 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.10, strategy_version: v18.0.196', state='RUNNING'
+2026-11-03 11:16:36,438 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.10, strategy_version: v18.0.196', state='RUNNING'
+2026-11-03 11:17:36,441 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.10, strategy_version: v18.0.196', state='RUNNING'
+2026-11-03 11:18:36,444 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.10, strategy_version: v18.0.196', state='RUNNING'
+2026-11-03 11:19:36,447 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.10, strategy_version: v18.0.196', state='RUNNING'
+2026-11-03 11:20:38,760 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.10, strategy_version: v18.0.196', state='RUNNING'
+2026-11-03 11:21:38,763 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.10, strategy_version: v18.0.196', state='RUNNING'
+2026-11-03 11:22:38,765 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.10, strategy_version: v18.0.196', state='RUNNING'
+2026-11-03 11:23:38,768 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.10, strategy_version: v18.0.196', state='RUNNING'
+2026-11-03 11:24:38,771 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.10, strategy_version: v18.0.196', state='RUNNING'
+2026-11-03 11:25:41,440 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.10, strategy_version: v18.0.196', state='RUNNING'
