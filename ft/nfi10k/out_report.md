@@ -1,15 +1,15 @@
-# nfi10k (demo) — 2026-11-04 05:28 UTC
+# nfi10k (demo) — 2026-11-04 05:48 UTC
 
-**Balance:** 10027.68 USDT (start 10000, +27.68, +0.28%)
-**Closed trades:** 4, wins 4 (100%)
-**Open now:** 3
+**Balance:** 10029.65 USDT (start 10000, +29.65, +0.30%)
+**Closed trades:** 5, wins 5 (100%)
+**Open now:** 2
 
 | Pair | Opened | Closed | Profit | Reason |
 |---|---|---|---|---|
 | PEPE/USDT | 2026-10-29 15:55 | 2026-10-29 16:05 | +8.56 | exit_long_rebuy_1_1_1 ( 65 ) |
 | WLD/USDT | 2026-10-29 20:05 | open | +1.15 | grind_1_exit 11 |
 | ARB/USDT | 2026-10-29 20:55 | 2026-10-29 21:03 | +1.53 | exit_long_tc_u_0 ( 143 ) |
-| SOXLB/USDT | 2026-10-29 21:00 | open | +3.13 | grind_1_exit 34 |
+| SOXLB/USDT | 2026-10-29 21:00 | open | +2.42 | grind_5_exit 38 |
 | HUMA/USDT | 2026-11-03 08:55 | 2026-11-03 11:50 | +1.88 | exit_long_rebuy_d_0_2 ( 62 ) |
 | HOT/USDT | 2026-11-03 11:10 | 2026-11-03 11:15 | +15.72 | exit_long_rebuy_d_7_1 ( 65 ) |
-| HUMA/USDT | 2026-11-04 03:10 | open | +0.00 |  |
+| HUMA/USDT | 2026-11-04 03:10 | 2026-11-04 05:43 | +1.96 | exit_profit_long_normal_t_0_1_m ( 3 ) |
