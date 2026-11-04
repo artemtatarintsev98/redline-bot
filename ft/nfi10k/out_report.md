@@ -1,4 +1,4 @@
-# nfi10k (demo) — 2026-11-04 14:01 UTC
+# nfi10k (demo) — 2026-11-04 14:21 UTC
 
 **Balance:** 10029.65 USDT (start 10000, +29.65, +0.30%)
 **Closed trades:** 5, wins 5 (100%)
@@ -14,4 +14,4 @@
 | HOT/USDT | 2026-11-03 11:10 | 2026-11-03 11:15 | +15.72 | exit_long_rebuy_d_7_1 ( 65 ) |
 | HUMA/USDT | 2026-11-04 03:10 | 2026-11-04 05:43 | +1.96 | exit_profit_long_normal_t_0_1_m ( 3 ) |
 | HAEDAL/USDT | 2026-11-04 09:25 | open | +0.00 |  |
-| HUMA/USDT | 2026-11-04 14:00 | open | +0.00 |  |
+| HUMA/USDT | 2026-11-04 14:03 | open | +0.00 |  |
