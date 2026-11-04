@@ -1,8 +1,8 @@
-# nfi10k (demo) — 2026-11-04 03:07 UTC
+# nfi10k (demo) — 2026-11-04 03:27 UTC
 
 **Balance:** 10027.68 USDT (start 10000, +27.68, +0.28%)
 **Closed trades:** 4, wins 4 (100%)
-**Open now:** 2
+**Open now:** 3
 
 | Pair | Opened | Closed | Profit | Reason |
 |---|---|---|---|---|
@@ -12,3 +12,4 @@
 | SOXLB/USDT | 2026-10-29 21:00 | open | +0.94 | grind_5_exit 27 23 |
 | HUMA/USDT | 2026-11-03 08:55 | 2026-11-03 11:50 | +1.88 | exit_long_rebuy_d_0_2 ( 62 ) |
 | HOT/USDT | 2026-11-03 11:10 | 2026-11-03 11:15 | +15.72 | exit_long_rebuy_d_7_1 ( 65 ) |
+| HUMA/USDT | 2026-11-04 03:10 | open | +0.00 |  |
