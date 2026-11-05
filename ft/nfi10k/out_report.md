@@ -1,8 +1,8 @@
-# nfi10k (demo) — 2026-11-05 16:46 UTC
+# nfi10k (demo) — 2026-11-05 17:06 UTC
 
-**Balance:** 10037.22 USDT (start 10000, +37.22, +0.37%)
-**Closed trades:** 6, wins 6 (100%)
-**Open now:** 8
+**Balance:** 10041.41 USDT (start 10000, +41.41, +0.41%)
+**Closed trades:** 7, wins 7 (100%)
+**Open now:** 7
 
 | Pair | Opened | Closed | Profit | Reason |
 |---|---|---|---|---|
@@ -19,4 +19,4 @@
 | QNT/USDT | 2026-11-04 18:40 | open | +0.00 |  |
 | SAND/USDT | 2026-11-05 15:25 | open | +0.00 |  |
 | DASH/USDT | 2026-11-05 15:55 | 2026-11-05 16:15 | +7.58 | exit_long_tc_u_1 ( 143 ) |
-| CRV/USDT | 2026-11-05 15:55 | open | +0.00 |  |
+| CRV/USDT | 2026-11-05 15:55 | 2026-11-05 16:59 | +4.19 | exit_profit_long_tc_t_0_1_m ( 141 142 ) |
