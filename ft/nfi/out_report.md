@@ -1,4 +1,4 @@
-# nfi (demo) — 2026-11-05 14:26 UTC
+# nfi (demo) — 2026-11-05 14:46 UTC
 
 **Balance:** 1013.44 USDT (start 1000, +13.44, +1.34%)
 **Closed trades:** 15, wins 15 (100%)
@@ -14,10 +14,10 @@
 | PEPE/USDT | 2026-10-29 15:55 | 2026-10-29 16:05 | +1.15 | exit_long_rebuy_1_1_1 ( 65 ) |
 | WLD/USDT | 2026-10-29 20:05 | open | -0.23 | grind_5_exit 44 |
 | ARB/USDT | 2026-10-29 20:55 | 2026-10-29 21:02 | +0.21 | exit_long_tc_u_0 ( 143 ) |
-| SOXLB/USDT | 2026-10-29 23:00 | open | -0.52 | grind_3_exit 78 |
+| SOXLB/USDT | 2026-10-29 23:00 | open | -3.07 | grind_5_derisk 80 64 |
 | HUMA/USDT | 2026-11-03 08:55 | 2026-11-03 11:50 | +0.57 | exit_long_rebuy_d_1_2 ( 62 ) |
 | HOT/USDT | 2026-11-03 11:10 | 2026-11-03 11:15 | +3.12 | exit_long_rebuy_d_7_1 ( 65 ) |
 | HUMA/USDT | 2026-11-04 03:10 | 2026-11-04 05:20 | +0.48 | exit_profit_long_normal_t_0_1_m ( 3 ) |
 | HUMA/USDT | 2026-11-04 14:00 | open | -3.88 | derisk_level_1 |
-| SNXXB/USDT | 2026-11-04 15:45 | open | -3.70 | derisk_level_1 |
+| SNXXB/USDT | 2026-11-04 15:45 | open | -16.25 | derisk_level_3 |
 | QNT/USDT | 2026-11-04 18:40 | 2026-11-05 05:23 | +0.04 | exit_profit_long_rebuy_t_0_1_m ( 64 ) |
