@@ -261,3 +261,47 @@
 2026-11-05 19:09:51,558 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.10, strategy_version: v18.0.208', state='RUNNING'
 2026-11-05 19:10:53,521 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.10, strategy_version: v18.0.208', state='RUNNING'
 2026-11-05 19:11:53,523 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.10, strategy_version: v18.0.208', state='RUNNING'
+2026-11-05 19:12:53,526 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.10, strategy_version: v18.0.208', state='RUNNING'
+2026-11-05 19:13:53,529 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.10, strategy_version: v18.0.208', state='RUNNING'
+2026-11-05 19:14:53,532 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.10, strategy_version: v18.0.208', state='RUNNING'
+2026-11-05 19:15:23,462 - NostalgiaForInfinityX8 - INFO - Grinding exit (grind_1_exit) [2026-11-05 19:15:23.314503+00:00] [SNXXB/USDT] | Rate: 3.48 | Stake amount: 33.373 | Coin amount: 9.59 | Profit (stake): -37.063 | Profit: -14.65% | Grind profit: 2.96% (0.926 USDT)
+2026-11-05 19:15:23,466 - freqtrade.wallets - INFO - Wallets synced.
+2026-11-05 19:15:23,604 - freqtrade.rpc.rpc_manager - INFO - Sending rpc message: {'type': exit, 'trade_id': 18, 'exchange': 'Binance', 'pair': 'SNXXB/USDT', 'leverage': 1.0, 'direction': 'Long', 'gain': 'profit', 'limit': 3.48, 'order_rate': 3.48, 'order_type': 'limit', 'amount': 9.58, 'open_rate': 3.44, 'close_rate': 3.48, 'current_rate': 3.48, 'profit_amount': 0.3169064, 'profit_ratio': 0.00960667, 'buy_tag': '4 ', 'enter_tag': '4 ', 'exit_reason': 'grind_1_exit 124', 'open_date': datetime.datetime(2026, 11, 4, 15, 45, 8, 313222, tzinfo=datetime.timezone.utc), 'close_date': datetime.datetime(2026, 11, 5, 19, 15, 23, 604460, tzinfo=datetime.timezone.utc), 'stake_amount': 42.12682608109102, 'stake_currency': 'USDT', 'base_currency': 'SNXXB', 'quote_currency': 'USDT', 'fiat_currency': '', 'sub_trade': True, 'cumulative_profit': -37.412333479999994, 'final_profit_ratio': None, 'is_final_exit': False}
+2026-11-05 19:15:23,644 - freqtrade.rpc.rpc_manager - INFO - Sending rpc strategy_msg: ❎​ ​**Grinding exit:** `(grind_1_exit)`
+🏦 **Exchange:** `Binance`
+🪙 **Pair:** `SNXXB/USDT`
+〽️ **Rate:** `3.48`
+💰 **Stake amount:** `33.37 USDT`
+🪙 **Coin amount:** `9.59`
+💵 **Profit (stake):** `-37.06 USDT`
+💸 **Profit (percent):** `-14.65%`
+💶 **Grind profit (stake):** `0.93 USDT`
+💸 **Grind profit (percent):** `2.96%`
+2026-11-05 19:15:26,903 - freqtrade.freqtradebot - INFO - Found open order for Trade(id=18, pair=SNXXB/USDT, amount=12.23, is_short=False, leverage=1, open_rate=3.44, open_since=2026-11-04 15:45:08)
+2026-11-05 19:15:26,911 - freqtrade.persistence.trade_model - INFO - Updating trade (id=18) ...
+2026-11-05 19:15:26,911 - freqtrade.persistence.trade_model - INFO - LIMIT_SELL has been fulfilled for Trade(id=18, pair=SNXXB/USDT, amount=12.23, is_short=False, leverage=1, open_rate=3.44, open_since=2026-11-04 15:45:08).
+2026-11-05 19:15:26,925 - freqtrade.wallets - INFO - Wallets synced.
+2026-11-05 19:15:26,927 - freqtrade.rpc.rpc_manager - INFO - Sending rpc message: {'type': exit_fill, 'trade_id': 18, 'exchange': 'Binance', 'pair': 'SNXXB/USDT', 'leverage': 1.0, 'direction': 'Long', 'gain': 'profit', 'limit': 3.48, 'order_rate': 3.48, 'order_type': 'limit', 'amount': 9.58, 'open_rate': 3.44, 'close_rate': 3.48, 'current_rate': None, 'profit_amount': 0.3169064, 'profit_ratio': 0.00960667, 'buy_tag': '4 ', 'enter_tag': '4 ', 'exit_reason': 'grind_1_exit 124', 'open_date': datetime.datetime(2026, 11, 4, 15, 45, 8, 313222, tzinfo=datetime.timezone.utc), 'close_date': datetime.datetime(2026, 11, 5, 19, 15, 26, 927388, tzinfo=datetime.timezone.utc), 'stake_amount': 9.128053075624791, 'stake_currency': 'USDT', 'base_currency': 'SNXXB', 'quote_currency': 'USDT', 'fiat_currency': '', 'sub_trade': True, 'cumulative_profit': -37.13904365999999, 'final_profit_ratio': None, 'is_final_exit': False}
+2026-11-05 19:15:56,597 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.10, strategy_version: v18.0.208', state='RUNNING'
+2026-11-05 19:16:56,600 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.10, strategy_version: v18.0.208', state='RUNNING'
+2026-11-05 19:17:32,183 - AgeFilter - INFO - Removed HYPE/USDT from whitelist, because age 42 is less than 60 days
+2026-11-05 19:17:32,184 - AgeFilter - INFO - Removed RWUSD/USDT from whitelist, because age 23 is less than 60 days
+2026-11-05 19:17:32,184 - AgeFilter - INFO - Removed BNCB/USDT from whitelist, because age 52 is less than 60 days
+2026-11-05 19:17:32,185 - AgeFilter - INFO - Validated 57 pairs.
+2026-11-05 19:17:32,185 - PriceFilter - INFO - Removed FOGO/USDT from whitelist, because 1 unit is 0.439%
+2026-11-05 19:17:32,297 - freqtrade.plugins.pairlistmanager - INFO - Whitelist with 40 pairs: ['BTC/USDT', 'ETH/USDT', 'SOL/USDT', 'ZEC/USDT', 'XRP/USDT', 'UNI/USDT', 'NEAR/USDT', 'PEPE/USDT', 'DOGE/USDT', 'SUI/USDT', 'ENA/USDT', 'LINK/USDT', 'WLD/USDT', 'TRX/USDT', 'INJ/USDT', 'ADA/USDT', 'AAVE/USDT', 'LTC/USDT', 'PUMP/USDT', 'AVAX/USDT', 'TAO/USDT', 'ONDO/USDT', 'BCH/USDT', 'XLM/USDT', 'ARB/USDT', 'FET/USDT', 'ASTER/USDT', 'QNT/USDT', 'CELO/USDT', 'ZRO/USDT', 'XPL/USDT', 'GRAM/USDT', 'FIL/USDT', 'HUMA/USDT', 'HBAR/USDT', 'DASH/USDT', 'BEAMX/USDT', 'PENGU/USDT', 'RUNE/USDT', 'BMT/USDT']
+2026-11-05 19:17:56,603 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.10, strategy_version: v18.0.208', state='RUNNING'
+2026-11-05 19:18:56,606 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.10, strategy_version: v18.0.208', state='RUNNING'
+2026-11-05 19:19:56,609 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.10, strategy_version: v18.0.208', state='RUNNING'
+2026-11-05 19:20:58,525 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.10, strategy_version: v18.0.208', state='RUNNING'
+2026-11-05 19:21:58,528 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.10, strategy_version: v18.0.208', state='RUNNING'
+2026-11-05 19:22:58,531 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.10, strategy_version: v18.0.208', state='RUNNING'
+2026-11-05 19:23:58,534 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.10, strategy_version: v18.0.208', state='RUNNING'
+2026-11-05 19:24:58,537 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.10, strategy_version: v18.0.208', state='RUNNING'
+2026-11-05 19:26:00,602 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.10, strategy_version: v18.0.208', state='RUNNING'
+2026-11-05 19:27:00,604 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.10, strategy_version: v18.0.208', state='RUNNING'
+2026-11-05 19:28:00,607 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.10, strategy_version: v18.0.208', state='RUNNING'
+2026-11-05 19:29:00,610 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.10, strategy_version: v18.0.208', state='RUNNING'
+2026-11-05 19:30:01,000 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.10, strategy_version: v18.0.208', state='RUNNING'
+2026-11-05 19:31:04,658 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.10, strategy_version: v18.0.208', state='RUNNING'
+2026-11-05 19:32:04,661 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.10, strategy_version: v18.0.208', state='RUNNING'
