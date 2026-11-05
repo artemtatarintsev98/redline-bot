@@ -852,3 +852,135 @@
 2026-11-05 15:03:26,886 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.10, strategy_version: v18.0.205', state='RUNNING'
 2026-11-05 15:04:26,889 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.10, strategy_version: v18.0.205', state='RUNNING'
 2026-11-05 15:05:31,547 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.10, strategy_version: v18.0.205', state='RUNNING'
+2026-11-05 15:06:31,550 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.10, strategy_version: v18.0.205', state='RUNNING'
+2026-11-05 15:07:31,553 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.10, strategy_version: v18.0.205', state='RUNNING'
+2026-11-05 15:08:31,556 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.10, strategy_version: v18.0.205', state='RUNNING'
+2026-11-05 15:09:31,559 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.10, strategy_version: v18.0.205', state='RUNNING'
+2026-11-05 15:09:48,559 - NostalgiaForInfinityX8 - INFO - Grinding entry (grind_4_entry) [2026-11-05 15:09:48.451594+00:00] [SNXXB/USDT] | Rate: 3.75 | Stake amount: 56.921 | Profit (stake): -173.706 | Profit: -18.40% | Tag: g_pre_derisk
+2026-11-05 15:09:48,560 - freqtrade.freqtradebot - INFO - Position adjust: about to create a new order for SNXXB/USDT with stake_amount: 56.920584 and price: 3.75 for Trade(id=10, pair=SNXXB/USDT, amount=19.03, is_short=False, leverage=1, open_rate=5.4, open_since=2026-11-04 15:45:16)
+2026-11-05 15:09:48,661 - freqtrade.freqtradebot - INFO - Order dry_run_buy_SNXXB/USDT_a882bb5d-f6c1-4c23-a05a-61fb5bd2e70d was created for SNXXB/USDT and status is open.
+2026-11-05 15:09:48,668 - freqtrade.wallets - INFO - Wallets synced.
+2026-11-05 15:09:48,668 - freqtrade.rpc.rpc_manager - INFO - Sending rpc message: {'trade_id': 10, 'type': entry, 'buy_tag': '4 ', 'enter_tag': '4 ', 'exchange': 'Binance', 'pair': 'SNXXB/USDT', 'leverage': 1.0, 'direction': 'Long', 'limit': 3.75, 'order_rate': 3.75, 'open_rate': 3.75, 'order_type': 'limit', 'stake_amount': 159.64047491528095, 'stake_currency': 'USDT', 'base_currency': 'SNXXB', 'quote_currency': 'USDT', 'fiat_currency': '', 'amount': 15.17, 'open_date': datetime.datetime(2026, 11, 4, 15, 45, 16, 764150, tzinfo=datetime.timezone.utc), 'current_rate': 3.75, 'sub_trade': True}
+2026-11-05 15:09:48,669 - freqtrade.freqtradebot - INFO - DCA order open, will wait for resolution: Trade(id=10, pair=SNXXB/USDT, amount=19.03, is_short=False, leverage=1, open_rate=5.4, open_since=2026-11-04 15:45:16)
+2026-11-05 15:09:48,971 - freqtrade.rpc.rpc_manager - INFO - Sending rpc strategy_msg: ✅ ​**Grinding entry:** `(grind_4_entry)`
+🏦 **Exchange:** `Binance`
+🪙 **Pair:** `SNXXB/USDT`
+〽️ **Rate:** `3.75`
+💰 **Stake amount:** `56.92 USDT`
+💵 **Profit (stake):** `-173.71 USDT`
+💸 **Profit (percent):** `-18.40%`
+
+2026-11-05 15:09:51,976 - freqtrade.freqtradebot - INFO - Found open order for Trade(id=10, pair=SNXXB/USDT, amount=19.03, is_short=False, leverage=1, open_rate=5.4, open_since=2026-11-04 15:45:16)
+2026-11-05 15:09:57,005 - freqtrade.freqtradebot - INFO - Found open order for Trade(id=10, pair=SNXXB/USDT, amount=19.03, is_short=False, leverage=1, open_rate=5.4, open_since=2026-11-04 15:45:16)
+2026-11-05 15:10:14,214 - freqtrade.freqtradebot - INFO - Found open order for Trade(id=10, pair=SNXXB/USDT, amount=19.03, is_short=False, leverage=1, open_rate=5.4, open_since=2026-11-04 15:45:16)
+2026-11-05 15:10:14,219 - freqtrade.freqtradebot - INFO - Fee for Trade Trade(id=10, pair=SNXXB/USDT, amount=19.03, is_short=False, leverage=1, open_rate=5.4, open_since=2026-11-04 15:45:16) [buy]: 0.0568875 USDT - rate: 0.001
+2026-11-05 15:10:14,219 - freqtrade.persistence.trade_model - INFO - Updating trade (id=10) ...
+2026-11-05 15:10:14,220 - freqtrade.persistence.trade_model - INFO - LIMIT_BUY has been fulfilled for Trade(id=10, pair=SNXXB/USDT, amount=15.17, is_short=False, leverage=1, open_rate=3.75, open_since=2026-11-04 15:45:16).
+2026-11-05 15:10:14,227 - freqtrade.wallets - INFO - Wallets synced.
+2026-11-05 15:10:14,230 - freqtrade.rpc.rpc_manager - INFO - Sending rpc message: {'trade_id': 10, 'type': entry_fill, 'buy_tag': '4 ', 'enter_tag': '4 ', 'exchange': 'Binance', 'pair': 'SNXXB/USDT', 'leverage': 1.0, 'direction': 'Long', 'limit': 3.75, 'order_rate': 3.75, 'open_rate': 3.75, 'order_type': 'limit', 'stake_amount': 159.64047491528095, 'stake_currency': 'USDT', 'base_currency': 'SNXXB', 'quote_currency': 'USDT', 'fiat_currency': '', 'amount': 15.17, 'open_date': datetime.datetime(2026, 11, 4, 15, 45, 16, 764150, tzinfo=datetime.timezone.utc), 'current_rate': 3.78, 'sub_trade': True}
+2026-11-05 15:10:17,987 - NostalgiaForInfinityX8 - INFO - Grinding entry (grind_5_entry) [2026-11-05 15:10:17.875435+00:00] [SOXLB/USDT] | Rate: 50.16 | Stake amount: 99.080 | Profit (stake): -317.824 | Profit: -6.25% | Tag: g_pre_derisk
+2026-11-05 15:10:17,988 - freqtrade.freqtradebot - INFO - Position adjust: about to create a new order for SOXLB/USDT with stake_amount: 99.0795152 and price: 50.16 for Trade(id=4, pair=SOXLB/USDT, amount=15.615, is_short=False, leverage=1, open_rate=60.58, open_since=2026-10-29 21:00:12)
+2026-11-05 15:10:18,091 - freqtrade.freqtradebot - INFO - Order dry_run_buy_SOXLB/USDT_23568cdb-9650-448f-9e45-30789c15ee1a was created for SOXLB/USDT and status is open.
+2026-11-05 15:10:18,099 - freqtrade.wallets - INFO - Wallets synced.
+2026-11-05 15:10:18,099 - freqtrade.rpc.rpc_manager - INFO - Sending rpc message: {'trade_id': 4, 'type': entry, 'buy_tag': '5 63 ', 'enter_tag': '5 63 ', 'exchange': 'Binance', 'pair': 'SOXLB/USDT', 'leverage': 1.0, 'direction': 'Long', 'limit': 50.16, 'order_rate': 50.16, 'open_rate': 50.16, 'order_type': 'limit', 'stake_amount': 1044.9508231093791, 'stake_currency': 'USDT', 'base_currency': 'SOXLB', 'quote_currency': 'USDT', 'fiat_currency': '', 'amount': 1.975, 'open_date': datetime.datetime(2026, 10, 29, 21, 0, 12, 809992, tzinfo=datetime.timezone.utc), 'current_rate': 50.16, 'sub_trade': True}
+2026-11-05 15:10:18,100 - freqtrade.freqtradebot - INFO - DCA order open, will wait for resolution: Trade(id=4, pair=SOXLB/USDT, amount=15.615, is_short=False, leverage=1, open_rate=60.58, open_since=2026-10-29 21:00:12)
+2026-11-05 15:10:19,029 - freqtrade.rpc.rpc_manager - INFO - Sending rpc strategy_msg: ✅ ​**Grinding entry:** `(grind_5_entry)`
+🏦 **Exchange:** `Binance`
+🪙 **Pair:** `SOXLB/USDT`
+〽️ **Rate:** `50.16`
+💰 **Stake amount:** `99.08 USDT`
+💵 **Profit (stake):** `-317.82 USDT`
+💸 **Profit (percent):** `-6.25%`
+
+2026-11-05 15:10:21,656 - freqtrade.freqtradebot - INFO - Found open order for Trade(id=4, pair=SOXLB/USDT, amount=15.615, is_short=False, leverage=1, open_rate=60.58, open_since=2026-10-29 21:00:12)
+2026-11-05 15:10:21,661 - freqtrade.freqtradebot - INFO - Fee for Trade Trade(id=4, pair=SOXLB/USDT, amount=15.615, is_short=False, leverage=1, open_rate=60.58, open_since=2026-10-29 21:00:12) [buy]: 0.099066 USDT - rate: 0.001
+2026-11-05 15:10:21,662 - freqtrade.persistence.trade_model - INFO - Updating trade (id=4) ...
+2026-11-05 15:10:21,662 - freqtrade.persistence.trade_model - INFO - LIMIT_BUY has been fulfilled for Trade(id=4, pair=SOXLB/USDT, amount=1.975, is_short=False, leverage=1, open_rate=50.16, open_since=2026-10-29 21:00:12).
+2026-11-05 15:10:21,675 - freqtrade.wallets - INFO - Wallets synced.
+2026-11-05 15:10:21,679 - freqtrade.rpc.rpc_manager - INFO - Sending rpc message: {'trade_id': 4, 'type': entry_fill, 'buy_tag': '5 63 ', 'enter_tag': '5 63 ', 'exchange': 'Binance', 'pair': 'SOXLB/USDT', 'leverage': 1.0, 'direction': 'Long', 'limit': 50.16, 'order_rate': 50.16, 'open_rate': 50.16, 'order_type': 'limit', 'stake_amount': 1044.9508231093791, 'stake_currency': 'USDT', 'base_currency': 'SOXLB', 'quote_currency': 'USDT', 'fiat_currency': '', 'amount': 1.975, 'open_date': datetime.datetime(2026, 10, 29, 21, 0, 12, 809992, tzinfo=datetime.timezone.utc), 'current_rate': 50.16, 'sub_trade': True}
+2026-11-05 15:10:36,234 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.10, strategy_version: v18.0.205', state='RUNNING'
+2026-11-05 15:11:36,238 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.10, strategy_version: v18.0.205', state='RUNNING'
+2026-11-05 15:11:48,036 - NostalgiaForInfinityX8 - INFO - De-risk Level 2 [2026-11-05 15:11:47.928988+00:00] [HUMA/USDT] | Rate: 0.0145 | Stake amount: 198.834 | Profit (stake): -146.615 | Profit: -16.25%
+2026-11-05 15:11:48,039 - freqtrade.wallets - INFO - Wallets synced.
+2026-11-05 15:11:48,141 - freqtrade.rpc.rpc_manager - INFO - Sending rpc message: {'type': exit, 'trade_id': 9, 'exchange': 'Binance', 'pair': 'HUMA/USDT', 'leverage': 1.0, 'direction': 'Long', 'gain': 'loss', 'limit': 0.0145, 'order_rate': 0.0145, 'order_type': 'limit', 'amount': 13712.0, 'open_rate': 0.01748, 'close_rate': 0.0145, 'current_rate': 0.0145, 'profit_amount': -41.30026976, 'profit_ratio': -0.17213793, 'buy_tag': '46 ', 'enter_tag': '46 ', 'exit_reason': 'derisk_level_2', 'open_date': datetime.datetime(2026, 11, 4, 14, 3, 24, 703227, tzinfo=datetime.timezone.utc), 'close_date': datetime.datetime(2026, 11, 5, 15, 11, 48, 141873, tzinfo=datetime.timezone.utc), 'stake_amount': 739.6240796044623, 'stake_currency': 'USDT', 'base_currency': 'HUMA', 'quote_currency': 'USDT', 'fiat_currency': '', 'sub_trade': True, 'cumulative_profit': -19.01717132, 'final_profit_ratio': None, 'is_final_exit': False}
+2026-11-05 15:11:48,142 - freqtrade.freqtradebot - INFO - Found open order for Trade(id=9, pair=HUMA/USDT, amount=42302, is_short=False, leverage=1, open_rate=0.01748, open_since=2026-11-04 14:03:24)
+2026-11-05 15:11:48,146 - freqtrade.persistence.trade_model - INFO - Updating trade (id=9) ...
+2026-11-05 15:11:48,147 - freqtrade.persistence.trade_model - INFO - LIMIT_SELL has been fulfilled for Trade(id=9, pair=HUMA/USDT, amount=42302, is_short=False, leverage=1, open_rate=0.01748, open_since=2026-11-04 14:03:24).
+2026-11-05 15:11:48,155 - freqtrade.wallets - INFO - Wallets synced.
+2026-11-05 15:11:48,157 - freqtrade.rpc.rpc_manager - INFO - Sending rpc message: {'type': exit_fill, 'trade_id': 9, 'exchange': 'Binance', 'pair': 'HUMA/USDT', 'leverage': 1.0, 'direction': 'Long', 'gain': 'loss', 'limit': 0.0145, 'order_rate': 0.0145, 'order_type': 'limit', 'amount': 13712.0, 'open_rate': 0.01748, 'close_rate': 0.0145, 'current_rate': None, 'profit_amount': -41.30026976, 'profit_ratio': -0.17213793, 'buy_tag': '46 ', 'enter_tag': '46 ', 'exit_reason': 'derisk_level_2', 'open_date': datetime.datetime(2026, 11, 4, 14, 3, 24, 703227, tzinfo=datetime.timezone.utc), 'close_date': datetime.datetime(2026, 11, 5, 15, 11, 48, 157124, tzinfo=datetime.timezone.utc), 'stake_amount': 499.8783139305843, 'stake_currency': 'USDT', 'base_currency': 'HUMA', 'quote_currency': 'USDT', 'fiat_currency': '', 'sub_trade': True, 'cumulative_profit': -60.37750676, 'final_profit_ratio': None, 'is_final_exit': False}
+2026-11-05 15:11:48,671 - freqtrade.rpc.rpc_manager - INFO - Sending rpc strategy_msg: ❌​​ ​**De-risk:** `(Level 2)`
+🏦 **Exchange:** `Binance`
+🪙 **Pair:** `HUMA/USDT`
+〽️ **Rate:** `0.0145`
+💰 **Stake amount:** `198.83 USDT`
+💵 **Profit (stake):** `-146.62 USDT`
+💸 **Profit (percent):** `-16.25%`
+
+2026-11-05 15:11:52,414 - NostalgiaForInfinityX8 - INFO - De-risk Level 2 [2026-11-05 15:11:52.306387+00:00] [WLD/USDT] | Rate: 0.3451 | Stake amount: 313.126 | Profit (stake): -223.597 | Profit: -11.27%
+2026-11-05 15:11:52,418 - freqtrade.wallets - INFO - Wallets synced.
+2026-11-05 15:11:52,520 - freqtrade.rpc.rpc_manager - INFO - Sending rpc message: {'type': exit, 'trade_id': 2, 'exchange': 'Binance', 'pair': 'WLD/USDT', 'leverage': 1.0, 'direction': 'Long', 'gain': 'loss', 'limit': 0.3453, 'order_rate': 0.3453, 'order_type': 'limit', 'amount': 907.3, 'open_rate': 0.4023, 'close_rate': 0.3453, 'current_rate': 0.3453, 'profit_amount': -52.39439748, 'profit_ratio': -0.14340022, 'buy_tag': '145 ', 'enter_tag': '145 ', 'exit_reason': 'derisk_level_2', 'open_date': datetime.datetime(2026, 10, 29, 20, 5, 7, 233770, tzinfo=datetime.timezone.utc), 'close_date': datetime.datetime(2026, 11, 5, 15, 11, 52, 520323, tzinfo=datetime.timezone.utc), 'stake_amount': 1348.7652967498145, 'stake_currency': 'USDT', 'base_currency': 'WLD', 'quote_currency': 'USDT', 'fiat_currency': '', 'sub_trade': True, 'cumulative_profit': -29.41167881, 'final_profit_ratio': None, 'is_final_exit': False}
+2026-11-05 15:11:53,666 - freqtrade.rpc.rpc_manager - INFO - Sending rpc strategy_msg: ❌​​ ​**De-risk:** `(Level 2)`
+🏦 **Exchange:** `Binance`
+🪙 **Pair:** `WLD/USDT`
+〽️ **Rate:** `0.3451`
+💰 **Stake amount:** `313.13 USDT`
+💵 **Profit (stake):** `-223.60 USDT`
+💸 **Profit (percent):** `-11.27%`
+
+2026-11-05 15:11:56,659 - freqtrade.freqtradebot - INFO - Found open order for Trade(id=2, pair=WLD/USDT, amount=3352.9, is_short=False, leverage=1, open_rate=0.4023, open_since=2026-10-29 20:05:07)
+2026-11-05 15:11:56,663 - freqtrade.persistence.trade_model - INFO - Updating trade (id=2) ...
+2026-11-05 15:11:56,663 - freqtrade.persistence.trade_model - INFO - LIMIT_SELL has been fulfilled for Trade(id=2, pair=WLD/USDT, amount=3352.9, is_short=False, leverage=1, open_rate=0.4023, open_since=2026-10-29 20:05:07).
+2026-11-05 15:11:56,672 - freqtrade.wallets - INFO - Wallets synced.
+2026-11-05 15:11:56,675 - freqtrade.rpc.rpc_manager - INFO - Sending rpc message: {'type': exit_fill, 'trade_id': 2, 'exchange': 'Binance', 'pair': 'WLD/USDT', 'leverage': 1.0, 'direction': 'Long', 'gain': 'loss', 'limit': 0.3453, 'order_rate': 0.3453, 'order_type': 'limit', 'amount': 907.3, 'open_rate': 0.4023, 'close_rate': 0.3453, 'current_rate': None, 'profit_amount': -52.39439748, 'profit_ratio': -0.14340022, 'buy_tag': '145 ', 'enter_tag': '145 ', 'exit_reason': 'derisk_level_2', 'open_date': datetime.datetime(2026, 10, 29, 20, 5, 7, 233770, tzinfo=datetime.timezone.utc), 'close_date': datetime.datetime(2026, 11, 5, 15, 11, 56, 675091, tzinfo=datetime.timezone.utc), 'stake_amount': 983.7872915181922, 'stake_currency': 'USDT', 'base_currency': 'WLD', 'quote_currency': 'USDT', 'fiat_currency': '', 'sub_trade': True, 'cumulative_profit': -81.77726274, 'final_profit_ratio': None, 'is_final_exit': False}
+2026-11-05 15:12:36,241 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.10, strategy_version: v18.0.205', state='RUNNING'
+2026-11-05 15:13:36,244 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.10, strategy_version: v18.0.205', state='RUNNING'
+2026-11-05 15:14:36,247 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.10, strategy_version: v18.0.205', state='RUNNING'
+2026-11-05 15:15:40,712 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.10, strategy_version: v18.0.205', state='RUNNING'
+2026-11-05 15:16:40,715 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.10, strategy_version: v18.0.205', state='RUNNING'
+2026-11-05 15:17:40,718 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.10, strategy_version: v18.0.205', state='RUNNING'
+2026-11-05 15:18:40,720 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.10, strategy_version: v18.0.205', state='RUNNING'
+2026-11-05 15:19:40,723 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.10, strategy_version: v18.0.205', state='RUNNING'
+2026-11-05 15:20:41,255 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.10, strategy_version: v18.0.205', state='RUNNING'
+2026-11-05 15:21:41,258 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.10, strategy_version: v18.0.205', state='RUNNING'
+2026-11-05 15:22:41,261 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.10, strategy_version: v18.0.205', state='RUNNING'
+2026-11-05 15:23:41,264 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.10, strategy_version: v18.0.205', state='RUNNING'
+2026-11-05 15:24:41,267 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.10, strategy_version: v18.0.205', state='RUNNING'
+2026-11-05 15:24:47,667 - NostalgiaForInfinityX8 - INFO - Grinding entry (grind_4_entry) [2026-11-05 15:24:47.534374+00:00] [SOXLB/USDT] | Rate: 47.67 | Stake amount: 99.080 | Profit (stake): -361.817 | Profit: -6.98% | Tag: g_pre_derisk
+2026-11-05 15:24:47,669 - freqtrade.freqtradebot - INFO - Position adjust: about to create a new order for SOXLB/USDT with stake_amount: 99.0795152 and price: 47.67 for Trade(id=4, pair=SOXLB/USDT, amount=17.59, is_short=False, leverage=1, open_rate=59.41, open_since=2026-10-29 21:00:12)
+2026-11-05 15:24:47,771 - freqtrade.freqtradebot - INFO - Order dry_run_buy_SOXLB/USDT_f73746be-a286-4c1d-b257-1b33d06c1eb6 was created for SOXLB/USDT and status is closed.
+2026-11-05 15:24:47,779 - freqtrade.wallets - INFO - Wallets synced.
+2026-11-05 15:24:47,780 - freqtrade.rpc.rpc_manager - INFO - Sending rpc message: {'trade_id': 4, 'type': entry, 'buy_tag': '5 63 ', 'enter_tag': '5 63 ', 'exchange': 'Binance', 'pair': 'SOXLB/USDT', 'leverage': 1.0, 'direction': 'Long', 'limit': 47.67, 'order_rate': 47.67, 'open_rate': 47.67, 'order_type': 'limit', 'stake_amount': 1144.0090831093792, 'stake_currency': 'USDT', 'base_currency': 'SOXLB', 'quote_currency': 'USDT', 'fiat_currency': '', 'amount': 2.078, 'open_date': datetime.datetime(2026, 10, 29, 21, 0, 12, 809992, tzinfo=datetime.timezone.utc), 'current_rate': 47.67, 'sub_trade': True}
+2026-11-05 15:24:47,780 - freqtrade.freqtradebot - INFO - DCA order closed, trade should be up to date: Trade(id=4, pair=SOXLB/USDT, amount=19.668, is_short=False, leverage=1, open_rate=58.17, open_since=2026-10-29 21:00:12)
+2026-11-05 15:24:47,781 - freqtrade.freqtradebot - INFO - Found open order for Trade(id=4, pair=SOXLB/USDT, amount=19.668, is_short=False, leverage=1, open_rate=58.17, open_since=2026-10-29 21:00:12)
+2026-11-05 15:24:47,784 - freqtrade.freqtradebot - INFO - Fee for Trade Trade(id=4, pair=SOXLB/USDT, amount=19.668, is_short=False, leverage=1, open_rate=58.17, open_since=2026-10-29 21:00:12) [buy]: 0.09905826 USDT - rate: 0.001
+2026-11-05 15:24:47,785 - freqtrade.persistence.trade_model - INFO - Updating trade (id=4) ...
+2026-11-05 15:24:47,785 - freqtrade.persistence.trade_model - INFO - LIMIT_BUY has been fulfilled for Trade(id=4, pair=SOXLB/USDT, amount=2.078, is_short=False, leverage=1, open_rate=47.67, open_since=2026-10-29 21:00:12).
+2026-11-05 15:24:47,799 - freqtrade.wallets - INFO - Wallets synced.
+2026-11-05 15:24:47,802 - freqtrade.rpc.rpc_manager - INFO - Sending rpc message: {'trade_id': 4, 'type': entry_fill, 'buy_tag': '5 63 ', 'enter_tag': '5 63 ', 'exchange': 'Binance', 'pair': 'SOXLB/USDT', 'leverage': 1.0, 'direction': 'Long', 'limit': 47.67, 'order_rate': 47.67, 'open_rate': 47.67, 'order_type': 'limit', 'stake_amount': 1144.0090831093792, 'stake_currency': 'USDT', 'base_currency': 'SOXLB', 'quote_currency': 'USDT', 'fiat_currency': '', 'amount': 2.078, 'open_date': datetime.datetime(2026, 10, 29, 21, 0, 12, 809992, tzinfo=datetime.timezone.utc), 'current_rate': 47.67, 'sub_trade': True}
+2026-11-05 15:24:48,729 - freqtrade.rpc.rpc_manager - INFO - Sending rpc strategy_msg: ✅ ​**Grinding entry:** `(grind_4_entry)`
+🏦 **Exchange:** `Binance`
+🪙 **Pair:** `SOXLB/USDT`
+〽️ **Rate:** `47.67`
+💰 **Stake amount:** `99.08 USDT`
+💵 **Profit (stake):** `-361.82 USDT`
+💸 **Profit (percent):** `-6.98%`
+
+2026-11-05 15:25:16,147 - freqtrade.wallets - INFO - Wallets synced.
+2026-11-05 15:25:16,251 - freqtrade.freqtradebot - INFO - Long signal found: about create a new trade for SAND/USDT with stake_amount: 791.3725927915501 and price: 0.04193 ...
+2026-11-05 15:25:16,353 - freqtrade.freqtradebot - INFO - Order dry_run_buy_SAND/USDT_aff443af-45da-4646-8788-59ba2a724a1b was created for SAND/USDT and status is open.
+2026-11-05 15:25:16,360 - freqtrade.wallets - INFO - Wallets synced.
+2026-11-05 15:25:16,361 - freqtrade.rpc.rpc_manager - INFO - Sending rpc message: {'trade_id': 12, 'type': entry, 'buy_tag': '142 ', 'enter_tag': '142 ', 'exchange': 'Binance', 'pair': 'SAND/USDT', 'leverage': 1.0, 'direction': 'Long', 'limit': 0.04193, 'order_rate': 0.04193, 'open_rate': 0.04193, 'order_type': 'limit', 'stake_amount': 791.3725927915501, 'stake_currency': 'USDT', 'base_currency': 'SAND', 'quote_currency': 'USDT', 'fiat_currency': '', 'amount': 18873.0, 'open_date': datetime.datetime(2026, 11, 5, 15, 25, 16, 353628, tzinfo=datetime.timezone.utc), 'current_rate': 0.04193, 'sub_trade': False}
+2026-11-05 15:25:17,062 - freqtrade.freqtradebot - INFO - Found open order for Trade(id=12, pair=SAND/USDT, amount=0, is_short=False, leverage=1, open_rate=0.04193, open_since=2026-11-05 15:25:16)
+2026-11-05 15:25:21,817 - freqtrade.freqtradebot - INFO - Found open order for Trade(id=12, pair=SAND/USDT, amount=0, is_short=False, leverage=1, open_rate=0.04193, open_since=2026-11-05 15:25:16)
+2026-11-05 15:25:26,818 - freqtrade.freqtradebot - INFO - Found open order for Trade(id=12, pair=SAND/USDT, amount=0, is_short=False, leverage=1, open_rate=0.04193, open_since=2026-11-05 15:25:16)
+2026-11-05 15:25:31,817 - freqtrade.freqtradebot - INFO - Found open order for Trade(id=12, pair=SAND/USDT, amount=0, is_short=False, leverage=1, open_rate=0.04193, open_since=2026-11-05 15:25:16)
+2026-11-05 15:25:36,818 - freqtrade.freqtradebot - INFO - Found open order for Trade(id=12, pair=SAND/USDT, amount=0, is_short=False, leverage=1, open_rate=0.04193, open_since=2026-11-05 15:25:16)
+2026-11-05 15:25:41,402 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.10, strategy_version: v18.0.205', state='RUNNING'
+2026-11-05 15:25:41,820 - freqtrade.freqtradebot - INFO - Found open order for Trade(id=12, pair=SAND/USDT, amount=0, is_short=False, leverage=1, open_rate=0.04193, open_since=2026-11-05 15:25:16)
+2026-11-05 15:25:46,821 - freqtrade.freqtradebot - INFO - Found open order for Trade(id=12, pair=SAND/USDT, amount=0, is_short=False, leverage=1, open_rate=0.04193, open_since=2026-11-05 15:25:16)
+2026-11-05 15:25:51,819 - freqtrade.freqtradebot - INFO - Found open order for Trade(id=12, pair=SAND/USDT, amount=0, is_short=False, leverage=1, open_rate=0.04193, open_since=2026-11-05 15:25:16)
+2026-11-05 15:25:51,823 - freqtrade.freqtradebot - INFO - Fee for Trade Trade(id=12, pair=SAND/USDT, amount=0, is_short=False, leverage=1, open_rate=0.04193, open_since=2026-11-05 15:25:16) [buy]: 0.79134489 USDT - rate: 0.001
+2026-11-05 15:25:51,823 - freqtrade.persistence.trade_model - INFO - Updating trade (id=12) ...
+2026-11-05 15:25:51,824 - freqtrade.persistence.trade_model - INFO - LIMIT_BUY has been fulfilled for Trade(id=12, pair=SAND/USDT, amount=18873, is_short=False, leverage=1, open_rate=0.04193, open_since=2026-11-05 15:25:16).
+2026-11-05 15:25:51,832 - freqtrade.wallets - INFO - Wallets synced.
+2026-11-05 15:25:51,834 - freqtrade.rpc.rpc_manager - INFO - Sending rpc message: {'trade_id': 12, 'type': entry_fill, 'buy_tag': '142 ', 'enter_tag': '142 ', 'exchange': 'Binance', 'pair': 'SAND/USDT', 'leverage': 1.0, 'direction': 'Long', 'limit': 0.04193, 'order_rate': 0.04193, 'open_rate': 0.04193, 'order_type': 'limit', 'stake_amount': 791.34489, 'stake_currency': 'USDT', 'base_currency': 'SAND', 'quote_currency': 'USDT', 'fiat_currency': '', 'amount': 18873.0, 'open_date': datetime.datetime(2026, 11, 5, 15, 25, 16, 353628, tzinfo=datetime.timezone.utc), 'current_rate': 0.04196, 'sub_trade': False}
