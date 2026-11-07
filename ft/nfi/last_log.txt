@@ -1,20 +1,4 @@
-- Checking exchange...
-2026-11-07 16:55:43,939 - freqtrade.exchange.check_exchange - INFO - Exchange "binance" is officially supported by the Freqtrade development team.
-2026-11-07 16:55:43,939 - freqtrade.configuration.configuration - INFO - Using pairlist from configuration.
-2026-11-07 16:55:43,940 - freqtrade.exchange.exchange - INFO - Instance is running with dry_run enabled
-2026-11-07 16:55:43,940 - freqtrade.exchange.exchange - INFO - Using CCXT 4.5.90
-2026-11-07 16:55:43,941 - freqtrade.exchange.exchange - INFO - Applying additional ccxt config: {'enableRateLimit': True, 'rateLimit': 60, 'options': {'brokerId': None, 'partner': {'spot': {'id': None, 'key': None}, 'future': {'id': None, 'key': None}}, 'fetchMarkets': {'types': ['spot']}}, 'urls': {'api': {'public': 'https://data-api.binance.vision/api/v3'}}}
-2026-11-07 16:55:43,945 - freqtrade.exchange.exchange - INFO - Applying additional ccxt config: {'enableRateLimit': True, 'rateLimit': 60, 'options': {'brokerId': None, 'partner': {'spot': {'id': None, 'key': None}, 'future': {'id': None, 'key': None}}, 'fetchMarkets': {'types': ['spot']}}, 'urls': {'api': {'public': 'https://data-api.binance.vision/api/v3'}}}
-2026-11-07 16:55:43,949 - freqtrade.exchange.exchange - INFO - Using Exchange "Binance"
-2026-11-07 16:55:46,404 - freqtrade.exchange.exchange - INFO - Time offset to Binance is -242ms.
-2026-11-07 16:55:46,404 - freqtrade.resolvers.exchange_resolver - INFO - Using resolved exchange class 'Binance' ...
-2026-11-07 16:55:46,931 - freqtrade.resolvers.iresolver - INFO - Using resolved strategy NostalgiaForInfinityX8 from '/freqtrade/user_data/strategies/NostalgiaForInfinityX8.py'...
-2026-11-07 16:55:46,933 - freqtrade.strategy.hyper - INFO - Found no parameter file.
-2026-11-07 16:55:46,934 - freqtrade.resolvers.strategy_resolver - INFO - Override strategy 'timeframe' with value from the configuration: 5m.
-2026-11-07 16:55:46,934 - freqtrade.resolvers.strategy_resolver - INFO - Override strategy 'order_types' with value from the configuration: {'entry': 'limit', 'exit': 'limit', 'emergency_exit': 'limit', 'force_entry': 'limit', 'force_exit': 'limit', 'stoploss': 'limit', 'stoploss_on_exchange': False, 'stoploss_on_exchange_interval': 60, 'stoploss_on_exchange_limit_ratio': 0.99}.
-2026-11-07 16:55:46,935 - freqtrade.resolvers.strategy_resolver - INFO - Override strategy 'stake_currency' with value from the configuration: USDT.
-2026-11-07 16:55:46,935 - freqtrade.resolvers.strategy_resolver - INFO - Override strategy 'stake_amount' with value from the configuration: unlimited.
-2026-11-07 16:55:46,935 - freqtrade.resolvers.strategy_resolver - INFO - Override strategy 'unfilledtimeout' with value from the configuration: {'entry': 3, 'exit': 2, 'exit_timeout_count': 0, 'unit': 'minutes'}.
+vers.strategy_resolver - INFO - Override strategy 'unfilledtimeout' with value from the configuration: {'entry': 3, 'exit': 2, 'exit_timeout_count': 0, 'unit': 'minutes'}.
 2026-11-07 16:55:46,936 - freqtrade.resolvers.strategy_resolver - INFO - Override strategy 'max_open_trades' with value from the configuration: 6.
 2026-11-07 16:55:46,936 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using minimal_roi: {}
 2026-11-07 16:55:46,937 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using timeframe: 5m
@@ -1195,3 +1179,22 @@
 2026-11-07 20:59:51,510 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.10, strategy_version: v18.0.215', state='RUNNING'
 2026-11-07 21:00:06,049 - freqtrade.exchange.common - WARNING - _async_get_candle_history() returned exception: "Could not fetch historical candle (OHLCV) data for LTC/USDT, 1h, spot due to OperationFailed. Message: binance {"code":-1001,"msg":"Internal error; unable to process your request. Please try again."}". Retrying still for 4 times.
 2026-11-07 21:00:55,091 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.10, strategy_version: v18.0.215', state='RUNNING'
+2026-11-07 21:01:55,094 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.10, strategy_version: v18.0.215', state='RUNNING'
+2026-11-07 21:02:55,097 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.10, strategy_version: v18.0.215', state='RUNNING'
+2026-11-07 21:03:55,099 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.10, strategy_version: v18.0.215', state='RUNNING'
+2026-11-07 21:04:55,102 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.10, strategy_version: v18.0.215', state='RUNNING'
+2026-11-07 21:05:59,094 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.10, strategy_version: v18.0.215', state='RUNNING'
+2026-11-07 21:06:59,097 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.10, strategy_version: v18.0.215', state='RUNNING'
+2026-11-07 21:07:59,100 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.10, strategy_version: v18.0.215', state='RUNNING'
+2026-11-07 21:08:59,103 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.10, strategy_version: v18.0.215', state='RUNNING'
+2026-11-07 21:09:59,106 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.10, strategy_version: v18.0.215', state='RUNNING'
+2026-11-07 21:11:01,680 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.10, strategy_version: v18.0.215', state='RUNNING'
+2026-11-07 21:12:01,683 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.10, strategy_version: v18.0.215', state='RUNNING'
+2026-11-07 21:13:01,686 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.10, strategy_version: v18.0.215', state='RUNNING'
+2026-11-07 21:14:01,689 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.10, strategy_version: v18.0.215', state='RUNNING'
+2026-11-07 21:15:10,421 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.10, strategy_version: v18.0.215', state='RUNNING'
+2026-11-07 21:16:10,424 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.10, strategy_version: v18.0.215', state='RUNNING'
+2026-11-07 21:17:10,427 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.10, strategy_version: v18.0.215', state='RUNNING'
+2026-11-07 21:18:10,430 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.10, strategy_version: v18.0.215', state='RUNNING'
+2026-11-07 21:19:10,433 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.10, strategy_version: v18.0.215', state='RUNNING'
+2026-11-07 21:20:14,098 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.10, strategy_version: v18.0.215', state='RUNNING'
