@@ -1,8 +1,8 @@
-# nfi10k (demo) — 2026-11-07 07:49 UTC
+# nfi10k (demo) — 2026-11-07 08:09 UTC
 
-**Balance:** 10069.24 USDT (start 10000, +69.24, +0.69%)
-**Closed trades:** 8, wins 8 (100%)
-**Open now:** 7
+**Balance:** 10081.24 USDT (start 10000, +81.24, +0.81%)
+**Closed trades:** 9, wins 9 (100%)
+**Open now:** 6
 
 | Pair | Opened | Closed | Profit | Reason |
 |---|---|---|---|---|
@@ -16,7 +16,7 @@
 | HAEDAL/USDT | 2026-11-04 09:25 | open | +0.00 |  |
 | HUMA/USDT | 2026-11-04 14:03 | open | -81.95 | derisk_level_3 |
 | SNXXB/USDT | 2026-11-04 15:45 | open | +8.55 | grind_1_exit 119 |
-| QNT/USDT | 2026-11-04 18:40 | open | +0.00 |  |
+| QNT/USDT | 2026-11-04 18:40 | 2026-11-07 07:55 | +12.00 | exit_profit_long_rebuy_t_5_1_m ( 64 ) |
 | SAND/USDT | 2026-11-05 15:25 | 2026-11-05 19:45 | +27.83 | exit_long_tc_d_3_2 ( 142 ) |
 | DASH/USDT | 2026-11-05 15:55 | 2026-11-05 16:15 | +7.58 | exit_long_tc_u_1 ( 143 ) |
 | CRV/USDT | 2026-11-05 15:55 | 2026-11-05 16:59 | +4.19 | exit_profit_long_tc_t_0_1_m ( 141 142 ) |
