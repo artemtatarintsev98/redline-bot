@@ -1,8 +1,8 @@
-# nfi10k (demo) — 2026-11-09 04:56 UTC
+# nfi10k (demo) — 2026-11-09 05:16 UTC
 
-**Balance:** 10081.24 USDT (start 10000, +81.24, +0.81%)
-**Closed trades:** 9, wins 9 (100%)
-**Open now:** 7
+**Balance:** 10082.12 USDT (start 10000, +82.12, +0.82%)
+**Closed trades:** 10, wins 10 (100%)
+**Open now:** 6
 
 | Pair | Opened | Closed | Profit | Reason |
 |---|---|---|---|---|
@@ -20,4 +20,4 @@
 | DASH/USDT | 2026-11-05 15:55 | 2026-11-05 16:15 | +7.58 | exit_long_tc_u_1 ( 143 ) |
 | CRV/USDT | 2026-11-05 15:55 | 2026-11-05 16:59 | +4.19 | exit_profit_long_tc_t_0_1_m ( 141 142 ) |
 | RUNE/USDT | 2026-11-06 11:20 | open | +0.00 |  |
-| HOT/USDT | 2026-11-09 04:10 | open | +0.00 |  |
+| HOT/USDT | 2026-11-09 04:10 | 2026-11-09 05:02 | +0.88 | exit_profit_long_rebuy_t_0_1_m ( 65 ) |
