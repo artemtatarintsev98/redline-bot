@@ -1,12 +1,11 @@
-# nfi (demo) — 2026-11-10 18:52 UTC
+# nfi (demo) — 2026-11-10 19:12 UTC
 
 **Balance:** 1015.25 USDT (start 1000, +15.25, +1.53%)
 **Closed trades:** 17, wins 17 (100%)
-**Open now:** 4
+**Open now:** 5
 
 | Pair | Opened | Closed | Profit | Reason |
 |---|---|---|---|---|
-| GTC/USDT | 2026-10-26 02:40 | 2026-10-26 09:14 | +0.26 | exit_profit_long_rebuy_t_0_1_m ( 62 ) |
 | ERA/USDT | 2026-10-26 04:21 | 2026-10-26 05:34 | +0.22 | exit_profit_long_rebuy_t_0_1_m ( 65 ) |
 | ERA/USDT | 2026-10-26 11:45 | 2026-10-26 12:28 | +0.26 | exit_profit_long_rapid_t_0_1_m ( 103 ) |
 | PEPE/USDT | 2026-10-29 15:55 | 2026-10-29 16:05 | +1.15 | exit_long_rebuy_1_1_1 ( 65 ) |
@@ -21,3 +20,4 @@
 | QNT/USDT | 2026-11-04 18:40 | 2026-11-05 05:23 | +0.04 | exit_profit_long_rebuy_t_0_1_m ( 64 ) |
 | DASH/USDT | 2026-11-05 15:55 | 2026-11-05 16:15 | +1.50 | exit_long_tc_u_1 ( 143 ) |
 | HOT/USDT | 2026-11-09 04:10 | 2026-11-09 05:02 | +0.32 | exit_profit_long_rebuy_t_0_1_m ( 65 ) |
+| PROM/USDT | 2026-11-10 19:05 | open | +0.00 |  |
