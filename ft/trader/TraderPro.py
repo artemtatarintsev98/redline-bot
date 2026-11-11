@@ -36,7 +36,10 @@ class TraderPro(IStrategy):
     position_adjustment_enable = False
 
     risk_per_trade = 0.01
-    target_r = 3.0
+    target_r = 3.0          # None = no fixed target
+    breakeven_at = 1.0      # None = never move to breakeven
+    lock_at = 2.0           # at +lock_at R lock +1R
+    trail_atr = None        # trail stop at current - N*ATR once in profit by 1R
     min_stop, max_stop = 0.008, 0.06
 
     @property
@@ -140,16 +143,36 @@ class TraderPro(IStrategy):
     def custom_stoploss(self, pair: str, trade: Trade, current_time: datetime, current_rate: float,
                         current_profit: float, after_fill: bool, **kwargs) -> float | None:
         r = self._risk_pct(trade)
-        initial_stop = trade.open_rate * (1 - r)
-        stop = initial_stop
-        if current_profit >= 2 * r:
-            stop = trade.open_rate * (1 + r)          # lock +1R
-        elif current_profit >= r:
-            stop = trade.open_rate * 1.002            # breakeven (covers fees)
+        stop = trade.open_rate * (1 - r)
+        if self.lock_at and current_profit >= self.lock_at * r:
+            stop = max(stop, trade.open_rate * (1 + r))      # lock +1R
+        elif self.breakeven_at and current_profit >= self.breakeven_at * r:
+            stop = max(stop, trade.open_rate * 1.002)        # breakeven (covers fees)
+        if self.trail_atr and current_profit >= r:
+            df, _ = self.dp.get_analyzed_dataframe(pair, self.timeframe)
+            if df is not None and not df.empty:
+                stop = max(stop, current_rate - self.trail_atr * float(df.iloc[-1]["atr"]))
         return stoploss_from_absolute(stop, current_rate, is_short=trade.is_short, leverage=trade.leverage)
 
     def custom_exit(self, pair: str, trade: Trade, current_time: datetime, current_rate: float,
                     current_profit: float, **kwargs):
-        if current_profit >= self.target_r * self._risk_pct(trade):
+        if self.target_r and current_profit >= self.target_r * self._risk_pct(trade):
             return "take_profit_3R"
         return None
+
+
+class TraderProB(TraderPro):
+    """Wider stops (fees eat less of R), no early breakeven, target 2.5R."""
+    min_stop, max_stop = 0.015, 0.08
+    breakeven_at = None
+    lock_at = 2.0
+    target_r = 2.5
+
+
+class TraderProC(TraderPro):
+    """Wider stops, no fixed target: let winners run with a 2.5 x ATR trailing stop after +1R."""
+    min_stop, max_stop = 0.015, 0.08
+    breakeven_at = None
+    lock_at = None
+    target_r = None
+    trail_atr = 2.5
