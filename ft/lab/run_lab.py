@@ -5,6 +5,7 @@ from pathlib import Path
 from freqtrade.data.btanalysis import get_latest_backtest_filename, load_backtest_stats
 
 timerange, stratdir, outdir = sys.argv[1], Path(sys.argv[2]), Path(sys.argv[3])
+only = set(sys.argv[4].split(",")) if len(sys.argv) > 4 and sys.argv[4] else None
 outdir.mkdir(parents=True, exist_ok=True)
 names = []
 for f in sorted(stratdir.glob("*.py")):
@@ -15,14 +16,16 @@ for f in sorted(stratdir.glob("*.py")):
     for node in tree.body:
         if isinstance(node, ast.ClassDef) and any(getattr(b, "id", getattr(b, "attr", "")) == "IStrategy" for b in node.bases):
             names.append(node.name)
+if only:
+    names = [n for n in names if n in only]
 print("candidates:", len(names), names, flush=True)
 results = []
 for name in names:
-    bt = Path("/tmp/bt") / name
+    bt = Path("/tmp/bt") / timerange / name
     bt.mkdir(parents=True, exist_ok=True)
     t0 = time.time()
     cmd = ["freqtrade", "backtesting", "-c", "/lab/config.json", "-s", name, "--strategy-path", str(stratdir),
-           "--timerange", timerange, "--export", "trades", "--backtest-directory", str(bt), "--cache", "none"]
+           "--timerange", timerange, "--export", "trades", "--backtest-directory", str(bt), "--cache", "none", "--enable-protections"]
     try:
         p = subprocess.run(cmd, capture_output=True, text=True, timeout=1500)
         st = load_backtest_stats(bt / get_latest_backtest_filename(bt))["strategy"][name]
@@ -36,7 +39,7 @@ for name in names:
         r = {"strategy": name, "error": f"{type(e).__name__}: {str(e)[:120]} | {tail[-300:]}"}
     print(r, flush=True)
     results.append(r)
-    json.dump(results, open(outdir / "lab_results.json", "w"), indent=1)
+    json.dump(results, open(outdir / f"lab_results_{timerange}.json", "w"), indent=1)
 
 ok = [r for r in results if "error" not in r]
 ok.sort(key=lambda r: (r["profit_pct"] > 0, r["profit_pct"] / (r["max_dd_pct"] + 1)), reverse=True)
@@ -48,5 +51,5 @@ for i, r in enumerate(ok, 1):
 bad = [r for r in results if "error" in r]
 if bad:
     L += ["", "Failed: " + ", ".join(r["strategy"] for r in bad)]
-(outdir / "lab_report.md").write_text("\n".join(L) + "\n")
+(outdir / f"lab_report_{timerange}.md").write_text("\n".join(L) + "\n")
 print("\n".join(L))
