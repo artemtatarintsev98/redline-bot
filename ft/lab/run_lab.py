@@ -17,7 +17,7 @@ for f in sorted(stratdir.glob("*.py")):
         if isinstance(node, ast.ClassDef) and any(getattr(b, "id", getattr(b, "attr", "")) == "IStrategy" for b in node.bases):
             names.append(node.name)
 if only:
-    names = [n for n in names if n in only]
+    names = sorted(only)
 print("candidates:", len(names), names, flush=True)
 results = []
 for name in names:
