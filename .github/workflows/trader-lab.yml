@@ -1,0 +1,42 @@
+name: trader-lab
+on:
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  lab:
+    runs-on: ubuntu-latest
+    timeout-minutes: 300
+    env:
+      IMG: freqtradeorg/freqtrade:stable
+      LIST: TraderPro,NostalgiaForInfinityX8,Strategy001
+    steps:
+      - uses: actions/checkout@v4
+      - name: Collect strategies
+        run: |
+          mkdir -p /tmp/strats /tmp/ud
+          git clone -q --depth 1 https://github.com/freqtrade/freqtrade-strategies.git /tmp/official
+          git clone -q --depth 1 https://github.com/iterativv/NostalgiaForInfinity.git /tmp/nfi
+          cp /tmp/official/user_data/strategies/Strategy001.py /tmp/nfi/NostalgiaForInfinityX8.py ft/trader/TraderPro.py /tmp/strats/
+          docker pull -q $IMG
+          sudo chmod -R 777 /tmp/strats /tmp/ud ft
+      - name: Download data
+        run: |
+          docker run --rm -v /tmp/ud:/freqtrade/user_data -v $PWD/ft/lab:/lab $IMG download-data -c /lab/config.json \
+            --timeframes 5m 15m 1h 4h 1d --timerange $(date -u -d '-420 days' +%Y%m%d)- --data-format-ohlcv feather
+      - name: Backtest 3 periods
+        run: |
+          sudo chmod -R 777 /tmp/ud ft
+          d() { date -u -d "$1" +%Y%m%d; }
+          for TR in "$(d '-60 days')-$(d now)" "$(d '-120 days')-$(d '-60 days')" "$(d '-240 days')-$(d '-120 days')"; do
+            docker run --rm -v /tmp/ud:/freqtrade/user_data -v $PWD/ft/lab:/lab -v /tmp/strats:/strats --entrypoint python $IMG \
+              /lab/run_lab.py "$TR" /strats /lab/out "$LIST" || true
+          done
+      - name: Save report
+        if: ${{ !cancelled() }}
+        run: |
+          sudo chmod -R 777 ft || true
+          git config user.name redline-bot; git config user.email bot@users.noreply.github.com
+          git add -f ft/lab/out/*.md ft/lab/out/*.json || true
+          git commit -qm "trader lab $(date -u +%F)" || true
+          for i in 1 2 3 4 5; do git pull -q --rebase -X theirs && git push -q && break; sleep 7; done
