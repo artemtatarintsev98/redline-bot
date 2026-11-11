@@ -25,13 +25,13 @@ jobs:
         run: |
           git clone -q --depth 1 https://github.com/iterativv/NostalgiaForInfinity.git /tmp/nfi
           echo "NFI commit: $(git -C /tmp/nfi log -1 --format='%h %cd')"
-          for b in nfi nfi10k; do mkdir -p ft/$b/user_data/strategies; cp /tmp/nfi/NostalgiaForInfinityX8.py ft/$b/user_data/strategies/; done
+          for b in nfi nfi10k nfisl; do mkdir -p ft/$b/user_data/strategies; cp /tmp/nfi/NostalgiaForInfinityX8.py ft/$b/user_data/strategies/; done
           python3 ft/merge_blacklist.py /tmp/nfi/configs/blacklist-binance.json ft/blacklist-extra.json /tmp/blacklist.json
           docker pull -q freqtradeorg/freqtrade:stable
           sudo chmod -R 777 ft /tmp/nfi
       - name: Run both bots (dry-run) and save state
         run: |
-          for b in nfi nfi10k; do
+          for b in nfi nfi10k nfisl; do
             docker run -d --name $b -v $PWD/ft/$b/user_data:/freqtrade/user_data -v $PWD/ft/$b/config.json:/freqtrade/config.json:ro \
               -v /tmp/nfi:/freqtrade/nfi:ro -v /tmp/blacklist.json:/freqtrade/blacklist.json:ro freqtradeorg/freqtrade:stable trade --config /freqtrade/config.json \
               --db-url sqlite:////freqtrade/user_data/trades.sqlite --logfile /freqtrade/user_data/bot.log
@@ -39,7 +39,7 @@ jobs:
           git config user.name redline-bot; git config user.email bot@users.noreply.github.com
           save() {
             sudo chmod -R 777 ft || true
-            for b in nfi nfi10k; do
+            for b in nfi nfi10k nfisl; do
               d=ft/$b/user_data
               start=$(python3 -c "import json;print(json.load(open('ft/$b/config.json'))['dry_run_wallet'])")
               [ -f $d/trades.sqlite ] && python3 ft/report.py $d/trades.sqlite "$b" ft/$b/out $start || true
@@ -54,10 +54,10 @@ jobs:
           end=$(( $(date +%s) + 330*60 ))
           while [ $(date +%s) -lt $end ]; do
             sleep 1200
-            for b in nfi nfi10k; do docker ps -q -f name=^$b$ | grep -q . || { echo "$b stopped"; docker logs --tail 60 $b; }; done
+            for b in nfi nfi10k nfisl; do docker ps -q -f name=^$b$ | grep -q . || { echo "$b stopped"; docker logs --tail 60 $b; }; done
             save
           done
-          docker stop -t 60 nfi nfi10k || true
+          docker stop -t 60 nfi nfi10k nfisl || true
           save
       - name: Relaunch
         if: ${{ !cancelled() }}
