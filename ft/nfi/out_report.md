@@ -1,4 +1,4 @@
-# nfi (demo) — 2026-11-11 08:50 UTC
+# nfi (demo) — 2026-11-11 09:10 UTC
 
 **Balance:** 1015.25 USDT (start 1000, +15.25, +1.53%)
 **Closed trades:** 17, wins 17 (100%)
@@ -15,7 +15,7 @@
 | HUMA/USDT | 2026-11-03 08:55 | 2026-11-03 11:50 | +0.57 | exit_long_rebuy_d_1_2 ( 62 ) |
 | HOT/USDT | 2026-11-03 11:10 | 2026-11-03 11:15 | +3.12 | exit_long_rebuy_d_7_1 ( 65 ) |
 | HUMA/USDT | 2026-11-04 03:10 | 2026-11-04 05:20 | +0.48 | exit_profit_long_normal_t_0_1_m ( 3 ) |
-| HUMA/USDT | 2026-11-04 14:00 | open | -3.15 | grind_5_derisk 156 105 |
+| HUMA/USDT | 2026-11-04 14:00 | open | -9.22 | grind_4_derisk 181 160 158 123 |
 | SNXXB/USDT | 2026-11-04 15:45 | open | +0.83 | grind_3_exit 184 |
 | QNT/USDT | 2026-11-04 18:40 | 2026-11-05 05:23 | +0.04 | exit_profit_long_rebuy_t_0_1_m ( 64 ) |
 | DASH/USDT | 2026-11-05 15:55 | 2026-11-05 16:15 | +1.50 | exit_long_tc_u_1 ( 143 ) |
