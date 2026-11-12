@@ -1,9 +1,4 @@
-, 'CAKE/USDT', 'AR/USDT', 'ZEN/USDT', 'ZK/USDT', 'QI/USDT', 'RSR/USDT', 'SEI/USDT', 'HOME/USDT', 'RKLBB/USDT', 'USUAL/USDT', 'BAT/USDT', 'WBTC/USDT', 'W/USDT', 'APE/USDT', 'SKY/USDT', 'ALT/USDT', 'VANA/USDT', 'ETC/USDT', 'DOGS/USDT', 'ALLO/USDT', '2Z/USDT', 'IO/USDT', 'EIGEN/USDT', 'RED/USDT', 'JTO/USDT']
-2026-11-11 19:58:14,912 - AgeFilter - INFO - Removed HYPE/USDT from whitelist, because age 48 is less than 60 days
-2026-11-11 19:58:14,913 - AgeFilter - INFO - Removed RWUSD/USDT from whitelist, because age 29 is less than 60 days
-2026-11-11 19:58:14,913 - AgeFilter - INFO - Removed BNCB/USDT from whitelist, because age 58 is less than 60 days
-2026-11-11 19:58:14,914 - AgeFilter - INFO - Removed SECZB/USDT from whitelist, because age 35 is less than 60 days
-2026-11-11 19:58:14,914 - AgeFilter - INFO - Validated 146 pairs.
+026-11-11 19:58:14,914 - AgeFilter - INFO - Validated 146 pairs.
 2026-11-11 19:58:14,915 - SpreadFilter - INFO - Removed OSMO/USDT from whitelist, because spread 0.585% > 0.500%
 2026-11-11 19:58:19,915 - rangestabilityfilter - INFO - Removed TRX/USDT from whitelist, because rate of change over 3 x 1d candles is 0.016, which is below the threshold of 0.03.
 2026-11-11 19:58:19,920 - rangestabilityfilter - INFO - Removed KGST/USDT from whitelist, because rate of change over 3 x 1d candles is 0.009, which is below the threshold of 0.03.
@@ -1123,3 +1118,9 @@
 2026-11-12 00:41:26,613 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.10, strategy_version: v18.0.241', state='RUNNING'
 2026-11-12 00:42:26,615 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.10, strategy_version: v18.0.241', state='RUNNING'
 2026-11-12 00:43:26,618 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.10, strategy_version: v18.0.241', state='RUNNING'
+2026-11-12 00:43:33,463 - freqtrade.commands.trade_commands - INFO - worker found ... calling exit
+2026-11-12 00:43:33,464 - freqtrade.rpc.rpc_manager - INFO - Sending rpc message: {'type': status, 'status': 'process died'}
+2026-11-12 00:43:33,464 - freqtrade.freqtradebot - INFO - Cleaning up modules ...
+2026-11-12 00:43:33,469 - freqtrade.rpc.rpc_manager - INFO - Sending rpc message: {'type': warning, 'status': "5 open trades active.\n\nHandle these trades manually on Binance, or '/start' the bot again and use '/stopentry' to handle open trades gracefully. \nNote: Trades are simulated (dry run)."}
+2026-11-12 00:43:33,470 - freqtrade.rpc.rpc_manager - INFO - Cleaning up rpc modules ...
+2026-11-12 00:43:33,729 - freqtrade - INFO - SIGINT received, aborting ...
