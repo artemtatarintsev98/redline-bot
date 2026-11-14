@@ -1,8 +1,8 @@
-# nfi (demo) — 2026-11-14 21:39 UTC
+# nfi (demo) — 2026-11-14 21:59 UTC
 
-**Balance:** 1025.26 USDT (start 1000, +25.26, +2.53%)
-**Closed trades:** 22, wins 22 (100%)
-**Open now:** 6
+**Balance:** 1025.62 USDT (start 1000, +25.62, +2.56%)
+**Closed trades:** 23, wins 23 (100%)
+**Open now:** 5
 
 | Pair | Opened | Closed | Profit | Reason |
 |---|---|---|---|---|
@@ -20,4 +20,4 @@
 | INJ/USDT | 2026-11-14 16:45 | 2026-11-14 17:42 | +4.74 | exit_long_normal_d_3_2 ( 5 ) |
 | ASTER/USDT | 2026-11-14 19:50 | 2026-11-14 19:50 | +0.23 | exit_long_normal_u_0 ( 2 4 ) |
 | ASTER/USDT | 2026-11-14 19:55 | open | -3.22 | derisk_level_1 |
-| ZRO/USDT | 2026-11-14 21:30 | open | +0.00 |  |
+| ZRO/USDT | 2026-11-14 21:30 | 2026-11-14 21:41 | +0.37 | exit_long_rebuy_u_1 ( 61 ) |

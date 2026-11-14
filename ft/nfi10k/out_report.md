@@ -1,8 +1,8 @@
-# nfi10k (demo) — 2026-11-14 21:39 UTC
+# nfi10k (demo) — 2026-11-14 21:59 UTC
 
-**Balance:** 10146.92 USDT (start 10000, +146.92, +1.47%)
-**Closed trades:** 17, wins 17 (100%)
-**Open now:** 9
+**Balance:** 10148.85 USDT (start 10000, +148.85, +1.49%)
+**Closed trades:** 18, wins 18 (100%)
+**Open now:** 8
 
 | Pair | Opened | Closed | Profit | Reason |
 |---|---|---|---|---|
@@ -20,4 +20,4 @@
 | ASTER/USDT | 2026-11-14 19:50 | 2026-11-14 19:50 | +1.21 | exit_long_normal_u_0 ( 2 4 ) |
 | ASTER/USDT | 2026-11-14 19:55 | open | -17.18 | derisk_level_1 |
 | JUP/USDT | 2026-11-14 20:55 | open | +0.00 |  |
-| ZRO/USDT | 2026-11-14 21:30 | open | +0.00 |  |
+| ZRO/USDT | 2026-11-14 21:30 | 2026-11-14 21:41 | +1.93 | exit_long_rebuy_u_1 ( 61 ) |
