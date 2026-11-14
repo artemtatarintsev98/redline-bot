@@ -1,12 +1,11 @@
-# nfi10k (demo) — 2026-11-14 20:39 UTC
+# nfi10k (demo) — 2026-11-14 20:59 UTC
 
 **Balance:** 10146.92 USDT (start 10000, +146.92, +1.47%)
 **Closed trades:** 17, wins 17 (100%)
-**Open now:** 7
+**Open now:** 8
 
 | Pair | Opened | Closed | Profit | Reason |
 |---|---|---|---|---|
-| SNXXB/USDT | 2026-11-04 15:45 | open | +3.61 | grind_1_exit 222 |
 | QNT/USDT | 2026-11-04 18:40 | 2026-11-07 07:55 | +12.00 | exit_profit_long_rebuy_t_5_1_m ( 64 ) |
 | SAND/USDT | 2026-11-05 15:25 | 2026-11-05 19:45 | +27.83 | exit_long_tc_d_3_2 ( 142 ) |
 | DASH/USDT | 2026-11-05 15:55 | 2026-11-05 16:15 | +7.58 | exit_long_tc_u_1 ( 143 ) |
@@ -20,4 +19,5 @@
 | KAVA/USDT | 2026-11-14 10:25 | open | +2.47 | grind_1_exit 254 |
 | INJ/USDT | 2026-11-14 16:45 | 2026-11-14 17:42 | +24.64 | exit_long_normal_d_3_2 ( 5 ) |
 | ASTER/USDT | 2026-11-14 19:50 | 2026-11-14 19:50 | +1.21 | exit_long_normal_u_0 ( 2 4 ) |
-| ASTER/USDT | 2026-11-14 19:55 | open | +0.00 |  |
+| ASTER/USDT | 2026-11-14 19:55 | open | -17.18 | derisk_level_1 |
+| JUP/USDT | 2026-11-14 20:55 | open | +0.00 |  |
