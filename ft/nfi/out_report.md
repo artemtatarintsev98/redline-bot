@@ -1,13 +1,11 @@
-# nfi (demo) — 2026-11-14 19:39 UTC
+# nfi (demo) — 2026-11-14 19:59 UTC
 
-**Balance:** 1025.03 USDT (start 1000, +25.03, +2.50%)
-**Closed trades:** 21, wins 21 (100%)
-**Open now:** 4
+**Balance:** 1025.26 USDT (start 1000, +25.26, +2.53%)
+**Closed trades:** 22, wins 22 (100%)
+**Open now:** 5
 
 | Pair | Opened | Closed | Profit | Reason |
 |---|---|---|---|---|
-| WLD/USDT | 2026-10-29 20:05 | open | -10.44 | grind_1_derisk 159 37 |
-| ARB/USDT | 2026-10-29 20:55 | 2026-10-29 21:02 | +0.21 | exit_long_tc_u_0 ( 143 ) |
 | SOXLB/USDT | 2026-10-29 23:00 | open | +1.13 | grind_3_exit 176 |
 | HUMA/USDT | 2026-11-03 08:55 | 2026-11-03 11:50 | +0.57 | exit_long_rebuy_d_1_2 ( 62 ) |
 | HOT/USDT | 2026-11-03 11:10 | 2026-11-03 11:15 | +3.12 | exit_long_rebuy_d_7_1 ( 65 ) |
@@ -21,3 +19,5 @@
 | BMT/USDT | 2026-11-14 07:45 | 2026-11-14 09:30 | +1.88 | exit_long_rebuy_d_5_1 ( 63 ) |
 | KAVA/USDT | 2026-11-14 10:28 | 2026-11-14 10:28 | +2.42 | exit_long_normal_u_1 ( 1 ) |
 | INJ/USDT | 2026-11-14 16:45 | 2026-11-14 17:42 | +4.74 | exit_long_normal_d_3_2 ( 5 ) |
+| ASTER/USDT | 2026-11-14 19:50 | 2026-11-14 19:50 | +0.23 | exit_long_normal_u_0 ( 2 4 ) |
+| ASTER/USDT | 2026-11-14 19:55 | open | +0.00 |  |
