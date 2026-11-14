@@ -1,8 +1,8 @@
-# nfi (demo) — 2026-11-14 17:39 UTC
+# nfi (demo) — 2026-11-14 17:59 UTC
 
-**Balance:** 1020.29 USDT (start 1000, +20.29, +2.03%)
-**Closed trades:** 20, wins 20 (100%)
-**Open now:** 5
+**Balance:** 1025.03 USDT (start 1000, +25.03, +2.50%)
+**Closed trades:** 21, wins 21 (100%)
+**Open now:** 4
 
 | Pair | Opened | Closed | Profit | Reason |
 |---|---|---|---|---|
@@ -20,4 +20,4 @@
 | PROM/USDT | 2026-11-10 19:05 | 2026-11-12 11:15 | +0.73 | exit_long_rapid_rpd_3 ( 103 ) |
 | BMT/USDT | 2026-11-14 07:45 | 2026-11-14 09:30 | +1.88 | exit_long_rebuy_d_5_1 ( 63 ) |
 | KAVA/USDT | 2026-11-14 10:28 | 2026-11-14 10:28 | +2.42 | exit_long_normal_u_1 ( 1 ) |
-| INJ/USDT | 2026-11-14 16:45 | open | +0.00 |  |
+| INJ/USDT | 2026-11-14 16:45 | 2026-11-14 17:42 | +4.74 | exit_long_normal_d_3_2 ( 5 ) |

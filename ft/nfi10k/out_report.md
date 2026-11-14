@@ -1,8 +1,8 @@
-# nfi10k (demo) — 2026-11-14 17:39 UTC
+# nfi10k (demo) — 2026-11-14 17:59 UTC
 
-**Balance:** 10121.07 USDT (start 10000, +121.07, +1.21%)
-**Closed trades:** 15, wins 15 (100%)
-**Open now:** 7
+**Balance:** 10145.71 USDT (start 10000, +145.71, +1.46%)
+**Closed trades:** 16, wins 16 (100%)
+**Open now:** 6
 
 | Pair | Opened | Closed | Profit | Reason |
 |---|---|---|---|---|
@@ -20,4 +20,4 @@
 | GUN/USDT | 2026-11-14 00:13 | open | -17.66 | derisk_level_1 |
 | BMT/USDT | 2026-11-14 07:45 | 2026-11-14 09:30 | +10.53 | exit_long_rebuy_d_5_1 ( 63 ) |
 | KAVA/USDT | 2026-11-14 10:25 | open | +2.47 | grind_1_exit 254 |
-| INJ/USDT | 2026-11-14 16:45 | open | +0.00 |  |
+| INJ/USDT | 2026-11-14 16:45 | 2026-11-14 17:42 | +24.64 | exit_long_normal_d_3_2 ( 5 ) |
