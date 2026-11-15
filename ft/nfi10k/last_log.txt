@@ -1,136 +1,4 @@
-sistence/trade_model.py", line 1433, in get_custom_data
-    data = CustomDataWrapper.get_custom_data(trade_id=self.id, key=key)
-  File "/freqtrade/freqtrade/persistence/custom_data.py", line 142, in get_custom_data
-    ).all()
-      ~~~^^
-  File "/home/ftuser/.local/lib/python3.14/site-packages/sqlalchemy/engine/result.py", line 1380, in all
-    return self._allrows()
-           ~~~~~~~~~~~~~^^
-  File "lib/sqlalchemy/engine/_result_cy.py", line 364, in sqlalchemy.engine._result_cy.BaseResultInternal._allrows
-  File "/home/ftuser/.local/lib/python3.14/site-packages/sqlalchemy/engine/result.py", line 1285, in _fetchall_impl
-    return self._real_result._fetchall_impl()
-           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
-  File "/home/ftuser/.local/lib/python3.14/site-packages/sqlalchemy/engine/result.py", line 1896, in _fetchall_impl
-    return list(self.iterator)
-  File "/home/ftuser/.local/lib/python3.14/site-packages/sqlalchemy/orm/loading.py", line 231, in chunks
-    fetch = cursor._raw_all_tuples()
-  File "lib/sqlalchemy/engine/_result_cy.py", line 356, in sqlalchemy.engine._result_cy.BaseResultInternal._raw_all_tuples
-  File "/home/ftuser/.local/lib/python3.14/site-packages/sqlalchemy/engine/cursor.py", line 2377, in _fetchall_impl
-    return self.cursor_strategy.fetchall(self, self.cursor)
-           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^
-  File "/home/ftuser/.local/lib/python3.14/site-packages/sqlalchemy/engine/cursor.py", line 1319, in fetchall
-    self.handle_exception(result, dbapi_cursor, e)
-    ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/home/ftuser/.local/lib/python3.14/site-packages/sqlalchemy/engine/cursor.py", line 1263, in handle_exception
-    result.connection._handle_dbapi_exception(
-    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^
-        err, None, None, dbapi_cursor, result.context
-        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-    )
-    ^
-  File "/home/ftuser/.local/lib/python3.14/site-packages/sqlalchemy/engine/base.py", line 2342, in _handle_dbapi_exception
-    raise sqlalchemy_exception.with_traceback(exc_info[2]) from e
-  File "/home/ftuser/.local/lib/python3.14/site-packages/sqlalchemy/engine/cursor.py", line 1315, in fetchall
-    rows = dbapi_cursor.fetchall()
-sqlalchemy.exc.DatabaseError: (sqlite3.DatabaseError) database disk image is malformed
-(Background on this error at: https://sqlalche.me/e/21/4xp6)
-2026-11-15 19:48:21,485 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.10, strategy_version: v18.0.258', state='RUNNING'
-2026-11-15 19:48:22,370 - freqtrade.strategy.strategy_wrapper - ERROR - Unexpected error DatabaseError('(sqlite3.DatabaseError) database disk image is malformed') calling <bound method NostalgiaForInfinityX8.custom_exit of <NostalgiaForInfinityX8.NostalgiaForInfinityX8 object at 0x7d36f1147380>>
-Traceback (most recent call last):
-  File "/home/ftuser/.local/lib/python3.14/site-packages/sqlalchemy/engine/cursor.py", line 1315, in fetchall
-    rows = dbapi_cursor.fetchall()
-sqlite3.DatabaseError: database disk image is malformed
-
-The above exception was the direct cause of the following exception:
-
-Traceback (most recent call last):
-  File "/freqtrade/freqtrade/strategy/strategy_wrapper.py", line 44, in wrapper
-    return f(*args, **kwargs)
-  File "/freqtrade/user_data/strategies/NostalgiaForInfinityX8.py", line 2031, in custom_exit
-    system_version = trade.get_custom_data(key="system_version")
-  File "/freqtrade/freqtrade/persistence/trade_model.py", line 1433, in get_custom_data
-    data = CustomDataWrapper.get_custom_data(trade_id=self.id, key=key)
-  File "/freqtrade/freqtrade/persistence/custom_data.py", line 142, in get_custom_data
-    ).all()
-      ~~~^^
-  File "/home/ftuser/.local/lib/python3.14/site-packages/sqlalchemy/engine/result.py", line 1380, in all
-    return self._allrows()
-           ~~~~~~~~~~~~~^^
-  File "lib/sqlalchemy/engine/_result_cy.py", line 364, in sqlalchemy.engine._result_cy.BaseResultInternal._allrows
-  File "/home/ftuser/.local/lib/python3.14/site-packages/sqlalchemy/engine/result.py", line 1285, in _fetchall_impl
-    return self._real_result._fetchall_impl()
-           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
-  File "/home/ftuser/.local/lib/python3.14/site-packages/sqlalchemy/engine/result.py", line 1896, in _fetchall_impl
-    return list(self.iterator)
-  File "/home/ftuser/.local/lib/python3.14/site-packages/sqlalchemy/orm/loading.py", line 231, in chunks
-    fetch = cursor._raw_all_tuples()
-  File "lib/sqlalchemy/engine/_result_cy.py", line 356, in sqlalchemy.engine._result_cy.BaseResultInternal._raw_all_tuples
-  File "/home/ftuser/.local/lib/python3.14/site-packages/sqlalchemy/engine/cursor.py", line 2377, in _fetchall_impl
-    return self.cursor_strategy.fetchall(self, self.cursor)
-           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^
-  File "/home/ftuser/.local/lib/python3.14/site-packages/sqlalchemy/engine/cursor.py", line 1319, in fetchall
-    self.handle_exception(result, dbapi_cursor, e)
-    ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/home/ftuser/.local/lib/python3.14/site-packages/sqlalchemy/engine/cursor.py", line 1263, in handle_exception
-    result.connection._handle_dbapi_exception(
-    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^
-        err, None, None, dbapi_cursor, result.context
-        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-    )
-    ^
-  File "/home/ftuser/.local/lib/python3.14/site-packages/sqlalchemy/engine/base.py", line 2342, in _handle_dbapi_exception
-    raise sqlalchemy_exception.with_traceback(exc_info[2]) from e
-  File "/home/ftuser/.local/lib/python3.14/site-packages/sqlalchemy/engine/cursor.py", line 1315, in fetchall
-    rows = dbapi_cursor.fetchall()
-sqlalchemy.exc.DatabaseError: (sqlite3.DatabaseError) database disk image is malformed
-(Background on this error at: https://sqlalche.me/e/21/4xp6)
-2026-11-15 19:48:23,663 - freqtrade.strategy.strategy_wrapper - ERROR - Unexpected error DatabaseError('(sqlite3.DatabaseError) database disk image is malformed') calling <bound method NostalgiaForInfinityX8.adjust_trade_position of <NostalgiaForInfinityX8.NostalgiaForInfinityX8 object at 0x7d36f1147380>>
-Traceback (most recent call last):
-  File "/home/ftuser/.local/lib/python3.14/site-packages/sqlalchemy/engine/cursor.py", line 1315, in fetchall
-    rows = dbapi_cursor.fetchall()
-sqlite3.DatabaseError: database disk image is malformed
-
-The above exception was the direct cause of the following exception:
-
-Traceback (most recent call last):
-  File "/freqtrade/freqtrade/strategy/strategy_wrapper.py", line 44, in wrapper
-    return f(*args, **kwargs)
-  File "/freqtrade/user_data/strategies/NostalgiaForInfinityX8.py", line 2803, in adjust_trade_position
-    is_system_v3, is_system_v3_1, is_system_v3_2 = self.get_system_version_flags(trade)
-                                                   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^
-  File "/freqtrade/user_data/strategies/NostalgiaForInfinityX8.py", line 5694, in get_system_version_flags
-    system_version = trade.get_custom_data(key="system_version")
-  File "/freqtrade/freqtrade/persistence/trade_model.py", line 1433, in get_custom_data
-    data = CustomDataWrapper.get_custom_data(trade_id=self.id, key=key)
-  File "/freqtrade/freqtrade/persistence/custom_data.py", line 142, in get_custom_data
-    ).all()
-      ~~~^^
-  File "/home/ftuser/.local/lib/python3.14/site-packages/sqlalchemy/engine/result.py", line 1380, in all
-    return self._allrows()
-           ~~~~~~~~~~~~~^^
-  File "lib/sqlalchemy/engine/_result_cy.py", line 364, in sqlalchemy.engine._result_cy.BaseResultInternal._allrows
-  File "/home/ftuser/.local/lib/python3.14/site-packages/sqlalchemy/engine/result.py", line 1285, in _fetchall_impl
-    return self._real_result._fetchall_impl()
-           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
-  File "/home/ftuser/.local/lib/python3.14/site-packages/sqlalchemy/engine/result.py", line 1896, in _fetchall_impl
-    return list(self.iterator)
-  File "/home/ftuser/.local/lib/python3.14/site-packages/sqlalchemy/orm/loading.py", line 231, in chunks
-    fetch = cursor._raw_all_tuples()
-  File "lib/sqlalchemy/engine/_result_cy.py", line 356, in sqlalchemy.engine._result_cy.BaseResultInternal._raw_all_tuples
-  File "/home/ftuser/.local/lib/python3.14/site-packages/sqlalchemy/engine/cursor.py", line 2377, in _fetchall_impl
-    return self.cursor_strategy.fetchall(self, self.cursor)
-           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^
-  File "/home/ftuser/.local/lib/python3.14/site-packages/sqlalchemy/engine/cursor.py", line 1319, in fetchall
-    self.handle_exception(result, dbapi_cursor, e)
-    ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/home/ftuser/.local/lib/python3.14/site-packages/sqlalchemy/engine/cursor.py", line 1263, in handle_exception
-    result.connection._handle_dbapi_exception(
-    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^
-        err, None, None, dbapi_cursor, result.context
-        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-    )
-    ^
-  File "/home/ftuser/.local/lib/python3.14/site-packages/sqlalchemy/engine/base.py", line 2342, in _handle_dbapi_exception
+e-packages/sqlalchemy/engine/base.py", line 2342, in _handle_dbapi_exception
     raise sqlalchemy_exception.with_traceback(exc_info[2]) from e
   File "/home/ftuser/.local/lib/python3.14/site-packages/sqlalchemy/engine/cursor.py", line 1315, in fetchall
     rows = dbapi_cursor.fetchall()
@@ -1913,3 +1781,57 @@ sqlalchemy.exc.DatabaseError: (sqlite3.DatabaseError) database disk image is mal
 2026-11-15 20:41:49,467 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.10, strategy_version: v18.0.258', state='RUNNING'
 2026-11-15 20:42:49,469 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.10, strategy_version: v18.0.258', state='RUNNING'
 2026-11-15 20:43:49,472 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.10, strategy_version: v18.0.258', state='RUNNING'
+2026-11-15 20:44:49,476 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.10, strategy_version: v18.0.258', state='RUNNING'
+2026-11-15 20:45:49,498 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.10, strategy_version: v18.0.258', state='RUNNING'
+2026-11-15 20:46:49,501 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.10, strategy_version: v18.0.258', state='RUNNING'
+2026-11-15 20:47:49,504 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.10, strategy_version: v18.0.258', state='RUNNING'
+2026-11-15 20:48:49,508 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.10, strategy_version: v18.0.258', state='RUNNING'
+2026-11-15 20:49:20,424 - AgeFilter - INFO - Removed HYPE/USDT from whitelist, because age 52 is less than 60 days
+2026-11-15 20:49:20,425 - AgeFilter - INFO - Removed RWUSD/USDT from whitelist, because age 33 is less than 60 days
+2026-11-15 20:49:20,426 - AgeFilter - INFO - Validated 148 pairs.
+2026-11-15 20:49:20,427 - PriceFilter - INFO - Removed BONK/USDT from whitelist, because 1 unit is 0.418%
+2026-11-15 20:49:20,427 - PriceFilter - INFO - Removed RAD/USDT from whitelist, because 1 unit is 0.469%
+2026-11-15 20:49:20,428 - PriceFilter - INFO - Removed STO/USDT from whitelist, because 1 unit is 0.450%
+2026-11-15 20:49:20,428 - PriceFilter - INFO - Removed KAIA/USDT from whitelist, because 1 unit is 0.339%
+2026-11-15 20:49:20,428 - PriceFilter - INFO - Removed AI/USDT from whitelist, because 1 unit is 0.685%
+2026-11-15 20:49:20,429 - PriceFilter - INFO - Removed CYBER/USDT from whitelist, because 1 unit is 0.448%
+2026-11-15 20:49:20,429 - PriceFilter - INFO - Removed PHA/USDT from whitelist, because 1 unit is 0.337%
+2026-11-15 20:49:20,433 - rangestabilityfilter - INFO - Removed SHELL/USDT from whitelist, because rate of change over 3 x 1d candles is 1.777, which is above the threshold of 0.95.
+2026-11-15 20:49:20,433 - rangestabilityfilter - INFO - Removed KAVA/USDT from whitelist, because rate of change over 3 x 1d candles is 1.748, which is above the threshold of 0.95.
+2026-11-15 20:49:20,436 - rangestabilityfilter - INFO - Removed BARD/USDT from whitelist, because rate of change over 3 x 1d candles is 1.246, which is above the threshold of 0.95.
+2026-11-15 20:49:20,569 - freqtrade.plugins.pairlistmanager - INFO - Whitelist with 100 pairs: ['BTC/USDT', 'ETH/USDT', 'SOL/USDT', 'XRP/USDT', 'ZEC/USDT', 'NEAR/USDT', 'DOGE/USDT', 'UNI/USDT', 'PEPE/USDT', 'SUI/USDT', 'ADA/USDT', 'LINK/USDT', 'ENA/USDT', 'TRX/USDT', 'AVAX/USDT', 'ASTER/USDT', 'TAO/USDT', 'LTC/USDT', 'INJ/USDT', 'AAVE/USDT', 'WLD/USDT', 'PUMP/USDT', 'XLM/USDT', 'QNT/USDT', 'PENGU/USDT', 'ZRO/USDT', 'ARB/USDT', 'HBAR/USDT', 'ONDO/USDT', 'FET/USDT', 'FIL/USDT', 'GRAM/USDT', 'ICP/USDT', 'BCH/USDT', 'MEGA/USDT', 'DOT/USDT', 'XPL/USDT', 'APT/USDT', 'STRK/USDT', 'RENDER/USDT', 'FF/USDT', 'TIA/USDT', 'JUP/USDT', 'DASH/USDT', 'SHIB/USDT', 'CAKE/USDT', 'CRV/USDT', 'OP/USDT', 'RAY/USDT', 'POL/USDT', 'SKY/USDT', 'KITE/USDT', 'PENDLE/USDT', 'ETHFI/USDT', 'ERA/USDT', 'VIRTUAL/USDT', 'JST/USDT', 'PYTH/USDT', 'MARSCOIN/USDT', 'ZAMA/USDT', 'SEI/USDT', 'BMT/USDT', 'WBTC/USDT', 'BERA/USDT', 'ETC/USDT', 'PLUME/USDT', 'LDO/USDT', 'WIF/USDT', 'CHIP/USDT', 'ATOM/USDT', 'AR/USDT', 'EIGEN/USDT', 'ALGO/USDT', 'ZK/USDT', 'BNCB/USDT', '0G/USDT', 'GIGGLE/USDT', 'AT/USDT', 'ALT/USDT', 'BNSOL/USDT', 'ZEN/USDT', 'ORDI/USDT', 'ALLO/USDT', 'AERO/USDT', 'SOLV/USDT', 'HOME/USDT', 'APE/USDT', 'BEAMX/USDT', 'SLP/USDT', 'JTO/USDT', 'PROM/USDT', 'W/USDT', 'AUDIO/USDT', 'VET/USDT', 'PARTI/USDT', 'BMNRB/USDT', 'WBETH/USDT', 'ZIL/USDT', 'MORPHO/USDT', 'LUNC/USDT']
+2026-11-15 20:49:49,510 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.10, strategy_version: v18.0.258', state='RUNNING'
+2026-11-15 20:50:50,368 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.10, strategy_version: v18.0.258', state='RUNNING'
+2026-11-15 20:51:50,371 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.10, strategy_version: v18.0.258', state='RUNNING'
+2026-11-15 20:52:50,374 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.10, strategy_version: v18.0.258', state='RUNNING'
+2026-11-15 20:53:50,377 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.10, strategy_version: v18.0.258', state='RUNNING'
+2026-11-15 20:54:50,380 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.10, strategy_version: v18.0.258', state='RUNNING'
+2026-11-15 20:55:52,505 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.10, strategy_version: v18.0.258', state='RUNNING'
+2026-11-15 20:56:52,508 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.10, strategy_version: v18.0.258', state='RUNNING'
+2026-11-15 20:57:52,511 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.10, strategy_version: v18.0.258', state='RUNNING'
+2026-11-15 20:58:52,513 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.10, strategy_version: v18.0.258', state='RUNNING'
+2026-11-15 20:59:52,516 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.10, strategy_version: v18.0.258', state='RUNNING'
+2026-11-15 21:00:54,748 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.10, strategy_version: v18.0.258', state='RUNNING'
+2026-11-15 21:01:54,751 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.10, strategy_version: v18.0.258', state='RUNNING'
+2026-11-15 21:02:54,754 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.10, strategy_version: v18.0.258', state='RUNNING'
+2026-11-15 21:03:07,190 - NostalgiaForInfinityX8 - INFO - Grinding entry (grind_5_entry) [2026-11-15 21:03:07.069235+00:00] [KAVA/USDT] | Rate: 0.02897 | Stake amount: 45.844 | Profit (stake): -91.619 | Profit: -4.01% | Tag: g5_fb1
+2026-11-15 21:03:07,191 - freqtrade.freqtradebot - INFO - Position adjust: about to create a new order for KAVA/USDT with stake_amount: 45.8444424 and price: 0.02897 for Trade(id=21, pair=KAVA/USDT, amount=12627.4, is_short=False, leverage=1, open_rate=0.03079, open_since=2026-11-14 10:25:12)
+2026-11-15 21:03:07,304 - freqtrade.freqtradebot - INFO - Order dry_run_buy_KAVA/USDT_86320194-db20-4775-ae1c-86929722e9dc was created for KAVA/USDT and status is closed.
+2026-11-15 21:03:07,317 - freqtrade.wallets - INFO - Wallets synced.
+2026-11-15 21:03:07,317 - freqtrade.rpc.rpc_manager - INFO - Sending rpc message: {'trade_id': 21, 'type': entry, 'buy_tag': '1 ', 'enter_tag': '1 ', 'exchange': 'Binance', 'pair': 'KAVA/USDT', 'leverage': 1.0, 'direction': 'Long', 'limit': 0.02897, 'order_rate': 0.02897, 'open_rate': 0.02897, 'order_type': 'limit', 'stake_amount': 434.6191933281997, 'stake_currency': 'USDT', 'base_currency': 'KAVA', 'quote_currency': 'USDT', 'fiat_currency': '', 'amount': 1582.4, 'open_date': datetime.datetime(2026, 11, 14, 10, 25, 12, 913597, tzinfo=datetime.timezone.utc), 'current_rate': 0.02897, 'sub_trade': True}
+2026-11-15 21:03:07,318 - freqtrade.freqtradebot - INFO - DCA order closed, trade should be up to date: Trade(id=21, pair=KAVA/USDT, amount=14209.8, is_short=False, leverage=1, open_rate=0.03059, open_since=2026-11-14 10:25:12)
+2026-11-15 21:03:07,318 - freqtrade.freqtradebot - INFO - Found open order for Trade(id=21, pair=KAVA/USDT, amount=14209.8, is_short=False, leverage=1, open_rate=0.03059, open_since=2026-11-14 10:25:12)
+2026-11-15 21:03:07,324 - freqtrade.freqtradebot - INFO - Fee for Trade Trade(id=21, pair=KAVA/USDT, amount=14209.8, is_short=False, leverage=1, open_rate=0.03059, open_since=2026-11-14 10:25:12) [buy]: 0.045842128 USDT - rate: 0.001
+2026-11-15 21:03:07,324 - freqtrade.persistence.trade_model - INFO - Updating trade (id=21) ...
+2026-11-15 21:03:07,325 - freqtrade.persistence.trade_model - INFO - LIMIT_BUY has been fulfilled for Trade(id=21, pair=KAVA/USDT, amount=1582.4, is_short=False, leverage=1, open_rate=0.02897, open_since=2026-11-14 10:25:12).
+2026-11-15 21:03:07,338 - freqtrade.wallets - INFO - Wallets synced.
+2026-11-15 21:03:07,343 - freqtrade.rpc.rpc_manager - INFO - Sending rpc message: {'trade_id': 21, 'type': entry_fill, 'buy_tag': '1 ', 'enter_tag': '1 ', 'exchange': 'Binance', 'pair': 'KAVA/USDT', 'leverage': 1.0, 'direction': 'Long', 'limit': 0.02897, 'order_rate': 0.02897, 'open_rate': 0.02897, 'order_type': 'limit', 'stake_amount': 434.6191933281997, 'stake_currency': 'USDT', 'base_currency': 'KAVA', 'quote_currency': 'USDT', 'fiat_currency': '', 'amount': 1582.4, 'open_date': datetime.datetime(2026, 11, 14, 10, 25, 12, 913597, tzinfo=datetime.timezone.utc), 'current_rate': 0.02897, 'sub_trade': True}
+2026-11-15 21:03:07,443 - freqtrade.rpc.rpc_manager - INFO - Sending rpc strategy_msg: ✅ ​**Grinding entry:** `(grind_5_entry)`
+🏦 **Exchange:** `Binance`
+🪙 **Pair:** `KAVA/USDT`
+〽️ **Rate:** `0.02897`
+💰 **Stake amount:** `45.84 USDT`
+💵 **Profit (stake):** `-91.62 USDT`
+💸 **Profit (percent):** `-4.01%`
+
+2026-11-15 21:03:54,757 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.10, strategy_version: v18.0.258', state='RUNNING'
