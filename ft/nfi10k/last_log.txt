@@ -572,3 +572,147 @@
 2026-11-15 04:48:58,743 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.10, strategy_version: v18.0.258', state='RUNNING'
 2026-11-15 04:49:58,746 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.10, strategy_version: v18.0.258', state='RUNNING'
 2026-11-15 04:51:00,586 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.10, strategy_version: v18.0.258', state='RUNNING'
+2026-11-15 04:52:00,589 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.10, strategy_version: v18.0.258', state='RUNNING'
+2026-11-15 04:53:00,592 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.10, strategy_version: v18.0.258', state='RUNNING'
+2026-11-15 04:54:00,595 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.10, strategy_version: v18.0.258', state='RUNNING'
+2026-11-15 04:55:01,000 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.10, strategy_version: v18.0.258', state='RUNNING'
+2026-11-15 04:55:15,836 - freqtrade.freqtradebot - INFO - Exit for JUP/USDT detected. Reason: custom_exit
+2026-11-15 04:55:15,841 - freqtrade.wallets - INFO - Wallets synced.
+2026-11-15 04:55:15,989 - freqtrade.rpc.rpc_manager - INFO - Sending rpc message: {'type': exit, 'trade_id': 25, 'exchange': 'Binance', 'pair': 'JUP/USDT', 'leverage': 1.0, 'direction': 'Long', 'gain': 'profit', 'limit': 0.2613, 'order_rate': 0.2613, 'order_type': 'limit', 'amount': 3044.2, 'open_rate': 0.2435, 'close_rate': 0.2613, 'current_rate': 0.2613, 'profit_amount': 52.65004784, 'profit_ratio': 0.07095656, 'buy_tag': '141 142 ', 'enter_tag': '141 142 ', 'exit_reason': 'exit_long_tc_d_7_1 ( 141 142 )', 'open_date': datetime.datetime(2026, 11, 14, 20, 55, 15, 53094, tzinfo=datetime.timezone.utc), 'close_date': datetime.datetime(2026, 11, 15, 4, 55, 15, 989554, tzinfo=datetime.timezone.utc), 'stake_amount': 741.2627, 'stake_currency': 'USDT', 'base_currency': 'JUP', 'quote_currency': 'USDT', 'fiat_currency': '', 'sub_trade': False, 'cumulative_profit': 0.0, 'final_profit_ratio': None, 'is_final_exit': False}
+2026-11-15 04:55:15,990 - freqtrade.freqtradebot - INFO - Found open order for Trade(id=25, pair=JUP/USDT, amount=3044.2, is_short=False, leverage=1, open_rate=0.2435, open_since=2026-11-14 20:55:15)
+2026-11-15 04:55:15,996 - freqtrade.freqtradebot - INFO - Fee for Trade Trade(id=25, pair=JUP/USDT, amount=3044.2, is_short=False, leverage=1, open_rate=0.2435, open_since=2026-11-14 20:55:15) [sell]: 0.79544946 USDT - rate: 0.001
+2026-11-15 04:55:15,996 - freqtrade.persistence.trade_model - INFO - Updating trade (id=25) ...
+2026-11-15 04:55:15,996 - freqtrade.persistence.trade_model - INFO - LIMIT_SELL has been fulfilled for Trade(id=25, pair=JUP/USDT, amount=3044.2, is_short=False, leverage=1, open_rate=0.2435, open_since=2026-11-14 20:55:15).
+2026-11-15 04:55:15,997 - freqtrade.persistence.trade_model - INFO - Marking Trade(id=25, pair=JUP/USDT, amount=3044.2, is_short=False, leverage=1, open_rate=0.2435, open_since=closed) as closed as the trade is fulfilled and found no open orders for it.
+2026-11-15 04:55:16,006 - freqtrade.wallets - INFO - Wallets synced.
+2026-11-15 04:55:16,009 - freqtrade.rpc.rpc_manager - INFO - Sending rpc message: {'type': exit_fill, 'trade_id': 25, 'exchange': 'Binance', 'pair': 'JUP/USDT', 'leverage': 1.0, 'direction': 'Long', 'gain': 'profit', 'limit': 0.2613, 'order_rate': 0.2613, 'order_type': 'limit', 'amount': 3044.2, 'open_rate': 0.2435, 'close_rate': 0.2613, 'current_rate': None, 'profit_amount': 52.65004784, 'profit_ratio': 0.07095656, 'buy_tag': '141 142 ', 'enter_tag': '141 142 ', 'exit_reason': 'exit_long_tc_d_7_1 ( 141 142 )', 'open_date': datetime.datetime(2026, 11, 14, 20, 55, 15, 53094, tzinfo=datetime.timezone.utc), 'close_date': datetime.datetime(2026, 11, 15, 4, 55, 15, 989000, tzinfo=datetime.timezone.utc), 'stake_amount': 741.2627, 'stake_currency': 'USDT', 'base_currency': 'JUP', 'quote_currency': 'USDT', 'fiat_currency': '', 'sub_trade': False, 'cumulative_profit': 52.65004784, 'final_profit_ratio': 0.07095655884156911, 'is_final_exit': True}
+2026-11-15 04:55:16,017 - freqtrade.wallets - INFO - Wallets synced.
+2026-11-15 04:55:17,839 - NostalgiaForInfinityX8 - INFO - Grinding exit (grind_1_exit) [2026-11-15 04:55:17.684900+00:00] [KAVA/USDT] | Rate: 0.03118 | Stake amount: 178.992 | Coin amount: 5740.6 | Profit (stake): -156.425 | Profit: -8.21% | Grind profit: 17.13% (25.998 USDT)
+2026-11-15 04:55:17,844 - freqtrade.wallets - INFO - Wallets synced.
+2026-11-15 04:55:17,991 - freqtrade.rpc.rpc_manager - INFO - Sending rpc message: {'type': exit, 'trade_id': 21, 'exchange': 'Binance', 'pair': 'KAVA/USDT', 'leverage': 1.0, 'direction': 'Long', 'gain': 'profit', 'limit': 0.03122, 'order_rate': 0.03122, 'order_type': 'limit', 'amount': 5740.6, 'open_rate': 0.02913, 'close_rate': 0.03122, 'current_rate': 0.03122, 'profit_amount': 11.65140879, 'profit_ratio': 0.06960599, 'buy_tag': '1 ', 'enter_tag': '1 ', 'exit_reason': 'grind_1_exit 281', 'open_date': datetime.datetime(2026, 11, 14, 10, 25, 12, 913597, tzinfo=datetime.timezone.utc), 'close_date': datetime.datetime(2026, 11, 15, 4, 55, 17, 991584, tzinfo=datetime.timezone.utc), 'stake_amount': 665.3643540497895, 'stake_currency': 'USDT', 'base_currency': 'KAVA', 'quote_currency': 'USDT', 'fiat_currency': '', 'sub_trade': True, 'cumulative_profit': -201.93444347, 'final_profit_ratio': None, 'is_final_exit': False}
+2026-11-15 04:55:18,391 - freqtrade.rpc.rpc_manager - INFO - Sending rpc strategy_msg: ❎​ ​**Grinding exit:** `(grind_1_exit)`
+🏦 **Exchange:** `Binance`
+🪙 **Pair:** `KAVA/USDT`
+〽️ **Rate:** `0.03118`
+💰 **Stake amount:** `178.99 USDT`
+🪙 **Coin amount:** `5740.6`
+💵 **Profit (stake):** `-156.43 USDT`
+💸 **Profit (percent):** `-8.21%`
+💶 **Grind profit (stake):** `26.00 USDT`
+💸 **Grind profit (percent):** `17.13%`
+2026-11-15 04:55:18,832 - freqtrade.freqtradebot - INFO - Found open order for Trade(id=21, pair=KAVA/USDT, amount=22843.2, is_short=False, leverage=1, open_rate=0.02913, open_since=2026-11-14 10:25:12)
+2026-11-15 04:55:23,836 - freqtrade.freqtradebot - INFO - Found open order for Trade(id=21, pair=KAVA/USDT, amount=22843.2, is_short=False, leverage=1, open_rate=0.02913, open_since=2026-11-14 10:25:12)
+2026-11-15 04:55:28,845 - freqtrade.freqtradebot - INFO - Found open order for Trade(id=21, pair=KAVA/USDT, amount=22843.2, is_short=False, leverage=1, open_rate=0.02913, open_since=2026-11-14 10:25:12)
+2026-11-15 04:55:33,836 - freqtrade.freqtradebot - INFO - Found open order for Trade(id=21, pair=KAVA/USDT, amount=22843.2, is_short=False, leverage=1, open_rate=0.02913, open_since=2026-11-14 10:25:12)
+2026-11-15 04:55:38,843 - freqtrade.freqtradebot - INFO - Found open order for Trade(id=21, pair=KAVA/USDT, amount=22843.2, is_short=False, leverage=1, open_rate=0.02913, open_since=2026-11-14 10:25:12)
+2026-11-15 04:55:43,833 - freqtrade.freqtradebot - INFO - Found open order for Trade(id=21, pair=KAVA/USDT, amount=22843.2, is_short=False, leverage=1, open_rate=0.02913, open_since=2026-11-14 10:25:12)
+2026-11-15 04:55:48,841 - freqtrade.freqtradebot - INFO - Found open order for Trade(id=21, pair=KAVA/USDT, amount=22843.2, is_short=False, leverage=1, open_rate=0.02913, open_since=2026-11-14 10:25:12)
+2026-11-15 04:55:53,852 - freqtrade.freqtradebot - INFO - Found open order for Trade(id=21, pair=KAVA/USDT, amount=22843.2, is_short=False, leverage=1, open_rate=0.02913, open_since=2026-11-14 10:25:12)
+2026-11-15 04:55:58,833 - freqtrade.freqtradebot - INFO - Found open order for Trade(id=21, pair=KAVA/USDT, amount=22843.2, is_short=False, leverage=1, open_rate=0.02913, open_since=2026-11-14 10:25:12)
+2026-11-15 04:56:03,394 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.10, strategy_version: v18.0.258', state='RUNNING'
+2026-11-15 04:56:03,836 - freqtrade.freqtradebot - INFO - Found open order for Trade(id=21, pair=KAVA/USDT, amount=22843.2, is_short=False, leverage=1, open_rate=0.02913, open_since=2026-11-14 10:25:12)
+2026-11-15 04:56:08,834 - freqtrade.freqtradebot - INFO - Found open order for Trade(id=21, pair=KAVA/USDT, amount=22843.2, is_short=False, leverage=1, open_rate=0.02913, open_since=2026-11-14 10:25:12)
+2026-11-15 04:56:13,843 - freqtrade.freqtradebot - INFO - Found open order for Trade(id=21, pair=KAVA/USDT, amount=22843.2, is_short=False, leverage=1, open_rate=0.02913, open_since=2026-11-14 10:25:12)
+2026-11-15 04:56:18,834 - freqtrade.freqtradebot - INFO - Found open order for Trade(id=21, pair=KAVA/USDT, amount=22843.2, is_short=False, leverage=1, open_rate=0.02913, open_since=2026-11-14 10:25:12)
+2026-11-15 04:56:23,831 - freqtrade.freqtradebot - INFO - Found open order for Trade(id=21, pair=KAVA/USDT, amount=22843.2, is_short=False, leverage=1, open_rate=0.02913, open_since=2026-11-14 10:25:12)
+2026-11-15 04:56:28,831 - freqtrade.freqtradebot - INFO - Found open order for Trade(id=21, pair=KAVA/USDT, amount=22843.2, is_short=False, leverage=1, open_rate=0.02913, open_since=2026-11-14 10:25:12)
+2026-11-15 04:56:33,842 - freqtrade.freqtradebot - INFO - Found open order for Trade(id=21, pair=KAVA/USDT, amount=22843.2, is_short=False, leverage=1, open_rate=0.02913, open_since=2026-11-14 10:25:12)
+2026-11-15 04:56:38,837 - freqtrade.freqtradebot - INFO - Found open order for Trade(id=21, pair=KAVA/USDT, amount=22843.2, is_short=False, leverage=1, open_rate=0.02913, open_since=2026-11-14 10:25:12)
+2026-11-15 04:56:43,837 - freqtrade.freqtradebot - INFO - Found open order for Trade(id=21, pair=KAVA/USDT, amount=22843.2, is_short=False, leverage=1, open_rate=0.02913, open_since=2026-11-14 10:25:12)
+2026-11-15 04:56:48,862 - freqtrade.freqtradebot - INFO - Found open order for Trade(id=21, pair=KAVA/USDT, amount=22843.2, is_short=False, leverage=1, open_rate=0.02913, open_since=2026-11-14 10:25:12)
+2026-11-15 04:56:48,867 - freqtrade.persistence.trade_model - INFO - Updating trade (id=21) ...
+2026-11-15 04:56:48,867 - freqtrade.persistence.trade_model - INFO - LIMIT_SELL has been fulfilled for Trade(id=21, pair=KAVA/USDT, amount=22843.2, is_short=False, leverage=1, open_rate=0.02913, open_since=2026-11-14 10:25:12).
+2026-11-15 04:56:48,881 - freqtrade.wallets - INFO - Wallets synced.
+2026-11-15 04:56:48,884 - freqtrade.rpc.rpc_manager - INFO - Sending rpc message: {'type': exit_fill, 'trade_id': 21, 'exchange': 'Binance', 'pair': 'KAVA/USDT', 'leverage': 1.0, 'direction': 'Long', 'gain': 'profit', 'limit': 0.03122, 'order_rate': 0.03122, 'order_type': 'limit', 'amount': 5740.6, 'open_rate': 0.02913, 'close_rate': 0.03122, 'current_rate': None, 'profit_amount': 11.65140879, 'profit_ratio': 0.06960599, 'buy_tag': '1 ', 'enter_tag': '1 ', 'exit_reason': 'grind_1_exit 281', 'open_date': datetime.datetime(2026, 11, 14, 10, 25, 12, 913597, tzinfo=datetime.timezone.utc), 'close_date': datetime.datetime(2026, 11, 15, 4, 56, 48, 884222, tzinfo=datetime.timezone.utc), 'stake_amount': 498.15526728181385, 'stake_currency': 'USDT', 'base_currency': 'KAVA', 'quote_currency': 'USDT', 'fiat_currency': '', 'sub_trade': True, 'cumulative_profit': -190.26842886, 'final_profit_ratio': None, 'is_final_exit': False}
+2026-11-15 04:56:51,768 - NostalgiaForInfinityX8 - INFO - Grinding exit (grind_2_exit) [2026-11-15 04:56:51.614268+00:00] [KAVA/USDT] | Rate: 0.03137 | Stake amount: 303.473 | Coin amount: 9674.0 | Profit (stake): -152.950 | Profit: -8.03% | Grind profit: 10.33% (28.109 USDT)
+2026-11-15 04:56:51,774 - freqtrade.wallets - INFO - Wallets synced.
+2026-11-15 04:56:51,920 - freqtrade.rpc.rpc_manager - INFO - Sending rpc message: {'type': exit, 'trade_id': 21, 'exchange': 'Binance', 'pair': 'KAVA/USDT', 'leverage': 1.0, 'direction': 'Long', 'gain': 'profit', 'limit': 0.03137, 'order_rate': 0.03137, 'order_type': 'limit', 'amount': 9674.0, 'open_rate': 0.02913, 'close_rate': 0.03137, 'current_rate': 0.03137, 'profit_amount': 21.084483, 'profit_ratio': 0.07474503, 'buy_tag': '1 ', 'enter_tag': '1 ', 'exit_reason': 'grind_2_exit 284 267 259', 'open_date': datetime.datetime(2026, 11, 14, 10, 25, 12, 913597, tzinfo=datetime.timezone.utc), 'close_date': datetime.datetime(2026, 11, 15, 4, 56, 51, 920862, tzinfo=datetime.timezone.utc), 'stake_amount': 498.15526728181385, 'stake_currency': 'USDT', 'base_currency': 'KAVA', 'quote_currency': 'USDT', 'fiat_currency': '', 'sub_trade': True, 'cumulative_profit': -190.26842886, 'final_profit_ratio': None, 'is_final_exit': False}
+2026-11-15 04:56:51,921 - freqtrade.freqtradebot - INFO - Found open order for Trade(id=21, pair=KAVA/USDT, amount=17102.6, is_short=False, leverage=1, open_rate=0.02913, open_since=2026-11-14 10:25:12)
+2026-11-15 04:56:51,927 - freqtrade.persistence.trade_model - INFO - Updating trade (id=21) ...
+2026-11-15 04:56:51,927 - freqtrade.persistence.trade_model - INFO - LIMIT_SELL has been fulfilled for Trade(id=21, pair=KAVA/USDT, amount=17102.6, is_short=False, leverage=1, open_rate=0.02913, open_since=2026-11-14 10:25:12).
+2026-11-15 04:56:51,940 - freqtrade.wallets - INFO - Wallets synced.
+2026-11-15 04:56:51,943 - freqtrade.rpc.rpc_manager - INFO - Sending rpc message: {'type': exit_fill, 'trade_id': 21, 'exchange': 'Binance', 'pair': 'KAVA/USDT', 'leverage': 1.0, 'direction': 'Long', 'gain': 'profit', 'limit': 0.03137, 'order_rate': 0.03137, 'order_type': 'limit', 'amount': 9674.0, 'open_rate': 0.02913, 'close_rate': 0.03137, 'current_rate': None, 'profit_amount': 21.084483, 'profit_ratio': 0.07474503, 'buy_tag': '1 ', 'enter_tag': '1 ', 'exit_reason': 'grind_2_exit 284 267 259', 'open_date': datetime.datetime(2026, 11, 14, 10, 25, 12, 913597, tzinfo=datetime.timezone.utc), 'close_date': datetime.datetime(2026, 11, 15, 4, 56, 51, 943180, tzinfo=datetime.timezone.utc), 'stake_amount': 216.37623627575235, 'stake_currency': 'USDT', 'base_currency': 'KAVA', 'quote_currency': 'USDT', 'fiat_currency': '', 'sub_trade': True, 'cumulative_profit': -169.15933228, 'final_profit_ratio': None, 'is_final_exit': False}
+2026-11-15 04:56:52,339 - freqtrade.rpc.rpc_manager - INFO - Sending rpc strategy_msg: ❎​ ​**Grinding exit:** `(grind_2_exit)`
+🏦 **Exchange:** `Binance`
+🪙 **Pair:** `KAVA/USDT`
+〽️ **Rate:** `0.03137`
+💰 **Stake amount:** `303.47 USDT`
+🪙 **Coin amount:** `9674.0`
+💵 **Profit (stake):** `-152.95 USDT`
+💸 **Profit (percent):** `-8.03%`
+💶 **Grind profit (stake):** `28.11 USDT`
+💸 **Grind profit (percent):** `10.33%`
+2026-11-15 04:56:56,591 - NostalgiaForInfinityX8 - INFO - Grinding exit (grind_3_exit) [2026-11-15 04:56:56.431830+00:00] [KAVA/USDT] | Rate: 0.03177 | Stake amount: 90.916 | Coin amount: 2861.7 | Profit (stake): -149.981 | Profit: -7.88% | Grind profit: 18.99% (14.418 USDT)
+2026-11-15 04:56:56,598 - freqtrade.wallets - INFO - Wallets synced.
+2026-11-15 04:56:56,744 - freqtrade.rpc.rpc_manager - INFO - Sending rpc message: {'type': exit, 'trade_id': 21, 'exchange': 'Binance', 'pair': 'KAVA/USDT', 'leverage': 1.0, 'direction': 'Long', 'gain': 'profit', 'limit': 0.03177, 'order_rate': 0.03177, 'order_type': 'limit', 'amount': 2861.7, 'open_rate': 0.02913, 'close_rate': 0.03177, 'current_rate': 0.03177, 'profit_amount': 7.38061047, 'profit_ratio': 0.08844914, 'buy_tag': '1 ', 'enter_tag': '1 ', 'exit_reason': 'grind_3_exit 279', 'open_date': datetime.datetime(2026, 11, 14, 10, 25, 12, 913597, tzinfo=datetime.timezone.utc), 'close_date': datetime.datetime(2026, 11, 15, 4, 56, 56, 744838, tzinfo=datetime.timezone.utc), 'stake_amount': 216.37623627575235, 'stake_currency': 'USDT', 'base_currency': 'KAVA', 'quote_currency': 'USDT', 'fiat_currency': '', 'sub_trade': True, 'cumulative_profit': -169.15933228, 'final_profit_ratio': None, 'is_final_exit': False}
+2026-11-15 04:56:57,145 - freqtrade.rpc.rpc_manager - INFO - Sending rpc strategy_msg: ❎​ ​**Grinding exit:** `(grind_3_exit)`
+🏦 **Exchange:** `Binance`
+🪙 **Pair:** `KAVA/USDT`
+〽️ **Rate:** `0.03177`
+💰 **Stake amount:** `90.92 USDT`
+🪙 **Coin amount:** `2861.7`
+💵 **Profit (stake):** `-149.98 USDT`
+💸 **Profit (percent):** `-7.88%`
+💶 **Grind profit (stake):** `14.42 USDT`
+💸 **Grind profit (percent):** `18.99%`
+2026-11-15 04:56:58,844 - freqtrade.freqtradebot - INFO - Found open order for Trade(id=21, pair=KAVA/USDT, amount=7428.6, is_short=False, leverage=1, open_rate=0.02913, open_since=2026-11-14 10:25:12)
+2026-11-15 04:57:03,396 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.10, strategy_version: v18.0.258', state='RUNNING'
+2026-11-15 04:57:03,851 - freqtrade.freqtradebot - INFO - Found open order for Trade(id=21, pair=KAVA/USDT, amount=7428.6, is_short=False, leverage=1, open_rate=0.02913, open_since=2026-11-14 10:25:12)
+2026-11-15 04:57:08,840 - freqtrade.freqtradebot - INFO - Found open order for Trade(id=21, pair=KAVA/USDT, amount=7428.6, is_short=False, leverage=1, open_rate=0.02913, open_since=2026-11-14 10:25:12)
+2026-11-15 04:57:13,844 - freqtrade.freqtradebot - INFO - Found open order for Trade(id=21, pair=KAVA/USDT, amount=7428.6, is_short=False, leverage=1, open_rate=0.02913, open_since=2026-11-14 10:25:12)
+2026-11-15 04:57:18,844 - freqtrade.freqtradebot - INFO - Found open order for Trade(id=21, pair=KAVA/USDT, amount=7428.6, is_short=False, leverage=1, open_rate=0.02913, open_since=2026-11-14 10:25:12)
+2026-11-15 04:57:23,844 - freqtrade.freqtradebot - INFO - Found open order for Trade(id=21, pair=KAVA/USDT, amount=7428.6, is_short=False, leverage=1, open_rate=0.02913, open_since=2026-11-14 10:25:12)
+2026-11-15 04:57:28,842 - freqtrade.freqtradebot - INFO - Found open order for Trade(id=21, pair=KAVA/USDT, amount=7428.6, is_short=False, leverage=1, open_rate=0.02913, open_since=2026-11-14 10:25:12)
+2026-11-15 04:57:33,846 - freqtrade.freqtradebot - INFO - Found open order for Trade(id=21, pair=KAVA/USDT, amount=7428.6, is_short=False, leverage=1, open_rate=0.02913, open_since=2026-11-14 10:25:12)
+2026-11-15 04:57:38,839 - freqtrade.freqtradebot - INFO - Found open order for Trade(id=21, pair=KAVA/USDT, amount=7428.6, is_short=False, leverage=1, open_rate=0.02913, open_since=2026-11-14 10:25:12)
+2026-11-15 04:57:43,851 - freqtrade.freqtradebot - INFO - Found open order for Trade(id=21, pair=KAVA/USDT, amount=7428.6, is_short=False, leverage=1, open_rate=0.02913, open_since=2026-11-14 10:25:12)
+2026-11-15 04:57:48,844 - freqtrade.freqtradebot - INFO - Found open order for Trade(id=21, pair=KAVA/USDT, amount=7428.6, is_short=False, leverage=1, open_rate=0.02913, open_since=2026-11-14 10:25:12)
+2026-11-15 04:57:53,849 - freqtrade.freqtradebot - INFO - Found open order for Trade(id=21, pair=KAVA/USDT, amount=7428.6, is_short=False, leverage=1, open_rate=0.02913, open_since=2026-11-14 10:25:12)
+2026-11-15 04:57:58,855 - freqtrade.freqtradebot - INFO - Found open order for Trade(id=21, pair=KAVA/USDT, amount=7428.6, is_short=False, leverage=1, open_rate=0.02913, open_since=2026-11-14 10:25:12)
+2026-11-15 04:58:03,399 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.10, strategy_version: v18.0.258', state='RUNNING'
+2026-11-15 04:58:03,855 - freqtrade.freqtradebot - INFO - Found open order for Trade(id=21, pair=KAVA/USDT, amount=7428.6, is_short=False, leverage=1, open_rate=0.02913, open_since=2026-11-14 10:25:12)
+2026-11-15 04:58:08,854 - freqtrade.freqtradebot - INFO - Found open order for Trade(id=21, pair=KAVA/USDT, amount=7428.6, is_short=False, leverage=1, open_rate=0.02913, open_since=2026-11-14 10:25:12)
+2026-11-15 04:58:13,838 - freqtrade.freqtradebot - INFO - Found open order for Trade(id=21, pair=KAVA/USDT, amount=7428.6, is_short=False, leverage=1, open_rate=0.02913, open_since=2026-11-14 10:25:12)
+2026-11-15 04:58:18,838 - freqtrade.freqtradebot - INFO - Found open order for Trade(id=21, pair=KAVA/USDT, amount=7428.6, is_short=False, leverage=1, open_rate=0.02913, open_since=2026-11-14 10:25:12)
+2026-11-15 04:58:23,838 - freqtrade.freqtradebot - INFO - Found open order for Trade(id=21, pair=KAVA/USDT, amount=7428.6, is_short=False, leverage=1, open_rate=0.02913, open_since=2026-11-14 10:25:12)
+2026-11-15 04:58:28,847 - freqtrade.freqtradebot - INFO - Found open order for Trade(id=21, pair=KAVA/USDT, amount=7428.6, is_short=False, leverage=1, open_rate=0.02913, open_since=2026-11-14 10:25:12)
+2026-11-15 04:58:33,846 - freqtrade.freqtradebot - INFO - Found open order for Trade(id=21, pair=KAVA/USDT, amount=7428.6, is_short=False, leverage=1, open_rate=0.02913, open_since=2026-11-14 10:25:12)
+2026-11-15 04:58:38,864 - freqtrade.freqtradebot - INFO - Found open order for Trade(id=21, pair=KAVA/USDT, amount=7428.6, is_short=False, leverage=1, open_rate=0.02913, open_since=2026-11-14 10:25:12)
+2026-11-15 04:58:43,857 - freqtrade.freqtradebot - INFO - Found open order for Trade(id=21, pair=KAVA/USDT, amount=7428.6, is_short=False, leverage=1, open_rate=0.02913, open_since=2026-11-14 10:25:12)
+2026-11-15 04:58:48,848 - freqtrade.freqtradebot - INFO - Found open order for Trade(id=21, pair=KAVA/USDT, amount=7428.6, is_short=False, leverage=1, open_rate=0.02913, open_since=2026-11-14 10:25:12)
+2026-11-15 04:58:53,855 - freqtrade.freqtradebot - INFO - Found open order for Trade(id=21, pair=KAVA/USDT, amount=7428.6, is_short=False, leverage=1, open_rate=0.02913, open_since=2026-11-14 10:25:12)
+2026-11-15 04:58:58,857 - freqtrade.freqtradebot - INFO - Found open order for Trade(id=21, pair=KAVA/USDT, amount=7428.6, is_short=False, leverage=1, open_rate=0.02913, open_since=2026-11-14 10:25:12)
+2026-11-15 04:58:59,155 - freqtrade.freqtradebot - INFO - Found open order for Trade(id=21, pair=KAVA/USDT, amount=7428.6, is_short=False, leverage=1, open_rate=0.02913, open_since=2026-11-14 10:25:12)
+2026-11-15 04:58:59,160 - freqtrade.freqtradebot - INFO - Sell order cancelled due to timeout for Trade(id=21, pair=KAVA/USDT, amount=7428.6, is_short=False, leverage=1, open_rate=0.02913, open_since=2026-11-14 10:25:12).
+2026-11-15 04:58:59,160 - freqtrade.rpc.rpc_manager - INFO - Sending rpc message: {'type': exit_cancel, 'trade_id': 21, 'exchange': 'Binance', 'pair': 'KAVA/USDT', 'leverage': 1.0, 'direction': 'Long', 'gain': 'loss', 'limit': 0, 'order_rate': 0, 'order_type': 'limit', 'amount': 0.0, 'open_rate': 0.02913, 'current_rate': 0.03079, 'profit_amount': -216.61151312, 'profit_ratio': -1.0, 'buy_tag': '1 ', 'enter_tag': '1 ', 'exit_reason': None, 'open_date': datetime.datetime(2026, 11, 14, 10, 25, 12, 913597), 'close_date': datetime.datetime(2026, 11, 15, 4, 58, 59, 160853, tzinfo=datetime.timezone.utc), 'stake_currency': 'USDT', 'base_currency': 'KAVA', 'quote_currency': 'USDT', 'fiat_currency': '', 'reason': 'cancelled due to timeout', 'sub_trade': True, 'stake_amount': 216.37623627575235}
+2026-11-15 04:59:02,060 - NostalgiaForInfinityX8 - INFO - Grinding exit (grind_3_exit) [2026-11-15 04:59:01.905802+00:00] [KAVA/USDT] | Rate: 0.03075 | Stake amount: 87.997 | Coin amount: 2861.7 | Profit (stake): -157.551 | Profit: -8.27% | Grind profit: 15.17% (11.502 USDT)
+2026-11-15 04:59:02,065 - freqtrade.wallets - INFO - Wallets synced.
+2026-11-15 04:59:02,213 - freqtrade.rpc.rpc_manager - INFO - Sending rpc message: {'type': exit, 'trade_id': 21, 'exchange': 'Binance', 'pair': 'KAVA/USDT', 'leverage': 1.0, 'direction': 'Long', 'gain': 'profit', 'limit': 0.03075, 'order_rate': 0.03075, 'order_type': 'limit', 'amount': 2861.7, 'open_rate': 0.02913, 'close_rate': 0.03075, 'current_rate': 0.03075, 'profit_amount': 4.4645954, 'profit_ratio': 0.05350365, 'buy_tag': '1 ', 'enter_tag': '1 ', 'exit_reason': 'grind_3_exit 279', 'open_date': datetime.datetime(2026, 11, 14, 10, 25, 12, 913597, tzinfo=datetime.timezone.utc), 'close_date': datetime.datetime(2026, 11, 15, 4, 59, 2, 212942, tzinfo=datetime.timezone.utc), 'stake_amount': 216.37623627575235, 'stake_currency': 'USDT', 'base_currency': 'KAVA', 'quote_currency': 'USDT', 'fiat_currency': '', 'sub_trade': True, 'cumulative_profit': -169.15933228, 'final_profit_ratio': None, 'is_final_exit': False}
+2026-11-15 04:59:02,213 - freqtrade.freqtradebot - INFO - Found open order for Trade(id=21, pair=KAVA/USDT, amount=7428.6, is_short=False, leverage=1, open_rate=0.02913, open_since=2026-11-14 10:25:12)
+2026-11-15 04:59:02,219 - freqtrade.persistence.trade_model - INFO - Updating trade (id=21) ...
+2026-11-15 04:59:02,219 - freqtrade.persistence.trade_model - INFO - LIMIT_SELL has been fulfilled for Trade(id=21, pair=KAVA/USDT, amount=7428.6, is_short=False, leverage=1, open_rate=0.02913, open_since=2026-11-14 10:25:12).
+2026-11-15 04:59:02,233 - freqtrade.wallets - INFO - Wallets synced.
+2026-11-15 04:59:02,236 - freqtrade.rpc.rpc_manager - INFO - Sending rpc message: {'type': exit_fill, 'trade_id': 21, 'exchange': 'Binance', 'pair': 'KAVA/USDT', 'leverage': 1.0, 'direction': 'Long', 'gain': 'profit', 'limit': 0.03075, 'order_rate': 0.03075, 'order_type': 'limit', 'amount': 2861.7, 'open_rate': 0.02913, 'close_rate': 0.03075, 'current_rate': None, 'profit_amount': 4.4645954, 'profit_ratio': 0.05350365, 'buy_tag': '1 ', 'enter_tag': '1 ', 'exit_reason': 'grind_3_exit 279', 'open_date': datetime.datetime(2026, 11, 14, 10, 25, 12, 913597, tzinfo=datetime.timezone.utc), 'close_date': datetime.datetime(2026, 11, 15, 4, 59, 2, 236000, tzinfo=datetime.timezone.utc), 'stake_amount': 133.0221890326217, 'stake_currency': 'USDT', 'base_currency': 'KAVA', 'quote_currency': 'USDT', 'fiat_currency': '', 'sub_trade': True, 'cumulative_profit': -164.68745585, 'final_profit_ratio': None, 'is_final_exit': False}
+2026-11-15 04:59:02,632 - freqtrade.rpc.rpc_manager - INFO - Sending rpc strategy_msg: ❎​ ​**Grinding exit:** `(grind_3_exit)`
+🏦 **Exchange:** `Binance`
+🪙 **Pair:** `KAVA/USDT`
+〽️ **Rate:** `0.03075`
+💰 **Stake amount:** `88.00 USDT`
+🪙 **Coin amount:** `2861.7`
+💵 **Profit (stake):** `-157.55 USDT`
+💸 **Profit (percent):** `-8.27%`
+💶 **Grind profit (stake):** `11.50 USDT`
+💸 **Grind profit (percent):** `15.17%`
+2026-11-15 04:59:03,401 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.10, strategy_version: v18.0.258', state='RUNNING'
+2026-11-15 05:00:03,404 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.10, strategy_version: v18.0.258', state='RUNNING'
+2026-11-15 05:01:05,442 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.10, strategy_version: v18.0.258', state='RUNNING'
+2026-11-15 05:02:05,445 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.10, strategy_version: v18.0.258', state='RUNNING'
+2026-11-15 05:03:05,448 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.10, strategy_version: v18.0.258', state='RUNNING'
+2026-11-15 05:04:05,451 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.10, strategy_version: v18.0.258', state='RUNNING'
+2026-11-15 05:05:18,423 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.10, strategy_version: v18.0.258', state='RUNNING'
+2026-11-15 05:06:18,426 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.10, strategy_version: v18.0.258', state='RUNNING'
+2026-11-15 05:07:18,429 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.10, strategy_version: v18.0.258', state='RUNNING'
+2026-11-15 05:08:18,432 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.10, strategy_version: v18.0.258', state='RUNNING'
+2026-11-15 05:09:18,434 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.10, strategy_version: v18.0.258', state='RUNNING'
+2026-11-15 05:10:19,851 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.10, strategy_version: v18.0.258', state='RUNNING'
+2026-11-15 05:11:19,854 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.10, strategy_version: v18.0.258', state='RUNNING'
