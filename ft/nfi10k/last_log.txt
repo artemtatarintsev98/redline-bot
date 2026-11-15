@@ -1,12 +1,4 @@
-e-packages/sqlalchemy/engine/base.py", line 2342, in _handle_dbapi_exception
-    raise sqlalchemy_exception.with_traceback(exc_info[2]) from e
-  File "/home/ftuser/.local/lib/python3.14/site-packages/sqlalchemy/engine/cursor.py", line 1315, in fetchall
-    rows = dbapi_cursor.fetchall()
-sqlalchemy.exc.DatabaseError: (sqlite3.DatabaseError) database disk image is malformed
-(Background on this error at: https://sqlalche.me/e/21/4xp6)
-2026-11-15 19:48:27,369 - freqtrade.strategy.strategy_wrapper - ERROR - Unexpected error DatabaseError('(sqlite3.DatabaseError) database disk image is malformed') calling <bound method NostalgiaForInfinityX8.custom_exit of <NostalgiaForInfinityX8.NostalgiaForInfinityX8 object at 0x7d36f1147380>>
-Traceback (most recent call last):
-  File "/home/ftuser/.local/lib/python3.14/site-packages/sqlalchemy/engine/cursor.py", line 1315, in fetchall
+File "/home/ftuser/.local/lib/python3.14/site-packages/sqlalchemy/engine/cursor.py", line 1315, in fetchall
     rows = dbapi_cursor.fetchall()
 sqlite3.DatabaseError: database disk image is malformed
 
@@ -1835,3 +1827,9 @@ sqlalchemy.exc.DatabaseError: (sqlite3.DatabaseError) database disk image is mal
 💸 **Profit (percent):** `-4.01%`
 
 2026-11-15 21:03:54,757 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.10, strategy_version: v18.0.258', state='RUNNING'
+2026-11-15 21:04:30,065 - freqtrade.commands.trade_commands - INFO - worker found ... calling exit
+2026-11-15 21:04:30,066 - freqtrade.rpc.rpc_manager - INFO - Sending rpc message: {'type': status, 'status': 'process died'}
+2026-11-15 21:04:30,066 - freqtrade.freqtradebot - INFO - Cleaning up modules ...
+2026-11-15 21:04:30,074 - freqtrade.rpc.rpc_manager - INFO - Sending rpc message: {'type': warning, 'status': "6 open trades active.\n\nHandle these trades manually on Binance, or '/start' the bot again and use '/stopentry' to handle open trades gracefully. \nNote: Trades are simulated (dry run)."}
+2026-11-15 21:04:30,075 - freqtrade.rpc.rpc_manager - INFO - Cleaning up rpc modules ...
+2026-11-15 21:04:30,342 - freqtrade - INFO - SIGINT received, aborting ...
