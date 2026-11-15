@@ -1,4 +1,4 @@
-# nfi10k (demo) — 2026-11-15 09:32 UTC
+# nfi10k (demo) — 2026-11-15 09:37 UTC
 
 **Balance:** 10202.41 USDT (start 10000, +202.41, +2.02%)
 **Closed trades:** 19, wins 19 (100%)
@@ -15,7 +15,7 @@
 | PROM/USDT | 2026-11-10 19:08 | 2026-11-12 12:45 | +4.30 | exit_long_rapid_rpd_6 ( 103 ) |
 | GUN/USDT | 2026-11-14 00:13 | open | -17.66 | derisk_level_1 |
 | BMT/USDT | 2026-11-14 07:45 | 2026-11-14 09:30 | +10.53 | exit_long_rebuy_d_5_1 ( 63 ) |
-| KAVA/USDT | 2026-11-14 10:25 | open | -52.19 | grind_1_derisk 266 258 |
+| KAVA/USDT | 2026-11-14 10:25 | open | +25.83 | grind_4_exit 268 260 253 |
 | INJ/USDT | 2026-11-14 16:45 | 2026-11-14 17:42 | +24.64 | exit_long_normal_d_3_2 ( 5 ) |
 | ASTER/USDT | 2026-11-14 19:50 | 2026-11-14 19:50 | +1.21 | exit_long_normal_u_0 ( 2 4 ) |
 | ASTER/USDT | 2026-11-14 19:55 | open | -17.18 | derisk_level_1 |
