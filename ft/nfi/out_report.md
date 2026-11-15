@@ -1,4 +1,4 @@
-# nfi (demo) — 2026-11-15 18:44 UTC
+# nfi (demo) — 2026-11-15 19:04 UTC
 
 **Balance:** 1025.62 USDT (start 1000, +25.62, +2.56%)
 **Closed trades:** 23, wins 23 (100%)
@@ -19,5 +19,5 @@
 | KAVA/USDT | 2026-11-14 10:28 | 2026-11-14 10:28 | +2.42 | exit_long_normal_u_1 ( 1 ) |
 | INJ/USDT | 2026-11-14 16:45 | 2026-11-14 17:42 | +4.74 | exit_long_normal_d_3_2 ( 5 ) |
 | ASTER/USDT | 2026-11-14 19:50 | 2026-11-14 19:50 | +0.23 | exit_long_normal_u_0 ( 2 4 ) |
-| ASTER/USDT | 2026-11-14 19:55 | open | -3.22 | derisk_level_1 |
+| ASTER/USDT | 2026-11-14 19:55 | open | -0.08 | grind_4_exit 251 |
 | ZRO/USDT | 2026-11-14 21:30 | 2026-11-14 21:41 | +0.37 | exit_long_rebuy_u_1 ( 61 ) |
