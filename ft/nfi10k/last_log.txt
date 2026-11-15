@@ -1,91 +1,4 @@
-unks
-    fetch = cursor._raw_all_tuples()
-  File "lib/sqlalchemy/engine/_result_cy.py", line 356, in sqlalchemy.engine._result_cy.BaseResultInternal._raw_all_tuples
-  File "/home/ftuser/.local/lib/python3.14/site-packages/sqlalchemy/engine/cursor.py", line 2377, in _fetchall_impl
-    return self.cursor_strategy.fetchall(self, self.cursor)
-           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^
-  File "/home/ftuser/.local/lib/python3.14/site-packages/sqlalchemy/engine/cursor.py", line 1319, in fetchall
-    self.handle_exception(result, dbapi_cursor, e)
-    ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/home/ftuser/.local/lib/python3.14/site-packages/sqlalchemy/engine/cursor.py", line 1263, in handle_exception
-    result.connection._handle_dbapi_exception(
-    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^
-        err, None, None, dbapi_cursor, result.context
-        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-    )
-    ^
-  File "/home/ftuser/.local/lib/python3.14/site-packages/sqlalchemy/engine/base.py", line 2342, in _handle_dbapi_exception
-    raise sqlalchemy_exception.with_traceback(exc_info[2]) from e
-  File "/home/ftuser/.local/lib/python3.14/site-packages/sqlalchemy/engine/cursor.py", line 1315, in fetchall
-    rows = dbapi_cursor.fetchall()
-sqlalchemy.exc.DatabaseError: (sqlite3.DatabaseError) database disk image is malformed
-(Background on this error at: https://sqlalche.me/e/21/4xp6)
-2026-11-15 19:48:17,370 - freqtrade.strategy.strategy_wrapper - ERROR - Unexpected error DatabaseError('(sqlite3.DatabaseError) database disk image is malformed') calling <bound method NostalgiaForInfinityX8.custom_exit of <NostalgiaForInfinityX8.NostalgiaForInfinityX8 object at 0x7d36f1147380>>
-Traceback (most recent call last):
-  File "/home/ftuser/.local/lib/python3.14/site-packages/sqlalchemy/engine/cursor.py", line 1315, in fetchall
-    rows = dbapi_cursor.fetchall()
-sqlite3.DatabaseError: database disk image is malformed
-
-The above exception was the direct cause of the following exception:
-
-Traceback (most recent call last):
-  File "/freqtrade/freqtrade/strategy/strategy_wrapper.py", line 44, in wrapper
-    return f(*args, **kwargs)
-  File "/freqtrade/user_data/strategies/NostalgiaForInfinityX8.py", line 2031, in custom_exit
-    system_version = trade.get_custom_data(key="system_version")
-  File "/freqtrade/freqtrade/persistence/trade_model.py", line 1433, in get_custom_data
-    data = CustomDataWrapper.get_custom_data(trade_id=self.id, key=key)
-  File "/freqtrade/freqtrade/persistence/custom_data.py", line 142, in get_custom_data
-    ).all()
-      ~~~^^
-  File "/home/ftuser/.local/lib/python3.14/site-packages/sqlalchemy/engine/result.py", line 1380, in all
-    return self._allrows()
-           ~~~~~~~~~~~~~^^
-  File "lib/sqlalchemy/engine/_result_cy.py", line 364, in sqlalchemy.engine._result_cy.BaseResultInternal._allrows
-  File "/home/ftuser/.local/lib/python3.14/site-packages/sqlalchemy/engine/result.py", line 1285, in _fetchall_impl
-    return self._real_result._fetchall_impl()
-           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
-  File "/home/ftuser/.local/lib/python3.14/site-packages/sqlalchemy/engine/result.py", line 1896, in _fetchall_impl
-    return list(self.iterator)
-  File "/home/ftuser/.local/lib/python3.14/site-packages/sqlalchemy/orm/loading.py", line 231, in chunks
-    fetch = cursor._raw_all_tuples()
-  File "lib/sqlalchemy/engine/_result_cy.py", line 356, in sqlalchemy.engine._result_cy.BaseResultInternal._raw_all_tuples
-  File "/home/ftuser/.local/lib/python3.14/site-packages/sqlalchemy/engine/cursor.py", line 2377, in _fetchall_impl
-    return self.cursor_strategy.fetchall(self, self.cursor)
-           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^
-  File "/home/ftuser/.local/lib/python3.14/site-packages/sqlalchemy/engine/cursor.py", line 1319, in fetchall
-    self.handle_exception(result, dbapi_cursor, e)
-    ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/home/ftuser/.local/lib/python3.14/site-packages/sqlalchemy/engine/cursor.py", line 1263, in handle_exception
-    result.connection._handle_dbapi_exception(
-    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^
-        err, None, None, dbapi_cursor, result.context
-        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-    )
-    ^
-  File "/home/ftuser/.local/lib/python3.14/site-packages/sqlalchemy/engine/base.py", line 2342, in _handle_dbapi_exception
-    raise sqlalchemy_exception.with_traceback(exc_info[2]) from e
-  File "/home/ftuser/.local/lib/python3.14/site-packages/sqlalchemy/engine/cursor.py", line 1315, in fetchall
-    rows = dbapi_cursor.fetchall()
-sqlalchemy.exc.DatabaseError: (sqlite3.DatabaseError) database disk image is malformed
-(Background on this error at: https://sqlalche.me/e/21/4xp6)
-2026-11-15 19:48:18,665 - freqtrade.strategy.strategy_wrapper - ERROR - Unexpected error DatabaseError('(sqlite3.DatabaseError) database disk image is malformed') calling <bound method NostalgiaForInfinityX8.adjust_trade_position of <NostalgiaForInfinityX8.NostalgiaForInfinityX8 object at 0x7d36f1147380>>
-Traceback (most recent call last):
-  File "/home/ftuser/.local/lib/python3.14/site-packages/sqlalchemy/engine/cursor.py", line 1315, in fetchall
-    rows = dbapi_cursor.fetchall()
-sqlite3.DatabaseError: database disk image is malformed
-
-The above exception was the direct cause of the following exception:
-
-Traceback (most recent call last):
-  File "/freqtrade/freqtrade/strategy/strategy_wrapper.py", line 44, in wrapper
-    return f(*args, **kwargs)
-  File "/freqtrade/user_data/strategies/NostalgiaForInfinityX8.py", line 2803, in adjust_trade_position
-    is_system_v3, is_system_v3_1, is_system_v3_2 = self.get_system_version_flags(trade)
-                                                   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^
-  File "/freqtrade/user_data/strategies/NostalgiaForInfinityX8.py", line 5694, in get_system_version_flags
-    system_version = trade.get_custom_data(key="system_version")
-  File "/freqtrade/freqtrade/persistence/trade_model.py", line 1433, in get_custom_data
+sistence/trade_model.py", line 1433, in get_custom_data
     data = CustomDataWrapper.get_custom_data(trade_id=self.id, key=key)
   File "/freqtrade/freqtrade/persistence/custom_data.py", line 142, in get_custom_data
     ).all()
@@ -1969,3 +1882,34 @@ sqlalchemy.exc.DatabaseError: (sqlite3.DatabaseError) database disk image is mal
 2026-11-15 20:21:40,191 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.10, strategy_version: v18.0.258', state='RUNNING'
 2026-11-15 20:22:40,194 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.10, strategy_version: v18.0.258', state='RUNNING'
 2026-11-15 20:23:40,197 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.10, strategy_version: v18.0.258', state='RUNNING'
+2026-11-15 20:24:40,200 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.10, strategy_version: v18.0.258', state='RUNNING'
+2026-11-15 20:25:43,368 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.10, strategy_version: v18.0.258', state='RUNNING'
+2026-11-15 20:26:43,371 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.10, strategy_version: v18.0.258', state='RUNNING'
+2026-11-15 20:27:43,374 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.10, strategy_version: v18.0.258', state='RUNNING'
+2026-11-15 20:28:43,376 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.10, strategy_version: v18.0.258', state='RUNNING'
+2026-11-15 20:29:43,379 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.10, strategy_version: v18.0.258', state='RUNNING'
+2026-11-15 20:30:35,327 - freqtrade.freqtradebot - INFO - Exit for ASTER/USDT detected. Reason: custom_exit
+2026-11-15 20:30:35,332 - freqtrade.wallets - INFO - Wallets synced.
+2026-11-15 20:30:35,446 - freqtrade.rpc.rpc_manager - INFO - Sending rpc message: {'type': exit, 'trade_id': 24, 'exchange': 'Binance', 'pair': 'ASTER/USDT', 'leverage': 1.0, 'direction': 'Long', 'gain': 'profit', 'limit': 0.5758, 'order_rate': 0.5758, 'order_type': 'limit', 'amount': 1080.32, 'open_rate': 0.5507, 'close_rate': 0.5758, 'current_rate': 0.5758, 'profit_amount': 25.89905152, 'profit_ratio': 0.04348929, 'buy_tag': '2 4 63 101 ', 'enter_tag': '2 4 63 101 ', 'exit_reason': 'exit_long_normal_2_1_1 ( 2 4 63 101 )', 'open_date': datetime.datetime(2026, 11, 14, 19, 55, 15, 864314, tzinfo=datetime.timezone.utc), 'close_date': datetime.datetime(2026, 11, 15, 20, 30, 35, 446360, tzinfo=datetime.timezone.utc), 'stake_amount': 594.9109706328445, 'stake_currency': 'USDT', 'base_currency': 'ASTER', 'quote_currency': 'USDT', 'fiat_currency': '', 'sub_trade': False, 'cumulative_profit': -17.49004425, 'final_profit_ratio': None, 'is_final_exit': False}
+2026-11-15 20:30:35,456 - freqtrade.wallets - INFO - Wallets synced.
+2026-11-15 20:30:39,588 - freqtrade.freqtradebot - INFO - Found open order for Trade(id=24, pair=ASTER/USDT, amount=1080.32, is_short=False, leverage=1, open_rate=0.5507, open_since=2026-11-14 19:55:15)
+2026-11-15 20:30:44,187 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.10, strategy_version: v18.0.258', state='RUNNING'
+2026-11-15 20:30:44,591 - freqtrade.freqtradebot - INFO - Found open order for Trade(id=24, pair=ASTER/USDT, amount=1080.32, is_short=False, leverage=1, open_rate=0.5507, open_since=2026-11-14 19:55:15)
+2026-11-15 20:30:44,597 - freqtrade.persistence.trade_model - INFO - Updating trade (id=24) ...
+2026-11-15 20:30:44,597 - freqtrade.persistence.trade_model - INFO - LIMIT_SELL has been fulfilled for Trade(id=24, pair=ASTER/USDT, amount=1080.32, is_short=False, leverage=1, open_rate=0.5507, open_since=2026-11-14 19:55:15).
+2026-11-15 20:30:44,598 - freqtrade.persistence.trade_model - INFO - Marking Trade(id=24, pair=ASTER/USDT, amount=1080.32, is_short=False, leverage=1, open_rate=0.5507, open_since=closed) as closed as the trade is fulfilled and found no open orders for it.
+2026-11-15 20:30:44,608 - freqtrade.wallets - INFO - Wallets synced.
+2026-11-15 20:30:44,611 - freqtrade.rpc.rpc_manager - INFO - Sending rpc message: {'type': exit_fill, 'trade_id': 24, 'exchange': 'Binance', 'pair': 'ASTER/USDT', 'leverage': 1.0, 'direction': 'Long', 'gain': 'profit', 'limit': 0.5758, 'order_rate': 0.5758, 'order_type': 'limit', 'amount': 1080.32, 'open_rate': 0.5507, 'close_rate': 0.5758, 'current_rate': None, 'profit_amount': 25.89905152, 'profit_ratio': 0.04348929, 'buy_tag': '2 4 63 101 ', 'enter_tag': '2 4 63 101 ', 'exit_reason': 'exit_long_normal_2_1_1 ( 2 4 63 101 )', 'open_date': datetime.datetime(2026, 11, 14, 19, 55, 15, 864314, tzinfo=datetime.timezone.utc), 'close_date': datetime.datetime(2026, 11, 15, 20, 30, 44, 591000, tzinfo=datetime.timezone.utc), 'stake_amount': 594.9109706328445, 'stake_currency': 'USDT', 'base_currency': 'ASTER', 'quote_currency': 'USDT', 'fiat_currency': '', 'sub_trade': False, 'cumulative_profit': 8.43028189, 'final_profit_ratio': 0.010752390637522147, 'is_final_exit': True}
+2026-11-15 20:31:44,190 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.10, strategy_version: v18.0.258', state='RUNNING'
+2026-11-15 20:32:44,193 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.10, strategy_version: v18.0.258', state='RUNNING'
+2026-11-15 20:33:44,196 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.10, strategy_version: v18.0.258', state='RUNNING'
+2026-11-15 20:34:44,199 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.10, strategy_version: v18.0.258', state='RUNNING'
+2026-11-15 20:35:44,891 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.10, strategy_version: v18.0.258', state='RUNNING'
+2026-11-15 20:36:44,894 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.10, strategy_version: v18.0.258', state='RUNNING'
+2026-11-15 20:37:44,897 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.10, strategy_version: v18.0.258', state='RUNNING'
+2026-11-15 20:38:44,900 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.10, strategy_version: v18.0.258', state='RUNNING'
+2026-11-15 20:39:44,902 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.10, strategy_version: v18.0.258', state='RUNNING'
+2026-11-15 20:40:49,464 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.10, strategy_version: v18.0.258', state='RUNNING'
+2026-11-15 20:41:49,467 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.10, strategy_version: v18.0.258', state='RUNNING'
+2026-11-15 20:42:49,469 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.10, strategy_version: v18.0.258', state='RUNNING'
+2026-11-15 20:43:49,472 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.10, strategy_version: v18.0.258', state='RUNNING'
