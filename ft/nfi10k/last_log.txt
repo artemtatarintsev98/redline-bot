@@ -1,55 +1,4 @@
-packages/sqlalchemy/engine/cursor.py", line 1315, in fetchall
-    rows = dbapi_cursor.fetchall()
-sqlite3.DatabaseError: database disk image is malformed
-
-The above exception was the direct cause of the following exception:
-
-Traceback (most recent call last):
-  File "/freqtrade/freqtrade/strategy/strategy_wrapper.py", line 44, in wrapper
-    return f(*args, **kwargs)
-  File "/freqtrade/user_data/strategies/NostalgiaForInfinityX8.py", line 2803, in adjust_trade_position
-    is_system_v3, is_system_v3_1, is_system_v3_2 = self.get_system_version_flags(trade)
-                                                   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^
-  File "/freqtrade/user_data/strategies/NostalgiaForInfinityX8.py", line 5694, in get_system_version_flags
-    system_version = trade.get_custom_data(key="system_version")
-  File "/freqtrade/freqtrade/persistence/trade_model.py", line 1433, in get_custom_data
-    data = CustomDataWrapper.get_custom_data(trade_id=self.id, key=key)
-  File "/freqtrade/freqtrade/persistence/custom_data.py", line 142, in get_custom_data
-    ).all()
-      ~~~^^
-  File "/home/ftuser/.local/lib/python3.14/site-packages/sqlalchemy/engine/result.py", line 1380, in all
-    return self._allrows()
-           ~~~~~~~~~~~~~^^
-  File "lib/sqlalchemy/engine/_result_cy.py", line 364, in sqlalchemy.engine._result_cy.BaseResultInternal._allrows
-  File "/home/ftuser/.local/lib/python3.14/site-packages/sqlalchemy/engine/result.py", line 1285, in _fetchall_impl
-    return self._real_result._fetchall_impl()
-           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
-  File "/home/ftuser/.local/lib/python3.14/site-packages/sqlalchemy/engine/result.py", line 1896, in _fetchall_impl
-    return list(self.iterator)
-  File "/home/ftuser/.local/lib/python3.14/site-packages/sqlalchemy/orm/loading.py", line 231, in chunks
-    fetch = cursor._raw_all_tuples()
-  File "lib/sqlalchemy/engine/_result_cy.py", line 356, in sqlalchemy.engine._result_cy.BaseResultInternal._raw_all_tuples
-  File "/home/ftuser/.local/lib/python3.14/site-packages/sqlalchemy/engine/cursor.py", line 2377, in _fetchall_impl
-    return self.cursor_strategy.fetchall(self, self.cursor)
-           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^
-  File "/home/ftuser/.local/lib/python3.14/site-packages/sqlalchemy/engine/cursor.py", line 1319, in fetchall
-    self.handle_exception(result, dbapi_cursor, e)
-    ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/home/ftuser/.local/lib/python3.14/site-packages/sqlalchemy/engine/cursor.py", line 1263, in handle_exception
-    result.connection._handle_dbapi_exception(
-    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^
-        err, None, None, dbapi_cursor, result.context
-        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-    )
-    ^
-  File "/home/ftuser/.local/lib/python3.14/site-packages/sqlalchemy/engine/base.py", line 2342, in _handle_dbapi_exception
-    raise sqlalchemy_exception.with_traceback(exc_info[2]) from e
-  File "/home/ftuser/.local/lib/python3.14/site-packages/sqlalchemy/engine/cursor.py", line 1315, in fetchall
-    rows = dbapi_cursor.fetchall()
-sqlalchemy.exc.DatabaseError: (sqlite3.DatabaseError) database disk image is malformed
-(Background on this error at: https://sqlalche.me/e/21/4xp6)
-2026-11-15 14:56:19,856 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.10, strategy_version: v18.0.258', state='RUNNING'
-2026-11-15 14:56:21,037 - freqtrade.strategy.strategy_wrapper - ERROR - Unexpected error DatabaseError('(sqlite3.DatabaseError) database disk image is malformed') calling <bound method NostalgiaForInfinityX8.custom_exit of <NostalgiaForInfinityX8.NostalgiaForInfinityX8 object at 0x7e3e474d3380>>
+r DatabaseError('(sqlite3.DatabaseError) database disk image is malformed') calling <bound method NostalgiaForInfinityX8.custom_exit of <NostalgiaForInfinityX8.NostalgiaForInfinityX8 object at 0x7e3e474d3380>>
 Traceback (most recent call last):
   File "/home/ftuser/.local/lib/python3.14/site-packages/sqlalchemy/engine/cursor.py", line 1315, in fetchall
     rows = dbapi_cursor.fetchall()
@@ -98,7 +47,7 @@ Traceback (most recent call last):
     rows = dbapi_cursor.fetchall()
 sqlalchemy.exc.DatabaseError: (sqlite3.DatabaseError) database disk image is malformed
 (Background on this error at: https://sqlalche.me/e/21/4xp6)
-2026-11-15 14:56:22,869 - freqtrade.strategy.strategy_wrapper - ERROR - Unexpected error DatabaseError('(sqlite3.DatabaseError) database disk image is malformed') calling <bound method NostalgiaForInfinityX8.adjust_trade_position of <NostalgiaForInfinityX8.NostalgiaForInfinityX8 object at 0x7e3e474d3380>>
+2026-11-15 15:16:22,538 - freqtrade.strategy.strategy_wrapper - ERROR - Unexpected error DatabaseError('(sqlite3.DatabaseError) database disk image is malformed') calling <bound method NostalgiaForInfinityX8.adjust_trade_position of <NostalgiaForInfinityX8.NostalgiaForInfinityX8 object at 0x7e3e474d3380>>
 Traceback (most recent call last):
   File "/home/ftuser/.local/lib/python3.14/site-packages/sqlalchemy/engine/cursor.py", line 1315, in fetchall
     rows = dbapi_cursor.fetchall()
@@ -150,7 +99,7 @@ Traceback (most recent call last):
     rows = dbapi_cursor.fetchall()
 sqlalchemy.exc.DatabaseError: (sqlite3.DatabaseError) database disk image is malformed
 (Background on this error at: https://sqlalche.me/e/21/4xp6)
-2026-11-15 14:56:26,040 - freqtrade.strategy.strategy_wrapper - ERROR - Unexpected error DatabaseError('(sqlite3.DatabaseError) database disk image is malformed') calling <bound method NostalgiaForInfinityX8.custom_exit of <NostalgiaForInfinityX8.NostalgiaForInfinityX8 object at 0x7e3e474d3380>>
+2026-11-15 15:16:25,710 - freqtrade.strategy.strategy_wrapper - ERROR - Unexpected error DatabaseError('(sqlite3.DatabaseError) database disk image is malformed') calling <bound method NostalgiaForInfinityX8.custom_exit of <NostalgiaForInfinityX8.NostalgiaForInfinityX8 object at 0x7e3e474d3380>>
 Traceback (most recent call last):
   File "/home/ftuser/.local/lib/python3.14/site-packages/sqlalchemy/engine/cursor.py", line 1315, in fetchall
     rows = dbapi_cursor.fetchall()
@@ -199,7 +148,7 @@ Traceback (most recent call last):
     rows = dbapi_cursor.fetchall()
 sqlalchemy.exc.DatabaseError: (sqlite3.DatabaseError) database disk image is malformed
 (Background on this error at: https://sqlalche.me/e/21/4xp6)
-2026-11-15 14:56:27,872 - freqtrade.strategy.strategy_wrapper - ERROR - Unexpected error DatabaseError('(sqlite3.DatabaseError) database disk image is malformed') calling <bound method NostalgiaForInfinityX8.adjust_trade_position of <NostalgiaForInfinityX8.NostalgiaForInfinityX8 object at 0x7e3e474d3380>>
+2026-11-15 15:16:27,534 - freqtrade.strategy.strategy_wrapper - ERROR - Unexpected error DatabaseError('(sqlite3.DatabaseError) database disk image is malformed') calling <bound method NostalgiaForInfinityX8.adjust_trade_position of <NostalgiaForInfinityX8.NostalgiaForInfinityX8 object at 0x7e3e474d3380>>
 Traceback (most recent call last):
   File "/home/ftuser/.local/lib/python3.14/site-packages/sqlalchemy/engine/cursor.py", line 1315, in fetchall
     rows = dbapi_cursor.fetchall()
@@ -251,7 +200,7 @@ Traceback (most recent call last):
     rows = dbapi_cursor.fetchall()
 sqlalchemy.exc.DatabaseError: (sqlite3.DatabaseError) database disk image is malformed
 (Background on this error at: https://sqlalche.me/e/21/4xp6)
-2026-11-15 14:56:31,037 - freqtrade.strategy.strategy_wrapper - ERROR - Unexpected error DatabaseError('(sqlite3.DatabaseError) database disk image is malformed') calling <bound method NostalgiaForInfinityX8.custom_exit of <NostalgiaForInfinityX8.NostalgiaForInfinityX8 object at 0x7e3e474d3380>>
+2026-11-15 15:16:30,717 - freqtrade.strategy.strategy_wrapper - ERROR - Unexpected error DatabaseError('(sqlite3.DatabaseError) database disk image is malformed') calling <bound method NostalgiaForInfinityX8.custom_exit of <NostalgiaForInfinityX8.NostalgiaForInfinityX8 object at 0x7e3e474d3380>>
 Traceback (most recent call last):
   File "/home/ftuser/.local/lib/python3.14/site-packages/sqlalchemy/engine/cursor.py", line 1315, in fetchall
     rows = dbapi_cursor.fetchall()
@@ -300,7 +249,7 @@ Traceback (most recent call last):
     rows = dbapi_cursor.fetchall()
 sqlalchemy.exc.DatabaseError: (sqlite3.DatabaseError) database disk image is malformed
 (Background on this error at: https://sqlalche.me/e/21/4xp6)
-2026-11-15 14:56:32,873 - freqtrade.strategy.strategy_wrapper - ERROR - Unexpected error DatabaseError('(sqlite3.DatabaseError) database disk image is malformed') calling <bound method NostalgiaForInfinityX8.adjust_trade_position of <NostalgiaForInfinityX8.NostalgiaForInfinityX8 object at 0x7e3e474d3380>>
+2026-11-15 15:16:32,550 - freqtrade.strategy.strategy_wrapper - ERROR - Unexpected error DatabaseError('(sqlite3.DatabaseError) database disk image is malformed') calling <bound method NostalgiaForInfinityX8.adjust_trade_position of <NostalgiaForInfinityX8.NostalgiaForInfinityX8 object at 0x7e3e474d3380>>
 Traceback (most recent call last):
   File "/home/ftuser/.local/lib/python3.14/site-packages/sqlalchemy/engine/cursor.py", line 1315, in fetchall
     rows = dbapi_cursor.fetchall()
@@ -352,7 +301,7 @@ Traceback (most recent call last):
     rows = dbapi_cursor.fetchall()
 sqlalchemy.exc.DatabaseError: (sqlite3.DatabaseError) database disk image is malformed
 (Background on this error at: https://sqlalche.me/e/21/4xp6)
-2026-11-15 14:56:36,038 - freqtrade.strategy.strategy_wrapper - ERROR - Unexpected error DatabaseError('(sqlite3.DatabaseError) database disk image is malformed') calling <bound method NostalgiaForInfinityX8.custom_exit of <NostalgiaForInfinityX8.NostalgiaForInfinityX8 object at 0x7e3e474d3380>>
+2026-11-15 15:16:35,710 - freqtrade.strategy.strategy_wrapper - ERROR - Unexpected error DatabaseError('(sqlite3.DatabaseError) database disk image is malformed') calling <bound method NostalgiaForInfinityX8.custom_exit of <NostalgiaForInfinityX8.NostalgiaForInfinityX8 object at 0x7e3e474d3380>>
 Traceback (most recent call last):
   File "/home/ftuser/.local/lib/python3.14/site-packages/sqlalchemy/engine/cursor.py", line 1315, in fetchall
     rows = dbapi_cursor.fetchall()
@@ -401,7 +350,7 @@ Traceback (most recent call last):
     rows = dbapi_cursor.fetchall()
 sqlalchemy.exc.DatabaseError: (sqlite3.DatabaseError) database disk image is malformed
 (Background on this error at: https://sqlalche.me/e/21/4xp6)
-2026-11-15 14:56:37,872 - freqtrade.strategy.strategy_wrapper - ERROR - Unexpected error DatabaseError('(sqlite3.DatabaseError) database disk image is malformed') calling <bound method NostalgiaForInfinityX8.adjust_trade_position of <NostalgiaForInfinityX8.NostalgiaForInfinityX8 object at 0x7e3e474d3380>>
+2026-11-15 15:16:37,538 - freqtrade.strategy.strategy_wrapper - ERROR - Unexpected error DatabaseError('(sqlite3.DatabaseError) database disk image is malformed') calling <bound method NostalgiaForInfinityX8.adjust_trade_position of <NostalgiaForInfinityX8.NostalgiaForInfinityX8 object at 0x7e3e474d3380>>
 Traceback (most recent call last):
   File "/home/ftuser/.local/lib/python3.14/site-packages/sqlalchemy/engine/cursor.py", line 1315, in fetchall
     rows = dbapi_cursor.fetchall()
@@ -453,7 +402,8 @@ Traceback (most recent call last):
     rows = dbapi_cursor.fetchall()
 sqlalchemy.exc.DatabaseError: (sqlite3.DatabaseError) database disk image is malformed
 (Background on this error at: https://sqlalche.me/e/21/4xp6)
-2026-11-15 14:56:41,058 - freqtrade.strategy.strategy_wrapper - ERROR - Unexpected error DatabaseError('(sqlite3.DatabaseError) database disk image is malformed') calling <bound method NostalgiaForInfinityX8.custom_exit of <NostalgiaForInfinityX8.NostalgiaForInfinityX8 object at 0x7e3e474d3380>>
+2026-11-15 15:16:39,544 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.10, strategy_version: v18.0.258', state='RUNNING'
+2026-11-15 15:16:40,711 - freqtrade.strategy.strategy_wrapper - ERROR - Unexpected error DatabaseError('(sqlite3.DatabaseError) database disk image is malformed') calling <bound method NostalgiaForInfinityX8.custom_exit of <NostalgiaForInfinityX8.NostalgiaForInfinityX8 object at 0x7e3e474d3380>>
 Traceback (most recent call last):
   File "/home/ftuser/.local/lib/python3.14/site-packages/sqlalchemy/engine/cursor.py", line 1315, in fetchall
     rows = dbapi_cursor.fetchall()
@@ -502,7 +452,7 @@ Traceback (most recent call last):
     rows = dbapi_cursor.fetchall()
 sqlalchemy.exc.DatabaseError: (sqlite3.DatabaseError) database disk image is malformed
 (Background on this error at: https://sqlalche.me/e/21/4xp6)
-2026-11-15 14:56:42,892 - freqtrade.strategy.strategy_wrapper - ERROR - Unexpected error DatabaseError('(sqlite3.DatabaseError) database disk image is malformed') calling <bound method NostalgiaForInfinityX8.adjust_trade_position of <NostalgiaForInfinityX8.NostalgiaForInfinityX8 object at 0x7e3e474d3380>>
+2026-11-15 15:16:42,538 - freqtrade.strategy.strategy_wrapper - ERROR - Unexpected error DatabaseError('(sqlite3.DatabaseError) database disk image is malformed') calling <bound method NostalgiaForInfinityX8.adjust_trade_position of <NostalgiaForInfinityX8.NostalgiaForInfinityX8 object at 0x7e3e474d3380>>
 Traceback (most recent call last):
   File "/home/ftuser/.local/lib/python3.14/site-packages/sqlalchemy/engine/cursor.py", line 1315, in fetchall
     rows = dbapi_cursor.fetchall()
@@ -554,7 +504,7 @@ Traceback (most recent call last):
     rows = dbapi_cursor.fetchall()
 sqlalchemy.exc.DatabaseError: (sqlite3.DatabaseError) database disk image is malformed
 (Background on this error at: https://sqlalche.me/e/21/4xp6)
-2026-11-15 14:56:46,040 - freqtrade.strategy.strategy_wrapper - ERROR - Unexpected error DatabaseError('(sqlite3.DatabaseError) database disk image is malformed') calling <bound method NostalgiaForInfinityX8.custom_exit of <NostalgiaForInfinityX8.NostalgiaForInfinityX8 object at 0x7e3e474d3380>>
+2026-11-15 15:16:45,742 - freqtrade.strategy.strategy_wrapper - ERROR - Unexpected error DatabaseError('(sqlite3.DatabaseError) database disk image is malformed') calling <bound method NostalgiaForInfinityX8.custom_exit of <NostalgiaForInfinityX8.NostalgiaForInfinityX8 object at 0x7e3e474d3380>>
 Traceback (most recent call last):
   File "/home/ftuser/.local/lib/python3.14/site-packages/sqlalchemy/engine/cursor.py", line 1315, in fetchall
     rows = dbapi_cursor.fetchall()
@@ -603,7 +553,7 @@ Traceback (most recent call last):
     rows = dbapi_cursor.fetchall()
 sqlalchemy.exc.DatabaseError: (sqlite3.DatabaseError) database disk image is malformed
 (Background on this error at: https://sqlalche.me/e/21/4xp6)
-2026-11-15 14:56:47,878 - freqtrade.strategy.strategy_wrapper - ERROR - Unexpected error DatabaseError('(sqlite3.DatabaseError) database disk image is malformed') calling <bound method NostalgiaForInfinityX8.adjust_trade_position of <NostalgiaForInfinityX8.NostalgiaForInfinityX8 object at 0x7e3e474d3380>>
+2026-11-15 15:16:47,569 - freqtrade.strategy.strategy_wrapper - ERROR - Unexpected error DatabaseError('(sqlite3.DatabaseError) database disk image is malformed') calling <bound method NostalgiaForInfinityX8.adjust_trade_position of <NostalgiaForInfinityX8.NostalgiaForInfinityX8 object at 0x7e3e474d3380>>
 Traceback (most recent call last):
   File "/home/ftuser/.local/lib/python3.14/site-packages/sqlalchemy/engine/cursor.py", line 1315, in fetchall
     rows = dbapi_cursor.fetchall()
@@ -655,7 +605,7 @@ Traceback (most recent call last):
     rows = dbapi_cursor.fetchall()
 sqlalchemy.exc.DatabaseError: (sqlite3.DatabaseError) database disk image is malformed
 (Background on this error at: https://sqlalche.me/e/21/4xp6)
-2026-11-15 14:56:51,039 - freqtrade.strategy.strategy_wrapper - ERROR - Unexpected error DatabaseError('(sqlite3.DatabaseError) database disk image is malformed') calling <bound method NostalgiaForInfinityX8.custom_exit of <NostalgiaForInfinityX8.NostalgiaForInfinityX8 object at 0x7e3e474d3380>>
+2026-11-15 15:16:50,733 - freqtrade.strategy.strategy_wrapper - ERROR - Unexpected error DatabaseError('(sqlite3.DatabaseError) database disk image is malformed') calling <bound method NostalgiaForInfinityX8.custom_exit of <NostalgiaForInfinityX8.NostalgiaForInfinityX8 object at 0x7e3e474d3380>>
 Traceback (most recent call last):
   File "/home/ftuser/.local/lib/python3.14/site-packages/sqlalchemy/engine/cursor.py", line 1315, in fetchall
     rows = dbapi_cursor.fetchall()
@@ -704,7 +654,7 @@ Traceback (most recent call last):
     rows = dbapi_cursor.fetchall()
 sqlalchemy.exc.DatabaseError: (sqlite3.DatabaseError) database disk image is malformed
 (Background on this error at: https://sqlalche.me/e/21/4xp6)
-2026-11-15 14:56:52,876 - freqtrade.strategy.strategy_wrapper - ERROR - Unexpected error DatabaseError('(sqlite3.DatabaseError) database disk image is malformed') calling <bound method NostalgiaForInfinityX8.adjust_trade_position of <NostalgiaForInfinityX8.NostalgiaForInfinityX8 object at 0x7e3e474d3380>>
+2026-11-15 15:16:52,557 - freqtrade.strategy.strategy_wrapper - ERROR - Unexpected error DatabaseError('(sqlite3.DatabaseError) database disk image is malformed') calling <bound method NostalgiaForInfinityX8.adjust_trade_position of <NostalgiaForInfinityX8.NostalgiaForInfinityX8 object at 0x7e3e474d3380>>
 Traceback (most recent call last):
   File "/home/ftuser/.local/lib/python3.14/site-packages/sqlalchemy/engine/cursor.py", line 1315, in fetchall
     rows = dbapi_cursor.fetchall()
@@ -756,7 +706,7 @@ Traceback (most recent call last):
     rows = dbapi_cursor.fetchall()
 sqlalchemy.exc.DatabaseError: (sqlite3.DatabaseError) database disk image is malformed
 (Background on this error at: https://sqlalche.me/e/21/4xp6)
-2026-11-15 14:56:56,042 - freqtrade.strategy.strategy_wrapper - ERROR - Unexpected error DatabaseError('(sqlite3.DatabaseError) database disk image is malformed') calling <bound method NostalgiaForInfinityX8.custom_exit of <NostalgiaForInfinityX8.NostalgiaForInfinityX8 object at 0x7e3e474d3380>>
+2026-11-15 15:16:55,718 - freqtrade.strategy.strategy_wrapper - ERROR - Unexpected error DatabaseError('(sqlite3.DatabaseError) database disk image is malformed') calling <bound method NostalgiaForInfinityX8.custom_exit of <NostalgiaForInfinityX8.NostalgiaForInfinityX8 object at 0x7e3e474d3380>>
 Traceback (most recent call last):
   File "/home/ftuser/.local/lib/python3.14/site-packages/sqlalchemy/engine/cursor.py", line 1315, in fetchall
     rows = dbapi_cursor.fetchall()
@@ -805,7 +755,7 @@ Traceback (most recent call last):
     rows = dbapi_cursor.fetchall()
 sqlalchemy.exc.DatabaseError: (sqlite3.DatabaseError) database disk image is malformed
 (Background on this error at: https://sqlalche.me/e/21/4xp6)
-2026-11-15 14:56:57,875 - freqtrade.strategy.strategy_wrapper - ERROR - Unexpected error DatabaseError('(sqlite3.DatabaseError) database disk image is malformed') calling <bound method NostalgiaForInfinityX8.adjust_trade_position of <NostalgiaForInfinityX8.NostalgiaForInfinityX8 object at 0x7e3e474d3380>>
+2026-11-15 15:16:57,545 - freqtrade.strategy.strategy_wrapper - ERROR - Unexpected error DatabaseError('(sqlite3.DatabaseError) database disk image is malformed') calling <bound method NostalgiaForInfinityX8.adjust_trade_position of <NostalgiaForInfinityX8.NostalgiaForInfinityX8 object at 0x7e3e474d3380>>
 Traceback (most recent call last):
   File "/home/ftuser/.local/lib/python3.14/site-packages/sqlalchemy/engine/cursor.py", line 1315, in fetchall
     rows = dbapi_cursor.fetchall()
@@ -857,7 +807,7 @@ Traceback (most recent call last):
     rows = dbapi_cursor.fetchall()
 sqlalchemy.exc.DatabaseError: (sqlite3.DatabaseError) database disk image is malformed
 (Background on this error at: https://sqlalche.me/e/21/4xp6)
-2026-11-15 14:57:01,038 - freqtrade.strategy.strategy_wrapper - ERROR - Unexpected error DatabaseError('(sqlite3.DatabaseError) database disk image is malformed') calling <bound method NostalgiaForInfinityX8.custom_exit of <NostalgiaForInfinityX8.NostalgiaForInfinityX8 object at 0x7e3e474d3380>>
+2026-11-15 15:17:00,713 - freqtrade.strategy.strategy_wrapper - ERROR - Unexpected error DatabaseError('(sqlite3.DatabaseError) database disk image is malformed') calling <bound method NostalgiaForInfinityX8.custom_exit of <NostalgiaForInfinityX8.NostalgiaForInfinityX8 object at 0x7e3e474d3380>>
 Traceback (most recent call last):
   File "/home/ftuser/.local/lib/python3.14/site-packages/sqlalchemy/engine/cursor.py", line 1315, in fetchall
     rows = dbapi_cursor.fetchall()
@@ -906,7 +856,7 @@ Traceback (most recent call last):
     rows = dbapi_cursor.fetchall()
 sqlalchemy.exc.DatabaseError: (sqlite3.DatabaseError) database disk image is malformed
 (Background on this error at: https://sqlalche.me/e/21/4xp6)
-2026-11-15 14:57:02,874 - freqtrade.strategy.strategy_wrapper - ERROR - Unexpected error DatabaseError('(sqlite3.DatabaseError) database disk image is malformed') calling <bound method NostalgiaForInfinityX8.adjust_trade_position of <NostalgiaForInfinityX8.NostalgiaForInfinityX8 object at 0x7e3e474d3380>>
+2026-11-15 15:17:02,541 - freqtrade.strategy.strategy_wrapper - ERROR - Unexpected error DatabaseError('(sqlite3.DatabaseError) database disk image is malformed') calling <bound method NostalgiaForInfinityX8.adjust_trade_position of <NostalgiaForInfinityX8.NostalgiaForInfinityX8 object at 0x7e3e474d3380>>
 Traceback (most recent call last):
   File "/home/ftuser/.local/lib/python3.14/site-packages/sqlalchemy/engine/cursor.py", line 1315, in fetchall
     rows = dbapi_cursor.fetchall()
@@ -958,7 +908,7 @@ Traceback (most recent call last):
     rows = dbapi_cursor.fetchall()
 sqlalchemy.exc.DatabaseError: (sqlite3.DatabaseError) database disk image is malformed
 (Background on this error at: https://sqlalche.me/e/21/4xp6)
-2026-11-15 14:57:06,049 - freqtrade.strategy.strategy_wrapper - ERROR - Unexpected error DatabaseError('(sqlite3.DatabaseError) database disk image is malformed') calling <bound method NostalgiaForInfinityX8.custom_exit of <NostalgiaForInfinityX8.NostalgiaForInfinityX8 object at 0x7e3e474d3380>>
+2026-11-15 15:17:05,712 - freqtrade.strategy.strategy_wrapper - ERROR - Unexpected error DatabaseError('(sqlite3.DatabaseError) database disk image is malformed') calling <bound method NostalgiaForInfinityX8.custom_exit of <NostalgiaForInfinityX8.NostalgiaForInfinityX8 object at 0x7e3e474d3380>>
 Traceback (most recent call last):
   File "/home/ftuser/.local/lib/python3.14/site-packages/sqlalchemy/engine/cursor.py", line 1315, in fetchall
     rows = dbapi_cursor.fetchall()
@@ -1007,7 +957,7 @@ Traceback (most recent call last):
     rows = dbapi_cursor.fetchall()
 sqlalchemy.exc.DatabaseError: (sqlite3.DatabaseError) database disk image is malformed
 (Background on this error at: https://sqlalche.me/e/21/4xp6)
-2026-11-15 14:57:07,884 - freqtrade.strategy.strategy_wrapper - ERROR - Unexpected error DatabaseError('(sqlite3.DatabaseError) database disk image is malformed') calling <bound method NostalgiaForInfinityX8.adjust_trade_position of <NostalgiaForInfinityX8.NostalgiaForInfinityX8 object at 0x7e3e474d3380>>
+2026-11-15 15:17:07,538 - freqtrade.strategy.strategy_wrapper - ERROR - Unexpected error DatabaseError('(sqlite3.DatabaseError) database disk image is malformed') calling <bound method NostalgiaForInfinityX8.adjust_trade_position of <NostalgiaForInfinityX8.NostalgiaForInfinityX8 object at 0x7e3e474d3380>>
 Traceback (most recent call last):
   File "/home/ftuser/.local/lib/python3.14/site-packages/sqlalchemy/engine/cursor.py", line 1315, in fetchall
     rows = dbapi_cursor.fetchall()
@@ -1059,7 +1009,7 @@ Traceback (most recent call last):
     rows = dbapi_cursor.fetchall()
 sqlalchemy.exc.DatabaseError: (sqlite3.DatabaseError) database disk image is malformed
 (Background on this error at: https://sqlalche.me/e/21/4xp6)
-2026-11-15 14:57:11,073 - freqtrade.strategy.strategy_wrapper - ERROR - Unexpected error DatabaseError('(sqlite3.DatabaseError) database disk image is malformed') calling <bound method NostalgiaForInfinityX8.custom_exit of <NostalgiaForInfinityX8.NostalgiaForInfinityX8 object at 0x7e3e474d3380>>
+2026-11-15 15:17:10,719 - freqtrade.strategy.strategy_wrapper - ERROR - Unexpected error DatabaseError('(sqlite3.DatabaseError) database disk image is malformed') calling <bound method NostalgiaForInfinityX8.custom_exit of <NostalgiaForInfinityX8.NostalgiaForInfinityX8 object at 0x7e3e474d3380>>
 Traceback (most recent call last):
   File "/home/ftuser/.local/lib/python3.14/site-packages/sqlalchemy/engine/cursor.py", line 1315, in fetchall
     rows = dbapi_cursor.fetchall()
@@ -1108,7 +1058,7 @@ Traceback (most recent call last):
     rows = dbapi_cursor.fetchall()
 sqlalchemy.exc.DatabaseError: (sqlite3.DatabaseError) database disk image is malformed
 (Background on this error at: https://sqlalche.me/e/21/4xp6)
-2026-11-15 14:57:12,905 - freqtrade.strategy.strategy_wrapper - ERROR - Unexpected error DatabaseError('(sqlite3.DatabaseError) database disk image is malformed') calling <bound method NostalgiaForInfinityX8.adjust_trade_position of <NostalgiaForInfinityX8.NostalgiaForInfinityX8 object at 0x7e3e474d3380>>
+2026-11-15 15:17:12,570 - freqtrade.strategy.strategy_wrapper - ERROR - Unexpected error DatabaseError('(sqlite3.DatabaseError) database disk image is malformed') calling <bound method NostalgiaForInfinityX8.adjust_trade_position of <NostalgiaForInfinityX8.NostalgiaForInfinityX8 object at 0x7e3e474d3380>>
 Traceback (most recent call last):
   File "/home/ftuser/.local/lib/python3.14/site-packages/sqlalchemy/engine/cursor.py", line 1315, in fetchall
     rows = dbapi_cursor.fetchall()
@@ -1160,7 +1110,7 @@ Traceback (most recent call last):
     rows = dbapi_cursor.fetchall()
 sqlalchemy.exc.DatabaseError: (sqlite3.DatabaseError) database disk image is malformed
 (Background on this error at: https://sqlalche.me/e/21/4xp6)
-2026-11-15 14:57:16,044 - freqtrade.strategy.strategy_wrapper - ERROR - Unexpected error DatabaseError('(sqlite3.DatabaseError) database disk image is malformed') calling <bound method NostalgiaForInfinityX8.custom_exit of <NostalgiaForInfinityX8.NostalgiaForInfinityX8 object at 0x7e3e474d3380>>
+2026-11-15 15:17:15,714 - freqtrade.strategy.strategy_wrapper - ERROR - Unexpected error DatabaseError('(sqlite3.DatabaseError) database disk image is malformed') calling <bound method NostalgiaForInfinityX8.custom_exit of <NostalgiaForInfinityX8.NostalgiaForInfinityX8 object at 0x7e3e474d3380>>
 Traceback (most recent call last):
   File "/home/ftuser/.local/lib/python3.14/site-packages/sqlalchemy/engine/cursor.py", line 1315, in fetchall
     rows = dbapi_cursor.fetchall()
@@ -1209,7 +1159,7 @@ Traceback (most recent call last):
     rows = dbapi_cursor.fetchall()
 sqlalchemy.exc.DatabaseError: (sqlite3.DatabaseError) database disk image is malformed
 (Background on this error at: https://sqlalche.me/e/21/4xp6)
-2026-11-15 14:57:17,879 - freqtrade.strategy.strategy_wrapper - ERROR - Unexpected error DatabaseError('(sqlite3.DatabaseError) database disk image is malformed') calling <bound method NostalgiaForInfinityX8.adjust_trade_position of <NostalgiaForInfinityX8.NostalgiaForInfinityX8 object at 0x7e3e474d3380>>
+2026-11-15 15:17:17,542 - freqtrade.strategy.strategy_wrapper - ERROR - Unexpected error DatabaseError('(sqlite3.DatabaseError) database disk image is malformed') calling <bound method NostalgiaForInfinityX8.adjust_trade_position of <NostalgiaForInfinityX8.NostalgiaForInfinityX8 object at 0x7e3e474d3380>>
 Traceback (most recent call last):
   File "/home/ftuser/.local/lib/python3.14/site-packages/sqlalchemy/engine/cursor.py", line 1315, in fetchall
     rows = dbapi_cursor.fetchall()
@@ -1261,8 +1211,7 @@ Traceback (most recent call last):
     rows = dbapi_cursor.fetchall()
 sqlalchemy.exc.DatabaseError: (sqlite3.DatabaseError) database disk image is malformed
 (Background on this error at: https://sqlalche.me/e/21/4xp6)
-2026-11-15 14:57:19,859 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.10, strategy_version: v18.0.258', state='RUNNING'
-2026-11-15 14:57:21,042 - freqtrade.strategy.strategy_wrapper - ERROR - Unexpected error DatabaseError('(sqlite3.DatabaseError) database disk image is malformed') calling <bound method NostalgiaForInfinityX8.custom_exit of <NostalgiaForInfinityX8.NostalgiaForInfinityX8 object at 0x7e3e474d3380>>
+2026-11-15 15:17:20,714 - freqtrade.strategy.strategy_wrapper - ERROR - Unexpected error DatabaseError('(sqlite3.DatabaseError) database disk image is malformed') calling <bound method NostalgiaForInfinityX8.custom_exit of <NostalgiaForInfinityX8.NostalgiaForInfinityX8 object at 0x7e3e474d3380>>
 Traceback (most recent call last):
   File "/home/ftuser/.local/lib/python3.14/site-packages/sqlalchemy/engine/cursor.py", line 1315, in fetchall
     rows = dbapi_cursor.fetchall()
@@ -1311,7 +1260,7 @@ Traceback (most recent call last):
     rows = dbapi_cursor.fetchall()
 sqlalchemy.exc.DatabaseError: (sqlite3.DatabaseError) database disk image is malformed
 (Background on this error at: https://sqlalche.me/e/21/4xp6)
-2026-11-15 14:57:22,876 - freqtrade.strategy.strategy_wrapper - ERROR - Unexpected error DatabaseError('(sqlite3.DatabaseError) database disk image is malformed') calling <bound method NostalgiaForInfinityX8.adjust_trade_position of <NostalgiaForInfinityX8.NostalgiaForInfinityX8 object at 0x7e3e474d3380>>
+2026-11-15 15:17:22,540 - freqtrade.strategy.strategy_wrapper - ERROR - Unexpected error DatabaseError('(sqlite3.DatabaseError) database disk image is malformed') calling <bound method NostalgiaForInfinityX8.adjust_trade_position of <NostalgiaForInfinityX8.NostalgiaForInfinityX8 object at 0x7e3e474d3380>>
 Traceback (most recent call last):
   File "/home/ftuser/.local/lib/python3.14/site-packages/sqlalchemy/engine/cursor.py", line 1315, in fetchall
     rows = dbapi_cursor.fetchall()
@@ -1363,7 +1312,7 @@ Traceback (most recent call last):
     rows = dbapi_cursor.fetchall()
 sqlalchemy.exc.DatabaseError: (sqlite3.DatabaseError) database disk image is malformed
 (Background on this error at: https://sqlalche.me/e/21/4xp6)
-2026-11-15 14:57:26,042 - freqtrade.strategy.strategy_wrapper - ERROR - Unexpected error DatabaseError('(sqlite3.DatabaseError) database disk image is malformed') calling <bound method NostalgiaForInfinityX8.custom_exit of <NostalgiaForInfinityX8.NostalgiaForInfinityX8 object at 0x7e3e474d3380>>
+2026-11-15 15:17:25,718 - freqtrade.strategy.strategy_wrapper - ERROR - Unexpected error DatabaseError('(sqlite3.DatabaseError) database disk image is malformed') calling <bound method NostalgiaForInfinityX8.custom_exit of <NostalgiaForInfinityX8.NostalgiaForInfinityX8 object at 0x7e3e474d3380>>
 Traceback (most recent call last):
   File "/home/ftuser/.local/lib/python3.14/site-packages/sqlalchemy/engine/cursor.py", line 1315, in fetchall
     rows = dbapi_cursor.fetchall()
@@ -1412,7 +1361,7 @@ Traceback (most recent call last):
     rows = dbapi_cursor.fetchall()
 sqlalchemy.exc.DatabaseError: (sqlite3.DatabaseError) database disk image is malformed
 (Background on this error at: https://sqlalche.me/e/21/4xp6)
-2026-11-15 14:57:27,874 - freqtrade.strategy.strategy_wrapper - ERROR - Unexpected error DatabaseError('(sqlite3.DatabaseError) database disk image is malformed') calling <bound method NostalgiaForInfinityX8.adjust_trade_position of <NostalgiaForInfinityX8.NostalgiaForInfinityX8 object at 0x7e3e474d3380>>
+2026-11-15 15:17:27,543 - freqtrade.strategy.strategy_wrapper - ERROR - Unexpected error DatabaseError('(sqlite3.DatabaseError) database disk image is malformed') calling <bound method NostalgiaForInfinityX8.adjust_trade_position of <NostalgiaForInfinityX8.NostalgiaForInfinityX8 object at 0x7e3e474d3380>>
 Traceback (most recent call last):
   File "/home/ftuser/.local/lib/python3.14/site-packages/sqlalchemy/engine/cursor.py", line 1315, in fetchall
     rows = dbapi_cursor.fetchall()
@@ -1464,7 +1413,7 @@ Traceback (most recent call last):
     rows = dbapi_cursor.fetchall()
 sqlalchemy.exc.DatabaseError: (sqlite3.DatabaseError) database disk image is malformed
 (Background on this error at: https://sqlalche.me/e/21/4xp6)
-2026-11-15 14:57:31,046 - freqtrade.strategy.strategy_wrapper - ERROR - Unexpected error DatabaseError('(sqlite3.DatabaseError) database disk image is malformed') calling <bound method NostalgiaForInfinityX8.custom_exit of <NostalgiaForInfinityX8.NostalgiaForInfinityX8 object at 0x7e3e474d3380>>
+2026-11-15 15:17:30,729 - freqtrade.strategy.strategy_wrapper - ERROR - Unexpected error DatabaseError('(sqlite3.DatabaseError) database disk image is malformed') calling <bound method NostalgiaForInfinityX8.custom_exit of <NostalgiaForInfinityX8.NostalgiaForInfinityX8 object at 0x7e3e474d3380>>
 Traceback (most recent call last):
   File "/home/ftuser/.local/lib/python3.14/site-packages/sqlalchemy/engine/cursor.py", line 1315, in fetchall
     rows = dbapi_cursor.fetchall()
@@ -1513,7 +1462,7 @@ Traceback (most recent call last):
     rows = dbapi_cursor.fetchall()
 sqlalchemy.exc.DatabaseError: (sqlite3.DatabaseError) database disk image is malformed
 (Background on this error at: https://sqlalche.me/e/21/4xp6)
-2026-11-15 14:57:32,879 - freqtrade.strategy.strategy_wrapper - ERROR - Unexpected error DatabaseError('(sqlite3.DatabaseError) database disk image is malformed') calling <bound method NostalgiaForInfinityX8.adjust_trade_position of <NostalgiaForInfinityX8.NostalgiaForInfinityX8 object at 0x7e3e474d3380>>
+2026-11-15 15:17:32,556 - freqtrade.strategy.strategy_wrapper - ERROR - Unexpected error DatabaseError('(sqlite3.DatabaseError) database disk image is malformed') calling <bound method NostalgiaForInfinityX8.adjust_trade_position of <NostalgiaForInfinityX8.NostalgiaForInfinityX8 object at 0x7e3e474d3380>>
 Traceback (most recent call last):
   File "/home/ftuser/.local/lib/python3.14/site-packages/sqlalchemy/engine/cursor.py", line 1315, in fetchall
     rows = dbapi_cursor.fetchall()
@@ -1565,7 +1514,7 @@ Traceback (most recent call last):
     rows = dbapi_cursor.fetchall()
 sqlalchemy.exc.DatabaseError: (sqlite3.DatabaseError) database disk image is malformed
 (Background on this error at: https://sqlalche.me/e/21/4xp6)
-2026-11-15 14:57:36,040 - freqtrade.strategy.strategy_wrapper - ERROR - Unexpected error DatabaseError('(sqlite3.DatabaseError) database disk image is malformed') calling <bound method NostalgiaForInfinityX8.custom_exit of <NostalgiaForInfinityX8.NostalgiaForInfinityX8 object at 0x7e3e474d3380>>
+2026-11-15 15:17:35,713 - freqtrade.strategy.strategy_wrapper - ERROR - Unexpected error DatabaseError('(sqlite3.DatabaseError) database disk image is malformed') calling <bound method NostalgiaForInfinityX8.custom_exit of <NostalgiaForInfinityX8.NostalgiaForInfinityX8 object at 0x7e3e474d3380>>
 Traceback (most recent call last):
   File "/home/ftuser/.local/lib/python3.14/site-packages/sqlalchemy/engine/cursor.py", line 1315, in fetchall
     rows = dbapi_cursor.fetchall()
@@ -1614,7 +1563,7 @@ Traceback (most recent call last):
     rows = dbapi_cursor.fetchall()
 sqlalchemy.exc.DatabaseError: (sqlite3.DatabaseError) database disk image is malformed
 (Background on this error at: https://sqlalche.me/e/21/4xp6)
-2026-11-15 14:57:37,875 - freqtrade.strategy.strategy_wrapper - ERROR - Unexpected error DatabaseError('(sqlite3.DatabaseError) database disk image is malformed') calling <bound method NostalgiaForInfinityX8.adjust_trade_position of <NostalgiaForInfinityX8.NostalgiaForInfinityX8 object at 0x7e3e474d3380>>
+2026-11-15 15:17:37,539 - freqtrade.strategy.strategy_wrapper - ERROR - Unexpected error DatabaseError('(sqlite3.DatabaseError) database disk image is malformed') calling <bound method NostalgiaForInfinityX8.adjust_trade_position of <NostalgiaForInfinityX8.NostalgiaForInfinityX8 object at 0x7e3e474d3380>>
 Traceback (most recent call last):
   File "/home/ftuser/.local/lib/python3.14/site-packages/sqlalchemy/engine/cursor.py", line 1315, in fetchall
     rows = dbapi_cursor.fetchall()
@@ -1666,7 +1615,8 @@ Traceback (most recent call last):
     rows = dbapi_cursor.fetchall()
 sqlalchemy.exc.DatabaseError: (sqlite3.DatabaseError) database disk image is malformed
 (Background on this error at: https://sqlalche.me/e/21/4xp6)
-2026-11-15 14:57:41,066 - freqtrade.strategy.strategy_wrapper - ERROR - Unexpected error DatabaseError('(sqlite3.DatabaseError) database disk image is malformed') calling <bound method NostalgiaForInfinityX8.custom_exit of <NostalgiaForInfinityX8.NostalgiaForInfinityX8 object at 0x7e3e474d3380>>
+2026-11-15 15:17:39,547 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.10, strategy_version: v18.0.258', state='RUNNING'
+2026-11-15 15:17:40,715 - freqtrade.strategy.strategy_wrapper - ERROR - Unexpected error DatabaseError('(sqlite3.DatabaseError) database disk image is malformed') calling <bound method NostalgiaForInfinityX8.custom_exit of <NostalgiaForInfinityX8.NostalgiaForInfinityX8 object at 0x7e3e474d3380>>
 Traceback (most recent call last):
   File "/home/ftuser/.local/lib/python3.14/site-packages/sqlalchemy/engine/cursor.py", line 1315, in fetchall
     rows = dbapi_cursor.fetchall()
@@ -1715,7 +1665,7 @@ Traceback (most recent call last):
     rows = dbapi_cursor.fetchall()
 sqlalchemy.exc.DatabaseError: (sqlite3.DatabaseError) database disk image is malformed
 (Background on this error at: https://sqlalche.me/e/21/4xp6)
-2026-11-15 14:57:42,901 - freqtrade.strategy.strategy_wrapper - ERROR - Unexpected error DatabaseError('(sqlite3.DatabaseError) database disk image is malformed') calling <bound method NostalgiaForInfinityX8.adjust_trade_position of <NostalgiaForInfinityX8.NostalgiaForInfinityX8 object at 0x7e3e474d3380>>
+2026-11-15 15:17:42,565 - freqtrade.strategy.strategy_wrapper - ERROR - Unexpected error DatabaseError('(sqlite3.DatabaseError) database disk image is malformed') calling <bound method NostalgiaForInfinityX8.adjust_trade_position of <NostalgiaForInfinityX8.NostalgiaForInfinityX8 object at 0x7e3e474d3380>>
 Traceback (most recent call last):
   File "/home/ftuser/.local/lib/python3.14/site-packages/sqlalchemy/engine/cursor.py", line 1315, in fetchall
     rows = dbapi_cursor.fetchall()
@@ -1767,7 +1717,7 @@ Traceback (most recent call last):
     rows = dbapi_cursor.fetchall()
 sqlalchemy.exc.DatabaseError: (sqlite3.DatabaseError) database disk image is malformed
 (Background on this error at: https://sqlalche.me/e/21/4xp6)
-2026-11-15 14:57:46,074 - freqtrade.strategy.strategy_wrapper - ERROR - Unexpected error DatabaseError('(sqlite3.DatabaseError) database disk image is malformed') calling <bound method NostalgiaForInfinityX8.custom_exit of <NostalgiaForInfinityX8.NostalgiaForInfinityX8 object at 0x7e3e474d3380>>
+2026-11-15 15:17:45,726 - freqtrade.strategy.strategy_wrapper - ERROR - Unexpected error DatabaseError('(sqlite3.DatabaseError) database disk image is malformed') calling <bound method NostalgiaForInfinityX8.custom_exit of <NostalgiaForInfinityX8.NostalgiaForInfinityX8 object at 0x7e3e474d3380>>
 Traceback (most recent call last):
   File "/home/ftuser/.local/lib/python3.14/site-packages/sqlalchemy/engine/cursor.py", line 1315, in fetchall
     rows = dbapi_cursor.fetchall()
@@ -1816,7 +1766,7 @@ Traceback (most recent call last):
     rows = dbapi_cursor.fetchall()
 sqlalchemy.exc.DatabaseError: (sqlite3.DatabaseError) database disk image is malformed
 (Background on this error at: https://sqlalche.me/e/21/4xp6)
-2026-11-15 14:57:47,908 - freqtrade.strategy.strategy_wrapper - ERROR - Unexpected error DatabaseError('(sqlite3.DatabaseError) database disk image is malformed') calling <bound method NostalgiaForInfinityX8.adjust_trade_position of <NostalgiaForInfinityX8.NostalgiaForInfinityX8 object at 0x7e3e474d3380>>
+2026-11-15 15:17:47,557 - freqtrade.strategy.strategy_wrapper - ERROR - Unexpected error DatabaseError('(sqlite3.DatabaseError) database disk image is malformed') calling <bound method NostalgiaForInfinityX8.adjust_trade_position of <NostalgiaForInfinityX8.NostalgiaForInfinityX8 object at 0x7e3e474d3380>>
 Traceback (most recent call last):
   File "/home/ftuser/.local/lib/python3.14/site-packages/sqlalchemy/engine/cursor.py", line 1315, in fetchall
     rows = dbapi_cursor.fetchall()
@@ -1868,7 +1818,7 @@ Traceback (most recent call last):
     rows = dbapi_cursor.fetchall()
 sqlalchemy.exc.DatabaseError: (sqlite3.DatabaseError) database disk image is malformed
 (Background on this error at: https://sqlalche.me/e/21/4xp6)
-2026-11-15 14:57:51,054 - freqtrade.strategy.strategy_wrapper - ERROR - Unexpected error DatabaseError('(sqlite3.DatabaseError) database disk image is malformed') calling <bound method NostalgiaForInfinityX8.custom_exit of <NostalgiaForInfinityX8.NostalgiaForInfinityX8 object at 0x7e3e474d3380>>
+2026-11-15 15:17:50,716 - freqtrade.strategy.strategy_wrapper - ERROR - Unexpected error DatabaseError('(sqlite3.DatabaseError) database disk image is malformed') calling <bound method NostalgiaForInfinityX8.custom_exit of <NostalgiaForInfinityX8.NostalgiaForInfinityX8 object at 0x7e3e474d3380>>
 Traceback (most recent call last):
   File "/home/ftuser/.local/lib/python3.14/site-packages/sqlalchemy/engine/cursor.py", line 1315, in fetchall
     rows = dbapi_cursor.fetchall()
@@ -1917,7 +1867,7 @@ Traceback (most recent call last):
     rows = dbapi_cursor.fetchall()
 sqlalchemy.exc.DatabaseError: (sqlite3.DatabaseError) database disk image is malformed
 (Background on this error at: https://sqlalche.me/e/21/4xp6)
-2026-11-15 14:57:52,892 - freqtrade.strategy.strategy_wrapper - ERROR - Unexpected error DatabaseError('(sqlite3.DatabaseError) database disk image is malformed') calling <bound method NostalgiaForInfinityX8.adjust_trade_position of <NostalgiaForInfinityX8.NostalgiaForInfinityX8 object at 0x7e3e474d3380>>
+2026-11-15 15:17:52,540 - freqtrade.strategy.strategy_wrapper - ERROR - Unexpected error DatabaseError('(sqlite3.DatabaseError) database disk image is malformed') calling <bound method NostalgiaForInfinityX8.adjust_trade_position of <NostalgiaForInfinityX8.NostalgiaForInfinityX8 object at 0x7e3e474d3380>>
 Traceback (most recent call last):
   File "/home/ftuser/.local/lib/python3.14/site-packages/sqlalchemy/engine/cursor.py", line 1315, in fetchall
     rows = dbapi_cursor.fetchall()
@@ -1969,7 +1919,7 @@ Traceback (most recent call last):
     rows = dbapi_cursor.fetchall()
 sqlalchemy.exc.DatabaseError: (sqlite3.DatabaseError) database disk image is malformed
 (Background on this error at: https://sqlalche.me/e/21/4xp6)
-2026-11-15 14:57:56,051 - freqtrade.strategy.strategy_wrapper - ERROR - Unexpected error DatabaseError('(sqlite3.DatabaseError) database disk image is malformed') calling <bound method NostalgiaForInfinityX8.custom_exit of <NostalgiaForInfinityX8.NostalgiaForInfinityX8 object at 0x7e3e474d3380>>
+2026-11-15 15:17:55,728 - freqtrade.strategy.strategy_wrapper - ERROR - Unexpected error DatabaseError('(sqlite3.DatabaseError) database disk image is malformed') calling <bound method NostalgiaForInfinityX8.custom_exit of <NostalgiaForInfinityX8.NostalgiaForInfinityX8 object at 0x7e3e474d3380>>
 Traceback (most recent call last):
   File "/home/ftuser/.local/lib/python3.14/site-packages/sqlalchemy/engine/cursor.py", line 1315, in fetchall
     rows = dbapi_cursor.fetchall()
@@ -2018,7 +1968,7 @@ Traceback (most recent call last):
     rows = dbapi_cursor.fetchall()
 sqlalchemy.exc.DatabaseError: (sqlite3.DatabaseError) database disk image is malformed
 (Background on this error at: https://sqlalche.me/e/21/4xp6)
-2026-11-15 14:57:57,887 - freqtrade.strategy.strategy_wrapper - ERROR - Unexpected error DatabaseError('(sqlite3.DatabaseError) database disk image is malformed') calling <bound method NostalgiaForInfinityX8.adjust_trade_position of <NostalgiaForInfinityX8.NostalgiaForInfinityX8 object at 0x7e3e474d3380>>
+2026-11-15 15:17:57,552 - freqtrade.strategy.strategy_wrapper - ERROR - Unexpected error DatabaseError('(sqlite3.DatabaseError) database disk image is malformed') calling <bound method NostalgiaForInfinityX8.adjust_trade_position of <NostalgiaForInfinityX8.NostalgiaForInfinityX8 object at 0x7e3e474d3380>>
 Traceback (most recent call last):
   File "/home/ftuser/.local/lib/python3.14/site-packages/sqlalchemy/engine/cursor.py", line 1315, in fetchall
     rows = dbapi_cursor.fetchall()
@@ -2070,7 +2020,7 @@ Traceback (most recent call last):
     rows = dbapi_cursor.fetchall()
 sqlalchemy.exc.DatabaseError: (sqlite3.DatabaseError) database disk image is malformed
 (Background on this error at: https://sqlalche.me/e/21/4xp6)
-2026-11-15 14:58:01,048 - freqtrade.strategy.strategy_wrapper - ERROR - Unexpected error DatabaseError('(sqlite3.DatabaseError) database disk image is malformed') calling <bound method NostalgiaForInfinityX8.custom_exit of <NostalgiaForInfinityX8.NostalgiaForInfinityX8 object at 0x7e3e474d3380>>
+2026-11-15 15:18:00,718 - freqtrade.strategy.strategy_wrapper - ERROR - Unexpected error DatabaseError('(sqlite3.DatabaseError) database disk image is malformed') calling <bound method NostalgiaForInfinityX8.custom_exit of <NostalgiaForInfinityX8.NostalgiaForInfinityX8 object at 0x7e3e474d3380>>
 Traceback (most recent call last):
   File "/home/ftuser/.local/lib/python3.14/site-packages/sqlalchemy/engine/cursor.py", line 1315, in fetchall
     rows = dbapi_cursor.fetchall()
@@ -2119,7 +2069,7 @@ Traceback (most recent call last):
     rows = dbapi_cursor.fetchall()
 sqlalchemy.exc.DatabaseError: (sqlite3.DatabaseError) database disk image is malformed
 (Background on this error at: https://sqlalche.me/e/21/4xp6)
-2026-11-15 14:58:02,884 - freqtrade.strategy.strategy_wrapper - ERROR - Unexpected error DatabaseError('(sqlite3.DatabaseError) database disk image is malformed') calling <bound method NostalgiaForInfinityX8.adjust_trade_position of <NostalgiaForInfinityX8.NostalgiaForInfinityX8 object at 0x7e3e474d3380>>
+2026-11-15 15:18:02,546 - freqtrade.strategy.strategy_wrapper - ERROR - Unexpected error DatabaseError('(sqlite3.DatabaseError) database disk image is malformed') calling <bound method NostalgiaForInfinityX8.adjust_trade_position of <NostalgiaForInfinityX8.NostalgiaForInfinityX8 object at 0x7e3e474d3380>>
 Traceback (most recent call last):
   File "/home/ftuser/.local/lib/python3.14/site-packages/sqlalchemy/engine/cursor.py", line 1315, in fetchall
     rows = dbapi_cursor.fetchall()
@@ -2134,6 +2084,55 @@ Traceback (most recent call last):
     is_system_v3, is_system_v3_1, is_system_v3_2 = self.get_system_version_flags(trade)
                                                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^
   File "/freqtrade/user_data/strategies/NostalgiaForInfinityX8.py", line 5694, in get_system_version_flags
+    system_version = trade.get_custom_data(key="system_version")
+  File "/freqtrade/freqtrade/persistence/trade_model.py", line 1433, in get_custom_data
+    data = CustomDataWrapper.get_custom_data(trade_id=self.id, key=key)
+  File "/freqtrade/freqtrade/persistence/custom_data.py", line 142, in get_custom_data
+    ).all()
+      ~~~^^
+  File "/home/ftuser/.local/lib/python3.14/site-packages/sqlalchemy/engine/result.py", line 1380, in all
+    return self._allrows()
+           ~~~~~~~~~~~~~^^
+  File "lib/sqlalchemy/engine/_result_cy.py", line 364, in sqlalchemy.engine._result_cy.BaseResultInternal._allrows
+  File "/home/ftuser/.local/lib/python3.14/site-packages/sqlalchemy/engine/result.py", line 1285, in _fetchall_impl
+    return self._real_result._fetchall_impl()
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/home/ftuser/.local/lib/python3.14/site-packages/sqlalchemy/engine/result.py", line 1896, in _fetchall_impl
+    return list(self.iterator)
+  File "/home/ftuser/.local/lib/python3.14/site-packages/sqlalchemy/orm/loading.py", line 231, in chunks
+    fetch = cursor._raw_all_tuples()
+  File "lib/sqlalchemy/engine/_result_cy.py", line 356, in sqlalchemy.engine._result_cy.BaseResultInternal._raw_all_tuples
+  File "/home/ftuser/.local/lib/python3.14/site-packages/sqlalchemy/engine/cursor.py", line 2377, in _fetchall_impl
+    return self.cursor_strategy.fetchall(self, self.cursor)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^
+  File "/home/ftuser/.local/lib/python3.14/site-packages/sqlalchemy/engine/cursor.py", line 1319, in fetchall
+    self.handle_exception(result, dbapi_cursor, e)
+    ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ftuser/.local/lib/python3.14/site-packages/sqlalchemy/engine/cursor.py", line 1263, in handle_exception
+    result.connection._handle_dbapi_exception(
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        err, None, None, dbapi_cursor, result.context
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/home/ftuser/.local/lib/python3.14/site-packages/sqlalchemy/engine/base.py", line 2342, in _handle_dbapi_exception
+    raise sqlalchemy_exception.with_traceback(exc_info[2]) from e
+  File "/home/ftuser/.local/lib/python3.14/site-packages/sqlalchemy/engine/cursor.py", line 1315, in fetchall
+    rows = dbapi_cursor.fetchall()
+sqlalchemy.exc.DatabaseError: (sqlite3.DatabaseError) database disk image is malformed
+(Background on this error at: https://sqlalche.me/e/21/4xp6)
+2026-11-15 15:18:05,719 - freqtrade.strategy.strategy_wrapper - ERROR - Unexpected error DatabaseError('(sqlite3.DatabaseError) database disk image is malformed') calling <bound method NostalgiaForInfinityX8.custom_exit of <NostalgiaForInfinityX8.NostalgiaForInfinityX8 object at 0x7e3e474d3380>>
+Traceback (most recent call last):
+  File "/home/ftuser/.local/lib/python3.14/site-packages/sqlalchemy/engine/cursor.py", line 1315, in fetchall
+    rows = dbapi_cursor.fetchall()
+sqlite3.DatabaseError: database disk image is malformed
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/freqtrade/freqtrade/strategy/strategy_wrapper.py", line 44, in wrapper
+    return f(*args, **kwargs)
+  File "/freqtrade/user_data/strategies/NostalgiaForInfinityX8.py", line 2031, in custom_exit
     system_version = trade.get_custom_data(key="system_version")
   File "/freqtrade/freqtrade/persistence/trade_model.py", line 1433, in get_custom_data
     data = CustomDataWrapper.get_custom_data(trade_id=self.id, key=key)
