@@ -1,77 +1,4 @@
-2026-11-15 21:05:06,692 - freqtrade.loggers - INFO - Enabling colorized output.
-2026-11-15 21:05:06,692 - freqtrade.loggers - INFO - Logfile configured
-2026-11-15 21:05:06,692 - freqtrade.loggers - INFO - Verbosity set to 0
-2026-11-15 21:05:06,693 - freqtrade.configuration.configuration - INFO - Runmode set to dry_run.
-2026-11-15 21:05:06,693 - freqtrade.configuration.configuration - INFO - Parameter --db-url detected ...
-2026-11-15 21:05:06,693 - freqtrade.configuration.configuration - WARNING - `force_entry_enable` RPC message enabled.
-2026-11-15 21:05:06,694 - freqtrade.configuration.configuration - INFO - Dry run is enabled
-2026-11-15 21:05:06,694 - freqtrade.configuration.configuration - INFO - Using DB: "sqlite:////freqtrade/user_data/trades.sqlite"
-2026-11-15 21:05:06,694 - freqtrade.configuration.configuration - INFO - Using max_open_trades: 12 ...
-2026-11-15 21:05:06,702 - freqtrade.configuration.configuration - INFO - Using user-data directory: /freqtrade/user_data ...
-2026-11-15 21:05:06,703 - freqtrade.configuration.directory_operations - INFO - Created data directory: None
-2026-11-15 21:05:06,703 - freqtrade.configuration.configuration - INFO - Using data directory: /freqtrade/user_data/data/binance ...
-2026-11-15 21:05:06,704 - freqtrade.exchange.check_exchange - INFO - Checking exchange...
-2026-11-15 21:05:06,711 - freqtrade.exchange.check_exchange - INFO - Exchange "binance" is officially supported by the Freqtrade development team.
-2026-11-15 21:05:06,711 - freqtrade.configuration.configuration - INFO - Using pairlist from configuration.
-2026-11-15 21:05:06,712 - freqtrade.exchange.exchange - INFO - Instance is running with dry_run enabled
-2026-11-15 21:05:06,712 - freqtrade.exchange.exchange - INFO - Using CCXT 4.5.90
-2026-11-15 21:05:06,713 - freqtrade.exchange.exchange - INFO - Applying additional ccxt config: {'enableRateLimit': True, 'rateLimit': 60, 'options': {'brokerId': None, 'partner': {'spot': {'id': None, 'key': None}, 'future': {'id': None, 'key': None}}, 'fetchMarkets': {'types': ['spot']}}, 'urls': {'api': {'public': 'https://data-api.binance.vision/api/v3'}}}
-2026-11-15 21:05:06,716 - freqtrade.exchange.exchange - INFO - Applying additional ccxt config: {'enableRateLimit': True, 'rateLimit': 60, 'options': {'brokerId': None, 'partner': {'spot': {'id': None, 'key': None}, 'future': {'id': None, 'key': None}}, 'fetchMarkets': {'types': ['spot']}}, 'urls': {'api': {'public': 'https://data-api.binance.vision/api/v3'}}}
-2026-11-15 21:05:06,719 - freqtrade.exchange.exchange - INFO - Using Exchange "Binance"
-2026-11-15 21:05:08,665 - freqtrade.exchange.exchange - INFO - Time offset to Binance is -175ms.
-2026-11-15 21:05:08,665 - freqtrade.resolvers.exchange_resolver - INFO - Using resolved exchange class 'Binance' ...
-2026-11-15 21:05:09,090 - freqtrade.resolvers.iresolver - INFO - Using resolved strategy NostalgiaForInfinityX8 from '/freqtrade/user_data/strategies/NostalgiaForInfinityX8.py'...
-2026-11-15 21:05:09,091 - freqtrade.strategy.hyper - INFO - Found no parameter file.
-2026-11-15 21:05:09,092 - freqtrade.resolvers.strategy_resolver - INFO - Override strategy 'timeframe' with value from the configuration: 5m.
-2026-11-15 21:05:09,092 - freqtrade.resolvers.strategy_resolver - INFO - Override strategy 'order_types' with value from the configuration: {'entry': 'limit', 'exit': 'limit', 'emergency_exit': 'limit', 'force_entry': 'limit', 'force_exit': 'limit', 'stoploss': 'limit', 'stoploss_on_exchange': False, 'stoploss_on_exchange_interval': 60, 'stoploss_on_exchange_limit_ratio': 0.99}.
-2026-11-15 21:05:09,093 - freqtrade.resolvers.strategy_resolver - INFO - Override strategy 'stake_currency' with value from the configuration: USDT.
-2026-11-15 21:05:09,093 - freqtrade.resolvers.strategy_resolver - INFO - Override strategy 'stake_amount' with value from the configuration: unlimited.
-2026-11-15 21:05:09,093 - freqtrade.resolvers.strategy_resolver - INFO - Override strategy 'unfilledtimeout' with value from the configuration: {'entry': 3, 'exit': 2, 'exit_timeout_count': 0, 'unit': 'minutes'}.
-2026-11-15 21:05:09,093 - freqtrade.resolvers.strategy_resolver - INFO - Override strategy 'max_open_trades' with value from the configuration: 12.
-2026-11-15 21:05:09,094 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using minimal_roi: {}
-2026-11-15 21:05:09,094 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using timeframe: 5m
-2026-11-15 21:05:09,094 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using stoploss: -0.99
-2026-11-15 21:05:09,094 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using trailing_stop: False
-2026-11-15 21:05:09,095 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using trailing_stop_positive: 0.01
-2026-11-15 21:05:09,095 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using trailing_stop_positive_offset: 0.03
-2026-11-15 21:05:09,095 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using trailing_only_offset_is_reached: True
-2026-11-15 21:05:09,095 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using use_custom_stoploss: False
-2026-11-15 21:05:09,095 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using process_only_new_candles: True
-2026-11-15 21:05:09,096 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using order_types: {'entry': 'limit', 'exit': 'limit', 'emergency_exit': 'limit', 'force_entry': 'limit', 'force_exit': 'limit', 'stoploss': 'limit', 'stoploss_on_exchange': False, 'stoploss_on_exchange_interval': 60, 'stoploss_on_exchange_limit_ratio': 0.99}
-2026-11-15 21:05:09,096 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using order_time_in_force: {'entry': 'GTC', 'exit': 'GTC'}
-2026-11-15 21:05:09,096 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using stake_currency: USDT
-2026-11-15 21:05:09,096 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using stake_amount: unlimited
-2026-11-15 21:05:09,097 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using startup_candle_count: 800
-2026-11-15 21:05:09,097 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using unfilledtimeout: {'entry': 3, 'exit': 2, 'exit_timeout_count': 0, 'unit': 'minutes'}
-2026-11-15 21:05:09,097 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using use_exit_signal: True
-2026-11-15 21:05:09,097 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using exit_profit_only: False
-2026-11-15 21:05:09,098 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using ignore_roi_if_entry_signal: True
-2026-11-15 21:05:09,098 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using exit_profit_offset: 0.0
-2026-11-15 21:05:09,098 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using disable_dataframe_checks: False
-2026-11-15 21:05:09,098 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using ignore_buying_expired_candle_after: 0
-2026-11-15 21:05:09,098 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using position_adjustment_enable: True
-2026-11-15 21:05:09,099 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using max_entry_position_adjustment: -1
-2026-11-15 21:05:09,099 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using max_open_trades: 12
-2026-11-15 21:05:09,099 - freqtrade.configuration.config_validation - INFO - Validating configuration ...
-2026-11-15 21:05:09,132 - freqtrade.wallets - INFO - Wallets synced.
-2026-11-15 21:05:09,136 - freqtrade.resolvers.iresolver - INFO - Using resolved pairlist VolumePairList from '/freqtrade/freqtrade/plugins/pairlist/VolumePairList.py'...
-2026-11-15 21:05:09,137 - freqtrade.resolvers.iresolver - INFO - Using resolved pairlist AgeFilter from '/freqtrade/freqtrade/plugins/pairlist/AgeFilter.py'...
-2026-11-15 21:05:09,140 - freqtrade.resolvers.iresolver - INFO - Using resolved pairlist PriceFilter from '/freqtrade/freqtrade/plugins/pairlist/PriceFilter.py'...
-2026-11-15 21:05:09,141 - freqtrade.resolvers.iresolver - INFO - Using resolved pairlist SpreadFilter from '/freqtrade/freqtrade/plugins/pairlist/SpreadFilter.py'...
-2026-11-15 21:05:09,144 - freqtrade.resolvers.iresolver - INFO - Using resolved pairlist RangeStabilityFilter from '/freqtrade/freqtrade/plugins/pairlist/rangestabilityfilter.py'...
-2026-11-15 21:05:09,147 - freqtrade.resolvers.iresolver - INFO - Using resolved pairlist VolumePairList from '/freqtrade/freqtrade/plugins/pairlist/VolumePairList.py'...
-2026-11-15 21:05:09,147 - freqtrade.freqtradebot - INFO - Starting initial pairlist refresh
-2026-11-15 21:05:09,909 - VolumePairList - INFO - Pair BNB/USDT in your blacklist. Removing it from whitelist...
-2026-11-15 21:05:09,910 - VolumePairList - INFO - Pair TUSD/USDT in your blacklist. Removing it from whitelist...
-2026-11-15 21:05:09,910 - VolumePairList - INFO - Pair USDC/USDT in your blacklist. Removing it from whitelist...
-2026-11-15 21:05:09,911 - VolumePairList - INFO - Pair ONE/USDT in your blacklist. Removing it from whitelist...
-2026-11-15 21:05:09,911 - VolumePairList - INFO - Pair CVC/USDT in your blacklist. Removing it from whitelist...
-2026-11-15 21:05:09,911 - VolumePairList - INFO - Pair CHZ/USDT in your blacklist. Removing it from whitelist...
-2026-11-15 21:05:09,912 - VolumePairList - INFO - Pair STX/USDT in your blacklist. Removing it from whitelist...
-2026-11-15 21:05:09,912 - VolumePairList - INFO - Pair FTT/USDT in your blacklist. Removing it from whitelist...
-2026-11-15 21:05:09,913 - VolumePairList - INFO - Pair EUR/USDT in your blacklist. Removing it from whitelist...
-2026-11-15 21:05:09,913 - VolumePairList - INFO - Pair LSK/USDT in your blacklist. Removing it from whitelist...
-2026-11-15 21:05:09,913 - VolumePairList - INFO - Pair MBL/USDT in your blacklist. Removing it from whitelist...
+1-15 21:05:09,913 - VolumePairList - INFO - Pair MBL/USDT in your blacklist. Removing it from whitelist...
 2026-11-15 21:05:09,914 - VolumePairList - INFO - Pair NMR/USDT in your blacklist. Removing it from whitelist...
 2026-11-15 21:05:09,914 - VolumePairList - INFO - Pair LUNA/USDT in your blacklist. Removing it from whitelist...
 2026-11-15 21:05:09,914 - VolumePairList - INFO - Pair PAXG/USDT in your blacklist. Removing it from whitelist...
@@ -1059,3 +986,174 @@
 2026-11-16 00:30:18,999 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.10, strategy_version: v18.0.260', state='RUNNING'
 2026-11-16 00:30:19,005 - AgeFilter - INFO - Removed HYPE/USDT from whitelist, because age 53 is less than 60 days
 2026-11-16 00:30:19,005 - AgeFilter - INFO - Removed RWUSD/USDT from whitelist, because age 34 is less than 60 days
+2026-11-16 00:31:19,002 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.10, strategy_version: v18.0.260', state='RUNNING'
+2026-11-16 00:32:19,005 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.10, strategy_version: v18.0.260', state='RUNNING'
+2026-11-16 00:33:19,008 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.10, strategy_version: v18.0.260', state='RUNNING'
+2026-11-16 00:34:19,010 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.10, strategy_version: v18.0.260', state='RUNNING'
+2026-11-16 00:35:22,326 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.10, strategy_version: v18.0.260', state='RUNNING'
+2026-11-16 00:35:38,641 - AgeFilter - INFO - Validated 148 pairs.
+2026-11-16 00:35:38,642 - PriceFilter - INFO - Removed BONK/USDT from whitelist, because 1 unit is 0.427%
+2026-11-16 00:35:38,642 - PriceFilter - INFO - Removed RAD/USDT from whitelist, because 1 unit is 0.467%
+2026-11-16 00:35:38,643 - PriceFilter - INFO - Removed SKL/USDT from whitelist, because 1 unit is 0.325%
+2026-11-16 00:35:38,643 - PriceFilter - INFO - Removed STO/USDT from whitelist, because 1 unit is 0.448%
+2026-11-16 00:35:38,643 - PriceFilter - INFO - Removed PHA/USDT from whitelist, because 1 unit is 0.330%
+2026-11-16 00:35:38,644 - PriceFilter - INFO - Removed AI/USDT from whitelist, because 1 unit is 0.694%
+2026-11-16 00:35:38,644 - PriceFilter - INFO - Removed CYBER/USDT from whitelist, because 1 unit is 0.455%
+2026-11-16 00:35:38,644 - PriceFilter - INFO - Removed KAIA/USDT from whitelist, because 1 unit is 0.339%
+2026-11-16 00:35:38,645 - SpreadFilter - INFO - Removed PARTI/USDT from whitelist, because spread 0.567% > 0.500%
+2026-11-16 00:35:39,186 - rangestabilityfilter - INFO - Removed BTC/USDT from whitelist, no candles found.
+2026-11-16 00:35:39,187 - rangestabilityfilter - INFO - Removed ETH/USDT from whitelist, no candles found.
+2026-11-16 00:35:39,187 - rangestabilityfilter - INFO - Removed SOL/USDT from whitelist, no candles found.
+2026-11-16 00:35:39,187 - rangestabilityfilter - INFO - Removed ZEC/USDT from whitelist, no candles found.
+2026-11-16 00:35:39,188 - rangestabilityfilter - INFO - Removed XRP/USDT from whitelist, no candles found.
+2026-11-16 00:35:39,188 - rangestabilityfilter - INFO - Removed NEAR/USDT from whitelist, no candles found.
+2026-11-16 00:35:39,188 - rangestabilityfilter - INFO - Removed DOGE/USDT from whitelist, no candles found.
+2026-11-16 00:35:39,189 - rangestabilityfilter - INFO - Removed ASTER/USDT from whitelist, no candles found.
+2026-11-16 00:35:39,189 - rangestabilityfilter - INFO - Removed UNI/USDT from whitelist, no candles found.
+2026-11-16 00:35:39,189 - rangestabilityfilter - INFO - Removed PEPE/USDT from whitelist, no candles found.
+2026-11-16 00:35:39,190 - rangestabilityfilter - INFO - Removed SUI/USDT from whitelist, no candles found.
+2026-11-16 00:35:39,190 - rangestabilityfilter - INFO - Removed TRX/USDT from whitelist, no candles found.
+2026-11-16 00:35:39,190 - rangestabilityfilter - INFO - Removed ADA/USDT from whitelist, no candles found.
+2026-11-16 00:35:39,190 - rangestabilityfilter - INFO - Removed ENA/USDT from whitelist, no candles found.
+2026-11-16 00:35:39,191 - rangestabilityfilter - INFO - Removed LINK/USDT from whitelist, no candles found.
+2026-11-16 00:35:39,191 - rangestabilityfilter - INFO - Removed AVAX/USDT from whitelist, no candles found.
+2026-11-16 00:35:39,191 - rangestabilityfilter - INFO - Removed LTC/USDT from whitelist, no candles found.
+2026-11-16 00:35:39,192 - rangestabilityfilter - INFO - Removed INJ/USDT from whitelist, no candles found.
+2026-11-16 00:35:39,192 - rangestabilityfilter - INFO - Removed AAVE/USDT from whitelist, no candles found.
+2026-11-16 00:35:39,192 - rangestabilityfilter - INFO - Removed TAO/USDT from whitelist, no candles found.
+2026-11-16 00:35:39,193 - rangestabilityfilter - INFO - Removed WLD/USDT from whitelist, no candles found.
+2026-11-16 00:35:39,193 - rangestabilityfilter - INFO - Removed SHELL/USDT from whitelist, no candles found.
+2026-11-16 00:35:39,193 - rangestabilityfilter - INFO - Removed PUMP/USDT from whitelist, no candles found.
+2026-11-16 00:35:39,193 - rangestabilityfilter - INFO - Removed KAVA/USDT from whitelist, no candles found.
+2026-11-16 00:35:39,194 - rangestabilityfilter - INFO - Removed XLM/USDT from whitelist, no candles found.
+2026-11-16 00:35:39,194 - rangestabilityfilter - INFO - Removed PENGU/USDT from whitelist, no candles found.
+2026-11-16 00:35:39,194 - rangestabilityfilter - INFO - Removed QNT/USDT from whitelist, no candles found.
+2026-11-16 00:35:39,195 - rangestabilityfilter - INFO - Removed ZRO/USDT from whitelist, no candles found.
+2026-11-16 00:35:39,195 - rangestabilityfilter - INFO - Removed HBAR/USDT from whitelist, no candles found.
+2026-11-16 00:35:39,195 - rangestabilityfilter - INFO - Removed ARB/USDT from whitelist, no candles found.
+2026-11-16 00:35:39,195 - rangestabilityfilter - INFO - Removed ONDO/USDT from whitelist, no candles found.
+2026-11-16 00:35:39,196 - rangestabilityfilter - INFO - Removed FIL/USDT from whitelist, no candles found.
+2026-11-16 00:35:39,196 - rangestabilityfilter - INFO - Removed MEGA/USDT from whitelist, no candles found.
+2026-11-16 00:35:39,196 - rangestabilityfilter - INFO - Removed FET/USDT from whitelist, no candles found.
+2026-11-16 00:35:39,196 - rangestabilityfilter - INFO - Removed GRAM/USDT from whitelist, no candles found.
+2026-11-16 00:35:39,197 - rangestabilityfilter - INFO - Removed ICP/USDT from whitelist, no candles found.
+2026-11-16 00:35:39,197 - rangestabilityfilter - INFO - Removed FF/USDT from whitelist, no candles found.
+2026-11-16 00:35:39,197 - rangestabilityfilter - INFO - Removed DOT/USDT from whitelist, no candles found.
+2026-11-16 00:35:39,197 - rangestabilityfilter - INFO - Removed BCH/USDT from whitelist, no candles found.
+2026-11-16 00:35:39,198 - rangestabilityfilter - INFO - Removed XPL/USDT from whitelist, no candles found.
+2026-11-16 00:35:39,198 - rangestabilityfilter - INFO - Removed STRK/USDT from whitelist, no candles found.
+2026-11-16 00:35:39,198 - rangestabilityfilter - INFO - Removed JUP/USDT from whitelist, no candles found.
+2026-11-16 00:35:39,198 - rangestabilityfilter - INFO - Removed APT/USDT from whitelist, no candles found.
+2026-11-16 00:35:39,199 - rangestabilityfilter - INFO - Removed CRV/USDT from whitelist, no candles found.
+2026-11-16 00:35:39,199 - rangestabilityfilter - INFO - Removed KITE/USDT from whitelist, no candles found.
+2026-11-16 00:35:39,199 - rangestabilityfilter - INFO - Removed DASH/USDT from whitelist, no candles found.
+2026-11-16 00:35:39,200 - rangestabilityfilter - INFO - Removed TIA/USDT from whitelist, no candles found.
+2026-11-16 00:35:39,200 - rangestabilityfilter - INFO - Removed RENDER/USDT from whitelist, no candles found.
+2026-11-16 00:35:39,200 - rangestabilityfilter - INFO - Removed SKY/USDT from whitelist, no candles found.
+2026-11-16 00:35:39,201 - rangestabilityfilter - INFO - Removed SHIB/USDT from whitelist, no candles found.
+2026-11-16 00:35:39,201 - rangestabilityfilter - INFO - Removed BARD/USDT from whitelist, no candles found.
+2026-11-16 00:35:39,201 - rangestabilityfilter - INFO - Removed ERA/USDT from whitelist, no candles found.
+2026-11-16 00:35:39,201 - rangestabilityfilter - INFO - Removed JST/USDT from whitelist, no candles found.
+2026-11-16 00:35:39,202 - rangestabilityfilter - INFO - Removed POL/USDT from whitelist, no candles found.
+2026-11-16 00:35:39,202 - rangestabilityfilter - INFO - Removed CAKE/USDT from whitelist, no candles found.
+2026-11-16 00:35:39,202 - rangestabilityfilter - INFO - Removed RAY/USDT from whitelist, no candles found.
+2026-11-16 00:35:39,202 - rangestabilityfilter - INFO - Removed BMT/USDT from whitelist, no candles found.
+2026-11-16 00:35:39,203 - rangestabilityfilter - INFO - Removed OP/USDT from whitelist, no candles found.
+2026-11-16 00:35:39,203 - rangestabilityfilter - INFO - Removed MARSCOIN/USDT from whitelist, no candles found.
+2026-11-16 00:35:39,203 - rangestabilityfilter - INFO - Removed VIRTUAL/USDT from whitelist, no candles found.
+2026-11-16 00:35:39,203 - rangestabilityfilter - INFO - Removed PYTH/USDT from whitelist, no candles found.
+2026-11-16 00:35:39,204 - rangestabilityfilter - INFO - Removed ETHFI/USDT from whitelist, no candles found.
+2026-11-16 00:35:39,204 - rangestabilityfilter - INFO - Removed PENDLE/USDT from whitelist, no candles found.
+2026-11-16 00:35:39,204 - rangestabilityfilter - INFO - Removed BERA/USDT from whitelist, no candles found.
+2026-11-16 00:35:39,204 - rangestabilityfilter - INFO - Removed ZAMA/USDT from whitelist, no candles found.
+2026-11-16 00:35:39,205 - rangestabilityfilter - INFO - Removed 0G/USDT from whitelist, no candles found.
+2026-11-16 00:35:39,205 - rangestabilityfilter - INFO - Removed LDO/USDT from whitelist, no candles found.
+2026-11-16 00:35:39,205 - rangestabilityfilter - INFO - Removed SLP/USDT from whitelist, no candles found.
+2026-11-16 00:35:39,206 - rangestabilityfilter - INFO - Removed WIF/USDT from whitelist, no candles found.
+2026-11-16 00:35:39,206 - rangestabilityfilter - INFO - Removed ZIL/USDT from whitelist, no candles found.
+2026-11-16 00:35:39,207 - rangestabilityfilter - INFO - Removed SEI/USDT from whitelist, no candles found.
+2026-11-16 00:35:39,207 - rangestabilityfilter - INFO - Removed ALT/USDT from whitelist, no candles found.
+2026-11-16 00:35:39,207 - rangestabilityfilter - INFO - Removed AR/USDT from whitelist, no candles found.
+2026-11-16 00:35:39,207 - rangestabilityfilter - INFO - Removed ALLO/USDT from whitelist, no candles found.
+2026-11-16 00:35:39,208 - rangestabilityfilter - INFO - Removed BNCB/USDT from whitelist, no candles found.
+2026-11-16 00:35:39,208 - rangestabilityfilter - INFO - Removed ZK/USDT from whitelist, no candles found.
+2026-11-16 00:35:39,208 - rangestabilityfilter - INFO - Removed DRAMB/USDT from whitelist, no candles found.
+2026-11-16 00:35:39,208 - rangestabilityfilter - INFO - Removed CHIP/USDT from whitelist, no candles found.
+2026-11-16 00:35:39,209 - rangestabilityfilter - INFO - Removed GIGGLE/USDT from whitelist, no candles found.
+2026-11-16 00:35:39,209 - rangestabilityfilter - INFO - Removed PLUME/USDT from whitelist, no candles found.
+2026-11-16 00:35:39,209 - rangestabilityfilter - INFO - Removed AUDIO/USDT from whitelist, no candles found.
+2026-11-16 00:35:39,209 - rangestabilityfilter - INFO - Removed WBTC/USDT from whitelist, no candles found.
+2026-11-16 00:35:39,210 - rangestabilityfilter - INFO - Removed ATOM/USDT from whitelist, no candles found.
+2026-11-16 00:35:39,210 - rangestabilityfilter - INFO - Removed ORDI/USDT from whitelist, no candles found.
+2026-11-16 00:35:39,210 - rangestabilityfilter - INFO - Removed XEC/USDT from whitelist, no candles found.
+2026-11-16 00:35:39,211 - rangestabilityfilter - INFO - Removed ALGO/USDT from whitelist, no candles found.
+2026-11-16 00:35:39,211 - rangestabilityfilter - INFO - Removed PROM/USDT from whitelist, no candles found.
+2026-11-16 00:35:39,211 - rangestabilityfilter - INFO - Removed BNSOL/USDT from whitelist, no candles found.
+2026-11-16 00:35:39,211 - rangestabilityfilter - INFO - Removed ETC/USDT from whitelist, no candles found.
+2026-11-16 00:35:39,212 - rangestabilityfilter - INFO - Removed BMNRB/USDT from whitelist, no candles found.
+2026-11-16 00:35:39,212 - rangestabilityfilter - INFO - Removed VET/USDT from whitelist, no candles found.
+2026-11-16 00:35:39,212 - rangestabilityfilter - INFO - Removed BEAMX/USDT from whitelist, no candles found.
+2026-11-16 00:35:39,212 - rangestabilityfilter - INFO - Removed EIGEN/USDT from whitelist, no candles found.
+2026-11-16 00:35:39,213 - rangestabilityfilter - INFO - Removed JTO/USDT from whitelist, no candles found.
+2026-11-16 00:35:39,213 - rangestabilityfilter - INFO - Removed HOME/USDT from whitelist, no candles found.
+2026-11-16 00:35:39,213 - rangestabilityfilter - INFO - Removed W/USDT from whitelist, no candles found.
+2026-11-16 00:35:39,213 - rangestabilityfilter - INFO - Removed ZEN/USDT from whitelist, no candles found.
+2026-11-16 00:35:39,214 - rangestabilityfilter - INFO - Removed SENT/USDT from whitelist, no candles found.
+2026-11-16 00:35:39,214 - rangestabilityfilter - INFO - Removed AERO/USDT from whitelist, no candles found.
+2026-11-16 00:35:39,214 - rangestabilityfilter - INFO - Removed WIN/USDT from whitelist, no candles found.
+2026-11-16 00:35:39,214 - rangestabilityfilter - INFO - Removed APE/USDT from whitelist, no candles found.
+2026-11-16 00:35:39,215 - rangestabilityfilter - INFO - Removed CFX/USDT from whitelist, no candles found.
+2026-11-16 00:35:39,215 - rangestabilityfilter - INFO - Removed SAND/USDT from whitelist, no candles found.
+2026-11-16 00:35:39,215 - rangestabilityfilter - INFO - Removed MORPHO/USDT from whitelist, no candles found.
+2026-11-16 00:35:39,215 - rangestabilityfilter - INFO - Removed CVX/USDT from whitelist, no candles found.
+2026-11-16 00:35:39,216 - rangestabilityfilter - INFO - Removed AT/USDT from whitelist, no candles found.
+2026-11-16 00:35:39,216 - rangestabilityfilter - INFO - Removed LUNC/USDT from whitelist, no candles found.
+2026-11-16 00:35:39,216 - rangestabilityfilter - INFO - Removed TWT/USDT from whitelist, no candles found.
+2026-11-16 00:35:39,216 - rangestabilityfilter - INFO - Removed MET/USDT from whitelist, no candles found.
+2026-11-16 00:35:39,217 - rangestabilityfilter - INFO - Removed HUMA/USDT from whitelist, no candles found.
+2026-11-16 00:35:39,217 - rangestabilityfilter - INFO - Removed KAITO/USDT from whitelist, no candles found.
+2026-11-16 00:35:39,217 - rangestabilityfilter - INFO - Removed ORCA/USDT from whitelist, no candles found.
+2026-11-16 00:35:39,217 - rangestabilityfilter - INFO - Removed MMT/USDT from whitelist, no candles found.
+2026-11-16 00:35:39,218 - rangestabilityfilter - INFO - Removed 1000SATS/USDT from whitelist, no candles found.
+2026-11-16 00:35:39,218 - rangestabilityfilter - INFO - Removed NEXO/USDT from whitelist, no candles found.
+2026-11-16 00:35:39,218 - rangestabilityfilter - INFO - Removed FORM/USDT from whitelist, no candles found.
+2026-11-16 00:35:39,219 - rangestabilityfilter - INFO - Removed SOLV/USDT from whitelist, no candles found.
+2026-11-16 00:35:39,219 - rangestabilityfilter - INFO - Removed IO/USDT from whitelist, no candles found.
+2026-11-16 00:35:39,219 - rangestabilityfilter - INFO - Removed WBETH/USDT from whitelist, no candles found.
+2026-11-16 00:35:39,220 - rangestabilityfilter - INFO - Removed HEMI/USDT from whitelist, no candles found.
+2026-11-16 00:35:39,220 - rangestabilityfilter - INFO - Removed SCR/USDT from whitelist, no candles found.
+2026-11-16 00:35:39,220 - rangestabilityfilter - INFO - Removed BIO/USDT from whitelist, no candles found.
+2026-11-16 00:35:39,220 - rangestabilityfilter - INFO - Removed GALA/USDT from whitelist, no candles found.
+2026-11-16 00:35:39,221 - rangestabilityfilter - INFO - Removed GMT/USDT from whitelist, no candles found.
+2026-11-16 00:35:39,221 - rangestabilityfilter - INFO - Removed AVA/USDT from whitelist, no candles found.
+2026-11-16 00:35:39,221 - rangestabilityfilter - INFO - Removed FLOKI/USDT from whitelist, no candles found.
+2026-11-16 00:35:39,221 - rangestabilityfilter - INFO - Removed GRT/USDT from whitelist, no candles found.
+2026-11-16 00:35:39,222 - rangestabilityfilter - INFO - Removed COTI/USDT from whitelist, no candles found.
+2026-11-16 00:35:39,222 - rangestabilityfilter - INFO - Removed CFG/USDT from whitelist, no candles found.
+2026-11-16 00:35:39,222 - rangestabilityfilter - INFO - Removed LINEA/USDT from whitelist, no candles found.
+2026-11-16 00:35:39,222 - rangestabilityfilter - INFO - Removed A/USDT from whitelist, no candles found.
+2026-11-16 00:35:39,223 - rangestabilityfilter - INFO - Removed GTC/USDT from whitelist, no candles found.
+2026-11-16 00:35:39,223 - rangestabilityfilter - INFO - Removed SUPER/USDT from whitelist, no candles found.
+2026-11-16 00:35:39,223 - rangestabilityfilter - INFO - Removed RED/USDT from whitelist, no candles found.
+2026-11-16 00:35:39,223 - rangestabilityfilter - INFO - Removed AXS/USDT from whitelist, no candles found.
+2026-11-16 00:35:39,224 - rangestabilityfilter - INFO - Removed BOME/USDT from whitelist, no candles found.
+2026-11-16 00:35:39,316 - freqtrade.plugins.pairlistmanager - INFO - Whitelist with 3 pairs: ['AMP/USDT', 'HOT/USDT', 'ARPA/USDT']
+2026-11-16 00:35:42,609 - rangestabilityfilter - INFO - Removed SHELL/USDT from whitelist, because rate of change over 3 x 1d candles is 1.777, which is above the threshold of 0.95.
+2026-11-16 00:35:42,610 - rangestabilityfilter - INFO - Removed KAVA/USDT from whitelist, because rate of change over 3 x 1d candles is 1.748, which is above the threshold of 0.95.
+2026-11-16 00:35:42,612 - rangestabilityfilter - INFO - Removed BARD/USDT from whitelist, because rate of change over 3 x 1d candles is 1.246, which is above the threshold of 0.95.
+2026-11-16 00:35:42,716 - freqtrade.plugins.pairlistmanager - INFO - Whitelist with 100 pairs: ['BTC/USDT', 'ETH/USDT', 'SOL/USDT', 'ZEC/USDT', 'XRP/USDT', 'NEAR/USDT', 'DOGE/USDT', 'ASTER/USDT', 'UNI/USDT', 'PEPE/USDT', 'SUI/USDT', 'TRX/USDT', 'ADA/USDT', 'ENA/USDT', 'LINK/USDT', 'AVAX/USDT', 'LTC/USDT', 'INJ/USDT', 'AAVE/USDT', 'TAO/USDT', 'WLD/USDT', 'PUMP/USDT', 'XLM/USDT', 'PENGU/USDT', 'QNT/USDT', 'ZRO/USDT', 'HBAR/USDT', 'ARB/USDT', 'ONDO/USDT', 'FIL/USDT', 'MEGA/USDT', 'FET/USDT', 'GRAM/USDT', 'ICP/USDT', 'FF/USDT', 'DOT/USDT', 'BCH/USDT', 'XPL/USDT', 'STRK/USDT', 'JUP/USDT', 'APT/USDT', 'CRV/USDT', 'KITE/USDT', 'DASH/USDT', 'TIA/USDT', 'RENDER/USDT', 'SKY/USDT', 'SHIB/USDT', 'ERA/USDT', 'JST/USDT', 'POL/USDT', 'CAKE/USDT', 'RAY/USDT', 'BMT/USDT', 'OP/USDT', 'MARSCOIN/USDT', 'VIRTUAL/USDT', 'PYTH/USDT', 'ETHFI/USDT', 'PENDLE/USDT', 'BERA/USDT', 'ZAMA/USDT', '0G/USDT', 'LDO/USDT', 'SLP/USDT', 'WIF/USDT', 'AMP/USDT', 'ZIL/USDT', 'SEI/USDT', 'ALT/USDT', 'AR/USDT', 'ALLO/USDT', 'BNCB/USDT', 'ZK/USDT', 'DRAMB/USDT', 'CHIP/USDT', 'GIGGLE/USDT', 'PLUME/USDT', 'AUDIO/USDT', 'WBTC/USDT', 'ATOM/USDT', 'ORDI/USDT', 'XEC/USDT', 'ALGO/USDT', 'PROM/USDT', 'BNSOL/USDT', 'ETC/USDT', 'BMNRB/USDT', 'VET/USDT', 'BEAMX/USDT', 'EIGEN/USDT', 'JTO/USDT', 'HOME/USDT', 'W/USDT', 'ZEN/USDT', 'SENT/USDT', 'AERO/USDT', 'WIN/USDT', 'APE/USDT', 'CFX/USDT']
+2026-11-16 00:36:22,603 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.10, strategy_version: v18.0.260', state='RUNNING'
+2026-11-16 00:37:22,606 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.10, strategy_version: v18.0.260', state='RUNNING'
+2026-11-16 00:38:22,608 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.10, strategy_version: v18.0.260', state='RUNNING'
+2026-11-16 00:39:22,611 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.10, strategy_version: v18.0.260', state='RUNNING'
+2026-11-16 00:40:26,130 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.10, strategy_version: v18.0.260', state='RUNNING'
+2026-11-16 00:41:26,133 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.10, strategy_version: v18.0.260', state='RUNNING'
+2026-11-16 00:42:26,136 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.10, strategy_version: v18.0.260', state='RUNNING'
+2026-11-16 00:43:26,139 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.10, strategy_version: v18.0.260', state='RUNNING'
+2026-11-16 00:44:26,141 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.10, strategy_version: v18.0.260', state='RUNNING'
+2026-11-16 00:45:28,038 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.10, strategy_version: v18.0.260', state='RUNNING'
+2026-11-16 00:46:28,041 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.10, strategy_version: v18.0.260', state='RUNNING'
+2026-11-16 00:47:28,044 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.10, strategy_version: v18.0.260', state='RUNNING'
+2026-11-16 00:48:28,046 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.10, strategy_version: v18.0.260', state='RUNNING'
+2026-11-16 00:49:28,049 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.10, strategy_version: v18.0.260', state='RUNNING'
+2026-11-16 00:50:31,334 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.10, strategy_version: v18.0.260', state='RUNNING'
