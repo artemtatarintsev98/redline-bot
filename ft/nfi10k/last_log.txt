@@ -1,9 +1,4 @@
- Bot heartbeat. PID=1, version='2026.10, strategy_version: v18.0.260', state='RUNNING'
-2026-11-16 04:16:06,944 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.10, strategy_version: v18.0.260', state='RUNNING'
-2026-11-16 04:17:06,946 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.10, strategy_version: v18.0.260', state='RUNNING'
-2026-11-16 04:18:06,949 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.10, strategy_version: v18.0.260', state='RUNNING'
-2026-11-16 04:19:06,952 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.10, strategy_version: v18.0.260', state='RUNNING'
-2026-11-16 04:20:15,919 - NostalgiaForInfinityX8 - INFO - Grinding exit (grind_2_exit) [2026-11-16 04:20:15.757333+00:00] [KAVA/USDT] | Rate: 0.03133 | Stake amount: 79.343 | Coin amount: 2532.5 | Profit (stake): -50.272 | Profit: -2.07% | Grind profit: 3.84% (2.858 USDT)
+T] | Rate: 0.03133 | Stake amount: 79.343 | Coin amount: 2532.5 | Profit (stake): -50.272 | Profit: -2.07% | Grind profit: 3.84% (2.858 USDT)
 2026-11-16 04:20:15,923 - freqtrade.wallets - INFO - Wallets synced.
 2026-11-16 04:20:16,079 - freqtrade.rpc.rpc_manager - INFO - Sending rpc message: {'type': exit, 'trade_id': 21, 'exchange': 'Binance', 'pair': 'KAVA/USDT', 'leverage': 1.0, 'direction': 'Long', 'gain': 'profit', 'limit': 0.03133, 'order_rate': 0.03133, 'order_type': 'limit', 'amount': 2532.5, 'open_rate': 0.03032, 'close_rate': 0.03133, 'current_rate': 0.03133, 'profit_amount': 2.40169638, 'profit_ratio': 0.03124679, 'buy_tag': '1 ', 'enter_tag': '1 ', 'exit_reason': 'grind_2_exit 294', 'open_date': datetime.datetime(2026, 11, 14, 10, 25, 12, 913597, tzinfo=datetime.timezone.utc), 'close_date': datetime.datetime(2026, 11, 16, 4, 20, 16, 79362, tzinfo=datetime.timezone.utc), 'stake_amount': 526.3069603281997, 'stake_currency': 'USDT', 'base_currency': 'KAVA', 'quote_currency': 'USDT', 'fiat_currency': '', 'sub_trade': True, 'cumulative_profit': -66.76781953999999, 'final_profit_ratio': None, 'is_final_exit': False}
 2026-11-16 04:20:16,080 - freqtrade.freqtradebot - INFO - Found open order for Trade(id=21, pair=KAVA/USDT, amount=17359.5, is_short=False, leverage=1, open_rate=0.03032, open_since=2026-11-14 10:25:12)
@@ -1125,3 +1120,9 @@
 2026-11-16 08:33:52,118 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.10, strategy_version: v18.0.260', state='RUNNING'
 2026-11-16 08:34:52,121 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.10, strategy_version: v18.0.260', state='RUNNING'
 2026-11-16 08:35:56,122 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.10, strategy_version: v18.0.260', state='RUNNING'
+2026-11-16 08:36:53,822 - freqtrade.commands.trade_commands - INFO - worker found ... calling exit
+2026-11-16 08:36:53,824 - freqtrade.rpc.rpc_manager - INFO - Sending rpc message: {'type': status, 'status': 'process died'}
+2026-11-16 08:36:53,825 - freqtrade.freqtradebot - INFO - Cleaning up modules ...
+2026-11-16 08:36:53,831 - freqtrade.rpc.rpc_manager - INFO - Sending rpc message: {'type': warning, 'status': "6 open trades active.\n\nHandle these trades manually on Binance, or '/start' the bot again and use '/stopentry' to handle open trades gracefully. \nNote: Trades are simulated (dry run)."}
+2026-11-16 08:36:53,831 - freqtrade.rpc.rpc_manager - INFO - Cleaning up rpc modules ...
+2026-11-16 08:36:54,093 - freqtrade - INFO - SIGINT received, aborting ...
