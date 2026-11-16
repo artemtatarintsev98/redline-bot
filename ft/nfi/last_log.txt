@@ -1,29 +1,4 @@
-2026-11-16 14:24:16,078 - freqtrade.loggers - INFO - Enabling colorized output.
-2026-11-16 14:24:16,079 - freqtrade.loggers - INFO - Logfile configured
-2026-11-16 14:24:16,079 - freqtrade.loggers - INFO - Verbosity set to 0
-2026-11-16 14:24:16,080 - freqtrade.configuration.configuration - INFO - Runmode set to dry_run.
-2026-11-16 14:24:16,080 - freqtrade.configuration.configuration - INFO - Parameter --db-url detected ...
-2026-11-16 14:24:16,080 - freqtrade.configuration.configuration - WARNING - `force_entry_enable` RPC message enabled.
-2026-11-16 14:24:16,081 - freqtrade.configuration.configuration - INFO - Dry run is enabled
-2026-11-16 14:24:16,081 - freqtrade.configuration.configuration - INFO - Using DB: "sqlite:////freqtrade/user_data/trades.sqlite"
-2026-11-16 14:24:16,081 - freqtrade.configuration.configuration - INFO - Using max_open_trades: 6 ...
-2026-11-16 14:24:16,103 - freqtrade.configuration.configuration - INFO - Using user-data directory: /freqtrade/user_data ...
-2026-11-16 14:24:16,104 - freqtrade.configuration.directory_operations - INFO - Created data directory: None
-2026-11-16 14:24:16,104 - freqtrade.configuration.configuration - INFO - Using data directory: /freqtrade/user_data/data/binance ...
-2026-11-16 14:24:16,105 - freqtrade.exchange.check_exchange - INFO - Checking exchange...
-2026-11-16 14:24:16,119 - freqtrade.exchange.check_exchange - INFO - Exchange "binance" is officially supported by the Freqtrade development team.
-2026-11-16 14:24:16,121 - freqtrade.configuration.configuration - INFO - Using pairlist from configuration.
-2026-11-16 14:24:16,122 - freqtrade.exchange.exchange - INFO - Instance is running with dry_run enabled
-2026-11-16 14:24:16,122 - freqtrade.exchange.exchange - INFO - Using CCXT 4.5.90
-2026-11-16 14:24:16,123 - freqtrade.exchange.exchange - INFO - Applying additional ccxt config: {'enableRateLimit': True, 'rateLimit': 60, 'options': {'brokerId': None, 'partner': {'spot': {'id': None, 'key': None}, 'future': {'id': None, 'key': None}}, 'fetchMarkets': {'types': ['spot']}}, 'urls': {'api': {'public': 'https://data-api.binance.vision/api/v3'}}}
-2026-11-16 14:24:16,126 - freqtrade.exchange.exchange - INFO - Applying additional ccxt config: {'enableRateLimit': True, 'rateLimit': 60, 'options': {'brokerId': None, 'partner': {'spot': {'id': None, 'key': None}, 'future': {'id': None, 'key': None}}, 'fetchMarkets': {'types': ['spot']}}, 'urls': {'api': {'public': 'https://data-api.binance.vision/api/v3'}}}
-2026-11-16 14:24:16,130 - freqtrade.exchange.exchange - INFO - Using Exchange "Binance"
-2026-11-16 14:24:18,606 - freqtrade.exchange.exchange - INFO - Time offset to Binance is -245ms.
-2026-11-16 14:24:18,606 - freqtrade.resolvers.exchange_resolver - INFO - Using resolved exchange class 'Binance' ...
-2026-11-16 14:24:19,040 - freqtrade.resolvers.iresolver - INFO - Using resolved strategy NostalgiaForInfinityX8 from '/freqtrade/user_data/strategies/NostalgiaForInfinityX8.py'...
-2026-11-16 14:24:19,041 - freqtrade.strategy.hyper - INFO - Found no parameter file.
-2026-11-16 14:24:19,042 - freqtrade.resolvers.strategy_resolver - INFO - Override strategy 'timeframe' with value from the configuration: 5m.
-2026-11-16 14:24:19,042 - freqtrade.resolvers.strategy_resolver - INFO - Override strategy 'order_types' with value from the configuration: {'entry': 'limit', 'exit': 'limit', 'emergency_exit': 'limit', 'force_entry': 'limit', 'force_exit': 'limit', 'stoploss': 'limit', 'stoploss_on_exchange': False, 'stoploss_on_exchange_interval': 60, 'stoploss_on_exchange_limit_ratio': 0.99}.
+it', 'stoploss': 'limit', 'stoploss_on_exchange': False, 'stoploss_on_exchange_interval': 60, 'stoploss_on_exchange_limit_ratio': 0.99}.
 2026-11-16 14:24:19,043 - freqtrade.resolvers.strategy_resolver - INFO - Override strategy 'stake_currency' with value from the configuration: USDT.
 2026-11-16 14:24:19,043 - freqtrade.resolvers.strategy_resolver - INFO - Override strategy 'stake_amount' with value from the configuration: unlimited.
 2026-11-16 14:24:19,043 - freqtrade.resolvers.strategy_resolver - INFO - Override strategy 'unfilledtimeout' with value from the configuration: {'entry': 3, 'exit': 2, 'exit_timeout_count': 0, 'unit': 'minutes'}.
@@ -1123,3 +1098,43 @@
 2026-11-16 17:26:31,497 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.10, strategy_version: v18.0.265', state='RUNNING'
 2026-11-16 17:27:31,500 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.10, strategy_version: v18.0.265', state='RUNNING'
 2026-11-16 17:28:31,502 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.10, strategy_version: v18.0.265', state='RUNNING'
+2026-11-16 17:29:31,504 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.10, strategy_version: v18.0.265', state='RUNNING'
+2026-11-16 17:30:12,127 - NostalgiaForInfinityX8 - INFO - Grinding entry (grind_2_entry) [2026-11-16 17:30:11.967419+00:00] [HUMA/USDT] | Rate: 0.00836 | Stake amount: 16.213 | Profit (stake): -41.371 | Profit: -12.32% | Tag: g6
+2026-11-16 17:30:12,129 - freqtrade.freqtradebot - INFO - Position adjust: about to create a new order for HUMA/USDT with stake_amount: 16.213497 and price: 0.00836 for Trade(id=17, pair=HUMA/USDT, amount=4865, is_short=False, leverage=1, open_rate=0.00824, open_since=2026-11-04 14:00:12)
+2026-11-16 17:30:12,284 - freqtrade.freqtradebot - INFO - Order dry_run_buy_HUMA/USDT_5ec87f16-2d13-49a0-a593-d7fb8f57e819 was created for HUMA/USDT and status is closed.
+2026-11-16 17:30:12,292 - freqtrade.wallets - INFO - Wallets synced.
+2026-11-16 17:30:12,293 - freqtrade.rpc.rpc_manager - INFO - Sending rpc message: {'trade_id': 17, 'type': entry, 'buy_tag': '46 ', 'enter_tag': '46 ', 'exchange': 'Binance', 'pair': 'HUMA/USDT', 'leverage': 1.0, 'direction': 'Long', 'limit': 0.00836, 'order_rate': 0.00836, 'open_rate': 0.00836, 'order_type': 'limit', 'stake_amount': 56.29564908685628, 'stake_currency': 'USDT', 'base_currency': 'HUMA', 'quote_currency': 'USDT', 'fiat_currency': '', 'amount': 1939.0, 'open_date': datetime.datetime(2026, 11, 4, 14, 0, 12, 549318, tzinfo=datetime.timezone.utc), 'current_rate': 0.00836, 'sub_trade': True}
+2026-11-16 17:30:12,293 - freqtrade.freqtradebot - INFO - DCA order closed, trade should be up to date: Trade(id=17, pair=HUMA/USDT, amount=6804, is_short=False, leverage=1, open_rate=0.00827, open_since=2026-11-04 14:00:12)
+2026-11-16 17:30:12,293 - freqtrade.freqtradebot - INFO - Found open order for Trade(id=17, pair=HUMA/USDT, amount=6804, is_short=False, leverage=1, open_rate=0.00827, open_since=2026-11-04 14:00:12)
+2026-11-16 17:30:12,296 - freqtrade.freqtradebot - INFO - Fee for Trade Trade(id=17, pair=HUMA/USDT, amount=6804, is_short=False, leverage=1, open_rate=0.00827, open_since=2026-11-04 14:00:12) [buy]: 0.01621004 USDT - rate: 0.001
+2026-11-16 17:30:12,297 - freqtrade.persistence.trade_model - INFO - Updating trade (id=17) ...
+2026-11-16 17:30:12,297 - freqtrade.persistence.trade_model - INFO - LIMIT_BUY has been fulfilled for Trade(id=17, pair=HUMA/USDT, amount=1939, is_short=False, leverage=1, open_rate=0.00836, open_since=2026-11-04 14:00:12).
+2026-11-16 17:30:12,305 - freqtrade.wallets - INFO - Wallets synced.
+2026-11-16 17:30:12,308 - freqtrade.rpc.rpc_manager - INFO - Sending rpc message: {'trade_id': 17, 'type': entry_fill, 'buy_tag': '46 ', 'enter_tag': '46 ', 'exchange': 'Binance', 'pair': 'HUMA/USDT', 'leverage': 1.0, 'direction': 'Long', 'limit': 0.00836, 'order_rate': 0.00836, 'open_rate': 0.00836, 'order_type': 'limit', 'stake_amount': 56.29564908685628, 'stake_currency': 'USDT', 'base_currency': 'HUMA', 'quote_currency': 'USDT', 'fiat_currency': '', 'amount': 1939.0, 'open_date': datetime.datetime(2026, 11, 4, 14, 0, 12, 549318, tzinfo=datetime.timezone.utc), 'current_rate': 0.00836, 'sub_trade': True}
+2026-11-16 17:30:12,660 - freqtrade.rpc.rpc_manager - INFO - Sending rpc strategy_msg: ✅ ​**Grinding entry:** `(grind_2_entry)`
+🏦 **Exchange:** `Binance`
+🪙 **Pair:** `HUMA/USDT`
+〽️ **Rate:** `0.00836`
+💰 **Stake amount:** `16.21 USDT`
+💵 **Profit (stake):** `-41.37 USDT`
+💸 **Profit (percent):** `-12.32%`
+
+2026-11-16 17:30:34,698 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.10, strategy_version: v18.0.265', state='RUNNING'
+2026-11-16 17:31:34,701 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.10, strategy_version: v18.0.265', state='RUNNING'
+2026-11-16 17:32:34,704 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.10, strategy_version: v18.0.265', state='RUNNING'
+2026-11-16 17:33:34,706 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.10, strategy_version: v18.0.265', state='RUNNING'
+2026-11-16 17:34:34,709 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.10, strategy_version: v18.0.265', state='RUNNING'
+2026-11-16 17:35:36,970 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.10, strategy_version: v18.0.265', state='RUNNING'
+2026-11-16 17:36:36,972 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.10, strategy_version: v18.0.265', state='RUNNING'
+2026-11-16 17:37:36,975 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.10, strategy_version: v18.0.265', state='RUNNING'
+2026-11-16 17:38:36,978 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.10, strategy_version: v18.0.265', state='RUNNING'
+2026-11-16 17:39:36,980 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.10, strategy_version: v18.0.265', state='RUNNING'
+2026-11-16 17:40:38,466 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.10, strategy_version: v18.0.265', state='RUNNING'
+2026-11-16 17:41:38,468 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.10, strategy_version: v18.0.265', state='RUNNING'
+2026-11-16 17:42:38,471 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.10, strategy_version: v18.0.265', state='RUNNING'
+2026-11-16 17:43:38,474 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.10, strategy_version: v18.0.265', state='RUNNING'
+2026-11-16 17:44:38,476 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.10, strategy_version: v18.0.265', state='RUNNING'
+2026-11-16 17:45:41,932 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.10, strategy_version: v18.0.265', state='RUNNING'
+2026-11-16 17:46:41,934 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.10, strategy_version: v18.0.265', state='RUNNING'
+2026-11-16 17:47:41,937 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.10, strategy_version: v18.0.265', state='RUNNING'
+2026-11-16 17:48:41,939 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.10, strategy_version: v18.0.265', state='RUNNING'
