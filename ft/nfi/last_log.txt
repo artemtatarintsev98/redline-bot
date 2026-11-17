@@ -1,4 +1,4 @@
-INFO - Sending rpc message: {'type': exit, 'trade_id': 18, 'exchange': 'Binance', 'pair': 'SNXXB/USDT', 'leverage': 1.0, 'direction': 'Long', 'gain': 'loss', 'limit': 2.64, 'order_rate': 2.64, 'order_type': 'limit', 'amount': 24.85, 'open_rate': 3.44, 'close_rate': 2.64, 'current_rate': 2.64, 'profit_amount': -20.031088, 'profit_ratio': -0.23409149, 'buy_tag': '4 ', 'enter_tag': '4 ', 'exit_reason': 'grind_3_derisk 268 230 226 222', 'open_date': datetime.datetime(2026, 11, 4, 15, 45, 8, 313222, tzinfo=datetime.timezone.utc), 'close_date': datetime.datetime(2026, 11, 17, 15, 41, 41, 678940, tzinfo=datetime.timezone.utc), 'stake_amount': 114.68643676981237, 'stake_currency': 'USDT', 'base_currency': 'SNXXB', 'quote_currency': 'USDT', 'fiat_currency': '', 'sub_trade': True, 'cumulative_profit': -54.69793258, 'final_profit_ratio': None, 'is_final_exit': False}
+ade': True, 'cumulative_profit': -54.69793258, 'final_profit_ratio': None, 'is_final_exit': False}
 2026-11-17 15:41:41,679 - freqtrade.freqtradebot - INFO - Found open order for Trade(id=18, pair=SNXXB/USDT, amount=33.35, is_short=False, leverage=1, open_rate=3.44, open_since=2026-11-04 15:45:08)
 2026-11-17 15:41:41,684 - freqtrade.persistence.trade_model - INFO - Updating trade (id=18) ...
 2026-11-17 15:41:41,684 - freqtrade.persistence.trade_model - INFO - LIMIT_SELL has been fulfilled for Trade(id=18, pair=SNXXB/USDT, amount=33.35, is_short=False, leverage=1, open_rate=3.44, open_since=2026-11-04 15:45:08).
@@ -1060,3 +1060,9 @@ INFO - Sending rpc message: {'type': exit, 'trade_id': 18, 'exchange': 'Binance'
 2026-11-17 19:11:22,995 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.10, strategy_version: v18.0.266', state='RUNNING'
 2026-11-17 19:12:22,998 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.10, strategy_version: v18.0.266', state='RUNNING'
 2026-11-17 19:13:23,000 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.10, strategy_version: v18.0.266', state='RUNNING'
+2026-11-17 19:14:17,204 - freqtrade.commands.trade_commands - INFO - worker found ... calling exit
+2026-11-17 19:14:17,205 - freqtrade.rpc.rpc_manager - INFO - Sending rpc message: {'type': status, 'status': 'process died'}
+2026-11-17 19:14:17,206 - freqtrade.freqtradebot - INFO - Cleaning up modules ...
+2026-11-17 19:14:17,214 - freqtrade.rpc.rpc_manager - INFO - Sending rpc message: {'type': warning, 'status': "4 open trades active.\n\nHandle these trades manually on Binance, or '/start' the bot again and use '/stopentry' to handle open trades gracefully. \nNote: Trades are simulated (dry run)."}
+2026-11-17 19:14:17,215 - freqtrade.rpc.rpc_manager - INFO - Cleaning up rpc modules ...
+2026-11-17 19:14:17,476 - freqtrade - INFO - SIGINT received, aborting ...
