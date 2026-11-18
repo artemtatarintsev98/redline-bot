@@ -1,41 +1,4 @@
-2026-11-18 18:19:02,950 - freqtrade.loggers - INFO - Enabling colorized output.
-2026-11-18 18:19:02,951 - freqtrade.loggers - INFO - Logfile configured
-2026-11-18 18:19:02,951 - freqtrade.loggers - INFO - Verbosity set to 0
-2026-11-18 18:19:02,952 - freqtrade.configuration.configuration - INFO - Runmode set to dry_run.
-2026-11-18 18:19:02,952 - freqtrade.configuration.configuration - INFO - Parameter --db-url detected ...
-2026-11-18 18:19:02,952 - freqtrade.configuration.configuration - WARNING - `force_entry_enable` RPC message enabled.
-2026-11-18 18:19:02,953 - freqtrade.configuration.configuration - INFO - Dry run is enabled
-2026-11-18 18:19:02,953 - freqtrade.configuration.configuration - INFO - Using DB: "sqlite:////freqtrade/user_data/trades.sqlite"
-2026-11-18 18:19:02,954 - freqtrade.configuration.configuration - INFO - Using max_open_trades: 12 ...
-2026-11-18 18:19:02,965 - freqtrade.configuration.configuration - INFO - Using user-data directory: /freqtrade/user_data ...
-2026-11-18 18:19:02,966 - freqtrade.configuration.directory_operations - INFO - Created data directory: None
-2026-11-18 18:19:02,967 - freqtrade.configuration.configuration - INFO - Using data directory: /freqtrade/user_data/data/binance ...
-2026-11-18 18:19:02,968 - freqtrade.exchange.check_exchange - INFO - Checking exchange...
-2026-11-18 18:19:02,977 - freqtrade.exchange.check_exchange - INFO - Exchange "binance" is officially supported by the Freqtrade development team.
-2026-11-18 18:19:02,978 - freqtrade.configuration.configuration - INFO - Using pairlist from configuration.
-2026-11-18 18:19:02,979 - freqtrade.exchange.exchange - INFO - Instance is running with dry_run enabled
-2026-11-18 18:19:02,979 - freqtrade.exchange.exchange - INFO - Using CCXT 4.5.90
-2026-11-18 18:19:02,979 - freqtrade.exchange.exchange - INFO - Applying additional ccxt config: {'enableRateLimit': True, 'rateLimit': 60, 'options': {'brokerId': None, 'partner': {'spot': {'id': None, 'key': None}, 'future': {'id': None, 'key': None}}, 'fetchMarkets': {'types': ['spot']}}, 'urls': {'api': {'public': 'https://data-api.binance.vision/api/v3'}}}
-2026-11-18 18:19:02,984 - freqtrade.exchange.exchange - INFO - Applying additional ccxt config: {'enableRateLimit': True, 'rateLimit': 60, 'options': {'brokerId': None, 'partner': {'spot': {'id': None, 'key': None}, 'future': {'id': None, 'key': None}}, 'fetchMarkets': {'types': ['spot']}}, 'urls': {'api': {'public': 'https://data-api.binance.vision/api/v3'}}}
-2026-11-18 18:19:02,990 - freqtrade.exchange.exchange - INFO - Using Exchange "Binance"
-2026-11-18 18:19:05,887 - freqtrade.exchange.exchange - INFO - Time offset to Binance is -241ms.
-2026-11-18 18:19:05,888 - freqtrade.resolvers.exchange_resolver - INFO - Using resolved exchange class 'Binance' ...
-2026-11-18 18:19:06,429 - freqtrade.resolvers.iresolver - INFO - Using resolved strategy NostalgiaForInfinityX8 from '/freqtrade/user_data/strategies/NostalgiaForInfinityX8.py'...
-2026-11-18 18:19:06,431 - freqtrade.strategy.hyper - INFO - Found no parameter file.
-2026-11-18 18:19:06,432 - freqtrade.resolvers.strategy_resolver - INFO - Override strategy 'timeframe' with value from the configuration: 5m.
-2026-11-18 18:19:06,432 - freqtrade.resolvers.strategy_resolver - INFO - Override strategy 'order_types' with value from the configuration: {'entry': 'limit', 'exit': 'limit', 'emergency_exit': 'limit', 'force_entry': 'limit', 'force_exit': 'limit', 'stoploss': 'limit', 'stoploss_on_exchange': False, 'stoploss_on_exchange_interval': 60, 'stoploss_on_exchange_limit_ratio': 0.99}.
-2026-11-18 18:19:06,433 - freqtrade.resolvers.strategy_resolver - INFO - Override strategy 'stake_currency' with value from the configuration: USDT.
-2026-11-18 18:19:06,433 - freqtrade.resolvers.strategy_resolver - INFO - Override strategy 'stake_amount' with value from the configuration: unlimited.
-2026-11-18 18:19:06,434 - freqtrade.resolvers.strategy_resolver - INFO - Override strategy 'unfilledtimeout' with value from the configuration: {'entry': 3, 'exit': 2, 'exit_timeout_count': 0, 'unit': 'minutes'}.
-2026-11-18 18:19:06,434 - freqtrade.resolvers.strategy_resolver - INFO - Override strategy 'max_open_trades' with value from the configuration: 12.
-2026-11-18 18:19:06,435 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using minimal_roi: {}
-2026-11-18 18:19:06,435 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using timeframe: 5m
-2026-11-18 18:19:06,435 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using stoploss: -0.99
-2026-11-18 18:19:06,436 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using trailing_stop: False
-2026-11-18 18:19:06,436 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using trailing_stop_positive: 0.01
-2026-11-18 18:19:06,437 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using trailing_stop_positive_offset: 0.03
-2026-11-18 18:19:06,437 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using trailing_only_offset_is_reached: True
-2026-11-18 18:19:06,437 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using use_custom_stoploss: False
+strategy_resolver - INFO - Strategy using use_custom_stoploss: False
 2026-11-18 18:19:06,438 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using process_only_new_candles: True
 2026-11-18 18:19:06,438 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using order_types: {'entry': 'limit', 'exit': 'limit', 'emergency_exit': 'limit', 'force_entry': 'limit', 'force_exit': 'limit', 'stoploss': 'limit', 'stoploss_on_exchange': False, 'stoploss_on_exchange_interval': 60, 'stoploss_on_exchange_limit_ratio': 0.99}
 2026-11-18 18:19:06,439 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using order_time_in_force: {'entry': 'GTC', 'exit': 'GTC'}
@@ -1045,3 +1008,117 @@
 2026-11-18 21:41:59,009 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.10, strategy_version: v18.0.269', state='RUNNING'
 2026-11-18 21:42:59,012 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.10, strategy_version: v18.0.269', state='RUNNING'
 2026-11-18 21:43:59,015 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.10, strategy_version: v18.0.269', state='RUNNING'
+2026-11-18 21:44:59,018 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.10, strategy_version: v18.0.269', state='RUNNING'
+2026-11-18 21:45:25,225 - NostalgiaForInfinityX8 - INFO - Grinding entry (grind_1_entry) [2026-11-18 21:45:25.053933+00:00] [HUMA/USDT] | Rate: 0.00855 | Stake amount: 162.450 | Profit (stake): -244.528 | Profit: -9.64% | Tag: g22
+2026-11-18 21:45:25,227 - freqtrade.freqtradebot - INFO - Position adjust: about to create a new order for HUMA/USDT with stake_amount: 162.44978600000002 and price: 0.00855 for Trade(id=9, pair=HUMA/USDT, amount=1137, is_short=False, leverage=1, open_rate=0.00829, open_since=2026-11-04 14:03:24)
+2026-11-18 21:45:25,387 - freqtrade.freqtradebot - INFO - Order dry_run_buy_HUMA/USDT_aae47c2f-d730-4922-aafe-5d9fae08573e was created for HUMA/USDT and status is open.
+2026-11-18 21:45:25,400 - freqtrade.wallets - INFO - Wallets synced.
+2026-11-18 21:45:25,401 - freqtrade.rpc.rpc_manager - INFO - Sending rpc message: {'trade_id': 9, 'type': entry, 'buy_tag': '46 ', 'enter_tag': '46 ', 'exchange': 'Binance', 'pair': 'HUMA/USDT', 'leverage': 1.0, 'direction': 'Long', 'limit': 0.00855, 'order_rate': 0.00855, 'open_rate': 0.00855, 'order_type': 'limit', 'stake_amount': 171.8635523739877, 'stake_currency': 'USDT', 'base_currency': 'HUMA', 'quote_currency': 'USDT', 'fiat_currency': '', 'amount': 18999.0, 'open_date': datetime.datetime(2026, 11, 4, 14, 3, 24, 703227, tzinfo=datetime.timezone.utc), 'current_rate': 0.00855, 'sub_trade': True}
+2026-11-18 21:45:25,402 - freqtrade.freqtradebot - INFO - DCA order open, will wait for resolution: Trade(id=9, pair=HUMA/USDT, amount=1137, is_short=False, leverage=1, open_rate=0.00829, open_since=2026-11-04 14:03:24)
+2026-11-18 21:45:26,492 - freqtrade.rpc.rpc_manager - INFO - Sending rpc strategy_msg: ✅ ​**Grinding entry:** `(grind_1_entry)`
+🏦 **Exchange:** `Binance`
+🪙 **Pair:** `HUMA/USDT`
+〽️ **Rate:** `0.00855`
+💰 **Stake amount:** `162.45 USDT`
+💵 **Profit (stake):** `-244.53 USDT`
+💸 **Profit (percent):** `-9.64%`
+
+2026-11-18 21:45:26,986 - freqtrade.freqtradebot - INFO - Found open order for Trade(id=9, pair=HUMA/USDT, amount=1137, is_short=False, leverage=1, open_rate=0.00829, open_since=2026-11-04 14:03:24)
+2026-11-18 21:45:31,988 - freqtrade.freqtradebot - INFO - Found open order for Trade(id=9, pair=HUMA/USDT, amount=1137, is_short=False, leverage=1, open_rate=0.00829, open_since=2026-11-04 14:03:24)
+2026-11-18 21:45:31,995 - freqtrade.freqtradebot - INFO - Fee for Trade Trade(id=9, pair=HUMA/USDT, amount=1137, is_short=False, leverage=1, open_rate=0.00829, open_since=2026-11-04 14:03:24) [buy]: 0.16244145 USDT - rate: 0.001
+2026-11-18 21:45:31,996 - freqtrade.persistence.trade_model - INFO - Updating trade (id=9) ...
+2026-11-18 21:45:31,996 - freqtrade.persistence.trade_model - INFO - LIMIT_BUY has been fulfilled for Trade(id=9, pair=HUMA/USDT, amount=18999, is_short=False, leverage=1, open_rate=0.00855, open_since=2026-11-04 14:03:24).
+2026-11-18 21:45:32,014 - freqtrade.wallets - INFO - Wallets synced.
+2026-11-18 21:45:32,019 - freqtrade.rpc.rpc_manager - INFO - Sending rpc message: {'trade_id': 9, 'type': entry_fill, 'buy_tag': '46 ', 'enter_tag': '46 ', 'exchange': 'Binance', 'pair': 'HUMA/USDT', 'leverage': 1.0, 'direction': 'Long', 'limit': 0.00855, 'order_rate': 0.00855, 'open_rate': 0.00855, 'order_type': 'limit', 'stake_amount': 171.8635523739877, 'stake_currency': 'USDT', 'base_currency': 'HUMA', 'quote_currency': 'USDT', 'fiat_currency': '', 'amount': 18999.0, 'open_date': datetime.datetime(2026, 11, 4, 14, 3, 24, 703227, tzinfo=datetime.timezone.utc), 'current_rate': 0.00855, 'sub_trade': True}
+2026-11-18 21:46:01,494 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.10, strategy_version: v18.0.269', state='RUNNING'
+2026-11-18 21:47:01,497 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.10, strategy_version: v18.0.269', state='RUNNING'
+2026-11-18 21:48:01,500 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.10, strategy_version: v18.0.269', state='RUNNING'
+2026-11-18 21:49:01,503 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.10, strategy_version: v18.0.269', state='RUNNING'
+2026-11-18 21:49:33,343 - AgeFilter - INFO - Removed HYPE/USDT from whitelist, because age 55 is less than 60 days
+2026-11-18 21:49:33,343 - AgeFilter - INFO - Removed RWUSD/USDT from whitelist, because age 36 is less than 60 days
+2026-11-18 21:49:33,345 - AgeFilter - INFO - Validated 148 pairs.
+2026-11-18 21:49:33,345 - PriceFilter - INFO - Removed ZKC/USDT from whitelist, because 1 unit is 0.326%
+2026-11-18 21:49:33,346 - PriceFilter - INFO - Removed BONK/USDT from whitelist, because 1 unit is 0.431%
+2026-11-18 21:49:33,346 - PriceFilter - INFO - Removed MARSCOIN/USDT from whitelist, because 1 unit is 0.301%
+2026-11-18 21:49:33,347 - PriceFilter - INFO - Removed PHA/USDT from whitelist, because 1 unit is 0.332%
+2026-11-18 21:49:33,347 - PriceFilter - INFO - Removed CYBER/USDT from whitelist, because 1 unit is 0.478%
+2026-11-18 21:49:33,348 - PriceFilter - INFO - Removed KAIA/USDT from whitelist, because 1 unit is 0.339%
+2026-11-18 21:49:33,348 - PriceFilter - INFO - Removed TREE/USDT from whitelist, because 1 unit is 0.330%
+2026-11-18 21:49:33,349 - PriceFilter - INFO - Removed STO/USDT from whitelist, because 1 unit is 0.426%
+2026-11-18 21:49:33,693 - freqtrade.plugins.pairlistmanager - INFO - Whitelist with 100 pairs: ['BTC/USDT', 'ETH/USDT', 'SOL/USDT', 'ZEC/USDT', 'XRP/USDT', 'NEAR/USDT', 'MMT/USDT', 'ENA/USDT', 'DOGE/USDT', 'TRX/USDT', 'UNI/USDT', 'SUI/USDT', 'PEPE/USDT', 'ADA/USDT', 'LTC/USDT', 'PUMP/USDT', 'LINK/USDT', 'AAVE/USDT', 'GRAM/USDT', 'TAO/USDT', 'INJ/USDT', 'ASTER/USDT', 'AVAX/USDT', 'ZRO/USDT', 'ZIL/USDT', 'WLD/USDT', 'ICP/USDT', 'HUMA/USDT', 'XLM/USDT', 'FIL/USDT', 'HBAR/USDT', 'QNT/USDT', 'PENGU/USDT', 'ARB/USDT', 'APT/USDT', 'XPL/USDT', 'ONDO/USDT', 'FET/USDT', 'MEGA/USDT', 'ZAMA/USDT', 'SHELL/USDT', 'SENT/USDT', 'RENDER/USDT', 'USUAL/USDT', 'ZK/USDT', 'BCH/USDT', 'ETHFI/USDT', 'KITE/USDT', 'LUNC/USDT', 'JUP/USDT', 'RUNE/USDT', 'STRK/USDT', 'POL/USDT', 'JST/USDT', 'DOT/USDT', 'BMT/USDT', 'CHIP/USDT', 'PENDLE/USDT', 'DASH/USDT', 'ZBT/USDT', 'OP/USDT', 'SEI/USDT', 'SHIB/USDT', 'PYTH/USDT', 'FF/USDT', 'CAKE/USDT', 'BNCB/USDT', 'LA/USDT', 'ERA/USDT', 'TIA/USDT', 'STEEM/USDT', 'PLUME/USDT', 'RAY/USDT', 'WBTC/USDT', 'VIRTUAL/USDT', 'RLC/USDT', 'PROM/USDT', 'AR/USDT', 'ZEN/USDT', 'DRAMB/USDT', 'CFG/USDT', 'KMNO/USDT', 'CRV/USDT', 'ALLO/USDT', 'WBETH/USDT', 'IO/USDT', 'SPK/USDT', 'GALA/USDT', 'MIRA/USDT', 'BMNRB/USDT', 'ALT/USDT', 'ATOM/USDT', 'VANA/USDT', 'ETC/USDT', 'BEAMX/USDT', '2Z/USDT', 'RE/USDT', 'BARD/USDT', 'MORPHO/USDT', 'ALGO/USDT']
+2026-11-18 21:49:37,963 - rangestabilityfilter - INFO - Removed BREV/USDT from whitelist, because rate of change over 3 x 1d candles is 1.441, which is above the threshold of 0.95.
+2026-11-18 21:50:02,954 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.10, strategy_version: v18.0.269', state='RUNNING'
+2026-11-18 21:50:33,915 - NostalgiaForInfinityX8 - INFO - Grinding entry (grind_2_entry) [2026-11-18 21:50:33.745404+00:00] [HUMA/USDT] | Rate: 0.00852 | Stake amount: 81.225 | Profit (stake): -245.646 | Profit: -9.10% | Tag: g22
+2026-11-18 21:50:33,916 - freqtrade.freqtradebot - INFO - Position adjust: about to create a new order for HUMA/USDT with stake_amount: 81.22489300000001 and price: 0.00852 for Trade(id=9, pair=HUMA/USDT, amount=20136, is_short=False, leverage=1, open_rate=0.00854, open_since=2026-11-04 14:03:24)
+2026-11-18 21:50:34,076 - freqtrade.freqtradebot - INFO - Order dry_run_buy_HUMA/USDT_c0e39952-6e19-48f9-a7b7-a3b404fa0481 was created for HUMA/USDT and status is closed.
+2026-11-18 21:50:34,090 - freqtrade.wallets - INFO - Wallets synced.
+2026-11-18 21:50:34,090 - freqtrade.rpc.rpc_manager - INFO - Sending rpc message: {'trade_id': 9, 'type': entry, 'buy_tag': '46 ', 'enter_tag': '46 ', 'exchange': 'Binance', 'pair': 'HUMA/USDT', 'leverage': 1.0, 'direction': 'Long', 'limit': 0.00852, 'order_rate': 0.00852, 'open_rate': 0.00852, 'order_type': 'limit', 'stake_amount': 253.08471237398768, 'stake_currency': 'USDT', 'base_currency': 'HUMA', 'quote_currency': 'USDT', 'fiat_currency': '', 'amount': 9533.0, 'open_date': datetime.datetime(2026, 11, 4, 14, 3, 24, 703227, tzinfo=datetime.timezone.utc), 'current_rate': 0.00852, 'sub_trade': True}
+2026-11-18 21:50:34,091 - freqtrade.freqtradebot - INFO - DCA order closed, trade should be up to date: Trade(id=9, pair=HUMA/USDT, amount=29669, is_short=False, leverage=1, open_rate=0.00853, open_since=2026-11-04 14:03:24)
+2026-11-18 21:50:34,092 - freqtrade.freqtradebot - INFO - Found open order for Trade(id=9, pair=HUMA/USDT, amount=29669, is_short=False, leverage=1, open_rate=0.00853, open_since=2026-11-04 14:03:24)
+2026-11-18 21:50:34,096 - freqtrade.freqtradebot - INFO - Fee for Trade Trade(id=9, pair=HUMA/USDT, amount=29669, is_short=False, leverage=1, open_rate=0.00853, open_since=2026-11-04 14:03:24) [buy]: 0.08122116 USDT - rate: 0.001
+2026-11-18 21:50:34,096 - freqtrade.persistence.trade_model - INFO - Updating trade (id=9) ...
+2026-11-18 21:50:34,097 - freqtrade.persistence.trade_model - INFO - LIMIT_BUY has been fulfilled for Trade(id=9, pair=HUMA/USDT, amount=9533, is_short=False, leverage=1, open_rate=0.00852, open_since=2026-11-04 14:03:24).
+2026-11-18 21:50:34,112 - freqtrade.wallets - INFO - Wallets synced.
+2026-11-18 21:50:34,117 - freqtrade.rpc.rpc_manager - INFO - Sending rpc message: {'trade_id': 9, 'type': entry_fill, 'buy_tag': '46 ', 'enter_tag': '46 ', 'exchange': 'Binance', 'pair': 'HUMA/USDT', 'leverage': 1.0, 'direction': 'Long', 'limit': 0.00852, 'order_rate': 0.00852, 'open_rate': 0.00852, 'order_type': 'limit', 'stake_amount': 253.08471237398768, 'stake_currency': 'USDT', 'base_currency': 'HUMA', 'quote_currency': 'USDT', 'fiat_currency': '', 'amount': 9533.0, 'open_date': datetime.datetime(2026, 11, 4, 14, 3, 24, 703227, tzinfo=datetime.timezone.utc), 'current_rate': 0.00852, 'sub_trade': True}
+2026-11-18 21:50:35,210 - freqtrade.rpc.rpc_manager - INFO - Sending rpc strategy_msg: ✅ ​**Grinding entry:** `(grind_2_entry)`
+🏦 **Exchange:** `Binance`
+🪙 **Pair:** `HUMA/USDT`
+〽️ **Rate:** `0.00852`
+💰 **Stake amount:** `81.22 USDT`
+💵 **Profit (stake):** `-245.65 USDT`
+💸 **Profit (percent):** `-9.10%`
+
+2026-11-18 21:51:06,556 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.10, strategy_version: v18.0.269', state='RUNNING'
+2026-11-18 21:52:06,558 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.10, strategy_version: v18.0.269', state='RUNNING'
+2026-11-18 21:53:06,561 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.10, strategy_version: v18.0.269', state='RUNNING'
+2026-11-18 21:54:06,564 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.10, strategy_version: v18.0.269', state='RUNNING'
+2026-11-18 21:55:20,053 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.10, strategy_version: v18.0.269', state='RUNNING'
+2026-11-18 21:55:37,494 - NostalgiaForInfinityX8 - INFO - Grinding entry (grind_3_entry) [2026-11-18 21:55:37.324844+00:00] [HUMA/USDT] | Rate: 0.00857 | Stake amount: 81.225 | Profit (stake): -244.421 | Profit: -8.79% | Tag: g22
+2026-11-18 21:55:37,495 - freqtrade.freqtradebot - INFO - Position adjust: about to create a new order for HUMA/USDT with stake_amount: 81.22489300000001 and price: 0.00857 for Trade(id=9, pair=HUMA/USDT, amount=29669, is_short=False, leverage=1, open_rate=0.00853, open_since=2026-11-04 14:03:24)
+2026-11-18 21:55:37,655 - freqtrade.freqtradebot - INFO - Order dry_run_buy_HUMA/USDT_2f06b588-3db1-4be5-854a-74aff3f4254d was created for HUMA/USDT and status is closed.
+2026-11-18 21:55:37,668 - freqtrade.wallets - INFO - Wallets synced.
+2026-11-18 21:55:37,669 - freqtrade.rpc.rpc_manager - INFO - Sending rpc message: {'trade_id': 9, 'type': entry, 'buy_tag': '46 ', 'enter_tag': '46 ', 'exchange': 'Binance', 'pair': 'HUMA/USDT', 'leverage': 1.0, 'direction': 'Long', 'limit': 0.00857, 'order_rate': 0.00857, 'open_rate': 0.00857, 'order_type': 'limit', 'stake_amount': 334.30260237398767, 'stake_currency': 'USDT', 'base_currency': 'HUMA', 'quote_currency': 'USDT', 'fiat_currency': '', 'amount': 9477.0, 'open_date': datetime.datetime(2026, 11, 4, 14, 3, 24, 703227, tzinfo=datetime.timezone.utc), 'current_rate': 0.00857, 'sub_trade': True}
+2026-11-18 21:55:37,669 - freqtrade.freqtradebot - INFO - DCA order closed, trade should be up to date: Trade(id=9, pair=HUMA/USDT, amount=39146, is_short=False, leverage=1, open_rate=0.00854, open_since=2026-11-04 14:03:24)
+2026-11-18 21:55:37,670 - freqtrade.freqtradebot - INFO - Found open order for Trade(id=9, pair=HUMA/USDT, amount=39146, is_short=False, leverage=1, open_rate=0.00854, open_since=2026-11-04 14:03:24)
+2026-11-18 21:55:37,674 - freqtrade.freqtradebot - INFO - Fee for Trade Trade(id=9, pair=HUMA/USDT, amount=39146, is_short=False, leverage=1, open_rate=0.00854, open_since=2026-11-04 14:03:24) [buy]: 0.08121789 USDT - rate: 0.001
+2026-11-18 21:55:37,675 - freqtrade.persistence.trade_model - INFO - Updating trade (id=9) ...
+2026-11-18 21:55:37,675 - freqtrade.persistence.trade_model - INFO - LIMIT_BUY has been fulfilled for Trade(id=9, pair=HUMA/USDT, amount=9477, is_short=False, leverage=1, open_rate=0.00857, open_since=2026-11-04 14:03:24).
+2026-11-18 21:55:37,691 - freqtrade.wallets - INFO - Wallets synced.
+2026-11-18 21:55:37,695 - freqtrade.rpc.rpc_manager - INFO - Sending rpc message: {'trade_id': 9, 'type': entry_fill, 'buy_tag': '46 ', 'enter_tag': '46 ', 'exchange': 'Binance', 'pair': 'HUMA/USDT', 'leverage': 1.0, 'direction': 'Long', 'limit': 0.00857, 'order_rate': 0.00857, 'open_rate': 0.00857, 'order_type': 'limit', 'stake_amount': 334.30260237398767, 'stake_currency': 'USDT', 'base_currency': 'HUMA', 'quote_currency': 'USDT', 'fiat_currency': '', 'amount': 9477.0, 'open_date': datetime.datetime(2026, 11, 4, 14, 3, 24, 703227, tzinfo=datetime.timezone.utc), 'current_rate': 0.00857, 'sub_trade': True}
+2026-11-18 21:55:38,792 - freqtrade.rpc.rpc_manager - INFO - Sending rpc strategy_msg: ✅ ​**Grinding entry:** `(grind_3_entry)`
+🏦 **Exchange:** `Binance`
+🪙 **Pair:** `HUMA/USDT`
+〽️ **Rate:** `0.00857`
+💰 **Stake amount:** `81.22 USDT`
+💵 **Profit (stake):** `-244.42 USDT`
+💸 **Profit (percent):** `-8.79%`
+
+2026-11-18 21:56:20,055 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.10, strategy_version: v18.0.269', state='RUNNING'
+2026-11-18 21:57:20,058 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.10, strategy_version: v18.0.269', state='RUNNING'
+2026-11-18 21:58:20,061 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.10, strategy_version: v18.0.269', state='RUNNING'
+2026-11-18 21:59:20,063 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.10, strategy_version: v18.0.269', state='RUNNING'
+2026-11-18 22:00:06,173 - freqtrade.exchange.common - WARNING - _async_get_candle_history() returned exception: "Could not fetch historical candle (OHLCV) data for WLD/USDT, 5m, spot due to OperationFailed. Message: binance {"code":-1001,"msg":"Internal error; unable to process your request. Please try again."}". Retrying still for 4 times.
+2026-11-18 22:00:31,972 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.10, strategy_version: v18.0.269', state='RUNNING'
+2026-11-18 22:00:39,345 - NostalgiaForInfinityX8 - INFO - Grinding entry (grind_4_entry) [2026-11-18 22:00:39.175137+00:00] [HUMA/USDT] | Rate: 0.00861 | Stake amount: 40.612 | Profit (stake): -243.114 | Profit: -8.50% | Tag: g22
+2026-11-18 22:00:39,346 - freqtrade.freqtradebot - INFO - Position adjust: about to create a new order for HUMA/USDT with stake_amount: 40.612446500000004 and price: 0.00861 for Trade(id=9, pair=HUMA/USDT, amount=39146, is_short=False, leverage=1, open_rate=0.00854, open_since=2026-11-04 14:03:24)
+2026-11-18 22:00:39,506 - freqtrade.freqtradebot - INFO - Order dry_run_buy_HUMA/USDT_6d833043-c631-4a10-87b7-81b312548ff8 was created for HUMA/USDT and status is closed.
+2026-11-18 22:00:39,520 - freqtrade.wallets - INFO - Wallets synced.
+2026-11-18 22:00:39,520 - freqtrade.rpc.rpc_manager - INFO - Sending rpc message: {'trade_id': 9, 'type': entry, 'buy_tag': '46 ', 'enter_tag': '46 ', 'exchange': 'Binance', 'pair': 'HUMA/USDT', 'leverage': 1.0, 'direction': 'Long', 'limit': 0.00861, 'order_rate': 0.00861, 'open_rate': 0.00861, 'order_type': 'limit', 'stake_amount': 374.90736237398767, 'stake_currency': 'USDT', 'base_currency': 'HUMA', 'quote_currency': 'USDT', 'fiat_currency': '', 'amount': 4716.0, 'open_date': datetime.datetime(2026, 11, 4, 14, 3, 24, 703227, tzinfo=datetime.timezone.utc), 'current_rate': 0.00861, 'sub_trade': True}
+2026-11-18 22:00:39,521 - freqtrade.freqtradebot - INFO - DCA order closed, trade should be up to date: Trade(id=9, pair=HUMA/USDT, amount=43862, is_short=False, leverage=1, open_rate=0.00855, open_since=2026-11-04 14:03:24)
+2026-11-18 22:00:39,521 - freqtrade.freqtradebot - INFO - Found open order for Trade(id=9, pair=HUMA/USDT, amount=43862, is_short=False, leverage=1, open_rate=0.00855, open_since=2026-11-04 14:03:24)
+2026-11-18 22:00:39,526 - freqtrade.freqtradebot - INFO - Fee for Trade Trade(id=9, pair=HUMA/USDT, amount=43862, is_short=False, leverage=1, open_rate=0.00855, open_since=2026-11-04 14:03:24) [buy]: 0.04060476 USDT - rate: 0.001
+2026-11-18 22:00:39,527 - freqtrade.persistence.trade_model - INFO - Updating trade (id=9) ...
+2026-11-18 22:00:39,527 - freqtrade.persistence.trade_model - INFO - LIMIT_BUY has been fulfilled for Trade(id=9, pair=HUMA/USDT, amount=4716, is_short=False, leverage=1, open_rate=0.00861, open_since=2026-11-04 14:03:24).
+2026-11-18 22:00:39,543 - freqtrade.wallets - INFO - Wallets synced.
+2026-11-18 22:00:39,548 - freqtrade.rpc.rpc_manager - INFO - Sending rpc message: {'trade_id': 9, 'type': entry_fill, 'buy_tag': '46 ', 'enter_tag': '46 ', 'exchange': 'Binance', 'pair': 'HUMA/USDT', 'leverage': 1.0, 'direction': 'Long', 'limit': 0.00861, 'order_rate': 0.00861, 'open_rate': 0.00861, 'order_type': 'limit', 'stake_amount': 374.90736237398767, 'stake_currency': 'USDT', 'base_currency': 'HUMA', 'quote_currency': 'USDT', 'fiat_currency': '', 'amount': 4716.0, 'open_date': datetime.datetime(2026, 11, 4, 14, 3, 24, 703227, tzinfo=datetime.timezone.utc), 'current_rate': 0.00861, 'sub_trade': True}
+2026-11-18 22:00:40,648 - freqtrade.rpc.rpc_manager - INFO - Sending rpc strategy_msg: ✅ ​**Grinding entry:** `(grind_4_entry)`
+🏦 **Exchange:** `Binance`
+🪙 **Pair:** `HUMA/USDT`
+〽️ **Rate:** `0.00861`
+💰 **Stake amount:** `40.61 USDT`
+💵 **Profit (stake):** `-243.11 USDT`
+💸 **Profit (percent):** `-8.50%`
+
+2026-11-18 22:01:31,975 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.10, strategy_version: v18.0.269', state='RUNNING'
+2026-11-18 22:02:31,978 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.10, strategy_version: v18.0.269', state='RUNNING'
+2026-11-18 22:03:31,981 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.10, strategy_version: v18.0.269', state='RUNNING'
