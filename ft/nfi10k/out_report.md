@@ -1,4 +1,4 @@
-# nfi10k (demo) — 2026-11-18 03:26 UTC
+# nfi10k (demo) — 2026-11-18 03:46 UTC
 
 **Balance:** 10214.80 USDT (start 10000, +214.80, +2.15%)
 **Closed trades:** 21, wins 21 (100%)
@@ -20,4 +20,4 @@
 | JUP/USDT | 2026-11-14 20:55 | 2026-11-15 03:47 | +53.56 | exit_long_tc_d_7_1 ( 141 142 ) |
 | ZRO/USDT | 2026-11-14 21:30 | 2026-11-14 21:41 | +1.93 | exit_long_rebuy_u_1 ( 61 ) |
 | REQ/USDT | 2026-11-16 18:15 | 2026-11-16 18:30 | +3.96 | exit_profit_long_quick_t_0_1_m ( 42 ) |
-| SHELL/USDT | 2026-11-18 03:25 | open | +0.00 |  |
+| SHELL/USDT | 2026-11-18 03:28 | open | +0.00 |  |
