@@ -1,8 +1,4 @@
-, amount=10182, is_short=False, leverage=1, open_rate=0.00874, open_since=2026-11-04 14:00:12)
-2026-11-19 01:05:16,835 - freqtrade.persistence.trade_model - INFO - Updating trade (id=17) ...
-2026-11-19 01:05:16,836 - freqtrade.persistence.trade_model - INFO - LIMIT_SELL has been fulfilled for Trade(id=17, pair=HUMA/USDT, amount=10182, is_short=False, leverage=1, open_rate=0.00874, open_since=2026-11-04 14:00:12).
-2026-11-19 01:05:16,859 - freqtrade.wallets - INFO - Wallets synced.
-2026-11-19 01:05:16,864 - freqtrade.rpc.rpc_manager - INFO - Sending rpc message: {'type': exit_fill, 'trade_id': 17, 'exchange': 'Binance', 'pair': 'HUMA/USDT', 'leverage': 1.0, 'direction': 'Long', 'gain': 'profit', 'limit': 0.00907, 'order_rate': 0.00907, 'order_type': 'limit', 'amount': 3683.0, 'open_rate': 0.00874, 'close_rate': 0.00907, 'current_rate': None, 'profit_amount': 1.14979577, 'profit_ratio': 0.035684, 'buy_tag': '46 ', 'enter_tag': '46 ', 'exit_reason': 'grind_1_exit 344', 'open_date': datetime.datetime(2026, 11, 4, 14, 0, 12, 549318, tzinfo=datetime.timezone.utc), 'close_date': datetime.datetime(2026, 11, 19, 1, 5, 16, 864317, tzinfo=datetime.timezone.utc), 'stake_amount': 56.77502433252585, 'stake_currency': 'USDT', 'base_currency': 'HUMA', 'quote_currency': 'USDT', 'fiat_currency': '', 'sub_trade': True, 'cumulative_profit': -29.55375047000001, 'final_profit_ratio': None, 'is_final_exit': False}
+mount': 3683.0, 'open_rate': 0.00874, 'close_rate': 0.00907, 'current_rate': None, 'profit_amount': 1.14979577, 'profit_ratio': 0.035684, 'buy_tag': '46 ', 'enter_tag': '46 ', 'exit_reason': 'grind_1_exit 344', 'open_date': datetime.datetime(2026, 11, 4, 14, 0, 12, 549318, tzinfo=datetime.timezone.utc), 'close_date': datetime.datetime(2026, 11, 19, 1, 5, 16, 864317, tzinfo=datetime.timezone.utc), 'stake_amount': 56.77502433252585, 'stake_currency': 'USDT', 'base_currency': 'HUMA', 'quote_currency': 'USDT', 'fiat_currency': '', 'sub_trade': True, 'cumulative_profit': -29.55375047000001, 'final_profit_ratio': None, 'is_final_exit': False}
 2026-11-19 01:05:17,212 - freqtrade.rpc.rpc_manager - INFO - Sending rpc strategy_msg: ❎​ ​**Grinding exit:** `(grind_1_exit)`
 🏦 **Exchange:** `Binance`
 🪙 **Pair:** `HUMA/USDT`
@@ -1150,3 +1146,9 @@
 2026-11-19 05:47:31,727 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.10, strategy_version: v18.0.270', state='RUNNING'
 2026-11-19 05:48:31,730 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.10, strategy_version: v18.0.270', state='RUNNING'
 2026-11-19 05:49:31,732 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.10, strategy_version: v18.0.270', state='RUNNING'
+2026-11-19 05:50:32,555 - freqtrade.commands.trade_commands - INFO - worker found ... calling exit
+2026-11-19 05:50:32,556 - freqtrade.rpc.rpc_manager - INFO - Sending rpc message: {'type': status, 'status': 'process died'}
+2026-11-19 05:50:32,556 - freqtrade.freqtradebot - INFO - Cleaning up modules ...
+2026-11-19 05:50:32,566 - freqtrade.rpc.rpc_manager - INFO - Sending rpc message: {'type': warning, 'status': "4 open trades active.\n\nHandle these trades manually on Binance, or '/start' the bot again and use '/stopentry' to handle open trades gracefully. \nNote: Trades are simulated (dry run)."}
+2026-11-19 05:50:32,567 - freqtrade.rpc.rpc_manager - INFO - Cleaning up rpc modules ...
+2026-11-19 05:50:32,829 - freqtrade - INFO - SIGINT received, aborting ...
