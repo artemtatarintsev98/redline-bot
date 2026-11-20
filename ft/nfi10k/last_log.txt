@@ -1,43 +1,4 @@
-2026-11-20 04:56:20,551 - freqtrade.loggers - INFO - Enabling colorized output.
-2026-11-20 04:56:20,551 - freqtrade.loggers - INFO - Logfile configured
-2026-11-20 04:56:20,551 - freqtrade.loggers - INFO - Verbosity set to 0
-2026-11-20 04:56:20,552 - freqtrade.configuration.configuration - INFO - Runmode set to dry_run.
-2026-11-20 04:56:20,552 - freqtrade.configuration.configuration - INFO - Parameter --db-url detected ...
-2026-11-20 04:56:20,552 - freqtrade.configuration.configuration - WARNING - `force_entry_enable` RPC message enabled.
-2026-11-20 04:56:20,552 - freqtrade.configuration.configuration - INFO - Dry run is enabled
-2026-11-20 04:56:20,553 - freqtrade.configuration.configuration - INFO - Using DB: "sqlite:////freqtrade/user_data/trades.sqlite"
-2026-11-20 04:56:20,553 - freqtrade.configuration.configuration - INFO - Using max_open_trades: 12 ...
-2026-11-20 04:56:20,559 - freqtrade.configuration.configuration - INFO - Using user-data directory: /freqtrade/user_data ...
-2026-11-20 04:56:20,560 - freqtrade.configuration.directory_operations - INFO - Created data directory: None
-2026-11-20 04:56:20,560 - freqtrade.configuration.configuration - INFO - Using data directory: /freqtrade/user_data/data/binance ...
-2026-11-20 04:56:20,561 - freqtrade.exchange.check_exchange - INFO - Checking exchange...
-2026-11-20 04:56:20,567 - freqtrade.exchange.check_exchange - INFO - Exchange "binance" is officially supported by the Freqtrade development team.
-2026-11-20 04:56:20,567 - freqtrade.configuration.configuration - INFO - Using pairlist from configuration.
-2026-11-20 04:56:20,568 - freqtrade.exchange.exchange - INFO - Instance is running with dry_run enabled
-2026-11-20 04:56:20,568 - freqtrade.exchange.exchange - INFO - Using CCXT 4.5.90
-2026-11-20 04:56:20,568 - freqtrade.exchange.exchange - INFO - Applying additional ccxt config: {'enableRateLimit': True, 'rateLimit': 60, 'options': {'brokerId': None, 'partner': {'spot': {'id': None, 'key': None}, 'future': {'id': None, 'key': None}}, 'fetchMarkets': {'types': ['spot']}}, 'urls': {'api': {'public': 'https://data-api.binance.vision/api/v3'}}}
-2026-11-20 04:56:20,571 - freqtrade.exchange.exchange - INFO - Applying additional ccxt config: {'enableRateLimit': True, 'rateLimit': 60, 'options': {'brokerId': None, 'partner': {'spot': {'id': None, 'key': None}, 'future': {'id': None, 'key': None}}, 'fetchMarkets': {'types': ['spot']}}, 'urls': {'api': {'public': 'https://data-api.binance.vision/api/v3'}}}
-2026-11-20 04:56:20,574 - freqtrade.exchange.exchange - INFO - Using Exchange "Binance"
-2026-11-20 04:56:22,319 - freqtrade.exchange.exchange - INFO - Time offset to Binance is -153ms.
-2026-11-20 04:56:22,319 - freqtrade.resolvers.exchange_resolver - INFO - Using resolved exchange class 'Binance' ...
-2026-11-20 04:56:22,714 - freqtrade.resolvers.iresolver - INFO - Using resolved strategy NostalgiaForInfinityX8 from '/freqtrade/user_data/strategies/NostalgiaForInfinityX8.py'...
-2026-11-20 04:56:22,715 - freqtrade.strategy.hyper - INFO - Found no parameter file.
-2026-11-20 04:56:22,715 - freqtrade.resolvers.strategy_resolver - INFO - Override strategy 'timeframe' with value from the configuration: 5m.
-2026-11-20 04:56:22,716 - freqtrade.resolvers.strategy_resolver - INFO - Override strategy 'order_types' with value from the configuration: {'entry': 'limit', 'exit': 'limit', 'emergency_exit': 'limit', 'force_entry': 'limit', 'force_exit': 'limit', 'stoploss': 'limit', 'stoploss_on_exchange': False, 'stoploss_on_exchange_interval': 60, 'stoploss_on_exchange_limit_ratio': 0.99}.
-2026-11-20 04:56:22,716 - freqtrade.resolvers.strategy_resolver - INFO - Override strategy 'stake_currency' with value from the configuration: USDT.
-2026-11-20 04:56:22,716 - freqtrade.resolvers.strategy_resolver - INFO - Override strategy 'stake_amount' with value from the configuration: unlimited.
-2026-11-20 04:56:22,716 - freqtrade.resolvers.strategy_resolver - INFO - Override strategy 'unfilledtimeout' with value from the configuration: {'entry': 3, 'exit': 2, 'exit_timeout_count': 0, 'unit': 'minutes'}.
-2026-11-20 04:56:22,716 - freqtrade.resolvers.strategy_resolver - INFO - Override strategy 'max_open_trades' with value from the configuration: 12.
-2026-11-20 04:56:22,717 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using minimal_roi: {}
-2026-11-20 04:56:22,717 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using timeframe: 5m
-2026-11-20 04:56:22,717 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using stoploss: -0.99
-2026-11-20 04:56:22,717 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using trailing_stop: False
-2026-11-20 04:56:22,717 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using trailing_stop_positive: 0.01
-2026-11-20 04:56:22,718 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using trailing_stop_positive_offset: 0.03
-2026-11-20 04:56:22,718 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using trailing_only_offset_is_reached: True
-2026-11-20 04:56:22,718 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using use_custom_stoploss: False
-2026-11-20 04:56:22,718 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using process_only_new_candles: True
-2026-11-20 04:56:22,718 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using order_types: {'entry': 'limit', 'exit': 'limit', 'emergency_exit': 'limit', 'force_entry': 'limit', 'force_exit': 'limit', 'stoploss': 'limit', 'stoploss_on_exchange': False, 'stoploss_on_exchange_interval': 60, 'stoploss_on_exchange_limit_ratio': 0.99}
+ypes: {'entry': 'limit', 'exit': 'limit', 'emergency_exit': 'limit', 'force_entry': 'limit', 'force_exit': 'limit', 'stoploss': 'limit', 'stoploss_on_exchange': False, 'stoploss_on_exchange_interval': 60, 'stoploss_on_exchange_limit_ratio': 0.99}
 2026-11-20 04:56:22,718 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using order_time_in_force: {'entry': 'GTC', 'exit': 'GTC'}
 2026-11-20 04:56:22,719 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using stake_currency: USDT
 2026-11-20 04:56:22,719 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using stake_amount: unlimited
@@ -1133,3 +1094,41 @@
 2026-11-20 08:18:45,682 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.10, strategy_version: v18.0.275', state='RUNNING'
 2026-11-20 08:19:45,685 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.10, strategy_version: v18.0.275', state='RUNNING'
 2026-11-20 08:20:48,732 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.10, strategy_version: v18.0.275', state='RUNNING'
+2026-11-20 08:21:48,735 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.10, strategy_version: v18.0.275', state='RUNNING'
+2026-11-20 08:22:48,737 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.10, strategy_version: v18.0.275', state='RUNNING'
+2026-11-20 08:23:48,740 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.10, strategy_version: v18.0.275', state='RUNNING'
+2026-11-20 08:24:48,742 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.10, strategy_version: v18.0.275', state='RUNNING'
+2026-11-20 08:25:51,087 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.10, strategy_version: v18.0.275', state='RUNNING'
+2026-11-20 08:26:46,828 - AgeFilter - INFO - Removed HYPE/USDT from whitelist, because age 57 is less than 60 days
+2026-11-20 08:26:46,829 - AgeFilter - INFO - Removed RWUSD/USDT from whitelist, because age 38 is less than 60 days
+2026-11-20 08:26:46,829 - AgeFilter - INFO - Removed ANTB/USDT from whitelist, because age 1 is less than 60 days
+2026-11-20 08:26:46,830 - AgeFilter - INFO - Removed PDDB/USDT from whitelist, because age 51 is less than 60 days
+2026-11-20 08:26:46,830 - AgeFilter - INFO - Validated 146 pairs.
+2026-11-20 08:26:46,831 - PriceFilter - INFO - Removed CYBER/USDT from whitelist, because 1 unit is 0.329%
+2026-11-20 08:26:46,831 - PriceFilter - INFO - Removed ZKC/USDT from whitelist, because 1 unit is 0.398%
+2026-11-20 08:26:46,831 - PriceFilter - INFO - Removed BONK/USDT from whitelist, because 1 unit is 0.450%
+2026-11-20 08:26:46,831 - PriceFilter - INFO - Removed MARSCOIN/USDT from whitelist, because 1 unit is 0.319%
+2026-11-20 08:26:46,832 - PriceFilter - INFO - Removed THE/USDT from whitelist, because 1 unit is 0.348%
+2026-11-20 08:26:46,832 - PriceFilter - INFO - Removed PHA/USDT from whitelist, because 1 unit is 0.336%
+2026-11-20 08:26:46,832 - PriceFilter - INFO - Removed KAIA/USDT from whitelist, because 1 unit is 0.341%
+2026-11-20 08:26:46,832 - PriceFilter - INFO - Removed RAD/USDT from whitelist, because 1 unit is 0.469%
+2026-11-20 08:26:46,833 - PriceFilter - INFO - Removed PNUT/USDT from whitelist, because 1 unit is 0.355%
+2026-11-20 08:26:46,834 - rangestabilityfilter - INFO - Removed MMT/USDT from whitelist, because rate of change over 3 x 1d candles is 2.149, which is above the threshold of 0.95.
+2026-11-20 08:26:46,836 - rangestabilityfilter - INFO - Removed BREV/USDT from whitelist, because rate of change over 3 x 1d candles is 1.501, which is above the threshold of 0.95.
+2026-11-20 08:26:46,928 - freqtrade.plugins.pairlistmanager - INFO - Whitelist with 100 pairs: ['BTC/USDT', 'ETH/USDT', 'ZEC/USDT', 'SOL/USDT', 'XRP/USDT', 'NEAR/USDT', 'PEPE/USDT', 'UNI/USDT', 'ENA/USDT', 'DOGE/USDT', 'SUI/USDT', 'TRX/USDT', 'SKY/USDT', 'TAO/USDT', 'LTC/USDT', 'ADA/USDT', 'BMT/USDT', 'AAVE/USDT', 'LINK/USDT', 'AVAX/USDT', 'INJ/USDT', 'WBTC/USDT', 'WLD/USDT', 'HUMA/USDT', 'PUMP/USDT', 'MEGA/USDT', 'ASTER/USDT', 'SENT/USDT', 'HBAR/USDT', 'ONDO/USDT', 'LUNC/USDT', 'FET/USDT', 'ARB/USDT', 'STRK/USDT', 'XLM/USDT', 'QNT/USDT', 'FIL/USDT', 'BARD/USDT', 'CHIP/USDT', 'BCH/USDT', 'GRAM/USDT', 'ZRO/USDT', 'JUP/USDT', 'PENGU/USDT', 'APT/USDT', 'XPL/USDT', 'SAPIEN/USDT', 'ICP/USDT', 'ETHFI/USDT', 'PYTH/USDT', 'ZAMA/USDT', 'ERA/USDT', 'DOT/USDT', 'POL/USDT', 'EIGEN/USDT', 'RENDER/USDT', 'SEI/USDT', 'DASH/USDT', 'ZIL/USDT', 'GTC/USDT', 'SHIB/USDT', 'AERO/USDT', 'DRAMB/USDT', 'OP/USDT', 'CRV/USDT', 'CAKE/USDT', 'TIA/USDT', 'ETC/USDT', 'JST/USDT', 'CFG/USDT', 'LDO/USDT', 'PLUME/USDT', 'BNCB/USDT', 'PENDLE/USDT', 'BMNRB/USDT', 'RAY/USDT', 'VIRTUAL/USDT', 'ALGO/USDT', 'KITE/USDT', 'ALT/USDT', 'AR/USDT', 'ATOM/USDT', 'VANA/USDT', 'SNX/USDT', 'JTO/USDT', 'AXS/USDT', 'RUNE/USDT', 'ORDI/USDT', 'SAND/USDT', 'AT/USDT', 'STEEM/USDT', 'ZK/USDT', 'W/USDT', 'WIF/USDT', 'APE/USDT', 'THETA/USDT', 'MORPHO/USDT', 'ZEN/USDT', 'SUPER/USDT', 'CBRSB/USDT']
+2026-11-20 08:26:51,090 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.10, strategy_version: v18.0.275', state='RUNNING'
+2026-11-20 08:27:51,092 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.10, strategy_version: v18.0.275', state='RUNNING'
+2026-11-20 08:28:51,095 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.10, strategy_version: v18.0.275', state='RUNNING'
+2026-11-20 08:29:51,098 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.10, strategy_version: v18.0.275', state='RUNNING'
+2026-11-20 08:30:52,960 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.10, strategy_version: v18.0.275', state='RUNNING'
+2026-11-20 08:31:52,963 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.10, strategy_version: v18.0.275', state='RUNNING'
+2026-11-20 08:32:19,664 - freqtrade.wallets - INFO - Wallets synced.
+2026-11-20 08:32:52,966 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.10, strategy_version: v18.0.275', state='RUNNING'
+2026-11-20 08:33:52,968 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.10, strategy_version: v18.0.275', state='RUNNING'
+2026-11-20 08:34:52,971 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.10, strategy_version: v18.0.275', state='RUNNING'
+2026-11-20 08:35:55,485 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.10, strategy_version: v18.0.275', state='RUNNING'
+2026-11-20 08:36:55,487 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.10, strategy_version: v18.0.275', state='RUNNING'
+2026-11-20 08:37:55,490 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.10, strategy_version: v18.0.275', state='RUNNING'
+2026-11-20 08:38:55,492 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.10, strategy_version: v18.0.275', state='RUNNING'
+2026-11-20 08:39:55,494 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.10, strategy_version: v18.0.275', state='RUNNING'
+2026-11-20 08:40:59,067 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.10, strategy_version: v18.0.275', state='RUNNING'
