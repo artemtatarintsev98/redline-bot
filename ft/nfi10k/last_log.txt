@@ -1,8 +1,4 @@
-rade Trade(id=4, pair=SOXLB/USDT, amount=27.327, is_short=False, leverage=1, open_rate=51.14, open_since=2026-10-29 21:00:12) [buy]: 0.19812568 USDT - rate: 0.001
-2026-11-20 00:48:05,752 - freqtrade.persistence.trade_model - INFO - Updating trade (id=4) ...
-2026-11-20 00:48:05,752 - freqtrade.persistence.trade_model - INFO - LIMIT_BUY has been fulfilled for Trade(id=4, pair=SOXLB/USDT, amount=4.582, is_short=False, leverage=1, open_rate=43.24, open_since=2026-10-29 21:00:12).
-2026-11-20 00:48:05,771 - freqtrade.wallets - INFO - Wallets synced.
-2026-11-20 00:48:05,775 - freqtrade.rpc.rpc_manager - INFO - Sending rpc message: {'trade_id': 4, 'type': entry_fill, 'buy_tag': '5 63 ', 'enter_tag': '5 63 ', 'exchange': 'Binance', 'pair': 'SOXLB/USDT', 'leverage': 1.0, 'direction': 'Long', 'limit': 43.24, 'order_rate': 43.24, 'open_rate': 43.24, 'order_type': 'limit', 'stake_amount': 1595.514141158206, 'stake_currency': 'USDT', 'base_currency': 'SOXLB', 'quote_currency': 'USDT', 'fiat_currency': '', 'amount': 4.582, 'open_date': datetime.datetime(2026, 10, 29, 21, 0, 12, 809992, tzinfo=datetime.timezone.utc), 'current_rate': 43.25, 'sub_trade': True}
+, 'direction': 'Long', 'limit': 43.24, 'order_rate': 43.24, 'open_rate': 43.24, 'order_type': 'limit', 'stake_amount': 1595.514141158206, 'stake_currency': 'USDT', 'base_currency': 'SOXLB', 'quote_currency': 'USDT', 'fiat_currency': '', 'amount': 4.582, 'open_date': datetime.datetime(2026, 10, 29, 21, 0, 12, 809992, tzinfo=datetime.timezone.utc), 'current_rate': 43.25, 'sub_trade': True}
 2026-11-20 00:48:55,445 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.10, strategy_version: v18.0.275', state='RUNNING'
 2026-11-20 00:49:55,448 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.10, strategy_version: v18.0.275', state='RUNNING'
 2026-11-20 00:50:59,218 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.10, strategy_version: v18.0.275', state='RUNNING'
@@ -1133,3 +1129,9 @@ rade Trade(id=4, pair=SOXLB/USDT, amount=27.327, is_short=False, leverage=1, ope
 2026-11-20 04:52:50,668 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.10, strategy_version: v18.0.275', state='RUNNING'
 2026-11-20 04:53:50,670 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.10, strategy_version: v18.0.275', state='RUNNING'
 2026-11-20 04:54:50,673 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.10, strategy_version: v18.0.275', state='RUNNING'
+2026-11-20 04:55:42,790 - freqtrade.commands.trade_commands - INFO - worker found ... calling exit
+2026-11-20 04:55:42,791 - freqtrade.rpc.rpc_manager - INFO - Sending rpc message: {'type': status, 'status': 'process died'}
+2026-11-20 04:55:42,791 - freqtrade.freqtradebot - INFO - Cleaning up modules ...
+2026-11-20 04:55:42,801 - freqtrade.rpc.rpc_manager - INFO - Sending rpc message: {'type': warning, 'status': "6 open trades active.\n\nHandle these trades manually on Binance, or '/start' the bot again and use '/stopentry' to handle open trades gracefully. \nNote: Trades are simulated (dry run)."}
+2026-11-20 04:55:42,802 - freqtrade.rpc.rpc_manager - INFO - Cleaning up rpc modules ...
+2026-11-20 04:55:43,065 - freqtrade - INFO - SIGINT received, aborting ...
