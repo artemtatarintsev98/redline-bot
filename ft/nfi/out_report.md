@@ -1,8 +1,8 @@
-# nfi (demo) — 2026-11-20 18:13 UTC
+# nfi (demo) — 2026-11-20 18:33 UTC
 
-**Balance:** 1027.28 USDT (start 1000, +27.28, +2.73%)
-**Closed trades:** 24, wins 24 (100%)
-**Open now:** 6
+**Balance:** 1027.38 USDT (start 1000, +27.38, +2.74%)
+**Closed trades:** 25, wins 25 (100%)
+**Open now:** 5
 
 | Pair | Opened | Closed | Profit | Reason |
 |---|---|---|---|---|
@@ -20,4 +20,4 @@
 | ASTER/USDT | 2026-11-14 19:55 | 2026-11-15 20:30 | +1.65 | exit_long_normal_2_1_1 ( 2 4 63 101 ) |
 | ZRO/USDT | 2026-11-14 21:30 | 2026-11-14 21:41 | +0.37 | exit_long_rebuy_u_1 ( 61 ) |
 | BMT/USDT | 2026-11-20 11:20 | open | +0.00 |  |
-| UNI/USDT | 2026-11-20 15:25 | open | +0.00 |  |
+| UNI/USDT | 2026-11-20 15:25 | 2026-11-20 18:25 | +0.10 | exit_long_tc_d_0_2 ( 141 ) |
