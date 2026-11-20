@@ -1,8 +1,8 @@
-# nfisl (demo) — 2026-11-20 11:07 UTC
+# nfisl (demo) — 2026-11-20 11:27 UTC
 
 **Balance:** 1016.39 USDT (start 1000, +16.39, +1.64%)
 **Closed trades:** 6, wins 6 (100%)
-**Open now:** 1
+**Open now:** 2
 
 | Pair | Opened | Closed | Profit | Reason |
 |---|---|---|---|---|
@@ -13,3 +13,4 @@
 | ASTER/USDT | 2026-11-14 19:50 | 2026-11-14 19:50 | +0.54 | exit_long_normal_u_0 ( 2 4 ) |
 | ASTER/USDT | 2026-11-14 19:55 | 2026-11-15 20:30 | +5.29 | exit_long_normal_2_1_1 ( 2 4 63 101 ) |
 | ZRO/USDT | 2026-11-14 21:30 | 2026-11-14 21:41 | +0.44 | exit_long_rebuy_u_1 ( 61 ) |
+| BMT/USDT | 2026-11-20 11:20 | open | +0.00 |  |
