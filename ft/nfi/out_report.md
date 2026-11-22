@@ -1,8 +1,8 @@
-# nfi (demo) — 2026-11-22 19:21 UTC
+# nfi (demo) — 2026-11-22 19:41 UTC
 
-**Balance:** 1027.38 USDT (start 1000, +27.38, +2.74%)
-**Closed trades:** 25, wins 25 (100%)
-**Open now:** 6
+**Balance:** 1027.95 USDT (start 1000, +27.95, +2.80%)
+**Closed trades:** 26, wins 26 (100%)
+**Open now:** 5
 
 | Pair | Opened | Closed | Profit | Reason |
 |---|---|---|---|---|
@@ -20,4 +20,4 @@
 | ZRO/USDT | 2026-11-14 21:30 | 2026-11-14 21:41 | +0.37 | exit_long_rebuy_u_1 ( 61 ) |
 | BMT/USDT | 2026-11-20 11:20 | open | +0.00 |  |
 | UNI/USDT | 2026-11-20 15:25 | 2026-11-20 18:25 | +0.10 | exit_long_tc_d_0_2 ( 141 ) |
-| PROM/USDT | 2026-11-22 18:00 | open | +0.00 |  |
+| PROM/USDT | 2026-11-22 18:00 | 2026-11-22 19:31 | +0.57 | exit_profit_long_normal_t_0_1_m ( 3 ) |

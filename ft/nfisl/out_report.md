@@ -1,8 +1,8 @@
-# nfisl (demo) — 2026-11-22 19:21 UTC
+# nfisl (demo) — 2026-11-22 19:41 UTC
 
-**Balance:** 1019.49 USDT (start 1000, +19.49, +1.95%)
-**Closed trades:** 8, wins 8 (100%)
-**Open now:** 3
+**Balance:** 1020.68 USDT (start 1000, +20.68, +2.07%)
+**Closed trades:** 9, wins 9 (100%)
+**Open now:** 2
 
 | Pair | Opened | Closed | Profit | Reason |
 |---|---|---|---|---|
@@ -16,4 +16,4 @@
 | BMT/USDT | 2026-11-20 11:20 | open | +0.00 |  |
 | UNI/USDT | 2026-11-20 15:25 | 2026-11-20 18:25 | +0.22 | exit_long_tc_d_0_2 ( 141 ) |
 | PROM/USDT | 2026-11-22 16:40 | 2026-11-22 16:40 | +2.88 | exit_long_normal_u_2 ( 1 ) |
-| PROM/USDT | 2026-11-22 18:00 | open | +0.00 |  |
+| PROM/USDT | 2026-11-22 18:00 | 2026-11-22 19:31 | +1.19 | exit_profit_long_normal_t_0_1_m ( 3 ) |
