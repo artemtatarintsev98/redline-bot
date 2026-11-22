@@ -1,7 +1,7 @@
-# nfisl (demo) — 2026-11-22 16:21 UTC
+# nfisl (demo) — 2026-11-22 16:41 UTC
 
-**Balance:** 1016.62 USDT (start 1000, +16.62, +1.66%)
-**Closed trades:** 7, wins 7 (100%)
+**Balance:** 1019.49 USDT (start 1000, +19.49, +1.95%)
+**Closed trades:** 8, wins 8 (100%)
 **Open now:** 2
 
 | Pair | Opened | Closed | Profit | Reason |
@@ -15,3 +15,4 @@
 | ZRO/USDT | 2026-11-14 21:30 | 2026-11-14 21:41 | +0.44 | exit_long_rebuy_u_1 ( 61 ) |
 | BMT/USDT | 2026-11-20 11:20 | open | +0.00 |  |
 | UNI/USDT | 2026-11-20 15:25 | 2026-11-20 18:25 | +0.22 | exit_long_tc_d_0_2 ( 141 ) |
+| PROM/USDT | 2026-11-22 16:40 | 2026-11-22 16:40 | +2.88 | exit_long_normal_u_2 ( 1 ) |
