@@ -1,4 +1,4 @@
-# nfi (demo) — 2026-11-22 23:27 UTC
+# nfi (demo) — 2026-11-22 23:47 UTC
 
 **Balance:** 1027.95 USDT (start 1000, +27.95, +2.80%)
 **Closed trades:** 26, wins 26 (100%)
