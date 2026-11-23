@@ -1,38 +1,4 @@
-11, 4, 15, 45, 8, 313222, tzinfo=datetime.timezone.utc), 'close_date': datetime.datetime(2026, 11, 23, 14, 0, 18, 687693, tzinfo=datetime.timezone.utc), 'stake_amount': 45.41559815232832, 'stake_currency': 'USDT', 'base_currency': 'SNXXB', 'quote_currency': 'USDT', 'fiat_currency': '', 'sub_trade': True, 'cumulative_profit': -79.84523442, 'final_profit_ratio': None, 'is_final_exit': False}
-2026-11-23 14:00:18,740 - freqtrade.rpc.rpc_manager - INFO - Sending rpc strategy_msg: ❎​ ​**Grinding exit:** `(grind_1_exit)`
-🏦 **Exchange:** `Binance`
-🪙 **Pair:** `WLD/USDT`
-〽️ **Rate:** `0.2479`
-💰 **Stake amount:** `69.21 USDT`
-🪙 **Coin amount:** `279.2`
-💵 **Profit (stake):** `-56.51 USDT`
-💸 **Profit (percent):** `-10.67%`
-💶 **Grind profit (stake):** `2.58 USDT`
-💸 **Grind profit (percent):** `3.99%`
-2026-11-23 14:00:18,741 - freqtrade.rpc.rpc_manager - INFO - Sending rpc strategy_msg: ❎​ ​**Grinding exit:** `(grind_5_exit)`
-🏦 **Exchange:** `Binance`
-🪙 **Pair:** `SOXLB/USDT`
-〽️ **Rate:** `42.43`
-💰 **Stake amount:** `51.72 USDT`
-🪙 **Coin amount:** `1.2189999999999999`
-💵 **Profit (stake):** `-139.83 USDT`
-💸 **Profit (percent):** `-9.09%`
-💶 **Grind profit (stake):** `8.46 USDT`
-💸 **Grind profit (percent):** `19.71%`
-2026-11-23 14:00:18,742 - freqtrade.rpc.rpc_manager - INFO - Sending rpc strategy_msg: ❎​ ​**Grinding exit:** `(grind_4_exit)`
-🏦 **Exchange:** `Binance`
-🪙 **Pair:** `SNXXB/USDT`
-〽️ **Rate:** `2.15`
-💰 **Stake amount:** `31.93 USDT`
-🪙 **Coin amount:** `14.85`
-💵 **Profit (stake):** `-73.80 USDT`
-💸 **Profit (percent):** `-5.27%`
-💶 **Grind profit (stake):** `2.76 USDT`
-💸 **Grind profit (percent):** `9.58%`
-2026-11-23 14:00:19,138 - freqtrade.freqtradebot - INFO - Found open order for Trade(id=11, pair=WLD/USDT, amount=622.3, is_short=False, leverage=1, open_rate=0.2551, open_since=2026-10-29 20:05:06)
-2026-11-23 14:00:21,222 - NostalgiaForInfinityX8 - INFO - Grinding exit (grind_5_exit) [2026-11-23 14:00:21.041578+00:00] [SNXXB/USDT] | Rate: 2.15 | Stake amount: 43.419 | Coin amount: 21.22 | Profit (stake): -73.801 | Profit: -5.27% | Grind profit: 8.38% (3.484 USDT)
-2026-11-23 14:00:21,231 - freqtrade.wallets - INFO - Wallets synced.
-2026-11-23 14:00:21,393 - freqtrade.rpc.rpc_manager - INFO - Sending rpc message: {'type': exit, 'trade_id': 18, 'exchange': 'Binance', 'pair': 'SNXXB/USDT', 'leverage': 1.0, 'direction': 'Long', 'gain': 'profit', 'limit': 2.15, 'order_rate': 2.15, 'order_type': 'limit', 'amount': 20.19, 'open_rate': 1.89, 'close_rate': 2.15, 'current_rate': 2.15, 'profit_amount': 5.1678324, 'profit_ratio': 0.13529328, 'buy_tag': '4 ', 'enter_tag': '4 ', 'exit_reason': 'grind_5_exit 437 417 409 383', 'open_date': datetime.datetime(2026, 11, 4, 15, 45, 8, 313222, tzinfo=datetime.timezone.utc), 'close_date': datetime.datetime(2026, 11, 23, 14, 0, 21, 393393, tzinfo=datetime.timezone.utc), 'stake_amount': 45.41559815232832, 'stake_currency': 'USDT', 'base_currency': 'SNXXB', 'quote_currency': 'USDT', 'fiat_currency': '', 'sub_trade': True, 'cumulative_profit': -79.84523442, 'final_profit_ratio': None, 'is_final_exit': False}
+date': datetime.datetime(2026, 11, 4, 15, 45, 8, 313222, tzinfo=datetime.timezone.utc), 'close_date': datetime.datetime(2026, 11, 23, 14, 0, 21, 393393, tzinfo=datetime.timezone.utc), 'stake_amount': 45.41559815232832, 'stake_currency': 'USDT', 'base_currency': 'SNXXB', 'quote_currency': 'USDT', 'fiat_currency': '', 'sub_trade': True, 'cumulative_profit': -79.84523442, 'final_profit_ratio': None, 'is_final_exit': False}
 2026-11-23 14:00:21,394 - freqtrade.freqtradebot - INFO - Found open order for Trade(id=18, pair=SNXXB/USDT, amount=23.98, is_short=False, leverage=1, open_rate=1.89, open_since=2026-11-04 15:45:08)
 2026-11-23 14:00:21,403 - freqtrade.persistence.trade_model - INFO - Updating trade (id=18) ...
 2026-11-23 14:00:21,404 - freqtrade.persistence.trade_model - INFO - LIMIT_SELL has been fulfilled for Trade(id=18, pair=SNXXB/USDT, amount=23.98, is_short=False, leverage=1, open_rate=1.89, open_since=2026-11-04 15:45:08).
@@ -1150,3 +1116,23 @@
 2026-11-23 17:42:55,437 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.10, strategy_version: v18.0.300', state='RUNNING'
 2026-11-23 17:43:55,439 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.10, strategy_version: v18.0.300', state='RUNNING'
 2026-11-23 17:44:55,442 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.10, strategy_version: v18.0.300', state='RUNNING'
+2026-11-23 17:45:58,638 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.10, strategy_version: v18.0.300', state='RUNNING'
+2026-11-23 17:46:58,641 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.10, strategy_version: v18.0.300', state='RUNNING'
+2026-11-23 17:47:58,643 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.10, strategy_version: v18.0.300', state='RUNNING'
+2026-11-23 17:48:58,646 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.10, strategy_version: v18.0.300', state='RUNNING'
+2026-11-23 17:49:58,649 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.10, strategy_version: v18.0.300', state='RUNNING'
+2026-11-23 17:50:59,291 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.10, strategy_version: v18.0.300', state='RUNNING'
+2026-11-23 17:51:59,294 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.10, strategy_version: v18.0.300', state='RUNNING'
+2026-11-23 17:52:59,296 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.10, strategy_version: v18.0.300', state='RUNNING'
+2026-11-23 17:53:59,299 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.10, strategy_version: v18.0.300', state='RUNNING'
+2026-11-23 17:54:59,302 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.10, strategy_version: v18.0.300', state='RUNNING'
+2026-11-23 17:56:03,957 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.10, strategy_version: v18.0.300', state='RUNNING'
+2026-11-23 17:57:03,959 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.10, strategy_version: v18.0.300', state='RUNNING'
+2026-11-23 17:58:03,962 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.10, strategy_version: v18.0.300', state='RUNNING'
+2026-11-23 17:59:03,965 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.10, strategy_version: v18.0.300', state='RUNNING'
+2026-11-23 18:00:03,967 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.10, strategy_version: v18.0.300', state='RUNNING'
+2026-11-23 18:01:08,174 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.10, strategy_version: v18.0.300', state='RUNNING'
+2026-11-23 18:02:08,177 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.10, strategy_version: v18.0.300', state='RUNNING'
+2026-11-23 18:03:08,180 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.10, strategy_version: v18.0.300', state='RUNNING'
+2026-11-23 18:04:08,184 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.10, strategy_version: v18.0.300', state='RUNNING'
+2026-11-23 18:05:13,876 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.10, strategy_version: v18.0.300', state='RUNNING'
