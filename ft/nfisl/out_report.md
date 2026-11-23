@@ -1,8 +1,8 @@
-# nfisl (demo) — 2026-11-23 01:07 UTC
+# nfisl (demo) — 2026-11-23 01:27 UTC
 
-**Balance:** 1020.68 USDT (start 1000, +20.68, +2.07%)
-**Closed trades:** 9, wins 9 (100%)
-**Open now:** 2
+**Balance:** 1021.38 USDT (start 1000, +21.38, +2.14%)
+**Closed trades:** 10, wins 10 (100%)
+**Open now:** 1
 
 | Pair | Opened | Closed | Profit | Reason |
 |---|---|---|---|---|
@@ -13,7 +13,7 @@
 | ASTER/USDT | 2026-11-14 19:50 | 2026-11-14 19:50 | +0.54 | exit_long_normal_u_0 ( 2 4 ) |
 | ASTER/USDT | 2026-11-14 19:55 | 2026-11-15 20:30 | +5.29 | exit_long_normal_2_1_1 ( 2 4 63 101 ) |
 | ZRO/USDT | 2026-11-14 21:30 | 2026-11-14 21:41 | +0.44 | exit_long_rebuy_u_1 ( 61 ) |
-| BMT/USDT | 2026-11-20 11:20 | open | +0.00 |  |
+| BMT/USDT | 2026-11-20 11:20 | 2026-11-23 01:13 | +0.70 | exit_long_rapid_rpd_1 ( 103 ) |
 | UNI/USDT | 2026-11-20 15:25 | 2026-11-20 18:25 | +0.22 | exit_long_tc_d_0_2 ( 141 ) |
 | PROM/USDT | 2026-11-22 16:40 | 2026-11-22 16:40 | +2.88 | exit_long_normal_u_2 ( 1 ) |
 | PROM/USDT | 2026-11-22 18:00 | 2026-11-22 19:31 | +1.19 | exit_profit_long_normal_t_0_1_m ( 3 ) |
