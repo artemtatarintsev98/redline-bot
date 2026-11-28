@@ -1,275 +1,4 @@
-2026-11-28 09:06:41,488 - freqtrade.loggers - INFO - Enabling colorized output.
-2026-11-28 09:06:41,488 - freqtrade.loggers - INFO - Logfile configured
-2026-11-28 09:06:41,488 - freqtrade.loggers - INFO - Verbosity set to 0
-2026-11-28 09:06:41,489 - freqtrade.configuration.configuration - INFO - Runmode set to dry_run.
-2026-11-28 09:06:41,489 - freqtrade.configuration.configuration - INFO - Parameter --db-url detected ...
-2026-11-28 09:06:41,489 - freqtrade.configuration.configuration - WARNING - `force_entry_enable` RPC message enabled.
-2026-11-28 09:06:41,490 - freqtrade.configuration.configuration - INFO - Dry run is enabled
-2026-11-28 09:06:41,490 - freqtrade.configuration.configuration - INFO - Using DB: "sqlite:////freqtrade/user_data/trades.sqlite"
-2026-11-28 09:06:41,490 - freqtrade.configuration.configuration - INFO - Using max_open_trades: 6 ...
-2026-11-28 09:06:41,509 - freqtrade.configuration.configuration - INFO - Using user-data directory: /freqtrade/user_data ...
-2026-11-28 09:06:41,509 - freqtrade.configuration.directory_operations - INFO - Created data directory: None
-2026-11-28 09:06:41,510 - freqtrade.configuration.configuration - INFO - Using data directory: /freqtrade/user_data/data/binance ...
-2026-11-28 09:06:41,511 - freqtrade.exchange.check_exchange - INFO - Checking exchange...
-2026-11-28 09:06:41,517 - freqtrade.exchange.check_exchange - INFO - Exchange "binance" is officially supported by the Freqtrade development team.
-2026-11-28 09:06:41,517 - freqtrade.configuration.configuration - INFO - Using pairlist from configuration.
-2026-11-28 09:06:41,518 - freqtrade.exchange.exchange - INFO - Instance is running with dry_run enabled
-2026-11-28 09:06:41,518 - freqtrade.exchange.exchange - INFO - Using CCXT 4.5.90
-2026-11-28 09:06:41,518 - freqtrade.exchange.exchange - INFO - Applying additional ccxt config: {'enableRateLimit': True, 'rateLimit': 60, 'options': {'brokerId': None, 'partner': {'spot': {'id': None, 'key': None}, 'future': {'id': None, 'key': None}}, 'fetchMarkets': {'types': ['spot']}}, 'urls': {'api': {'public': 'https://data-api.binance.vision/api/v3'}}}
-2026-11-28 09:06:41,520 - freqtrade.exchange.exchange - INFO - Applying additional ccxt config: {'enableRateLimit': True, 'rateLimit': 60, 'options': {'brokerId': None, 'partner': {'spot': {'id': None, 'key': None}, 'future': {'id': None, 'key': None}}, 'fetchMarkets': {'types': ['spot']}}, 'urls': {'api': {'public': 'https://data-api.binance.vision/api/v3'}}}
-2026-11-28 09:06:41,523 - freqtrade.exchange.exchange - INFO - Using Exchange "Binance"
-2026-11-28 09:06:43,600 - freqtrade.exchange.exchange - INFO - Time offset to Binance is -207ms.
-2026-11-28 09:06:43,600 - freqtrade.resolvers.exchange_resolver - INFO - Using resolved exchange class 'Binance' ...
-2026-11-28 09:06:43,979 - freqtrade.resolvers.iresolver - INFO - Using resolved strategy NostalgiaForInfinityX8 from '/freqtrade/user_data/strategies/NostalgiaForInfinityX8.py'...
-2026-11-28 09:06:43,980 - freqtrade.strategy.hyper - INFO - Found no parameter file.
-2026-11-28 09:06:43,980 - NostalgiaForInfinityX8 - INFO - Parameter stop_threshold_doom_spot changed from "0.2" to "0.08".
-2026-11-28 09:06:43,981 - NostalgiaForInfinityX8 - INFO - Parameter stop_threshold_rapid_spot changed from "0.2" to "0.08".
-2026-11-28 09:06:43,981 - NostalgiaForInfinityX8 - INFO - Parameter stop_threshold_scalp_spot changed from "0.2" to "0.08".
-2026-11-28 09:06:43,981 - NostalgiaForInfinityX8 - INFO - Parameter stops_enable changed from "True" to "True".
-2026-11-28 09:06:43,981 - freqtrade.resolvers.strategy_resolver - INFO - Override strategy 'timeframe' with value from the configuration: 5m.
-2026-11-28 09:06:43,982 - freqtrade.resolvers.strategy_resolver - INFO - Override strategy 'stoploss' with value from the configuration: -0.08.
-2026-11-28 09:06:43,982 - freqtrade.resolvers.strategy_resolver - INFO - Override strategy 'order_types' with value from the configuration: {'entry': 'limit', 'exit': 'limit', 'emergency_exit': 'limit', 'force_entry': 'limit', 'force_exit': 'limit', 'stoploss': 'limit', 'stoploss_on_exchange': False, 'stoploss_on_exchange_interval': 60, 'stoploss_on_exchange_limit_ratio': 0.99}.
-2026-11-28 09:06:43,982 - freqtrade.resolvers.strategy_resolver - INFO - Override strategy 'stake_currency' with value from the configuration: USDT.
-2026-11-28 09:06:43,982 - freqtrade.resolvers.strategy_resolver - INFO - Override strategy 'stake_amount' with value from the configuration: unlimited.
-2026-11-28 09:06:43,982 - freqtrade.resolvers.strategy_resolver - INFO - Override strategy 'unfilledtimeout' with value from the configuration: {'entry': 3, 'exit': 2, 'exit_timeout_count': 0, 'unit': 'minutes'}.
-2026-11-28 09:06:43,983 - freqtrade.resolvers.strategy_resolver - INFO - Override strategy 'position_adjustment_enable' with value from the configuration: False.
-2026-11-28 09:06:43,983 - freqtrade.resolvers.strategy_resolver - INFO - Override strategy 'max_open_trades' with value from the configuration: 6.
-2026-11-28 09:06:43,983 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using minimal_roi: {}
-2026-11-28 09:06:43,983 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using timeframe: 5m
-2026-11-28 09:06:43,983 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using stoploss: -0.08
-2026-11-28 09:06:43,983 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using trailing_stop: False
-2026-11-28 09:06:43,983 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using trailing_stop_positive: 0.01
-2026-11-28 09:06:43,984 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using trailing_stop_positive_offset: 0.03
-2026-11-28 09:06:43,984 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using trailing_only_offset_is_reached: True
-2026-11-28 09:06:43,984 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using use_custom_stoploss: False
-2026-11-28 09:06:43,984 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using process_only_new_candles: True
-2026-11-28 09:06:43,984 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using order_types: {'entry': 'limit', 'exit': 'limit', 'emergency_exit': 'limit', 'force_entry': 'limit', 'force_exit': 'limit', 'stoploss': 'limit', 'stoploss_on_exchange': False, 'stoploss_on_exchange_interval': 60, 'stoploss_on_exchange_limit_ratio': 0.99}
-2026-11-28 09:06:43,984 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using order_time_in_force: {'entry': 'GTC', 'exit': 'GTC'}
-2026-11-28 09:06:43,985 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using stake_currency: USDT
-2026-11-28 09:06:43,985 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using stake_amount: unlimited
-2026-11-28 09:06:43,985 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using startup_candle_count: 800
-2026-11-28 09:06:43,985 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using unfilledtimeout: {'entry': 3, 'exit': 2, 'exit_timeout_count': 0, 'unit': 'minutes'}
-2026-11-28 09:06:43,985 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using use_exit_signal: True
-2026-11-28 09:06:43,986 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using exit_profit_only: False
-2026-11-28 09:06:43,986 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using ignore_roi_if_entry_signal: True
-2026-11-28 09:06:43,986 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using exit_profit_offset: 0.0
-2026-11-28 09:06:43,986 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using disable_dataframe_checks: False
-2026-11-28 09:06:43,986 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using ignore_buying_expired_candle_after: 0
-2026-11-28 09:06:43,986 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using position_adjustment_enable: False
-2026-11-28 09:06:43,986 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using max_entry_position_adjustment: -1
-2026-11-28 09:06:43,987 - freqtrade.resolvers.strategy_resolver - INFO - Strategy using max_open_trades: 6
-2026-11-28 09:06:43,987 - freqtrade.configuration.config_validation - INFO - Validating configuration ...
-2026-11-28 09:06:44,014 - freqtrade.wallets - INFO - Wallets synced.
-2026-11-28 09:06:44,017 - freqtrade.resolvers.iresolver - INFO - Using resolved pairlist VolumePairList from '/freqtrade/freqtrade/plugins/pairlist/VolumePairList.py'...
-2026-11-28 09:06:44,019 - freqtrade.resolvers.iresolver - INFO - Using resolved pairlist AgeFilter from '/freqtrade/freqtrade/plugins/pairlist/AgeFilter.py'...
-2026-11-28 09:06:44,021 - freqtrade.resolvers.iresolver - INFO - Using resolved pairlist PriceFilter from '/freqtrade/freqtrade/plugins/pairlist/PriceFilter.py'...
-2026-11-28 09:06:44,022 - freqtrade.resolvers.iresolver - INFO - Using resolved pairlist SpreadFilter from '/freqtrade/freqtrade/plugins/pairlist/SpreadFilter.py'...
-2026-11-28 09:06:44,025 - freqtrade.resolvers.iresolver - INFO - Using resolved pairlist RangeStabilityFilter from '/freqtrade/freqtrade/plugins/pairlist/rangestabilityfilter.py'...
-2026-11-28 09:06:44,027 - freqtrade.resolvers.iresolver - INFO - Using resolved pairlist VolumePairList from '/freqtrade/freqtrade/plugins/pairlist/VolumePairList.py'...
-2026-11-28 09:06:44,028 - freqtrade.freqtradebot - INFO - Starting initial pairlist refresh
-2026-11-28 09:06:44,828 - VolumePairList - INFO - Pair BNB/USDT in your blacklist. Removing it from whitelist...
-2026-11-28 09:06:44,828 - VolumePairList - INFO - Pair TUSD/USDT in your blacklist. Removing it from whitelist...
-2026-11-28 09:06:44,829 - VolumePairList - INFO - Pair USDC/USDT in your blacklist. Removing it from whitelist...
-2026-11-28 09:06:44,829 - VolumePairList - INFO - Pair ZIL/USDT in your blacklist. Removing it from whitelist...
-2026-11-28 09:06:44,829 - VolumePairList - INFO - Pair ONE/USDT in your blacklist. Removing it from whitelist...
-2026-11-28 09:06:44,830 - VolumePairList - INFO - Pair CVC/USDT in your blacklist. Removing it from whitelist...
-2026-11-28 09:06:44,830 - VolumePairList - INFO - Pair CHZ/USDT in your blacklist. Removing it from whitelist...
-2026-11-28 09:06:44,830 - VolumePairList - INFO - Pair STX/USDT in your blacklist. Removing it from whitelist...
-2026-11-28 09:06:44,830 - VolumePairList - INFO - Pair KAVA/USDT in your blacklist. Removing it from whitelist...
-2026-11-28 09:06:44,831 - VolumePairList - INFO - Pair FTT/USDT in your blacklist. Removing it from whitelist...
-2026-11-28 09:06:44,831 - VolumePairList - INFO - Pair EUR/USDT in your blacklist. Removing it from whitelist...
-2026-11-28 09:06:44,831 - VolumePairList - INFO - Pair LSK/USDT in your blacklist. Removing it from whitelist...
-2026-11-28 09:06:44,831 - VolumePairList - INFO - Pair MBL/USDT in your blacklist. Removing it from whitelist...
-2026-11-28 09:06:44,832 - VolumePairList - INFO - Pair NMR/USDT in your blacklist. Removing it from whitelist...
-2026-11-28 09:06:44,832 - VolumePairList - INFO - Pair LUNA/USDT in your blacklist. Removing it from whitelist...
-2026-11-28 09:06:44,832 - VolumePairList - INFO - Pair PAXG/USDT in your blacklist. Removing it from whitelist...
-2026-11-28 09:06:44,833 - VolumePairList - INFO - Pair BEL/USDT in your blacklist. Removing it from whitelist...
-2026-11-28 09:06:44,833 - VolumePairList - INFO - Pair JUV/USDT in your blacklist. Removing it from whitelist...
-2026-11-28 09:06:44,833 - VolumePairList - INFO - Pair PSG/USDT in your blacklist. Removing it from whitelist...
-2026-11-28 09:06:44,833 - VolumePairList - INFO - Pair ATM/USDT in your blacklist. Removing it from whitelist...
-2026-11-28 09:06:44,834 - VolumePairList - INFO - Pair ASR/USDT in your blacklist. Removing it from whitelist...
-2026-11-28 09:06:44,834 - VolumePairList - INFO - Pair RIF/USDT in your blacklist. Removing it from whitelist...
-2026-11-28 09:06:44,834 - VolumePairList - INFO - Pair DODO/USDT in your blacklist. Removing it from whitelist...
-2026-11-28 09:06:44,834 - VolumePairList - INFO - Pair ACM/USDT in your blacklist. Removing it from whitelist...
-2026-11-28 09:06:44,835 - VolumePairList - INFO - Pair ALICE/USDT in your blacklist. Removing it from whitelist...
-2026-11-28 09:06:44,835 - VolumePairList - INFO - Pair TLM/USDT in your blacklist. Removing it from whitelist...
-2026-11-28 09:06:44,835 - VolumePairList - INFO - Pair BAR/USDT in your blacklist. Removing it from whitelist...
-2026-11-28 09:06:44,835 - VolumePairList - INFO - Pair DEXE/USDT in your blacklist. Removing it from whitelist...
-2026-11-28 09:06:44,836 - VolumePairList - INFO - Pair FLOW/USDT in your blacklist. Removing it from whitelist...
-2026-11-28 09:06:44,836 - VolumePairList - INFO - Pair YGG/USDT in your blacklist. Removing it from whitelist...
-2026-11-28 09:06:44,836 - VolumePairList - INFO - Pair AGLD/USDT in your blacklist. Removing it from whitelist...
-2026-11-28 09:06:44,837 - VolumePairList - INFO - Pair RARE/USDT in your blacklist. Removing it from whitelist...
-2026-11-28 09:06:44,837 - VolumePairList - INFO - Pair MOVR/USDT in your blacklist. Removing it from whitelist...
-2026-11-28 09:06:44,837 - VolumePairList - INFO - Pair CITY/USDT in your blacklist. Removing it from whitelist...
-2026-11-28 09:06:44,837 - VolumePairList - INFO - Pair BICO/USDT in your blacklist. Removing it from whitelist...
-2026-11-28 09:06:44,838 - VolumePairList - INFO - Pair ACH/USDT in your blacklist. Removing it from whitelist...
-2026-11-28 09:06:44,838 - VolumePairList - INFO - Pair GLMR/USDT in your blacklist. Removing it from whitelist...
-2026-11-28 09:06:44,838 - VolumePairList - INFO - Pair XNO/USDT in your blacklist. Removing it from whitelist...
-2026-11-28 09:06:44,838 - VolumePairList - INFO - Pair ALPINE/USDT in your blacklist. Removing it from whitelist...
-2026-11-28 09:06:44,839 - VolumePairList - INFO - Pair MAGIC/USDT in your blacklist. Removing it from whitelist...
-2026-11-28 09:06:44,839 - VolumePairList - INFO - Pair GNS/USDT in your blacklist. Removing it from whitelist...
-2026-11-28 09:06:44,839 - VolumePairList - INFO - Pair SYN/USDT in your blacklist. Removing it from whitelist...
-2026-11-28 09:06:44,839 - VolumePairList - INFO - Pair USTC/USDT in your blacklist. Removing it from whitelist...
-2026-11-28 09:06:44,840 - VolumePairList - INFO - Pair QKC/USDT in your blacklist. Removing it from whitelist...
-2026-11-28 09:06:44,840 - VolumePairList - INFO - Pair FDUSD/USDT in your blacklist. Removing it from whitelist...
-2026-11-28 09:06:44,840 - VolumePairList - INFO - Pair ARK/USDT in your blacklist. Removing it from whitelist...
-2026-11-28 09:06:44,841 - VolumePairList - INFO - Pair MEME/USDT in your blacklist. Removing it from whitelist...
-2026-11-28 09:06:44,841 - VolumePairList - INFO - Pair BLUR/USDT in your blacklist. Removing it from whitelist...
-2026-11-28 09:06:44,841 - VolumePairList - INFO - Pair ACE/USDT in your blacklist. Removing it from whitelist...
-2026-11-28 09:06:44,841 - VolumePairList - INFO - Pair XAI/USDT in your blacklist. Removing it from whitelist...
-2026-11-28 09:06:44,842 - VolumePairList - INFO - Pair DYM/USDT in your blacklist. Removing it from whitelist...
-2026-11-28 09:06:44,842 - VolumePairList - INFO - Pair PIXEL/USDT in your blacklist. Removing it from whitelist...
-2026-11-28 09:06:44,842 - VolumePairList - INFO - Pair PORTAL/USDT in your blacklist. Removing it from whitelist...
-2026-11-28 09:06:44,843 - VolumePairList - INFO - Pair TNSR/USDT in your blacklist. Removing it from whitelist...
-2026-11-28 09:06:44,843 - VolumePairList - INFO - Pair SAGA/USDT in your blacklist. Removing it from whitelist...
-2026-11-28 09:06:44,843 - VolumePairList - INFO - Pair BB/USDT in your blacklist. Removing it from whitelist...
-2026-11-28 09:06:44,843 - VolumePairList - INFO - Pair LISTA/USDT in your blacklist. Removing it from whitelist...
-2026-11-28 09:06:44,844 - VolumePairList - INFO - Pair EURI/USDT in your blacklist. Removing it from whitelist...
-2026-11-28 09:06:44,844 - VolumePairList - INFO - Pair NEIRO/USDT in your blacklist. Removing it from whitelist...
-2026-11-28 09:06:44,844 - VolumePairList - INFO - Pair HMSTR/USDT in your blacklist. Removing it from whitelist...
-2026-11-28 09:06:44,844 - VolumePairList - INFO - Pair ACT/USDT in your blacklist. Removing it from whitelist...
-2026-11-28 09:06:44,845 - VolumePairList - INFO - Pair THE/USDT in your blacklist. Removing it from whitelist...
-2026-11-28 09:06:44,845 - VolumePairList - INFO - Pair AIXBT/USDT in your blacklist. Removing it from whitelist...
-2026-11-28 09:06:44,845 - VolumePairList - INFO - Pair COOKIE/USDT in your blacklist. Removing it from whitelist...
-2026-11-28 09:06:44,845 - VolumePairList - INFO - Pair S/USDT in your blacklist. Removing it from whitelist...
-2026-11-28 09:06:44,846 - VolumePairList - INFO - Pair TRUMP/USDT in your blacklist. Removing it from whitelist...
-2026-11-28 09:06:44,846 - VolumePairList - INFO - Pair ANIME/USDT in your blacklist. Removing it from whitelist...
-2026-11-28 09:06:44,846 - VolumePairList - INFO - Pair TST/USDT in your blacklist. Removing it from whitelist...
-2026-11-28 09:06:44,846 - VolumePairList - INFO - Pair LAYER/USDT in your blacklist. Removing it from whitelist...
-2026-11-28 09:06:44,846 - VolumePairList - INFO - Pair HEI/USDT in your blacklist. Removing it from whitelist...
-2026-11-28 09:06:44,847 - VolumePairList - INFO - Pair GPS/USDT in your blacklist. Removing it from whitelist...
-2026-11-28 09:06:44,847 - VolumePairList - INFO - Pair XUSD/USDT in your blacklist. Removing it from whitelist...
-2026-11-28 09:06:44,847 - VolumePairList - INFO - Pair NIL/USDT in your blacklist. Removing it from whitelist...
-2026-11-28 09:06:44,847 - VolumePairList - INFO - Pair MUBARAK/USDT in your blacklist. Removing it from whitelist...
-2026-11-28 09:06:44,848 - VolumePairList - INFO - Pair TUT/USDT in your blacklist. Removing it from whitelist...
-2026-11-28 09:06:44,848 - VolumePairList - INFO - Pair BROCCOLI714/USDT in your blacklist. Removing it from whitelist...
-2026-11-28 09:06:44,848 - VolumePairList - INFO - Pair BANANAS31/USDT in your blacklist. Removing it from whitelist...
-2026-11-28 09:06:44,848 - VolumePairList - INFO - Pair WCT/USDT in your blacklist. Removing it from whitelist...
-2026-11-28 09:06:44,849 - VolumePairList - INFO - Pair INIT/USDT in your blacklist. Removing it from whitelist...
-2026-11-28 09:06:44,849 - VolumePairList - INFO - Pair SYRUP/USDT in your blacklist. Removing it from whitelist...
-2026-11-28 09:06:44,849 - VolumePairList - INFO - Pair NXPC/USDT in your blacklist. Removing it from whitelist...
-2026-11-28 09:06:44,849 - VolumePairList - INFO - Pair USD1/USDT in your blacklist. Removing it from whitelist...
-2026-11-28 09:06:44,849 - VolumePairList - INFO - Pair SOPH/USDT in your blacklist. Removing it from whitelist...
-2026-11-28 09:06:44,850 - VolumePairList - INFO - Pair RESOLV/USDT in your blacklist. Removing it from whitelist...
-2026-11-28 09:06:44,850 - VolumePairList - INFO - Pair SAHARA/USDT in your blacklist. Removing it from whitelist...
-2026-11-28 09:06:44,850 - VolumePairList - INFO - Pair TOWNS/USDT in your blacklist. Removing it from whitelist...
-2026-11-28 09:06:44,850 - VolumePairList - INFO - Pair BFUSD/USDT in your blacklist. Removing it from whitelist...
-2026-11-28 09:06:44,851 - VolumePairList - INFO - Pair DOLO/USDT in your blacklist. Removing it from whitelist...
-2026-11-28 09:06:44,851 - VolumePairList - INFO - Pair MITO/USDT in your blacklist. Removing it from whitelist...
-2026-11-28 09:06:44,851 - VolumePairList - INFO - Pair WLFI/USDT in your blacklist. Removing it from whitelist...
-2026-11-28 09:06:44,851 - VolumePairList - INFO - Pair USDE/USDT in your blacklist. Removing it from whitelist...
-2026-11-28 09:06:44,852 - VolumePairList - INFO - Pair EDEN/USDT in your blacklist. Removing it from whitelist...
-2026-11-28 09:06:44,852 - VolumePairList - INFO - Pair NOM/USDT in your blacklist. Removing it from whitelist...
-2026-11-28 09:06:44,852 - VolumePairList - INFO - Pair ENSO/USDT in your blacklist. Removing it from whitelist...
-2026-11-28 09:06:44,852 - VolumePairList - INFO - Pair YB/USDT in your blacklist. Removing it from whitelist...
-2026-11-28 09:06:44,853 - VolumePairList - INFO - Pair F/USDT in your blacklist. Removing it from whitelist...
-2026-11-28 09:06:44,853 - VolumePairList - INFO - Pair BANK/USDT in your blacklist. Removing it from whitelist...
-2026-11-28 09:06:44,853 - VolumePairList - INFO - Pair 币安人生/USDT in your blacklist. Removing it from whitelist...
-2026-11-28 09:06:44,854 - VolumePairList - INFO - Pair ZKP/USDT in your blacklist. Removing it from whitelist...
-2026-11-28 09:06:44,854 - VolumePairList - INFO - Pair U/USDT in your blacklist. Removing it from whitelist...
-2026-11-28 09:06:44,854 - VolumePairList - INFO - Pair RLUSD/USDT in your blacklist. Removing it from whitelist...
-2026-11-28 09:06:44,855 - VolumePairList - INFO - Pair ESP/USDT in your blacklist. Removing it from whitelist...
-2026-11-28 09:06:44,855 - VolumePairList - INFO - Pair OPN/USDT in your blacklist. Removing it from whitelist...
-2026-11-28 09:06:44,855 - VolumePairList - INFO - Pair NIGHT/USDT in your blacklist. Removing it from whitelist...
-2026-11-28 09:06:44,855 - VolumePairList - INFO - Pair KAT/USDT in your blacklist. Removing it from whitelist...
-2026-11-28 09:06:44,856 - VolumePairList - INFO - Pair XAUT/USDT in your blacklist. Removing it from whitelist...
-2026-11-28 09:06:44,856 - VolumePairList - INFO - Pair USDS/USDT in your blacklist. Removing it from whitelist...
-2026-11-28 09:06:44,856 - VolumePairList - INFO - Pair AIGENSYN/USDT in your blacklist. Removing it from whitelist...
-2026-11-28 09:06:44,856 - VolumePairList - INFO - Pair OPG/USDT in your blacklist. Removing it from whitelist...
-2026-11-28 09:06:44,857 - VolumePairList - INFO - Pair MUB/USDT in your blacklist. Removing it from whitelist...
-2026-11-28 09:06:44,857 - VolumePairList - INFO - Pair CRCLB/USDT in your blacklist. Removing it from whitelist...
-2026-11-28 09:06:44,857 - VolumePairList - INFO - Pair NVDAB/USDT in your blacklist. Removing it from whitelist...
-2026-11-28 09:06:44,857 - VolumePairList - INFO - Pair SNDKB/USDT in your blacklist. Removing it from whitelist...
-2026-11-28 09:06:44,857 - VolumePairList - INFO - Pair TSLAB/USDT in your blacklist. Removing it from whitelist...
-2026-11-28 09:06:44,858 - VolumePairList - INFO - Pair SPCXB/USDT in your blacklist. Removing it from whitelist...
-2026-11-28 09:06:44,858 - VolumePairList - INFO - Pair AMDB/USDT in your blacklist. Removing it from whitelist...
-2026-11-28 09:06:44,858 - VolumePairList - INFO - Pair EWYB/USDT in your blacklist. Removing it from whitelist...
-2026-11-28 09:06:44,858 - VolumePairList - INFO - Pair INTCB/USDT in your blacklist. Removing it from whitelist...
-2026-11-28 09:06:44,859 - VolumePairList - INFO - Pair MSTRB/USDT in your blacklist. Removing it from whitelist...
-2026-11-28 09:06:44,859 - VolumePairList - INFO - Pair LITEB/USDT in your blacklist. Removing it from whitelist...
-2026-11-28 09:06:44,859 - VolumePairList - INFO - Pair METAB/USDT in your blacklist. Removing it from whitelist...
-2026-11-28 09:06:44,859 - VolumePairList - INFO - Pair MSFTB/USDT in your blacklist. Removing it from whitelist...
-2026-11-28 09:06:44,859 - VolumePairList - INFO - Pair PLTRB/USDT in your blacklist. Removing it from whitelist...
-2026-11-28 09:06:44,860 - VolumePairList - INFO - Pair QQQB/USDT in your blacklist. Removing it from whitelist...
-2026-11-28 09:06:44,860 - VolumePairList - INFO - Pair COINB/USDT in your blacklist. Removing it from whitelist...
-2026-11-28 09:06:44,860 - VolumePairList - INFO - Pair DRAMB/USDT in your blacklist. Removing it from whitelist...
-2026-11-28 09:06:44,860 - VolumePairList - INFO - Pair GLWB/USDT in your blacklist. Removing it from whitelist...
-2026-11-28 09:06:44,861 - VolumePairList - INFO - Pair GOOGLB/USDT in your blacklist. Removing it from whitelist...
-2026-11-28 09:06:44,861 - VolumePairList - INFO - Pair NBISB/USDT in your blacklist. Removing it from whitelist...
-2026-11-28 09:06:44,861 - VolumePairList - INFO - Pair QCOMB/USDT in your blacklist. Removing it from whitelist...
-2026-11-28 09:06:44,861 - VolumePairList - INFO - Pair SOXLB/USDT in your blacklist. Removing it from whitelist...
-2026-11-28 09:06:44,861 - VolumePairList - INFO - Pair SPYB/USDT in your blacklist. Removing it from whitelist...
-2026-11-28 09:06:44,862 - VolumePairList - INFO - Pair SKHYB/USDT in your blacklist. Removing it from whitelist...
-2026-11-28 09:06:44,862 - VolumePairList - INFO - Pair AAOIB/USDT in your blacklist. Removing it from whitelist...
-2026-11-28 09:06:44,862 - VolumePairList - INFO - Pair ARMB/USDT in your blacklist. Removing it from whitelist...
-2026-11-28 09:06:44,862 - VolumePairList - INFO - Pair AVGOB/USDT in your blacklist. Removing it from whitelist...
-2026-11-28 09:06:44,863 - VolumePairList - INFO - Pair BABAB/USDT in your blacklist. Removing it from whitelist...
-2026-11-28 09:06:44,863 - VolumePairList - INFO - Pair HOODB/USDT in your blacklist. Removing it from whitelist...
-2026-11-28 09:06:44,863 - VolumePairList - INFO - Pair IBMB/USDT in your blacklist. Removing it from whitelist...
-2026-11-28 09:06:44,863 - VolumePairList - INFO - Pair MRVLB/USDT in your blacklist. Removing it from whitelist...
-2026-11-28 09:06:44,863 - VolumePairList - INFO - Pair TSMB/USDT in your blacklist. Removing it from whitelist...
-2026-11-28 09:06:44,864 - VolumePairList - INFO - Pair AXTIB/USDT in your blacklist. Removing it from whitelist...
-2026-11-28 09:06:44,864 - VolumePairList - INFO - Pair CRWVB/USDT in your blacklist. Removing it from whitelist...
-2026-11-28 09:06:44,864 - VolumePairList - INFO - Pair INTWB/USDT in your blacklist. Removing it from whitelist...
-2026-11-28 09:06:44,864 - VolumePairList - INFO - Pair KORUB/USDT in your blacklist. Removing it from whitelist...
-2026-11-28 09:06:44,865 - VolumePairList - INFO - Pair MUUB/USDT in your blacklist. Removing it from whitelist...
-2026-11-28 09:06:44,865 - VolumePairList - INFO - Pair MVLLB/USDT in your blacklist. Removing it from whitelist...
-2026-11-28 09:06:44,865 - VolumePairList - INFO - Pair ORCLB/USDT in your blacklist. Removing it from whitelist...
-2026-11-28 09:06:44,865 - VolumePairList - INFO - Pair SNXXB/USDT in your blacklist. Removing it from whitelist...
-2026-11-28 09:06:44,865 - VolumePairList - INFO - Pair TQQQB/USDT in your blacklist. Removing it from whitelist...
-2026-11-28 09:06:44,866 - VolumePairList - INFO - Pair AAPLB/USDT in your blacklist. Removing it from whitelist...
-2026-11-28 09:06:44,866 - VolumePairList - INFO - Pair AMZNB/USDT in your blacklist. Removing it from whitelist...
-2026-11-28 09:06:44,866 - VolumePairList - INFO - Pair BEB/USDT in your blacklist. Removing it from whitelist...
-2026-11-28 09:06:44,866 - VolumePairList - INFO - Pair DELLB/USDT in your blacklist. Removing it from whitelist...
-2026-11-28 09:06:44,867 - VolumePairList - INFO - Pair SMHB/USDT in your blacklist. Removing it from whitelist...
-2026-11-28 09:06:44,867 - VolumePairList - INFO - Pair SOXSB/USDT in your blacklist. Removing it from whitelist...
-2026-11-28 09:06:44,867 - VolumePairList - INFO - Pair ASMLB/USDT in your blacklist. Removing it from whitelist...
-2026-11-28 09:06:44,867 - VolumePairList - INFO - Pair ASTSB/USDT in your blacklist. Removing it from whitelist...
-2026-11-28 09:06:44,867 - VolumePairList - INFO - Pair BMNRB/USDT in your blacklist. Removing it from whitelist...
-2026-11-28 09:06:44,868 - VolumePairList - INFO - Pair COHRB/USDT in your blacklist. Removing it from whitelist...
-2026-11-28 09:06:44,868 - VolumePairList - INFO - Pair CRDOB/USDT in your blacklist. Removing it from whitelist...
-2026-11-28 09:06:44,868 - VolumePairList - INFO - Pair IRENB/USDT in your blacklist. Removing it from whitelist...
-2026-11-28 09:06:44,868 - VolumePairList - INFO - Pair NFLXB/USDT in your blacklist. Removing it from whitelist...
-2026-11-28 09:06:44,868 - VolumePairList - INFO - Pair SMCIB/USDT in your blacklist. Removing it from whitelist...
-2026-11-28 09:06:44,869 - VolumePairList - INFO - Pair USARB/USDT in your blacklist. Removing it from whitelist...
-2026-11-28 09:06:44,869 - VolumePairList - INFO - Pair ALABB/USDT in your blacklist. Removing it from whitelist...
-2026-11-28 09:06:44,869 - VolumePairList - INFO - Pair GMEB/USDT in your blacklist. Removing it from whitelist...
-2026-11-28 09:06:44,869 - VolumePairList - INFO - Pair DJTB/USDT in your blacklist. Removing it from whitelist...
-2026-11-28 09:06:44,870 - VolumePairList - INFO - Pair MRNAB/USDT in your blacklist. Removing it from whitelist...
-2026-11-28 09:06:44,870 - VolumePairList - INFO - Pair SQQQB/USDT in your blacklist. Removing it from whitelist...
-2026-11-28 09:06:44,870 - VolumePairList - INFO - Pair STXB/USDT in your blacklist. Removing it from whitelist...
-2026-11-28 09:06:44,870 - VolumePairList - INFO - Pair 牛来/USDT in your blacklist. Removing it from whitelist...
-2026-11-28 09:06:44,871 - VolumePairList - INFO - Pair RDDTB/USDT in your blacklist. Removing it from whitelist...
-2026-11-28 09:06:44,871 - VolumePairList - INFO - Pair AGPUB/USDT in your blacklist. Removing it from whitelist...
-2026-11-28 09:06:44,871 - VolumePairList - INFO - Pair AMCB/USDT in your blacklist. Removing it from whitelist...
-2026-11-28 09:06:44,871 - VolumePairList - INFO - Pair LLYB/USDT in your blacklist. Removing it from whitelist...
-2026-11-28 09:06:44,872 - VolumePairList - INFO - Pair BBB/USDT in your blacklist. Removing it from whitelist...
-2026-11-28 09:06:44,872 - VolumePairList - INFO - Pair UVXYB/USDT in your blacklist. Removing it from whitelist...
-2026-11-28 09:06:44,872 - VolumePairList - INFO - Pair TMFB/USDT in your blacklist. Removing it from whitelist...
-2026-11-28 09:06:44,872 - VolumePairList - INFO - Pair APPB/USDT in your blacklist. Removing it from whitelist...
-2026-11-28 09:06:44,873 - VolumePairList - INFO - Pair SKDDB/USDT in your blacklist. Removing it from whitelist...
-2026-11-28 09:06:44,873 - VolumePairList - INFO - Pair SKUUB/USDT in your blacklist. Removing it from whitelist...
-2026-11-28 09:06:44,873 - VolumePairList - INFO - Pair EWJB/USDT in your blacklist. Removing it from whitelist...
-2026-11-28 09:06:44,873 - VolumePairList - INFO - Pair EWTB/USDT in your blacklist. Removing it from whitelist...
-2026-11-28 09:06:44,874 - VolumePairList - INFO - Pair IWMB/USDT in your blacklist. Removing it from whitelist...
-2026-11-28 09:06:44,874 - VolumePairList - INFO - Pair MELIB/USDT in your blacklist. Removing it from whitelist...
-2026-11-28 09:06:47,054 - AgeFilter - INFO - Removed RWUSD/USDT from whitelist, because age 46 is less than 60 days
-2026-11-28 09:06:47,055 - AgeFilter - INFO - Removed ANTB/USDT from whitelist, because age 9 is less than 60 days
-2026-11-28 09:06:47,055 - AgeFilter - INFO - Validated 58 pairs.
-2026-11-28 09:06:47,056 - PriceFilter - INFO - Removed ROBO/USDT from whitelist, because 1 unit is 0.314%
-2026-11-28 09:06:48,854 - rangestabilityfilter - INFO - Removed MMT/USDT from whitelist, because rate of change over 3 x 1d candles is 1.084, which is above the threshold of 0.95.
-2026-11-28 09:06:48,856 - rangestabilityfilter - INFO - Removed SSV/USDT from whitelist, because rate of change over 3 x 1d candles is 1.190, which is above the threshold of 0.95.
-2026-11-28 09:06:48,857 - rangestabilityfilter - INFO - Removed BIGTIME/USDT from whitelist, because rate of change over 3 x 1d candles is 1.764, which is above the threshold of 0.95.
-2026-11-28 09:06:48,942 - freqtrade.plugins.pairlistmanager - INFO - Whitelist with 40 pairs: ['BTC/USDT', 'ETH/USDT', 'SOL/USDT', 'ZEC/USDT', 'XRP/USDT', 'NEAR/USDT', 'HYPE/USDT', 'UNI/USDT', 'TRX/USDT', 'PEPE/USDT', 'DOGE/USDT', 'SUI/USDT', 'LTC/USDT', 'ENA/USDT', 'LINK/USDT', 'ADA/USDT', 'HAEDAL/USDT', 'CFG/USDT', 'FET/USDT', 'TAO/USDT', 'WBTC/USDT', 'WLD/USDT', 'PUMP/USDT', 'INJ/USDT', 'AAVE/USDT', 'AVAX/USDT', 'BCH/USDT', 'GRAM/USDT', 'SKY/USDT', 'XLM/USDT', 'SENT/USDT', 'ZRO/USDT', 'HBAR/USDT', 'SEI/USDT', 'RENDER/USDT', 'QNT/USDT', 'ICP/USDT', 'FIL/USDT', 'ONDO/USDT', 'ASTER/USDT']
-2026-11-28 09:06:48,943 - freqtrade.freqtradebot - INFO - Initial Pairlist refresh took 4.92s
-2026-11-28 09:06:48,944 - freqtrade.plugins.protectionmanager - INFO - No protection Handlers defined.
-2026-11-28 09:06:48,945 - freqtrade.rpc.rpc_manager - INFO - Sending rpc message: {'type': status, 'status': 'running'}
-2026-11-28 09:06:48,945 - freqtrade.worker - INFO - Changing state to: RUNNING
-2026-11-28 09:06:48,950 - freqtrade.rpc.rpc_manager - INFO - Sending rpc message: {'type': warning, 'status': 'Dry run is enabled. All trades are simulated.'}
-2026-11-28 09:06:48,951 - freqtrade.rpc.rpc_manager - INFO - Sending rpc message: {'type': startup, 'status': '*Exchange:* `binance`\n*Stake per trade:* `unlimited USDT`\n*Minimum ROI:* `{}`\n*Stoploss:* `-0.08`\n*Position adjustment:* `Off`\n*Timeframe:* `5m`\n*Strategy:* `NostalgiaForInfinityX8`'}
-2026-11-28 09:06:48,951 - freqtrade.rpc.rpc_manager - INFO - Sending rpc message: {'type': startup, 'status': "Searching for USDT pairs to buy and sell based on [{'VolumePairList': 'VolumePairList - top 60 volume pairs.'}, {'AgeFilter': 'AgeFilter - Filtering pairs with age less than 60 days'}, {'PriceFilter': 'PriceFilter - Filtering pairs priced below 0.3%.'}, {'SpreadFilter': 'SpreadFilter - Filtering pairs with ask/bid diff above 0.50%.'}, {'RangeStabilityFilter': 'RangeStabilityFilter - Filtering pairs with rate of change below 0.03 and above 0.95 over the last 3 x 1d candles.'}, {'VolumePairList': 'VolumePairList - top 40 volume pairs.'}]"}
-2026-11-28 09:06:48,953 - freqtrade.persistence.trade_model - INFO - Found open trade: Trade(id=3, pair=KAVA/USDT, amount=3083.7, is_short=False, leverage=1, open_rate=0.05373, open_since=2026-11-14 10:30:10)
-2026-11-28 09:06:57,604 - freqtrade.freqtradebot - INFO - Exit for KAVA/USDT detected. Reason: stop_loss
+t - INFO - Exit for KAVA/USDT detected. Reason: stop_loss
 2026-11-28 09:06:57,606 - freqtrade.wallets - INFO - Wallets synced.
 2026-11-28 09:06:57,606 - freqtrade.freqtradebot - INFO - User denied exit for KAVA/USDT.
 2026-11-28 09:06:57,628 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.10, strategy_version: v18.0.332', state='RUNNING'
@@ -1188,3 +917,754 @@
 2026-11-28 09:31:37,049 - freqtrade.freqtradebot - INFO - Exit for KAVA/USDT detected. Reason: stop_loss
 2026-11-28 09:31:37,051 - freqtrade.wallets - INFO - Wallets synced.
 2026-11-28 09:31:37,051 - freqtrade.freqtradebot - INFO - User denied exit for KAVA/USDT.
+2026-11-28 09:31:42,047 - freqtrade.freqtradebot - INFO - Exit for KAVA/USDT detected. Reason: stop_loss
+2026-11-28 09:31:42,049 - freqtrade.wallets - INFO - Wallets synced.
+2026-11-28 09:31:42,049 - freqtrade.freqtradebot - INFO - User denied exit for KAVA/USDT.
+2026-11-28 09:31:47,046 - freqtrade.freqtradebot - INFO - Exit for KAVA/USDT detected. Reason: stop_loss
+2026-11-28 09:31:47,047 - freqtrade.wallets - INFO - Wallets synced.
+2026-11-28 09:31:47,048 - freqtrade.freqtradebot - INFO - User denied exit for KAVA/USDT.
+2026-11-28 09:31:52,045 - freqtrade.freqtradebot - INFO - Exit for KAVA/USDT detected. Reason: stop_loss
+2026-11-28 09:31:52,047 - freqtrade.wallets - INFO - Wallets synced.
+2026-11-28 09:31:52,047 - freqtrade.freqtradebot - INFO - User denied exit for KAVA/USDT.
+2026-11-28 09:31:57,048 - freqtrade.freqtradebot - INFO - Exit for KAVA/USDT detected. Reason: stop_loss
+2026-11-28 09:31:57,049 - freqtrade.wallets - INFO - Wallets synced.
+2026-11-28 09:31:57,050 - freqtrade.freqtradebot - INFO - User denied exit for KAVA/USDT.
+2026-11-28 09:32:02,044 - freqtrade.freqtradebot - INFO - Exit for KAVA/USDT detected. Reason: stop_loss
+2026-11-28 09:32:02,046 - freqtrade.wallets - INFO - Wallets synced.
+2026-11-28 09:32:02,046 - freqtrade.freqtradebot - INFO - User denied exit for KAVA/USDT.
+2026-11-28 09:32:07,047 - freqtrade.freqtradebot - INFO - Exit for KAVA/USDT detected. Reason: stop_loss
+2026-11-28 09:32:07,049 - freqtrade.wallets - INFO - Wallets synced.
+2026-11-28 09:32:07,049 - freqtrade.freqtradebot - INFO - User denied exit for KAVA/USDT.
+2026-11-28 09:32:11,796 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.10, strategy_version: v18.0.332', state='RUNNING'
+2026-11-28 09:32:12,047 - freqtrade.freqtradebot - INFO - Exit for KAVA/USDT detected. Reason: stop_loss
+2026-11-28 09:32:12,048 - freqtrade.wallets - INFO - Wallets synced.
+2026-11-28 09:32:12,049 - freqtrade.freqtradebot - INFO - User denied exit for KAVA/USDT.
+2026-11-28 09:32:17,049 - freqtrade.freqtradebot - INFO - Exit for KAVA/USDT detected. Reason: stop_loss
+2026-11-28 09:32:17,051 - freqtrade.wallets - INFO - Wallets synced.
+2026-11-28 09:32:17,051 - freqtrade.freqtradebot - INFO - User denied exit for KAVA/USDT.
+2026-11-28 09:32:22,049 - freqtrade.freqtradebot - INFO - Exit for KAVA/USDT detected. Reason: stop_loss
+2026-11-28 09:32:22,051 - freqtrade.wallets - INFO - Wallets synced.
+2026-11-28 09:32:22,052 - freqtrade.freqtradebot - INFO - User denied exit for KAVA/USDT.
+2026-11-28 09:32:27,048 - freqtrade.freqtradebot - INFO - Exit for KAVA/USDT detected. Reason: stop_loss
+2026-11-28 09:32:27,049 - freqtrade.wallets - INFO - Wallets synced.
+2026-11-28 09:32:27,050 - freqtrade.freqtradebot - INFO - User denied exit for KAVA/USDT.
+2026-11-28 09:32:32,049 - freqtrade.freqtradebot - INFO - Exit for KAVA/USDT detected. Reason: stop_loss
+2026-11-28 09:32:32,050 - freqtrade.wallets - INFO - Wallets synced.
+2026-11-28 09:32:32,051 - freqtrade.freqtradebot - INFO - User denied exit for KAVA/USDT.
+2026-11-28 09:32:37,049 - freqtrade.freqtradebot - INFO - Exit for KAVA/USDT detected. Reason: stop_loss
+2026-11-28 09:32:37,050 - freqtrade.wallets - INFO - Wallets synced.
+2026-11-28 09:32:37,051 - freqtrade.freqtradebot - INFO - User denied exit for KAVA/USDT.
+2026-11-28 09:32:42,045 - freqtrade.freqtradebot - INFO - Exit for KAVA/USDT detected. Reason: stop_loss
+2026-11-28 09:32:42,046 - freqtrade.wallets - INFO - Wallets synced.
+2026-11-28 09:32:42,047 - freqtrade.freqtradebot - INFO - User denied exit for KAVA/USDT.
+2026-11-28 09:32:47,047 - freqtrade.freqtradebot - INFO - Exit for KAVA/USDT detected. Reason: stop_loss
+2026-11-28 09:32:47,048 - freqtrade.wallets - INFO - Wallets synced.
+2026-11-28 09:32:47,049 - freqtrade.freqtradebot - INFO - User denied exit for KAVA/USDT.
+2026-11-28 09:32:52,043 - freqtrade.freqtradebot - INFO - Exit for KAVA/USDT detected. Reason: stop_loss
+2026-11-28 09:32:52,044 - freqtrade.wallets - INFO - Wallets synced.
+2026-11-28 09:32:52,045 - freqtrade.freqtradebot - INFO - User denied exit for KAVA/USDT.
+2026-11-28 09:32:57,048 - freqtrade.freqtradebot - INFO - Exit for KAVA/USDT detected. Reason: stop_loss
+2026-11-28 09:32:57,050 - freqtrade.wallets - INFO - Wallets synced.
+2026-11-28 09:32:57,050 - freqtrade.freqtradebot - INFO - User denied exit for KAVA/USDT.
+2026-11-28 09:33:02,048 - freqtrade.freqtradebot - INFO - Exit for KAVA/USDT detected. Reason: stop_loss
+2026-11-28 09:33:02,050 - freqtrade.wallets - INFO - Wallets synced.
+2026-11-28 09:33:02,050 - freqtrade.freqtradebot - INFO - User denied exit for KAVA/USDT.
+2026-11-28 09:33:07,049 - freqtrade.freqtradebot - INFO - Exit for KAVA/USDT detected. Reason: stop_loss
+2026-11-28 09:33:07,050 - freqtrade.wallets - INFO - Wallets synced.
+2026-11-28 09:33:07,051 - freqtrade.freqtradebot - INFO - User denied exit for KAVA/USDT.
+2026-11-28 09:33:11,799 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.10, strategy_version: v18.0.332', state='RUNNING'
+2026-11-28 09:33:12,048 - freqtrade.freqtradebot - INFO - Exit for KAVA/USDT detected. Reason: stop_loss
+2026-11-28 09:33:12,050 - freqtrade.wallets - INFO - Wallets synced.
+2026-11-28 09:33:12,050 - freqtrade.freqtradebot - INFO - User denied exit for KAVA/USDT.
+2026-11-28 09:33:17,051 - freqtrade.freqtradebot - INFO - Exit for KAVA/USDT detected. Reason: stop_loss
+2026-11-28 09:33:17,053 - freqtrade.wallets - INFO - Wallets synced.
+2026-11-28 09:33:17,053 - freqtrade.freqtradebot - INFO - User denied exit for KAVA/USDT.
+2026-11-28 09:33:22,050 - freqtrade.freqtradebot - INFO - Exit for KAVA/USDT detected. Reason: stop_loss
+2026-11-28 09:33:22,051 - freqtrade.wallets - INFO - Wallets synced.
+2026-11-28 09:33:22,052 - freqtrade.freqtradebot - INFO - User denied exit for KAVA/USDT.
+2026-11-28 09:33:27,047 - freqtrade.freqtradebot - INFO - Exit for KAVA/USDT detected. Reason: stop_loss
+2026-11-28 09:33:27,049 - freqtrade.wallets - INFO - Wallets synced.
+2026-11-28 09:33:27,049 - freqtrade.freqtradebot - INFO - User denied exit for KAVA/USDT.
+2026-11-28 09:33:32,050 - freqtrade.freqtradebot - INFO - Exit for KAVA/USDT detected. Reason: stop_loss
+2026-11-28 09:33:32,052 - freqtrade.wallets - INFO - Wallets synced.
+2026-11-28 09:33:32,052 - freqtrade.freqtradebot - INFO - User denied exit for KAVA/USDT.
+2026-11-28 09:33:37,049 - freqtrade.freqtradebot - INFO - Exit for KAVA/USDT detected. Reason: stop_loss
+2026-11-28 09:33:37,050 - freqtrade.wallets - INFO - Wallets synced.
+2026-11-28 09:33:37,051 - freqtrade.freqtradebot - INFO - User denied exit for KAVA/USDT.
+2026-11-28 09:33:42,050 - freqtrade.freqtradebot - INFO - Exit for KAVA/USDT detected. Reason: stop_loss
+2026-11-28 09:33:42,051 - freqtrade.wallets - INFO - Wallets synced.
+2026-11-28 09:33:42,052 - freqtrade.freqtradebot - INFO - User denied exit for KAVA/USDT.
+2026-11-28 09:33:47,052 - freqtrade.freqtradebot - INFO - Exit for KAVA/USDT detected. Reason: stop_loss
+2026-11-28 09:33:47,053 - freqtrade.wallets - INFO - Wallets synced.
+2026-11-28 09:33:47,054 - freqtrade.freqtradebot - INFO - User denied exit for KAVA/USDT.
+2026-11-28 09:33:52,047 - freqtrade.freqtradebot - INFO - Exit for KAVA/USDT detected. Reason: stop_loss
+2026-11-28 09:33:52,048 - freqtrade.wallets - INFO - Wallets synced.
+2026-11-28 09:33:52,048 - freqtrade.freqtradebot - INFO - User denied exit for KAVA/USDT.
+2026-11-28 09:33:57,050 - freqtrade.freqtradebot - INFO - Exit for KAVA/USDT detected. Reason: stop_loss
+2026-11-28 09:33:57,051 - freqtrade.wallets - INFO - Wallets synced.
+2026-11-28 09:33:57,052 - freqtrade.freqtradebot - INFO - User denied exit for KAVA/USDT.
+2026-11-28 09:34:02,050 - freqtrade.freqtradebot - INFO - Exit for KAVA/USDT detected. Reason: stop_loss
+2026-11-28 09:34:02,051 - freqtrade.wallets - INFO - Wallets synced.
+2026-11-28 09:34:02,052 - freqtrade.freqtradebot - INFO - User denied exit for KAVA/USDT.
+2026-11-28 09:34:07,053 - freqtrade.freqtradebot - INFO - Exit for KAVA/USDT detected. Reason: stop_loss
+2026-11-28 09:34:07,054 - freqtrade.wallets - INFO - Wallets synced.
+2026-11-28 09:34:07,055 - freqtrade.freqtradebot - INFO - User denied exit for KAVA/USDT.
+2026-11-28 09:34:11,801 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.10, strategy_version: v18.0.332', state='RUNNING'
+2026-11-28 09:34:12,052 - freqtrade.freqtradebot - INFO - Exit for KAVA/USDT detected. Reason: stop_loss
+2026-11-28 09:34:12,054 - freqtrade.wallets - INFO - Wallets synced.
+2026-11-28 09:34:12,054 - freqtrade.freqtradebot - INFO - User denied exit for KAVA/USDT.
+2026-11-28 09:34:17,050 - freqtrade.freqtradebot - INFO - Exit for KAVA/USDT detected. Reason: stop_loss
+2026-11-28 09:34:17,051 - freqtrade.wallets - INFO - Wallets synced.
+2026-11-28 09:34:17,052 - freqtrade.freqtradebot - INFO - User denied exit for KAVA/USDT.
+2026-11-28 09:34:22,049 - freqtrade.freqtradebot - INFO - Exit for KAVA/USDT detected. Reason: stop_loss
+2026-11-28 09:34:22,051 - freqtrade.wallets - INFO - Wallets synced.
+2026-11-28 09:34:22,051 - freqtrade.freqtradebot - INFO - User denied exit for KAVA/USDT.
+2026-11-28 09:34:27,050 - freqtrade.freqtradebot - INFO - Exit for KAVA/USDT detected. Reason: stop_loss
+2026-11-28 09:34:27,051 - freqtrade.wallets - INFO - Wallets synced.
+2026-11-28 09:34:27,052 - freqtrade.freqtradebot - INFO - User denied exit for KAVA/USDT.
+2026-11-28 09:34:32,050 - freqtrade.freqtradebot - INFO - Exit for KAVA/USDT detected. Reason: stop_loss
+2026-11-28 09:34:32,052 - freqtrade.wallets - INFO - Wallets synced.
+2026-11-28 09:34:32,052 - freqtrade.freqtradebot - INFO - User denied exit for KAVA/USDT.
+2026-11-28 09:34:37,046 - freqtrade.freqtradebot - INFO - Exit for KAVA/USDT detected. Reason: stop_loss
+2026-11-28 09:34:37,047 - freqtrade.wallets - INFO - Wallets synced.
+2026-11-28 09:34:37,047 - freqtrade.freqtradebot - INFO - User denied exit for KAVA/USDT.
+2026-11-28 09:34:42,049 - freqtrade.freqtradebot - INFO - Exit for KAVA/USDT detected. Reason: stop_loss
+2026-11-28 09:34:42,051 - freqtrade.wallets - INFO - Wallets synced.
+2026-11-28 09:34:42,051 - freqtrade.freqtradebot - INFO - User denied exit for KAVA/USDT.
+2026-11-28 09:34:47,049 - freqtrade.freqtradebot - INFO - Exit for KAVA/USDT detected. Reason: stop_loss
+2026-11-28 09:34:47,051 - freqtrade.wallets - INFO - Wallets synced.
+2026-11-28 09:34:47,051 - freqtrade.freqtradebot - INFO - User denied exit for KAVA/USDT.
+2026-11-28 09:34:52,048 - freqtrade.freqtradebot - INFO - Exit for KAVA/USDT detected. Reason: stop_loss
+2026-11-28 09:34:52,050 - freqtrade.wallets - INFO - Wallets synced.
+2026-11-28 09:34:52,050 - freqtrade.freqtradebot - INFO - User denied exit for KAVA/USDT.
+2026-11-28 09:34:57,047 - freqtrade.freqtradebot - INFO - Exit for KAVA/USDT detected. Reason: stop_loss
+2026-11-28 09:34:57,049 - freqtrade.wallets - INFO - Wallets synced.
+2026-11-28 09:34:57,049 - freqtrade.freqtradebot - INFO - User denied exit for KAVA/USDT.
+2026-11-28 09:35:05,313 - freqtrade.freqtradebot - INFO - Exit for KAVA/USDT detected. Reason: stop_loss
+2026-11-28 09:35:05,314 - freqtrade.wallets - INFO - Wallets synced.
+2026-11-28 09:35:05,314 - freqtrade.freqtradebot - INFO - User denied exit for KAVA/USDT.
+2026-11-28 09:35:06,246 - freqtrade.freqtradebot - INFO - Exit for KAVA/USDT detected. Reason: stop_loss
+2026-11-28 09:35:06,248 - freqtrade.wallets - INFO - Wallets synced.
+2026-11-28 09:35:06,248 - freqtrade.freqtradebot - INFO - User denied exit for KAVA/USDT.
+2026-11-28 09:35:11,247 - freqtrade.freqtradebot - INFO - Exit for KAVA/USDT detected. Reason: stop_loss
+2026-11-28 09:35:11,248 - freqtrade.wallets - INFO - Wallets synced.
+2026-11-28 09:35:11,249 - freqtrade.freqtradebot - INFO - User denied exit for KAVA/USDT.
+2026-11-28 09:35:16,000 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.10, strategy_version: v18.0.332', state='RUNNING'
+2026-11-28 09:35:16,243 - freqtrade.freqtradebot - INFO - Exit for KAVA/USDT detected. Reason: stop_loss
+2026-11-28 09:35:16,244 - freqtrade.wallets - INFO - Wallets synced.
+2026-11-28 09:35:16,245 - freqtrade.freqtradebot - INFO - User denied exit for KAVA/USDT.
+2026-11-28 09:35:21,247 - freqtrade.freqtradebot - INFO - Exit for KAVA/USDT detected. Reason: stop_loss
+2026-11-28 09:35:21,248 - freqtrade.wallets - INFO - Wallets synced.
+2026-11-28 09:35:21,249 - freqtrade.freqtradebot - INFO - User denied exit for KAVA/USDT.
+2026-11-28 09:35:26,242 - freqtrade.freqtradebot - INFO - Exit for KAVA/USDT detected. Reason: stop_loss
+2026-11-28 09:35:26,244 - freqtrade.wallets - INFO - Wallets synced.
+2026-11-28 09:35:26,244 - freqtrade.freqtradebot - INFO - User denied exit for KAVA/USDT.
+2026-11-28 09:35:31,247 - freqtrade.freqtradebot - INFO - Exit for KAVA/USDT detected. Reason: stop_loss
+2026-11-28 09:35:31,248 - freqtrade.wallets - INFO - Wallets synced.
+2026-11-28 09:35:31,249 - freqtrade.freqtradebot - INFO - User denied exit for KAVA/USDT.
+2026-11-28 09:35:36,247 - freqtrade.freqtradebot - INFO - Exit for KAVA/USDT detected. Reason: stop_loss
+2026-11-28 09:35:36,248 - freqtrade.wallets - INFO - Wallets synced.
+2026-11-28 09:35:36,249 - freqtrade.freqtradebot - INFO - User denied exit for KAVA/USDT.
+2026-11-28 09:35:41,250 - freqtrade.freqtradebot - INFO - Exit for KAVA/USDT detected. Reason: stop_loss
+2026-11-28 09:35:41,251 - freqtrade.wallets - INFO - Wallets synced.
+2026-11-28 09:35:41,252 - freqtrade.freqtradebot - INFO - User denied exit for KAVA/USDT.
+2026-11-28 09:35:46,249 - freqtrade.freqtradebot - INFO - Exit for KAVA/USDT detected. Reason: stop_loss
+2026-11-28 09:35:46,250 - freqtrade.wallets - INFO - Wallets synced.
+2026-11-28 09:35:46,250 - freqtrade.freqtradebot - INFO - User denied exit for KAVA/USDT.
+2026-11-28 09:35:51,248 - freqtrade.freqtradebot - INFO - Exit for KAVA/USDT detected. Reason: stop_loss
+2026-11-28 09:35:51,249 - freqtrade.wallets - INFO - Wallets synced.
+2026-11-28 09:35:51,250 - freqtrade.freqtradebot - INFO - User denied exit for KAVA/USDT.
+2026-11-28 09:35:56,249 - freqtrade.freqtradebot - INFO - Exit for KAVA/USDT detected. Reason: stop_loss
+2026-11-28 09:35:56,250 - freqtrade.wallets - INFO - Wallets synced.
+2026-11-28 09:35:56,251 - freqtrade.freqtradebot - INFO - User denied exit for KAVA/USDT.
+2026-11-28 09:36:01,251 - freqtrade.freqtradebot - INFO - Exit for KAVA/USDT detected. Reason: stop_loss
+2026-11-28 09:36:01,252 - freqtrade.wallets - INFO - Wallets synced.
+2026-11-28 09:36:01,253 - freqtrade.freqtradebot - INFO - User denied exit for KAVA/USDT.
+2026-11-28 09:36:06,245 - freqtrade.freqtradebot - INFO - Exit for KAVA/USDT detected. Reason: stop_loss
+2026-11-28 09:36:06,246 - freqtrade.wallets - INFO - Wallets synced.
+2026-11-28 09:36:06,247 - freqtrade.freqtradebot - INFO - User denied exit for KAVA/USDT.
+2026-11-28 09:36:11,251 - freqtrade.freqtradebot - INFO - Exit for KAVA/USDT detected. Reason: stop_loss
+2026-11-28 09:36:11,252 - freqtrade.wallets - INFO - Wallets synced.
+2026-11-28 09:36:11,253 - freqtrade.freqtradebot - INFO - User denied exit for KAVA/USDT.
+2026-11-28 09:36:16,003 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.10, strategy_version: v18.0.332', state='RUNNING'
+2026-11-28 09:36:16,255 - freqtrade.freqtradebot - INFO - Exit for KAVA/USDT detected. Reason: stop_loss
+2026-11-28 09:36:16,256 - freqtrade.wallets - INFO - Wallets synced.
+2026-11-28 09:36:16,257 - freqtrade.freqtradebot - INFO - User denied exit for KAVA/USDT.
+2026-11-28 09:36:21,255 - freqtrade.freqtradebot - INFO - Exit for KAVA/USDT detected. Reason: stop_loss
+2026-11-28 09:36:21,256 - freqtrade.wallets - INFO - Wallets synced.
+2026-11-28 09:36:21,257 - freqtrade.freqtradebot - INFO - User denied exit for KAVA/USDT.
+2026-11-28 09:36:26,254 - freqtrade.freqtradebot - INFO - Exit for KAVA/USDT detected. Reason: stop_loss
+2026-11-28 09:36:26,255 - freqtrade.wallets - INFO - Wallets synced.
+2026-11-28 09:36:26,256 - freqtrade.freqtradebot - INFO - User denied exit for KAVA/USDT.
+2026-11-28 09:36:31,252 - freqtrade.freqtradebot - INFO - Exit for KAVA/USDT detected. Reason: stop_loss
+2026-11-28 09:36:31,254 - freqtrade.wallets - INFO - Wallets synced.
+2026-11-28 09:36:31,254 - freqtrade.freqtradebot - INFO - User denied exit for KAVA/USDT.
+2026-11-28 09:36:36,252 - freqtrade.freqtradebot - INFO - Exit for KAVA/USDT detected. Reason: stop_loss
+2026-11-28 09:36:36,253 - freqtrade.wallets - INFO - Wallets synced.
+2026-11-28 09:36:36,254 - freqtrade.freqtradebot - INFO - User denied exit for KAVA/USDT.
+2026-11-28 09:36:41,252 - freqtrade.freqtradebot - INFO - Exit for KAVA/USDT detected. Reason: stop_loss
+2026-11-28 09:36:41,253 - freqtrade.wallets - INFO - Wallets synced.
+2026-11-28 09:36:41,254 - freqtrade.freqtradebot - INFO - User denied exit for KAVA/USDT.
+2026-11-28 09:36:47,058 - AgeFilter - INFO - Removed RWUSD/USDT from whitelist, because age 46 is less than 60 days
+2026-11-28 09:36:47,058 - AgeFilter - INFO - Removed ANTB/USDT from whitelist, because age 9 is less than 60 days
+2026-11-28 09:36:47,059 - AgeFilter - INFO - Validated 58 pairs.
+2026-11-28 09:36:47,059 - PriceFilter - INFO - Removed ROBO/USDT from whitelist, because 1 unit is 0.324%
+2026-11-28 09:36:47,307 - freqtrade.plugins.pairlistmanager - INFO - Whitelist with 40 pairs: ['BTC/USDT', 'ETH/USDT', 'SOL/USDT', 'ZEC/USDT', 'XRP/USDT', 'NEAR/USDT', 'HYPE/USDT', 'UNI/USDT', 'TRX/USDT', 'PEPE/USDT', 'DOGE/USDT', 'SUI/USDT', 'LTC/USDT', 'LINK/USDT', 'ENA/USDT', 'ADA/USDT', 'FET/USDT', 'HAEDAL/USDT', 'TAO/USDT', 'CFG/USDT', 'WBTC/USDT', 'WLD/USDT', 'PUMP/USDT', 'INJ/USDT', 'AAVE/USDT', 'AVAX/USDT', 'BCH/USDT', 'GRAM/USDT', 'SKY/USDT', 'XLM/USDT', 'SENT/USDT', 'ZRO/USDT', 'HBAR/USDT', 'QNT/USDT', 'SEI/USDT', 'RENDER/USDT', 'ICP/USDT', 'ASTER/USDT', 'FIL/USDT', 'ONDO/USDT']
+2026-11-28 09:36:47,472 - freqtrade.freqtradebot - INFO - Exit for KAVA/USDT detected. Reason: stop_loss
+2026-11-28 09:36:47,474 - freqtrade.wallets - INFO - Wallets synced.
+2026-11-28 09:36:47,474 - freqtrade.freqtradebot - INFO - User denied exit for KAVA/USDT.
+2026-11-28 09:36:51,008 - rangestabilityfilter - INFO - Removed MMT/USDT from whitelist, because rate of change over 3 x 1d candles is 1.084, which is above the threshold of 0.95.
+2026-11-28 09:36:51,009 - rangestabilityfilter - INFO - Removed SSV/USDT from whitelist, because rate of change over 3 x 1d candles is 1.190, which is above the threshold of 0.95.
+2026-11-28 09:36:51,010 - rangestabilityfilter - INFO - Removed BIGTIME/USDT from whitelist, because rate of change over 3 x 1d candles is 1.764, which is above the threshold of 0.95.
+2026-11-28 09:36:51,256 - freqtrade.freqtradebot - INFO - Exit for KAVA/USDT detected. Reason: stop_loss
+2026-11-28 09:36:51,258 - freqtrade.wallets - INFO - Wallets synced.
+2026-11-28 09:36:51,258 - freqtrade.freqtradebot - INFO - User denied exit for KAVA/USDT.
+2026-11-28 09:36:56,252 - freqtrade.freqtradebot - INFO - Exit for KAVA/USDT detected. Reason: stop_loss
+2026-11-28 09:36:56,253 - freqtrade.wallets - INFO - Wallets synced.
+2026-11-28 09:36:56,254 - freqtrade.freqtradebot - INFO - User denied exit for KAVA/USDT.
+2026-11-28 09:37:01,254 - freqtrade.freqtradebot - INFO - Exit for KAVA/USDT detected. Reason: stop_loss
+2026-11-28 09:37:01,255 - freqtrade.wallets - INFO - Wallets synced.
+2026-11-28 09:37:01,256 - freqtrade.freqtradebot - INFO - User denied exit for KAVA/USDT.
+2026-11-28 09:37:06,253 - freqtrade.freqtradebot - INFO - Exit for KAVA/USDT detected. Reason: stop_loss
+2026-11-28 09:37:06,254 - freqtrade.wallets - INFO - Wallets synced.
+2026-11-28 09:37:06,255 - freqtrade.freqtradebot - INFO - User denied exit for KAVA/USDT.
+2026-11-28 09:37:11,252 - freqtrade.freqtradebot - INFO - Exit for KAVA/USDT detected. Reason: stop_loss
+2026-11-28 09:37:11,253 - freqtrade.wallets - INFO - Wallets synced.
+2026-11-28 09:37:11,253 - freqtrade.freqtradebot - INFO - User denied exit for KAVA/USDT.
+2026-11-28 09:37:16,006 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.10, strategy_version: v18.0.332', state='RUNNING'
+2026-11-28 09:37:16,254 - freqtrade.freqtradebot - INFO - Exit for KAVA/USDT detected. Reason: stop_loss
+2026-11-28 09:37:16,256 - freqtrade.wallets - INFO - Wallets synced.
+2026-11-28 09:37:16,256 - freqtrade.freqtradebot - INFO - User denied exit for KAVA/USDT.
+2026-11-28 09:37:21,257 - freqtrade.freqtradebot - INFO - Exit for KAVA/USDT detected. Reason: stop_loss
+2026-11-28 09:37:21,259 - freqtrade.wallets - INFO - Wallets synced.
+2026-11-28 09:37:21,259 - freqtrade.freqtradebot - INFO - User denied exit for KAVA/USDT.
+2026-11-28 09:37:26,257 - freqtrade.freqtradebot - INFO - Exit for KAVA/USDT detected. Reason: stop_loss
+2026-11-28 09:37:26,259 - freqtrade.wallets - INFO - Wallets synced.
+2026-11-28 09:37:26,259 - freqtrade.freqtradebot - INFO - User denied exit for KAVA/USDT.
+2026-11-28 09:37:31,260 - freqtrade.freqtradebot - INFO - Exit for KAVA/USDT detected. Reason: stop_loss
+2026-11-28 09:37:31,261 - freqtrade.wallets - INFO - Wallets synced.
+2026-11-28 09:37:31,262 - freqtrade.freqtradebot - INFO - User denied exit for KAVA/USDT.
+2026-11-28 09:37:36,260 - freqtrade.freqtradebot - INFO - Exit for KAVA/USDT detected. Reason: stop_loss
+2026-11-28 09:37:36,261 - freqtrade.wallets - INFO - Wallets synced.
+2026-11-28 09:37:36,262 - freqtrade.freqtradebot - INFO - User denied exit for KAVA/USDT.
+2026-11-28 09:37:41,260 - freqtrade.freqtradebot - INFO - Exit for KAVA/USDT detected. Reason: stop_loss
+2026-11-28 09:37:41,261 - freqtrade.wallets - INFO - Wallets synced.
+2026-11-28 09:37:41,262 - freqtrade.freqtradebot - INFO - User denied exit for KAVA/USDT.
+2026-11-28 09:37:46,257 - freqtrade.freqtradebot - INFO - Exit for KAVA/USDT detected. Reason: stop_loss
+2026-11-28 09:37:46,258 - freqtrade.wallets - INFO - Wallets synced.
+2026-11-28 09:37:46,259 - freqtrade.freqtradebot - INFO - User denied exit for KAVA/USDT.
+2026-11-28 09:37:51,256 - freqtrade.freqtradebot - INFO - Exit for KAVA/USDT detected. Reason: stop_loss
+2026-11-28 09:37:51,257 - freqtrade.wallets - INFO - Wallets synced.
+2026-11-28 09:37:51,258 - freqtrade.freqtradebot - INFO - User denied exit for KAVA/USDT.
+2026-11-28 09:37:56,258 - freqtrade.freqtradebot - INFO - Exit for KAVA/USDT detected. Reason: stop_loss
+2026-11-28 09:37:56,260 - freqtrade.wallets - INFO - Wallets synced.
+2026-11-28 09:37:56,260 - freqtrade.freqtradebot - INFO - User denied exit for KAVA/USDT.
+2026-11-28 09:38:01,255 - freqtrade.freqtradebot - INFO - Exit for KAVA/USDT detected. Reason: stop_loss
+2026-11-28 09:38:01,257 - freqtrade.wallets - INFO - Wallets synced.
+2026-11-28 09:38:01,257 - freqtrade.freqtradebot - INFO - User denied exit for KAVA/USDT.
+2026-11-28 09:38:06,256 - freqtrade.freqtradebot - INFO - Exit for KAVA/USDT detected. Reason: stop_loss
+2026-11-28 09:38:06,257 - freqtrade.wallets - INFO - Wallets synced.
+2026-11-28 09:38:06,258 - freqtrade.freqtradebot - INFO - User denied exit for KAVA/USDT.
+2026-11-28 09:38:11,253 - freqtrade.freqtradebot - INFO - Exit for KAVA/USDT detected. Reason: stop_loss
+2026-11-28 09:38:11,254 - freqtrade.wallets - INFO - Wallets synced.
+2026-11-28 09:38:11,255 - freqtrade.freqtradebot - INFO - User denied exit for KAVA/USDT.
+2026-11-28 09:38:16,008 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.10, strategy_version: v18.0.332', state='RUNNING'
+2026-11-28 09:38:16,257 - freqtrade.freqtradebot - INFO - Exit for KAVA/USDT detected. Reason: stop_loss
+2026-11-28 09:38:16,258 - freqtrade.wallets - INFO - Wallets synced.
+2026-11-28 09:38:16,259 - freqtrade.freqtradebot - INFO - User denied exit for KAVA/USDT.
+2026-11-28 09:38:21,256 - freqtrade.freqtradebot - INFO - Exit for KAVA/USDT detected. Reason: stop_loss
+2026-11-28 09:38:21,257 - freqtrade.wallets - INFO - Wallets synced.
+2026-11-28 09:38:21,258 - freqtrade.freqtradebot - INFO - User denied exit for KAVA/USDT.
+2026-11-28 09:38:26,259 - freqtrade.freqtradebot - INFO - Exit for KAVA/USDT detected. Reason: stop_loss
+2026-11-28 09:38:26,260 - freqtrade.wallets - INFO - Wallets synced.
+2026-11-28 09:38:26,261 - freqtrade.freqtradebot - INFO - User denied exit for KAVA/USDT.
+2026-11-28 09:38:31,255 - freqtrade.freqtradebot - INFO - Exit for KAVA/USDT detected. Reason: stop_loss
+2026-11-28 09:38:31,256 - freqtrade.wallets - INFO - Wallets synced.
+2026-11-28 09:38:31,257 - freqtrade.freqtradebot - INFO - User denied exit for KAVA/USDT.
+2026-11-28 09:38:36,265 - freqtrade.freqtradebot - INFO - Exit for KAVA/USDT detected. Reason: stop_loss
+2026-11-28 09:38:36,266 - freqtrade.wallets - INFO - Wallets synced.
+2026-11-28 09:38:36,267 - freqtrade.freqtradebot - INFO - User denied exit for KAVA/USDT.
+2026-11-28 09:38:41,260 - freqtrade.freqtradebot - INFO - Exit for KAVA/USDT detected. Reason: stop_loss
+2026-11-28 09:38:41,261 - freqtrade.wallets - INFO - Wallets synced.
+2026-11-28 09:38:41,262 - freqtrade.freqtradebot - INFO - User denied exit for KAVA/USDT.
+2026-11-28 09:38:46,260 - freqtrade.freqtradebot - INFO - Exit for KAVA/USDT detected. Reason: stop_loss
+2026-11-28 09:38:46,262 - freqtrade.wallets - INFO - Wallets synced.
+2026-11-28 09:38:46,262 - freqtrade.freqtradebot - INFO - User denied exit for KAVA/USDT.
+2026-11-28 09:38:51,254 - freqtrade.freqtradebot - INFO - Exit for KAVA/USDT detected. Reason: stop_loss
+2026-11-28 09:38:51,256 - freqtrade.wallets - INFO - Wallets synced.
+2026-11-28 09:38:51,256 - freqtrade.freqtradebot - INFO - User denied exit for KAVA/USDT.
+2026-11-28 09:38:56,258 - freqtrade.freqtradebot - INFO - Exit for KAVA/USDT detected. Reason: stop_loss
+2026-11-28 09:38:56,260 - freqtrade.wallets - INFO - Wallets synced.
+2026-11-28 09:38:56,260 - freqtrade.freqtradebot - INFO - User denied exit for KAVA/USDT.
+2026-11-28 09:39:01,262 - freqtrade.freqtradebot - INFO - Exit for KAVA/USDT detected. Reason: stop_loss
+2026-11-28 09:39:01,264 - freqtrade.wallets - INFO - Wallets synced.
+2026-11-28 09:39:01,264 - freqtrade.freqtradebot - INFO - User denied exit for KAVA/USDT.
+2026-11-28 09:39:06,258 - freqtrade.freqtradebot - INFO - Exit for KAVA/USDT detected. Reason: stop_loss
+2026-11-28 09:39:06,259 - freqtrade.wallets - INFO - Wallets synced.
+2026-11-28 09:39:06,260 - freqtrade.freqtradebot - INFO - User denied exit for KAVA/USDT.
+2026-11-28 09:39:11,259 - freqtrade.freqtradebot - INFO - Exit for KAVA/USDT detected. Reason: stop_loss
+2026-11-28 09:39:11,260 - freqtrade.wallets - INFO - Wallets synced.
+2026-11-28 09:39:11,261 - freqtrade.freqtradebot - INFO - User denied exit for KAVA/USDT.
+2026-11-28 09:39:16,011 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.10, strategy_version: v18.0.332', state='RUNNING'
+2026-11-28 09:39:16,257 - freqtrade.freqtradebot - INFO - Exit for KAVA/USDT detected. Reason: stop_loss
+2026-11-28 09:39:16,258 - freqtrade.wallets - INFO - Wallets synced.
+2026-11-28 09:39:16,259 - freqtrade.freqtradebot - INFO - User denied exit for KAVA/USDT.
+2026-11-28 09:39:21,257 - freqtrade.freqtradebot - INFO - Exit for KAVA/USDT detected. Reason: stop_loss
+2026-11-28 09:39:21,258 - freqtrade.wallets - INFO - Wallets synced.
+2026-11-28 09:39:21,259 - freqtrade.freqtradebot - INFO - User denied exit for KAVA/USDT.
+2026-11-28 09:39:26,259 - freqtrade.freqtradebot - INFO - Exit for KAVA/USDT detected. Reason: stop_loss
+2026-11-28 09:39:26,261 - freqtrade.wallets - INFO - Wallets synced.
+2026-11-28 09:39:26,261 - freqtrade.freqtradebot - INFO - User denied exit for KAVA/USDT.
+2026-11-28 09:39:31,261 - freqtrade.freqtradebot - INFO - Exit for KAVA/USDT detected. Reason: stop_loss
+2026-11-28 09:39:31,262 - freqtrade.wallets - INFO - Wallets synced.
+2026-11-28 09:39:31,263 - freqtrade.freqtradebot - INFO - User denied exit for KAVA/USDT.
+2026-11-28 09:39:36,262 - freqtrade.freqtradebot - INFO - Exit for KAVA/USDT detected. Reason: stop_loss
+2026-11-28 09:39:36,263 - freqtrade.wallets - INFO - Wallets synced.
+2026-11-28 09:39:36,264 - freqtrade.freqtradebot - INFO - User denied exit for KAVA/USDT.
+2026-11-28 09:39:41,262 - freqtrade.freqtradebot - INFO - Exit for KAVA/USDT detected. Reason: stop_loss
+2026-11-28 09:39:41,264 - freqtrade.wallets - INFO - Wallets synced.
+2026-11-28 09:39:41,264 - freqtrade.freqtradebot - INFO - User denied exit for KAVA/USDT.
+2026-11-28 09:39:46,261 - freqtrade.freqtradebot - INFO - Exit for KAVA/USDT detected. Reason: stop_loss
+2026-11-28 09:39:46,263 - freqtrade.wallets - INFO - Wallets synced.
+2026-11-28 09:39:46,263 - freqtrade.freqtradebot - INFO - User denied exit for KAVA/USDT.
+2026-11-28 09:39:51,261 - freqtrade.freqtradebot - INFO - Exit for KAVA/USDT detected. Reason: stop_loss
+2026-11-28 09:39:51,263 - freqtrade.wallets - INFO - Wallets synced.
+2026-11-28 09:39:51,263 - freqtrade.freqtradebot - INFO - User denied exit for KAVA/USDT.
+2026-11-28 09:39:56,264 - freqtrade.freqtradebot - INFO - Exit for KAVA/USDT detected. Reason: stop_loss
+2026-11-28 09:39:56,266 - freqtrade.wallets - INFO - Wallets synced.
+2026-11-28 09:39:56,266 - freqtrade.freqtradebot - INFO - User denied exit for KAVA/USDT.
+2026-11-28 09:40:05,613 - freqtrade.freqtradebot - INFO - Exit for KAVA/USDT detected. Reason: stop_loss
+2026-11-28 09:40:05,614 - freqtrade.wallets - INFO - Wallets synced.
+2026-11-28 09:40:05,615 - freqtrade.freqtradebot - INFO - User denied exit for KAVA/USDT.
+2026-11-28 09:40:06,247 - freqtrade.freqtradebot - INFO - Exit for KAVA/USDT detected. Reason: stop_loss
+2026-11-28 09:40:06,249 - freqtrade.wallets - INFO - Wallets synced.
+2026-11-28 09:40:06,249 - freqtrade.freqtradebot - INFO - User denied exit for KAVA/USDT.
+2026-11-28 09:40:11,249 - freqtrade.freqtradebot - INFO - Exit for KAVA/USDT detected. Reason: stop_loss
+2026-11-28 09:40:11,250 - freqtrade.wallets - INFO - Wallets synced.
+2026-11-28 09:40:11,251 - freqtrade.freqtradebot - INFO - User denied exit for KAVA/USDT.
+2026-11-28 09:40:16,246 - freqtrade.freqtradebot - INFO - Exit for KAVA/USDT detected. Reason: stop_loss
+2026-11-28 09:40:16,247 - freqtrade.wallets - INFO - Wallets synced.
+2026-11-28 09:40:16,248 - freqtrade.freqtradebot - INFO - User denied exit for KAVA/USDT.
+2026-11-28 09:40:21,000 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.10, strategy_version: v18.0.332', state='RUNNING'
+2026-11-28 09:40:21,252 - freqtrade.freqtradebot - INFO - Exit for KAVA/USDT detected. Reason: stop_loss
+2026-11-28 09:40:21,253 - freqtrade.wallets - INFO - Wallets synced.
+2026-11-28 09:40:21,254 - freqtrade.freqtradebot - INFO - User denied exit for KAVA/USDT.
+2026-11-28 09:40:26,250 - freqtrade.freqtradebot - INFO - Exit for KAVA/USDT detected. Reason: stop_loss
+2026-11-28 09:40:26,251 - freqtrade.wallets - INFO - Wallets synced.
+2026-11-28 09:40:26,252 - freqtrade.freqtradebot - INFO - User denied exit for KAVA/USDT.
+2026-11-28 09:40:31,253 - freqtrade.freqtradebot - INFO - Exit for KAVA/USDT detected. Reason: stop_loss
+2026-11-28 09:40:31,254 - freqtrade.wallets - INFO - Wallets synced.
+2026-11-28 09:40:31,255 - freqtrade.freqtradebot - INFO - User denied exit for KAVA/USDT.
+2026-11-28 09:40:36,253 - freqtrade.freqtradebot - INFO - Exit for KAVA/USDT detected. Reason: stop_loss
+2026-11-28 09:40:36,255 - freqtrade.wallets - INFO - Wallets synced.
+2026-11-28 09:40:36,255 - freqtrade.freqtradebot - INFO - User denied exit for KAVA/USDT.
+2026-11-28 09:40:41,251 - freqtrade.freqtradebot - INFO - Exit for KAVA/USDT detected. Reason: stop_loss
+2026-11-28 09:40:41,253 - freqtrade.wallets - INFO - Wallets synced.
+2026-11-28 09:40:41,253 - freqtrade.freqtradebot - INFO - User denied exit for KAVA/USDT.
+2026-11-28 09:40:46,249 - freqtrade.freqtradebot - INFO - Exit for KAVA/USDT detected. Reason: stop_loss
+2026-11-28 09:40:46,250 - freqtrade.wallets - INFO - Wallets synced.
+2026-11-28 09:40:46,251 - freqtrade.freqtradebot - INFO - User denied exit for KAVA/USDT.
+2026-11-28 09:40:51,252 - freqtrade.freqtradebot - INFO - Exit for KAVA/USDT detected. Reason: stop_loss
+2026-11-28 09:40:51,253 - freqtrade.wallets - INFO - Wallets synced.
+2026-11-28 09:40:51,254 - freqtrade.freqtradebot - INFO - User denied exit for KAVA/USDT.
+2026-11-28 09:40:56,251 - freqtrade.freqtradebot - INFO - Exit for KAVA/USDT detected. Reason: stop_loss
+2026-11-28 09:40:56,252 - freqtrade.wallets - INFO - Wallets synced.
+2026-11-28 09:40:56,253 - freqtrade.freqtradebot - INFO - User denied exit for KAVA/USDT.
+2026-11-28 09:41:01,252 - freqtrade.freqtradebot - INFO - Exit for KAVA/USDT detected. Reason: stop_loss
+2026-11-28 09:41:01,253 - freqtrade.wallets - INFO - Wallets synced.
+2026-11-28 09:41:01,254 - freqtrade.freqtradebot - INFO - User denied exit for KAVA/USDT.
+2026-11-28 09:41:06,255 - freqtrade.freqtradebot - INFO - Exit for KAVA/USDT detected. Reason: stop_loss
+2026-11-28 09:41:06,256 - freqtrade.wallets - INFO - Wallets synced.
+2026-11-28 09:41:06,257 - freqtrade.freqtradebot - INFO - User denied exit for KAVA/USDT.
+2026-11-28 09:41:11,254 - freqtrade.freqtradebot - INFO - Exit for KAVA/USDT detected. Reason: stop_loss
+2026-11-28 09:41:11,255 - freqtrade.wallets - INFO - Wallets synced.
+2026-11-28 09:41:11,256 - freqtrade.freqtradebot - INFO - User denied exit for KAVA/USDT.
+2026-11-28 09:41:16,255 - freqtrade.freqtradebot - INFO - Exit for KAVA/USDT detected. Reason: stop_loss
+2026-11-28 09:41:16,256 - freqtrade.wallets - INFO - Wallets synced.
+2026-11-28 09:41:16,257 - freqtrade.freqtradebot - INFO - User denied exit for KAVA/USDT.
+2026-11-28 09:41:21,003 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.10, strategy_version: v18.0.332', state='RUNNING'
+2026-11-28 09:41:21,252 - freqtrade.freqtradebot - INFO - Exit for KAVA/USDT detected. Reason: stop_loss
+2026-11-28 09:41:21,253 - freqtrade.wallets - INFO - Wallets synced.
+2026-11-28 09:41:21,253 - freqtrade.freqtradebot - INFO - User denied exit for KAVA/USDT.
+2026-11-28 09:41:26,255 - freqtrade.freqtradebot - INFO - Exit for KAVA/USDT detected. Reason: stop_loss
+2026-11-28 09:41:26,256 - freqtrade.wallets - INFO - Wallets synced.
+2026-11-28 09:41:26,257 - freqtrade.freqtradebot - INFO - User denied exit for KAVA/USDT.
+2026-11-28 09:41:31,259 - freqtrade.freqtradebot - INFO - Exit for KAVA/USDT detected. Reason: stop_loss
+2026-11-28 09:41:31,261 - freqtrade.wallets - INFO - Wallets synced.
+2026-11-28 09:41:31,262 - freqtrade.freqtradebot - INFO - User denied exit for KAVA/USDT.
+2026-11-28 09:41:36,257 - freqtrade.freqtradebot - INFO - Exit for KAVA/USDT detected. Reason: stop_loss
+2026-11-28 09:41:36,258 - freqtrade.wallets - INFO - Wallets synced.
+2026-11-28 09:41:36,259 - freqtrade.freqtradebot - INFO - User denied exit for KAVA/USDT.
+2026-11-28 09:41:41,260 - freqtrade.freqtradebot - INFO - Exit for KAVA/USDT detected. Reason: stop_loss
+2026-11-28 09:41:41,261 - freqtrade.wallets - INFO - Wallets synced.
+2026-11-28 09:41:41,262 - freqtrade.freqtradebot - INFO - User denied exit for KAVA/USDT.
+2026-11-28 09:41:46,257 - freqtrade.freqtradebot - INFO - Exit for KAVA/USDT detected. Reason: stop_loss
+2026-11-28 09:41:46,258 - freqtrade.wallets - INFO - Wallets synced.
+2026-11-28 09:41:46,259 - freqtrade.freqtradebot - INFO - User denied exit for KAVA/USDT.
+2026-11-28 09:41:51,255 - freqtrade.freqtradebot - INFO - Exit for KAVA/USDT detected. Reason: stop_loss
+2026-11-28 09:41:51,257 - freqtrade.wallets - INFO - Wallets synced.
+2026-11-28 09:41:51,257 - freqtrade.freqtradebot - INFO - User denied exit for KAVA/USDT.
+2026-11-28 09:41:56,256 - freqtrade.freqtradebot - INFO - Exit for KAVA/USDT detected. Reason: stop_loss
+2026-11-28 09:41:56,257 - freqtrade.wallets - INFO - Wallets synced.
+2026-11-28 09:41:56,258 - freqtrade.freqtradebot - INFO - User denied exit for KAVA/USDT.
+2026-11-28 09:42:01,257 - freqtrade.freqtradebot - INFO - Exit for KAVA/USDT detected. Reason: stop_loss
+2026-11-28 09:42:01,259 - freqtrade.wallets - INFO - Wallets synced.
+2026-11-28 09:42:01,259 - freqtrade.freqtradebot - INFO - User denied exit for KAVA/USDT.
+2026-11-28 09:42:06,258 - freqtrade.freqtradebot - INFO - Exit for KAVA/USDT detected. Reason: stop_loss
+2026-11-28 09:42:06,260 - freqtrade.wallets - INFO - Wallets synced.
+2026-11-28 09:42:06,260 - freqtrade.freqtradebot - INFO - User denied exit for KAVA/USDT.
+2026-11-28 09:42:11,259 - freqtrade.freqtradebot - INFO - Exit for KAVA/USDT detected. Reason: stop_loss
+2026-11-28 09:42:11,261 - freqtrade.wallets - INFO - Wallets synced.
+2026-11-28 09:42:11,261 - freqtrade.freqtradebot - INFO - User denied exit for KAVA/USDT.
+2026-11-28 09:42:16,257 - freqtrade.freqtradebot - INFO - Exit for KAVA/USDT detected. Reason: stop_loss
+2026-11-28 09:42:16,259 - freqtrade.wallets - INFO - Wallets synced.
+2026-11-28 09:42:16,259 - freqtrade.freqtradebot - INFO - User denied exit for KAVA/USDT.
+2026-11-28 09:42:21,006 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.10, strategy_version: v18.0.332', state='RUNNING'
+2026-11-28 09:42:21,257 - freqtrade.freqtradebot - INFO - Exit for KAVA/USDT detected. Reason: stop_loss
+2026-11-28 09:42:21,258 - freqtrade.wallets - INFO - Wallets synced.
+2026-11-28 09:42:21,259 - freqtrade.freqtradebot - INFO - User denied exit for KAVA/USDT.
+2026-11-28 09:42:26,260 - freqtrade.freqtradebot - INFO - Exit for KAVA/USDT detected. Reason: stop_loss
+2026-11-28 09:42:26,262 - freqtrade.wallets - INFO - Wallets synced.
+2026-11-28 09:42:26,262 - freqtrade.freqtradebot - INFO - User denied exit for KAVA/USDT.
+2026-11-28 09:42:31,256 - freqtrade.freqtradebot - INFO - Exit for KAVA/USDT detected. Reason: stop_loss
+2026-11-28 09:42:31,258 - freqtrade.wallets - INFO - Wallets synced.
+2026-11-28 09:42:31,258 - freqtrade.freqtradebot - INFO - User denied exit for KAVA/USDT.
+2026-11-28 09:42:36,257 - freqtrade.freqtradebot - INFO - Exit for KAVA/USDT detected. Reason: stop_loss
+2026-11-28 09:42:36,258 - freqtrade.wallets - INFO - Wallets synced.
+2026-11-28 09:42:36,259 - freqtrade.freqtradebot - INFO - User denied exit for KAVA/USDT.
+2026-11-28 09:42:41,260 - freqtrade.freqtradebot - INFO - Exit for KAVA/USDT detected. Reason: stop_loss
+2026-11-28 09:42:41,262 - freqtrade.wallets - INFO - Wallets synced.
+2026-11-28 09:42:41,262 - freqtrade.freqtradebot - INFO - User denied exit for KAVA/USDT.
+2026-11-28 09:42:46,260 - freqtrade.freqtradebot - INFO - Exit for KAVA/USDT detected. Reason: stop_loss
+2026-11-28 09:42:46,261 - freqtrade.wallets - INFO - Wallets synced.
+2026-11-28 09:42:46,262 - freqtrade.freqtradebot - INFO - User denied exit for KAVA/USDT.
+2026-11-28 09:42:51,257 - freqtrade.freqtradebot - INFO - Exit for KAVA/USDT detected. Reason: stop_loss
+2026-11-28 09:42:51,259 - freqtrade.wallets - INFO - Wallets synced.
+2026-11-28 09:42:51,259 - freqtrade.freqtradebot - INFO - User denied exit for KAVA/USDT.
+2026-11-28 09:42:56,259 - freqtrade.freqtradebot - INFO - Exit for KAVA/USDT detected. Reason: stop_loss
+2026-11-28 09:42:56,260 - freqtrade.wallets - INFO - Wallets synced.
+2026-11-28 09:42:56,261 - freqtrade.freqtradebot - INFO - User denied exit for KAVA/USDT.
+2026-11-28 09:43:01,260 - freqtrade.freqtradebot - INFO - Exit for KAVA/USDT detected. Reason: stop_loss
+2026-11-28 09:43:01,261 - freqtrade.wallets - INFO - Wallets synced.
+2026-11-28 09:43:01,262 - freqtrade.freqtradebot - INFO - User denied exit for KAVA/USDT.
+2026-11-28 09:43:06,268 - freqtrade.freqtradebot - INFO - Exit for KAVA/USDT detected. Reason: stop_loss
+2026-11-28 09:43:06,269 - freqtrade.wallets - INFO - Wallets synced.
+2026-11-28 09:43:06,270 - freqtrade.freqtradebot - INFO - User denied exit for KAVA/USDT.
+2026-11-28 09:43:11,260 - freqtrade.freqtradebot - INFO - Exit for KAVA/USDT detected. Reason: stop_loss
+2026-11-28 09:43:11,262 - freqtrade.wallets - INFO - Wallets synced.
+2026-11-28 09:43:11,262 - freqtrade.freqtradebot - INFO - User denied exit for KAVA/USDT.
+2026-11-28 09:43:16,262 - freqtrade.freqtradebot - INFO - Exit for KAVA/USDT detected. Reason: stop_loss
+2026-11-28 09:43:16,264 - freqtrade.wallets - INFO - Wallets synced.
+2026-11-28 09:43:16,264 - freqtrade.freqtradebot - INFO - User denied exit for KAVA/USDT.
+2026-11-28 09:43:21,009 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.10, strategy_version: v18.0.332', state='RUNNING'
+2026-11-28 09:43:21,263 - freqtrade.freqtradebot - INFO - Exit for KAVA/USDT detected. Reason: stop_loss
+2026-11-28 09:43:21,264 - freqtrade.wallets - INFO - Wallets synced.
+2026-11-28 09:43:21,265 - freqtrade.freqtradebot - INFO - User denied exit for KAVA/USDT.
+2026-11-28 09:43:26,264 - freqtrade.freqtradebot - INFO - Exit for KAVA/USDT detected. Reason: stop_loss
+2026-11-28 09:43:26,266 - freqtrade.wallets - INFO - Wallets synced.
+2026-11-28 09:43:26,266 - freqtrade.freqtradebot - INFO - User denied exit for KAVA/USDT.
+2026-11-28 09:43:31,261 - freqtrade.freqtradebot - INFO - Exit for KAVA/USDT detected. Reason: stop_loss
+2026-11-28 09:43:31,262 - freqtrade.wallets - INFO - Wallets synced.
+2026-11-28 09:43:31,263 - freqtrade.freqtradebot - INFO - User denied exit for KAVA/USDT.
+2026-11-28 09:43:36,260 - freqtrade.freqtradebot - INFO - Exit for KAVA/USDT detected. Reason: stop_loss
+2026-11-28 09:43:36,261 - freqtrade.wallets - INFO - Wallets synced.
+2026-11-28 09:43:36,262 - freqtrade.freqtradebot - INFO - User denied exit for KAVA/USDT.
+2026-11-28 09:43:41,263 - freqtrade.freqtradebot - INFO - Exit for KAVA/USDT detected. Reason: stop_loss
+2026-11-28 09:43:41,264 - freqtrade.wallets - INFO - Wallets synced.
+2026-11-28 09:43:41,265 - freqtrade.freqtradebot - INFO - User denied exit for KAVA/USDT.
+2026-11-28 09:43:46,262 - freqtrade.freqtradebot - INFO - Exit for KAVA/USDT detected. Reason: stop_loss
+2026-11-28 09:43:46,263 - freqtrade.wallets - INFO - Wallets synced.
+2026-11-28 09:43:46,264 - freqtrade.freqtradebot - INFO - User denied exit for KAVA/USDT.
+2026-11-28 09:43:51,263 - freqtrade.freqtradebot - INFO - Exit for KAVA/USDT detected. Reason: stop_loss
+2026-11-28 09:43:51,264 - freqtrade.wallets - INFO - Wallets synced.
+2026-11-28 09:43:51,265 - freqtrade.freqtradebot - INFO - User denied exit for KAVA/USDT.
+2026-11-28 09:43:56,263 - freqtrade.freqtradebot - INFO - Exit for KAVA/USDT detected. Reason: stop_loss
+2026-11-28 09:43:56,265 - freqtrade.wallets - INFO - Wallets synced.
+2026-11-28 09:43:56,265 - freqtrade.freqtradebot - INFO - User denied exit for KAVA/USDT.
+2026-11-28 09:44:01,262 - freqtrade.freqtradebot - INFO - Exit for KAVA/USDT detected. Reason: stop_loss
+2026-11-28 09:44:01,263 - freqtrade.wallets - INFO - Wallets synced.
+2026-11-28 09:44:01,264 - freqtrade.freqtradebot - INFO - User denied exit for KAVA/USDT.
+2026-11-28 09:44:06,258 - freqtrade.freqtradebot - INFO - Exit for KAVA/USDT detected. Reason: stop_loss
+2026-11-28 09:44:06,259 - freqtrade.wallets - INFO - Wallets synced.
+2026-11-28 09:44:06,260 - freqtrade.freqtradebot - INFO - User denied exit for KAVA/USDT.
+2026-11-28 09:44:11,260 - freqtrade.freqtradebot - INFO - Exit for KAVA/USDT detected. Reason: stop_loss
+2026-11-28 09:44:11,261 - freqtrade.wallets - INFO - Wallets synced.
+2026-11-28 09:44:11,262 - freqtrade.freqtradebot - INFO - User denied exit for KAVA/USDT.
+2026-11-28 09:44:16,259 - freqtrade.freqtradebot - INFO - Exit for KAVA/USDT detected. Reason: stop_loss
+2026-11-28 09:44:16,261 - freqtrade.wallets - INFO - Wallets synced.
+2026-11-28 09:44:16,261 - freqtrade.freqtradebot - INFO - User denied exit for KAVA/USDT.
+2026-11-28 09:44:21,012 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.10, strategy_version: v18.0.332', state='RUNNING'
+2026-11-28 09:44:21,260 - freqtrade.freqtradebot - INFO - Exit for KAVA/USDT detected. Reason: stop_loss
+2026-11-28 09:44:21,262 - freqtrade.wallets - INFO - Wallets synced.
+2026-11-28 09:44:21,262 - freqtrade.freqtradebot - INFO - User denied exit for KAVA/USDT.
+2026-11-28 09:44:26,262 - freqtrade.freqtradebot - INFO - Exit for KAVA/USDT detected. Reason: stop_loss
+2026-11-28 09:44:26,264 - freqtrade.wallets - INFO - Wallets synced.
+2026-11-28 09:44:26,264 - freqtrade.freqtradebot - INFO - User denied exit for KAVA/USDT.
+2026-11-28 09:44:31,268 - freqtrade.freqtradebot - INFO - Exit for KAVA/USDT detected. Reason: stop_loss
+2026-11-28 09:44:31,270 - freqtrade.wallets - INFO - Wallets synced.
+2026-11-28 09:44:31,270 - freqtrade.freqtradebot - INFO - User denied exit for KAVA/USDT.
+2026-11-28 09:44:36,265 - freqtrade.freqtradebot - INFO - Exit for KAVA/USDT detected. Reason: stop_loss
+2026-11-28 09:44:36,266 - freqtrade.wallets - INFO - Wallets synced.
+2026-11-28 09:44:36,267 - freqtrade.freqtradebot - INFO - User denied exit for KAVA/USDT.
+2026-11-28 09:44:41,265 - freqtrade.freqtradebot - INFO - Exit for KAVA/USDT detected. Reason: stop_loss
+2026-11-28 09:44:41,266 - freqtrade.wallets - INFO - Wallets synced.
+2026-11-28 09:44:41,267 - freqtrade.freqtradebot - INFO - User denied exit for KAVA/USDT.
+2026-11-28 09:44:46,262 - freqtrade.freqtradebot - INFO - Exit for KAVA/USDT detected. Reason: stop_loss
+2026-11-28 09:44:46,263 - freqtrade.wallets - INFO - Wallets synced.
+2026-11-28 09:44:46,264 - freqtrade.freqtradebot - INFO - User denied exit for KAVA/USDT.
+2026-11-28 09:44:51,262 - freqtrade.freqtradebot - INFO - Exit for KAVA/USDT detected. Reason: stop_loss
+2026-11-28 09:44:51,263 - freqtrade.wallets - INFO - Wallets synced.
+2026-11-28 09:44:51,264 - freqtrade.freqtradebot - INFO - User denied exit for KAVA/USDT.
+2026-11-28 09:44:56,267 - freqtrade.freqtradebot - INFO - Exit for KAVA/USDT detected. Reason: stop_loss
+2026-11-28 09:44:56,268 - freqtrade.wallets - INFO - Wallets synced.
+2026-11-28 09:44:56,269 - freqtrade.freqtradebot - INFO - User denied exit for KAVA/USDT.
+2026-11-28 09:45:06,769 - freqtrade.freqtradebot - INFO - Exit for KAVA/USDT detected. Reason: stop_loss
+2026-11-28 09:45:06,771 - freqtrade.wallets - INFO - Wallets synced.
+2026-11-28 09:45:06,772 - freqtrade.freqtradebot - INFO - User denied exit for KAVA/USDT.
+2026-11-28 09:45:07,228 - freqtrade.freqtradebot - INFO - Exit for KAVA/USDT detected. Reason: stop_loss
+2026-11-28 09:45:07,230 - freqtrade.wallets - INFO - Wallets synced.
+2026-11-28 09:45:07,230 - freqtrade.freqtradebot - INFO - User denied exit for KAVA/USDT.
+2026-11-28 09:45:12,048 - freqtrade.freqtradebot - INFO - Exit for KAVA/USDT detected. Reason: stop_loss
+2026-11-28 09:45:12,050 - freqtrade.wallets - INFO - Wallets synced.
+2026-11-28 09:45:12,050 - freqtrade.freqtradebot - INFO - User denied exit for KAVA/USDT.
+2026-11-28 09:45:17,043 - freqtrade.freqtradebot - INFO - Exit for KAVA/USDT detected. Reason: stop_loss
+2026-11-28 09:45:17,044 - freqtrade.wallets - INFO - Wallets synced.
+2026-11-28 09:45:17,045 - freqtrade.freqtradebot - INFO - User denied exit for KAVA/USDT.
+2026-11-28 09:45:21,795 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.10, strategy_version: v18.0.332', state='RUNNING'
+2026-11-28 09:45:22,049 - freqtrade.freqtradebot - INFO - Exit for KAVA/USDT detected. Reason: stop_loss
+2026-11-28 09:45:22,050 - freqtrade.wallets - INFO - Wallets synced.
+2026-11-28 09:45:22,051 - freqtrade.freqtradebot - INFO - User denied exit for KAVA/USDT.
+2026-11-28 09:45:27,047 - freqtrade.freqtradebot - INFO - Exit for KAVA/USDT detected. Reason: stop_loss
+2026-11-28 09:45:27,049 - freqtrade.wallets - INFO - Wallets synced.
+2026-11-28 09:45:27,049 - freqtrade.freqtradebot - INFO - User denied exit for KAVA/USDT.
+2026-11-28 09:45:32,049 - freqtrade.freqtradebot - INFO - Exit for KAVA/USDT detected. Reason: stop_loss
+2026-11-28 09:45:32,050 - freqtrade.wallets - INFO - Wallets synced.
+2026-11-28 09:45:32,051 - freqtrade.freqtradebot - INFO - User denied exit for KAVA/USDT.
+2026-11-28 09:45:37,049 - freqtrade.freqtradebot - INFO - Exit for KAVA/USDT detected. Reason: stop_loss
+2026-11-28 09:45:37,050 - freqtrade.wallets - INFO - Wallets synced.
+2026-11-28 09:45:37,051 - freqtrade.freqtradebot - INFO - User denied exit for KAVA/USDT.
+2026-11-28 09:45:42,047 - freqtrade.freqtradebot - INFO - Exit for KAVA/USDT detected. Reason: stop_loss
+2026-11-28 09:45:42,049 - freqtrade.wallets - INFO - Wallets synced.
+2026-11-28 09:45:42,049 - freqtrade.freqtradebot - INFO - User denied exit for KAVA/USDT.
+2026-11-28 09:45:47,050 - freqtrade.freqtradebot - INFO - Exit for KAVA/USDT detected. Reason: stop_loss
+2026-11-28 09:45:47,051 - freqtrade.wallets - INFO - Wallets synced.
+2026-11-28 09:45:47,052 - freqtrade.freqtradebot - INFO - User denied exit for KAVA/USDT.
+2026-11-28 09:45:52,053 - freqtrade.freqtradebot - INFO - Exit for KAVA/USDT detected. Reason: stop_loss
+2026-11-28 09:45:52,055 - freqtrade.wallets - INFO - Wallets synced.
+2026-11-28 09:45:52,056 - freqtrade.freqtradebot - INFO - User denied exit for KAVA/USDT.
+2026-11-28 09:45:57,046 - freqtrade.freqtradebot - INFO - Exit for KAVA/USDT detected. Reason: stop_loss
+2026-11-28 09:45:57,047 - freqtrade.wallets - INFO - Wallets synced.
+2026-11-28 09:45:57,048 - freqtrade.freqtradebot - INFO - User denied exit for KAVA/USDT.
+2026-11-28 09:46:02,050 - freqtrade.freqtradebot - INFO - Exit for KAVA/USDT detected. Reason: stop_loss
+2026-11-28 09:46:02,051 - freqtrade.wallets - INFO - Wallets synced.
+2026-11-28 09:46:02,052 - freqtrade.freqtradebot - INFO - User denied exit for KAVA/USDT.
+2026-11-28 09:46:07,048 - freqtrade.freqtradebot - INFO - Exit for KAVA/USDT detected. Reason: stop_loss
+2026-11-28 09:46:07,050 - freqtrade.wallets - INFO - Wallets synced.
+2026-11-28 09:46:07,050 - freqtrade.freqtradebot - INFO - User denied exit for KAVA/USDT.
+2026-11-28 09:46:12,046 - freqtrade.freqtradebot - INFO - Exit for KAVA/USDT detected. Reason: stop_loss
+2026-11-28 09:46:12,048 - freqtrade.wallets - INFO - Wallets synced.
+2026-11-28 09:46:12,048 - freqtrade.freqtradebot - INFO - User denied exit for KAVA/USDT.
+2026-11-28 09:46:17,048 - freqtrade.freqtradebot - INFO - Exit for KAVA/USDT detected. Reason: stop_loss
+2026-11-28 09:46:17,050 - freqtrade.wallets - INFO - Wallets synced.
+2026-11-28 09:46:17,050 - freqtrade.freqtradebot - INFO - User denied exit for KAVA/USDT.
+2026-11-28 09:46:21,798 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.10, strategy_version: v18.0.332', state='RUNNING'
+2026-11-28 09:46:22,049 - freqtrade.freqtradebot - INFO - Exit for KAVA/USDT detected. Reason: stop_loss
+2026-11-28 09:46:22,051 - freqtrade.wallets - INFO - Wallets synced.
+2026-11-28 09:46:22,051 - freqtrade.freqtradebot - INFO - User denied exit for KAVA/USDT.
+2026-11-28 09:46:27,048 - freqtrade.freqtradebot - INFO - Exit for KAVA/USDT detected. Reason: stop_loss
+2026-11-28 09:46:27,049 - freqtrade.wallets - INFO - Wallets synced.
+2026-11-28 09:46:27,050 - freqtrade.freqtradebot - INFO - User denied exit for KAVA/USDT.
+2026-11-28 09:46:32,052 - freqtrade.freqtradebot - INFO - Exit for KAVA/USDT detected. Reason: stop_loss
+2026-11-28 09:46:32,053 - freqtrade.wallets - INFO - Wallets synced.
+2026-11-28 09:46:32,054 - freqtrade.freqtradebot - INFO - User denied exit for KAVA/USDT.
+2026-11-28 09:46:37,053 - freqtrade.freqtradebot - INFO - Exit for KAVA/USDT detected. Reason: stop_loss
+2026-11-28 09:46:37,054 - freqtrade.wallets - INFO - Wallets synced.
+2026-11-28 09:46:37,055 - freqtrade.freqtradebot - INFO - User denied exit for KAVA/USDT.
+2026-11-28 09:46:42,048 - freqtrade.freqtradebot - INFO - Exit for KAVA/USDT detected. Reason: stop_loss
+2026-11-28 09:46:42,050 - freqtrade.wallets - INFO - Wallets synced.
+2026-11-28 09:46:42,050 - freqtrade.freqtradebot - INFO - User denied exit for KAVA/USDT.
+2026-11-28 09:46:47,052 - freqtrade.freqtradebot - INFO - Exit for KAVA/USDT detected. Reason: stop_loss
+2026-11-28 09:46:47,054 - freqtrade.wallets - INFO - Wallets synced.
+2026-11-28 09:46:47,054 - freqtrade.freqtradebot - INFO - User denied exit for KAVA/USDT.
+2026-11-28 09:46:52,052 - freqtrade.freqtradebot - INFO - Exit for KAVA/USDT detected. Reason: stop_loss
+2026-11-28 09:46:52,054 - freqtrade.wallets - INFO - Wallets synced.
+2026-11-28 09:46:52,054 - freqtrade.freqtradebot - INFO - User denied exit for KAVA/USDT.
+2026-11-28 09:46:57,051 - freqtrade.freqtradebot - INFO - Exit for KAVA/USDT detected. Reason: stop_loss
+2026-11-28 09:46:57,052 - freqtrade.wallets - INFO - Wallets synced.
+2026-11-28 09:46:57,053 - freqtrade.freqtradebot - INFO - User denied exit for KAVA/USDT.
+2026-11-28 09:47:02,050 - freqtrade.freqtradebot - INFO - Exit for KAVA/USDT detected. Reason: stop_loss
+2026-11-28 09:47:02,052 - freqtrade.wallets - INFO - Wallets synced.
+2026-11-28 09:47:02,052 - freqtrade.freqtradebot - INFO - User denied exit for KAVA/USDT.
+2026-11-28 09:47:07,051 - freqtrade.freqtradebot - INFO - Exit for KAVA/USDT detected. Reason: stop_loss
+2026-11-28 09:47:07,052 - freqtrade.wallets - INFO - Wallets synced.
+2026-11-28 09:47:07,053 - freqtrade.freqtradebot - INFO - User denied exit for KAVA/USDT.
+2026-11-28 09:47:12,051 - freqtrade.freqtradebot - INFO - Exit for KAVA/USDT detected. Reason: stop_loss
+2026-11-28 09:47:12,053 - freqtrade.wallets - INFO - Wallets synced.
+2026-11-28 09:47:12,053 - freqtrade.freqtradebot - INFO - User denied exit for KAVA/USDT.
+2026-11-28 09:47:17,048 - freqtrade.freqtradebot - INFO - Exit for KAVA/USDT detected. Reason: stop_loss
+2026-11-28 09:47:17,050 - freqtrade.wallets - INFO - Wallets synced.
+2026-11-28 09:47:17,050 - freqtrade.freqtradebot - INFO - User denied exit for KAVA/USDT.
+2026-11-28 09:47:21,801 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.10, strategy_version: v18.0.332', state='RUNNING'
+2026-11-28 09:47:22,051 - freqtrade.freqtradebot - INFO - Exit for KAVA/USDT detected. Reason: stop_loss
+2026-11-28 09:47:22,053 - freqtrade.wallets - INFO - Wallets synced.
+2026-11-28 09:47:22,053 - freqtrade.freqtradebot - INFO - User denied exit for KAVA/USDT.
+2026-11-28 09:47:27,050 - freqtrade.freqtradebot - INFO - Exit for KAVA/USDT detected. Reason: stop_loss
+2026-11-28 09:47:27,052 - freqtrade.wallets - INFO - Wallets synced.
+2026-11-28 09:47:27,052 - freqtrade.freqtradebot - INFO - User denied exit for KAVA/USDT.
+2026-11-28 09:47:32,047 - freqtrade.freqtradebot - INFO - Exit for KAVA/USDT detected. Reason: stop_loss
+2026-11-28 09:47:32,049 - freqtrade.wallets - INFO - Wallets synced.
+2026-11-28 09:47:32,049 - freqtrade.freqtradebot - INFO - User denied exit for KAVA/USDT.
+2026-11-28 09:47:37,049 - freqtrade.freqtradebot - INFO - Exit for KAVA/USDT detected. Reason: stop_loss
+2026-11-28 09:47:37,051 - freqtrade.wallets - INFO - Wallets synced.
+2026-11-28 09:47:37,051 - freqtrade.freqtradebot - INFO - User denied exit for KAVA/USDT.
+2026-11-28 09:47:42,050 - freqtrade.freqtradebot - INFO - Exit for KAVA/USDT detected. Reason: stop_loss
+2026-11-28 09:47:42,052 - freqtrade.wallets - INFO - Wallets synced.
+2026-11-28 09:47:42,052 - freqtrade.freqtradebot - INFO - User denied exit for KAVA/USDT.
+2026-11-28 09:47:47,053 - freqtrade.freqtradebot - INFO - Exit for KAVA/USDT detected. Reason: stop_loss
+2026-11-28 09:47:47,055 - freqtrade.wallets - INFO - Wallets synced.
+2026-11-28 09:47:47,055 - freqtrade.freqtradebot - INFO - User denied exit for KAVA/USDT.
+2026-11-28 09:47:52,052 - freqtrade.freqtradebot - INFO - Exit for KAVA/USDT detected. Reason: stop_loss
+2026-11-28 09:47:52,054 - freqtrade.wallets - INFO - Wallets synced.
+2026-11-28 09:47:52,054 - freqtrade.freqtradebot - INFO - User denied exit for KAVA/USDT.
+2026-11-28 09:47:57,055 - freqtrade.freqtradebot - INFO - Exit for KAVA/USDT detected. Reason: stop_loss
+2026-11-28 09:47:57,056 - freqtrade.wallets - INFO - Wallets synced.
+2026-11-28 09:47:57,056 - freqtrade.freqtradebot - INFO - User denied exit for KAVA/USDT.
+2026-11-28 09:48:02,053 - freqtrade.freqtradebot - INFO - Exit for KAVA/USDT detected. Reason: stop_loss
+2026-11-28 09:48:02,055 - freqtrade.wallets - INFO - Wallets synced.
+2026-11-28 09:48:02,056 - freqtrade.freqtradebot - INFO - User denied exit for KAVA/USDT.
+2026-11-28 09:48:07,058 - freqtrade.freqtradebot - INFO - Exit for KAVA/USDT detected. Reason: stop_loss
+2026-11-28 09:48:07,060 - freqtrade.wallets - INFO - Wallets synced.
+2026-11-28 09:48:07,061 - freqtrade.freqtradebot - INFO - User denied exit for KAVA/USDT.
+2026-11-28 09:48:12,058 - freqtrade.freqtradebot - INFO - Exit for KAVA/USDT detected. Reason: stop_loss
+2026-11-28 09:48:12,059 - freqtrade.wallets - INFO - Wallets synced.
+2026-11-28 09:48:12,060 - freqtrade.freqtradebot - INFO - User denied exit for KAVA/USDT.
+2026-11-28 09:48:17,056 - freqtrade.freqtradebot - INFO - Exit for KAVA/USDT detected. Reason: stop_loss
+2026-11-28 09:48:17,057 - freqtrade.wallets - INFO - Wallets synced.
+2026-11-28 09:48:17,058 - freqtrade.freqtradebot - INFO - User denied exit for KAVA/USDT.
+2026-11-28 09:48:21,804 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.10, strategy_version: v18.0.332', state='RUNNING'
+2026-11-28 09:48:22,060 - freqtrade.freqtradebot - INFO - Exit for KAVA/USDT detected. Reason: stop_loss
+2026-11-28 09:48:22,061 - freqtrade.wallets - INFO - Wallets synced.
+2026-11-28 09:48:22,062 - freqtrade.freqtradebot - INFO - User denied exit for KAVA/USDT.
+2026-11-28 09:48:27,051 - freqtrade.freqtradebot - INFO - Exit for KAVA/USDT detected. Reason: stop_loss
+2026-11-28 09:48:27,053 - freqtrade.wallets - INFO - Wallets synced.
+2026-11-28 09:48:27,053 - freqtrade.freqtradebot - INFO - User denied exit for KAVA/USDT.
+2026-11-28 09:48:32,054 - freqtrade.freqtradebot - INFO - Exit for KAVA/USDT detected. Reason: stop_loss
+2026-11-28 09:48:32,056 - freqtrade.wallets - INFO - Wallets synced.
+2026-11-28 09:48:32,056 - freqtrade.freqtradebot - INFO - User denied exit for KAVA/USDT.
+2026-11-28 09:48:37,054 - freqtrade.freqtradebot - INFO - Exit for KAVA/USDT detected. Reason: stop_loss
+2026-11-28 09:48:37,055 - freqtrade.wallets - INFO - Wallets synced.
+2026-11-28 09:48:37,056 - freqtrade.freqtradebot - INFO - User denied exit for KAVA/USDT.
+2026-11-28 09:48:42,055 - freqtrade.freqtradebot - INFO - Exit for KAVA/USDT detected. Reason: stop_loss
+2026-11-28 09:48:42,056 - freqtrade.wallets - INFO - Wallets synced.
+2026-11-28 09:48:42,057 - freqtrade.freqtradebot - INFO - User denied exit for KAVA/USDT.
+2026-11-28 09:48:47,055 - freqtrade.freqtradebot - INFO - Exit for KAVA/USDT detected. Reason: stop_loss
+2026-11-28 09:48:47,056 - freqtrade.wallets - INFO - Wallets synced.
+2026-11-28 09:48:47,057 - freqtrade.freqtradebot - INFO - User denied exit for KAVA/USDT.
+2026-11-28 09:48:52,057 - freqtrade.freqtradebot - INFO - Exit for KAVA/USDT detected. Reason: stop_loss
+2026-11-28 09:48:52,058 - freqtrade.wallets - INFO - Wallets synced.
+2026-11-28 09:48:52,059 - freqtrade.freqtradebot - INFO - User denied exit for KAVA/USDT.
+2026-11-28 09:48:57,050 - freqtrade.freqtradebot - INFO - Exit for KAVA/USDT detected. Reason: stop_loss
+2026-11-28 09:48:57,052 - freqtrade.wallets - INFO - Wallets synced.
+2026-11-28 09:48:57,053 - freqtrade.freqtradebot - INFO - User denied exit for KAVA/USDT.
+2026-11-28 09:49:02,052 - freqtrade.freqtradebot - INFO - Exit for KAVA/USDT detected. Reason: stop_loss
+2026-11-28 09:49:02,053 - freqtrade.wallets - INFO - Wallets synced.
+2026-11-28 09:49:02,054 - freqtrade.freqtradebot - INFO - User denied exit for KAVA/USDT.
+2026-11-28 09:49:07,055 - freqtrade.freqtradebot - INFO - Exit for KAVA/USDT detected. Reason: stop_loss
+2026-11-28 09:49:07,056 - freqtrade.wallets - INFO - Wallets synced.
+2026-11-28 09:49:07,057 - freqtrade.freqtradebot - INFO - User denied exit for KAVA/USDT.
+2026-11-28 09:49:12,057 - freqtrade.freqtradebot - INFO - Exit for KAVA/USDT detected. Reason: stop_loss
+2026-11-28 09:49:12,058 - freqtrade.wallets - INFO - Wallets synced.
+2026-11-28 09:49:12,059 - freqtrade.freqtradebot - INFO - User denied exit for KAVA/USDT.
+2026-11-28 09:49:17,055 - freqtrade.freqtradebot - INFO - Exit for KAVA/USDT detected. Reason: stop_loss
+2026-11-28 09:49:17,056 - freqtrade.wallets - INFO - Wallets synced.
+2026-11-28 09:49:17,057 - freqtrade.freqtradebot - INFO - User denied exit for KAVA/USDT.
+2026-11-28 09:49:21,806 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.10, strategy_version: v18.0.332', state='RUNNING'
+2026-11-28 09:49:22,059 - freqtrade.freqtradebot - INFO - Exit for KAVA/USDT detected. Reason: stop_loss
+2026-11-28 09:49:22,060 - freqtrade.wallets - INFO - Wallets synced.
+2026-11-28 09:49:22,061 - freqtrade.freqtradebot - INFO - User denied exit for KAVA/USDT.
+2026-11-28 09:49:27,061 - freqtrade.freqtradebot - INFO - Exit for KAVA/USDT detected. Reason: stop_loss
+2026-11-28 09:49:27,063 - freqtrade.wallets - INFO - Wallets synced.
+2026-11-28 09:49:27,063 - freqtrade.freqtradebot - INFO - User denied exit for KAVA/USDT.
+2026-11-28 09:49:32,063 - freqtrade.freqtradebot - INFO - Exit for KAVA/USDT detected. Reason: stop_loss
+2026-11-28 09:49:32,064 - freqtrade.wallets - INFO - Wallets synced.
+2026-11-28 09:49:32,065 - freqtrade.freqtradebot - INFO - User denied exit for KAVA/USDT.
+2026-11-28 09:49:37,062 - freqtrade.freqtradebot - INFO - Exit for KAVA/USDT detected. Reason: stop_loss
+2026-11-28 09:49:37,063 - freqtrade.wallets - INFO - Wallets synced.
+2026-11-28 09:49:37,064 - freqtrade.freqtradebot - INFO - User denied exit for KAVA/USDT.
+2026-11-28 09:49:42,058 - freqtrade.freqtradebot - INFO - Exit for KAVA/USDT detected. Reason: stop_loss
+2026-11-28 09:49:42,059 - freqtrade.wallets - INFO - Wallets synced.
+2026-11-28 09:49:42,059 - freqtrade.freqtradebot - INFO - User denied exit for KAVA/USDT.
+2026-11-28 09:49:47,061 - freqtrade.freqtradebot - INFO - Exit for KAVA/USDT detected. Reason: stop_loss
+2026-11-28 09:49:47,063 - freqtrade.wallets - INFO - Wallets synced.
+2026-11-28 09:49:47,063 - freqtrade.freqtradebot - INFO - User denied exit for KAVA/USDT.
+2026-11-28 09:49:52,060 - freqtrade.freqtradebot - INFO - Exit for KAVA/USDT detected. Reason: stop_loss
+2026-11-28 09:49:52,062 - freqtrade.wallets - INFO - Wallets synced.
+2026-11-28 09:49:52,062 - freqtrade.freqtradebot - INFO - User denied exit for KAVA/USDT.
+2026-11-28 09:49:57,062 - freqtrade.freqtradebot - INFO - Exit for KAVA/USDT detected. Reason: stop_loss
+2026-11-28 09:49:57,063 - freqtrade.wallets - INFO - Wallets synced.
+2026-11-28 09:49:57,064 - freqtrade.freqtradebot - INFO - User denied exit for KAVA/USDT.
+2026-11-28 09:50:05,552 - freqtrade.freqtradebot - INFO - Exit for KAVA/USDT detected. Reason: stop_loss
+2026-11-28 09:50:05,554 - freqtrade.wallets - INFO - Wallets synced.
+2026-11-28 09:50:05,555 - freqtrade.freqtradebot - INFO - User denied exit for KAVA/USDT.
+2026-11-28 09:50:06,254 - freqtrade.freqtradebot - INFO - Exit for KAVA/USDT detected. Reason: stop_loss
+2026-11-28 09:50:06,255 - freqtrade.wallets - INFO - Wallets synced.
+2026-11-28 09:50:06,256 - freqtrade.freqtradebot - INFO - User denied exit for KAVA/USDT.
+2026-11-28 09:50:11,258 - freqtrade.freqtradebot - INFO - Exit for KAVA/USDT detected. Reason: stop_loss
+2026-11-28 09:50:11,260 - freqtrade.wallets - INFO - Wallets synced.
+2026-11-28 09:50:11,260 - freqtrade.freqtradebot - INFO - User denied exit for KAVA/USDT.
+2026-11-28 09:50:16,255 - freqtrade.freqtradebot - INFO - Exit for KAVA/USDT detected. Reason: stop_loss
+2026-11-28 09:50:16,256 - freqtrade.wallets - INFO - Wallets synced.
+2026-11-28 09:50:16,257 - freqtrade.freqtradebot - INFO - User denied exit for KAVA/USDT.
+2026-11-28 09:50:21,254 - freqtrade.freqtradebot - INFO - Exit for KAVA/USDT detected. Reason: stop_loss
+2026-11-28 09:50:21,255 - freqtrade.wallets - INFO - Wallets synced.
+2026-11-28 09:50:21,256 - freqtrade.freqtradebot - INFO - User denied exit for KAVA/USDT.
+2026-11-28 09:50:26,001 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.10, strategy_version: v18.0.332', state='RUNNING'
+2026-11-28 09:50:26,254 - freqtrade.freqtradebot - INFO - Exit for KAVA/USDT detected. Reason: stop_loss
+2026-11-28 09:50:26,255 - freqtrade.wallets - INFO - Wallets synced.
+2026-11-28 09:50:26,256 - freqtrade.freqtradebot - INFO - User denied exit for KAVA/USDT.
+2026-11-28 09:50:31,255 - freqtrade.freqtradebot - INFO - Exit for KAVA/USDT detected. Reason: stop_loss
+2026-11-28 09:50:31,257 - freqtrade.wallets - INFO - Wallets synced.
+2026-11-28 09:50:31,257 - freqtrade.freqtradebot - INFO - User denied exit for KAVA/USDT.
+2026-11-28 09:50:36,256 - freqtrade.freqtradebot - INFO - Exit for KAVA/USDT detected. Reason: stop_loss
+2026-11-28 09:50:36,258 - freqtrade.wallets - INFO - Wallets synced.
+2026-11-28 09:50:36,258 - freqtrade.freqtradebot - INFO - User denied exit for KAVA/USDT.
+2026-11-28 09:50:41,258 - freqtrade.freqtradebot - INFO - Exit for KAVA/USDT detected. Reason: stop_loss
+2026-11-28 09:50:41,259 - freqtrade.wallets - INFO - Wallets synced.
+2026-11-28 09:50:41,260 - freqtrade.freqtradebot - INFO - User denied exit for KAVA/USDT.
+2026-11-28 09:50:46,261 - freqtrade.freqtradebot - INFO - Exit for KAVA/USDT detected. Reason: stop_loss
+2026-11-28 09:50:46,262 - freqtrade.wallets - INFO - Wallets synced.
+2026-11-28 09:50:46,263 - freqtrade.freqtradebot - INFO - User denied exit for KAVA/USDT.
+2026-11-28 09:50:51,253 - freqtrade.freqtradebot - INFO - Exit for KAVA/USDT detected. Reason: stop_loss
+2026-11-28 09:50:51,254 - freqtrade.wallets - INFO - Wallets synced.
+2026-11-28 09:50:51,254 - freqtrade.freqtradebot - INFO - User denied exit for KAVA/USDT.
+2026-11-28 09:50:56,259 - freqtrade.freqtradebot - INFO - Exit for KAVA/USDT detected. Reason: stop_loss
+2026-11-28 09:50:56,261 - freqtrade.wallets - INFO - Wallets synced.
+2026-11-28 09:50:56,261 - freqtrade.freqtradebot - INFO - User denied exit for KAVA/USDT.
+2026-11-28 09:51:01,254 - freqtrade.freqtradebot - INFO - Exit for KAVA/USDT detected. Reason: stop_loss
+2026-11-28 09:51:01,255 - freqtrade.wallets - INFO - Wallets synced.
+2026-11-28 09:51:01,256 - freqtrade.freqtradebot - INFO - User denied exit for KAVA/USDT.
+2026-11-28 09:51:06,254 - freqtrade.freqtradebot - INFO - Exit for KAVA/USDT detected. Reason: stop_loss
+2026-11-28 09:51:06,255 - freqtrade.wallets - INFO - Wallets synced.
+2026-11-28 09:51:06,255 - freqtrade.freqtradebot - INFO - User denied exit for KAVA/USDT.
+2026-11-28 09:51:11,253 - freqtrade.freqtradebot - INFO - Exit for KAVA/USDT detected. Reason: stop_loss
+2026-11-28 09:51:11,254 - freqtrade.wallets - INFO - Wallets synced.
+2026-11-28 09:51:11,255 - freqtrade.freqtradebot - INFO - User denied exit for KAVA/USDT.
+2026-11-28 09:51:16,255 - freqtrade.freqtradebot - INFO - Exit for KAVA/USDT detected. Reason: stop_loss
+2026-11-28 09:51:16,256 - freqtrade.wallets - INFO - Wallets synced.
+2026-11-28 09:51:16,257 - freqtrade.freqtradebot - INFO - User denied exit for KAVA/USDT.
+2026-11-28 09:51:21,256 - freqtrade.freqtradebot - INFO - Exit for KAVA/USDT detected. Reason: stop_loss
+2026-11-28 09:51:21,257 - freqtrade.wallets - INFO - Wallets synced.
+2026-11-28 09:51:21,258 - freqtrade.freqtradebot - INFO - User denied exit for KAVA/USDT.
+2026-11-28 09:51:26,003 - freqtrade.worker - INFO - Bot heartbeat. PID=1, version='2026.10, strategy_version: v18.0.332', state='RUNNING'
+2026-11-28 09:51:26,256 - freqtrade.freqtradebot - INFO - Exit for KAVA/USDT detected. Reason: stop_loss
+2026-11-28 09:51:26,257 - freqtrade.wallets - INFO - Wallets synced.
+2026-11-28 09:51:26,258 - freqtrade.freqtradebot - INFO - User denied exit for KAVA/USDT.
+2026-11-28 09:51:31,254 - freqtrade.freqtradebot - INFO - Exit for KAVA/USDT detected. Reason: stop_loss
+2026-11-28 09:51:31,256 - freqtrade.wallets - INFO - Wallets synced.
+2026-11-28 09:51:31,256 - freqtrade.freqtradebot - INFO - User denied exit for KAVA/USDT.
+2026-11-28 09:51:36,252 - freqtrade.freqtradebot - INFO - Exit for KAVA/USDT detected. Reason: stop_loss
+2026-11-28 09:51:36,253 - freqtrade.wallets - INFO - Wallets synced.
+2026-11-28 09:51:36,253 - freqtrade.freqtradebot - INFO - User denied exit for KAVA/USDT.
+2026-11-28 09:51:41,255 - freqtrade.freqtradebot - INFO - Exit for KAVA/USDT detected. Reason: stop_loss
+2026-11-28 09:51:41,257 - freqtrade.wallets - INFO - Wallets synced.
+2026-11-28 09:51:41,257 - freqtrade.freqtradebot - INFO - User denied exit for KAVA/USDT.
